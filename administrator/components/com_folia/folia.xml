@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+ 	<name>com_folia</name>
+	<creationDate>Novembre 2019</creationDate>
+	<author>BTS-SIO2 SLAM</author>
+	<copyright>All rights reserved</copyright>
+	<license>GNU/GPL</license>
+	<version>0.2</version>
+	<description>com_folia_descr</description>
+
+	<install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+	<administration>
+		<menu>com_folia</menu>
+		<submenu>
+			<menu link="option=com_folia&amp;view=utilisateurs">com_folia_utilisateurs</menu>
+		</submenu>
+		<files folder="admin">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>access.xml</filename>
+			<filename>folia.php</filename>
+			<filename>folia.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+		</files>                
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_folia.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_folia.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_folia.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_folia.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
