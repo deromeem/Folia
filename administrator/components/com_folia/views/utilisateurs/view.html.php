@@ -17,9 +17,9 @@ class FoliaViewUtilisateurs extends JViewLegacy
 
 		// récupère les paramêtres du fichier de configuration config.xml
 		$params = JComponentHelper::getParams('com_folia');
-		$this->paramDescShow = $params->get('jannuaire_show_desc', 0);
-		$this->paramDescSize = $params->get('jannuaire_size_desc', 70);
-		$this->paramDateFmt = $params->get('jannuaire_date_fmt', "d F Y");
+		$this->paramDescShow = $params->get('jfolia_show_desc', 0);
+		$this->paramDescSize = $params->get('jfolia_size_desc', 70);
+		$this->paramDateFmt = $params->get('jfolia_date_fmt', "d F Y");
 
 		// affiche les erreurs éventuellement retournées
 		if (count($errors = $this->get('Errors'))) 
@@ -31,7 +31,7 @@ class FoliaViewUtilisateurs extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		EntrepriseHelper::addSubmenu('utililisateurs');
+		utilisateurHelper::addSubmenu('Utilisateurs');
 		// prépare et affiche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();
@@ -63,22 +63,10 @@ class FoliaViewUtilisateurs extends JViewLegacy
 		JHtmlSidebar::setAction('index.php?option=com_folia');
 		
 		// ajoute le filtre standard des statuts dans le bloc des sous-menus
-		JHtmlSidebar::addFilter( JText::_('JOPTION_SELECT_PUBLISHED'), 'filter_published',
-			JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'),
-			'value', 'text', $this->state->get('filter.published'),true)
-		);
-
-		// ajoute le filtre spécifique pour les pays
-		$this->pays = $this->get('Pays');
-		$options3	= array();
-		foreach ($this->pays as $pay) {
-			$options3[]	= JHtml::_('select.option', $pay->id,  $pay->pays);
-		}
-		$this->pay = $options3;
-		JHtmlSidebar::addFilter("- ".JText::_('COM_FOLIA_PAYS_SELECT')." -", 'filter_pay',
-			JHtml::_('select.options', $this->pay,
-			'value', 'text', $this->state->get('filter.pay'))
-		);
+		// JHtmlSidebar::addFilter( JText::_('JOPTION_SELECT_PUBLISHED'), 'filter_published',
+		// 	JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'),
+		// 	'value', 'text', $this->state->get('filter.published'),true)
+		// );
 	}
 
  	protected function getSortFields()

@@ -12,10 +12,7 @@ class FoliaModelUtilisateurs extends JModelList
 				'id', 'u.id',
 				'nom', 'u.nom',
 				'prenom', 'u.prenom',
-				'email', 'u.email',
-				'published', 'u.published',
-				'hits', 'u.hits',
-				'modified', 'u.modified'
+				'email', 'u.email'
 			);
 		}
 		parent::__construct($config);
@@ -27,9 +24,6 @@ class FoliaModelUtilisateurs extends JModelList
 		$search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
 
-		$published = $this->getUserStateFromRequest($this->context.'.filter.published', 'filter_published', '');
-		$this->setState('filter.published', $published);
-
 		// parent::populateState('modified', 'desc');
 		parent::populateState('u.nom', 'ASC');
 	}
@@ -38,11 +32,8 @@ class FoliaModelUtilisateurs extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('u.id, u.nom, u.alias, u.logo, u.codeAPE_NAF, u.pays_id, u.siteWeb, u.published, u.hits, u.modified');
-		$query->from('#__annuaire_entreprises e');
-
-		// joint la table pays
-		$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=u.pays_id');
+		$query->select('u.id, u.nom, u.prenom, u.email');
+		$query->from('#__folia_utilisateurs u');
 
 		// joint la table _users de Joomla
 		// $query->select('ul.name AS linked_user')->join('LEFT', '#__users AS ul ON ul.id=a.affected_to');
@@ -60,19 +51,11 @@ class FoliaModelUtilisateurs extends JModelList
 				// Compile les clauses de recherche
 				$searches	= array();
 				$searches[]	= 'u.nom LIKE '.$search;
+				$searches[]	= 'u.prenom LIKE '.$search;
+				$searches[]	= 'u.email LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
-		}
-
-		// filtre selon l'état du filtre 'filter_published'
-		$published = $this->getState('filter.published');
-		if (is_numeric($published)) {
-			$query->where('u.published=' . (int) $published);
-		}
-		elseif ($published === '') {
-			// si aucune sélection, on n'affiche que les publiés et dépubliés
-			$query->where('(u.published=0 OR u.published=1)');
 		}
 
 		// tri des colonnes
@@ -83,5 +66,4 @@ class FoliaModelUtilisateurs extends JModelList
 		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
 		return $query;
 	}
-
 }

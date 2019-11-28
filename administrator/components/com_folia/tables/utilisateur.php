@@ -30,6 +30,14 @@ class FoliaTableUtilisateur extends JTable
 			}
 		}
 		
+		// contrôle d'unicité de l'alias SEF
+		// $table = JTable::getInstance('Entreprise', 'AnnuaireTable');
+		// if ($table->load(array('alias' => $this->alias)) && ($table->id != $this->id || $this->id == 0))
+		// {
+			// $this->setError("COM_ANNUAIRE_ALIAS_USED");
+			// return false;
+		// }
+		
 		return parent::store($updateNulls);
 	}
 }
