@@ -14,6 +14,10 @@ class UtilisateurHelper extends JHelperContent
 			'index.php?option=com_folia&view=etudiants',
 			$vName == 'etudiants'
 		);JHtmlSidebar::addEntry(
+			JText::_('professeurs'),
+			'index.php?option=com_folia&view=professeurs',
+			$vName == 'professeurs'
+		);JHtmlSidebar::addEntry(
 			JText::_('Classes'),
 			'index.php?option=com_folia&view=classes',
 			$vName == 'classes'
