@@ -9,7 +9,7 @@ class FoliaController extends JControllerLegacy
 
 		// affectation de la vue récupérée en paramètre
 		$input = JFactory::getApplication()->input;
-		$input->set('view', $input->getCmd('view', 'Utilisateur'));
+		$input->set('view', $input->getCmd('view', 'Utilisateurs'));
 
 		parent::display($cachable, $urlparams);		
 		return $this;
