@@ -62,11 +62,11 @@ class FoliaViewUtilisateurs extends JViewLegacy
 		// definit l'action du formulaire sidebar
 		JHtmlSidebar::setAction('index.php?option=com_folia');
 		
-		// ajoute le filtre standard des statuts dans le bloc des sous-menus
-		// JHtmlSidebar::addFilter( JText::_('JOPTION_SELECT_PUBLISHED'), 'filter_published',
-		// 	JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'),
-		// 	'value', 'text', $this->state->get('filter.published'),true)
-		// );
+		//ajoute le filtre standard des statuts dans le bloc des sous-menus
+		JHtmlSidebar::addFilter( JText::_('JOPTION_SELECT_PUBLISHED'), 'filter_published',
+			JHtml::_('select.options', JHtml::_('jgrid.publishedOptions'),
+			'value', 'text', $this->state->get('filter.published'),true)
+		);
 	}
 
  	protected function getSortFields()

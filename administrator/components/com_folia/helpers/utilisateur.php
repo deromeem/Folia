@@ -9,6 +9,14 @@ class UtilisateurHelper extends JHelperContent
 			JText::_('Utilisateurs'),
 			'index.php?option=com_folia&view=utilisateurs',
 			$vName == 'utilisateurs'
+		);JHtmlSidebar::addEntry(
+			JText::_('Etudiants'),
+			'index.php?option=com_folia&view=etudiants',
+			$vName == 'etudiants'
+		);JHtmlSidebar::addEntry(
+			JText::_('Classes'),
+			'index.php?option=com_folia&view=classes',
+			$vName == 'classes'
 		);
 	}
 }

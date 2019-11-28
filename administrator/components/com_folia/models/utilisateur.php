@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class FoliaModelUtilisateur extends JModelAdmin
 {
-	protected $_compo = 'com_utilisater';
+	protected $_compo = 'com_folia';
 	protected $_context = 'utilisateur';
 	public $typeAlias = 'com_folia.utilisateur';
 	

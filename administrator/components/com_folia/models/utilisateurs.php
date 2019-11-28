@@ -12,7 +12,10 @@ class FoliaModelUtilisateurs extends JModelList
 				'id', 'u.id',
 				'nom', 'u.nom',
 				'prenom', 'u.prenom',
-				'email', 'u.email'
+				'email', 'u.email',
+				'published', 'u.published',
+				'hits', 'u.hits',
+				'modified', 'u.modified'
 			);
 		}
 		parent::__construct($config);
@@ -32,7 +35,7 @@ class FoliaModelUtilisateurs extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('u.id, u.nom, u.prenom, u.email');
+		$query->select('u.id, u.nom, u.prenom, u.email, u.published, u.hits, u.modified');
 		$query->from('#__folia_utilisateurs u');
 
 		// joint la table _users de Joomla
