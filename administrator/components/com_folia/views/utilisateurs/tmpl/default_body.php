@@ -31,6 +31,15 @@ if ($saveOrder)
 			<?php echo $item->email; ?>
 		</td>
 		<td class="center hidden-phone">
+			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'utilisateurs.', true); ?>
+		</td>
+		<td class="center hidden-tablet hidden-phone">
+			<?php echo JHtml::_('date', $item->modified, $this->paramDateFmt); ?>
+		</td>
+		<td class="center hidden-tablet hidden-phone">
+			<?php echo (int) $item->hits; ?>
+		</td>
+		<td class="center hidden-phone">
 			<?php echo (int) $item->id; ?>
 		</td>
 	</tr>
