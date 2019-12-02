@@ -9,20 +9,24 @@
             description="COM_FOLIA_ACTIVITES_NOM"
             size="40" class="inputbox" default="" required="true"
         />
+        <field name="description" type="editor" label="COM_FOLIA_ACTIVITES_DESCRIPTION"
+            description="COM_FOLIA_ACTIVITES_DESCRIPTION"
+            size="60" class="inputbox" default="" required="true"
+        />
 
        <!--  <field name="description" type="text" label="COM_FOLIA_ACTIVITES_DESCRIPTION"
             description="COM_FOLIA_ACTIVITES_DESCRIPTION"
             size="80" class="inputbox" default="" required="true"
         /> -->
         
-		<field
+		<!-- <field
 				name="description" type="editor" label="COM_FOLIA_ACTIVITES_DESCRIPTION"
 				description="COM_FOLIA_ACTIVITES_DESCRIPTION"
 				class="inputbox"
 				filter="JComponentHelper::filterText"
 				buttons="true"
 				hide="readmore,pagebreak"
-		/>
+		/> -->
 		<field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

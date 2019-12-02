@@ -9,6 +9,11 @@
             description="COM_FOLIA_REFERENTIELS_NOM"
             size="40" class="inputbox" default="" required="true"
         />
+
+        <field name="description" type="editor" label="COM_FOLIA_REFERENTIELS_DESCRIPTION"
+            description="COM_FOLIA_REFERENTIELS_DESCRIPTION"
+            size="60" class="inputbox" default="" required="true"
+        />
         
 		<!-- <field
 				name="activite" type="editor" label="COM_FOLIA_REFERENTIELS_ACTIVITE"
@@ -61,11 +66,6 @@
 			description="JGLOBAL_FIELD_MODIFIED_BY_DESC"
 			class="inputbox" default=""
 		/>
-
-		<field name="classes_id" type="sql" default="" label="COM_FOLIA_REFERENTIELS_CLASSE" 
-			description="COM_FOLIA_REFERENTIELS_CLASSE"
-			query="SELECT id, libelle FROM #__folia_classes WHERE published=1 ORDER BY libelle" 
-			key_field="id" value_field="libelle" required="true" />
 
 	</fieldset>
 </form>

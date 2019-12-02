@@ -6,14 +6,14 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 ?>
 
 	<tr>
-        <th width="20" class="hidden-phone">
+        <th width="1%" class="center hidden-phone">
                 <?php echo JHtml::_('grid.checkall'); ?>
         </th>                   
-        <th width="35%">
+        <th width="15%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_REFERENTIELS_NOM', 'r.nom', $listDirn, $listOrder) ?>
         </th>
-        <th class="nowrap center hidden-tablet hidden-phone">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_REFERENTIELS_CLASSE', 'r.classes_id', $listDirn, $listOrder) ?>
+        <th width="20%" class="nowrap pull-left">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_REFERENTIELS_DESCRIPTION', 'r.description', $listDirn, $listOrder) ?>
         </th>
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'r.published', $listDirn, $listOrder) ?>

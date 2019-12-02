@@ -33,8 +33,6 @@ JHtml::_('formbehavior.chosen', 'select');
 			<div class="span9">
 				<div class="form-vertical">
 					<?php echo $this->form->getControlGroup('referentiels_id'); ?>
-				</div>
-				<div class="form-vertical">
 					<?php echo $this->form->getControlGroup('description'); ?>
 				</div>
 			</div>

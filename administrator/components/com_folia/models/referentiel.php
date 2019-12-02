@@ -44,7 +44,7 @@ class FoliaModelReferentiel extends JModelAdmin
 		$table->alias = JApplication::stringURLSafe($table->alias);
 		if (empty($table->alias))
 		{
-			$table->alias = JApplication::stringURLSafe($table->libelle);
+			$table->alias = JApplication::stringURLSafe($table->nom);
 		}
 	}
 }

@@ -24,8 +24,8 @@ if ($saveOrder)
 				</a>
 			</div>
 		</td>
-		<td class="nowrap hidden-phone center">
-			<?php echo $item->classes_libelle; ?>
+		<td class="nowrap pull-left hidden-tablet hidden-phone">
+			<?php echo $item->description; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'entreprises.', true); ?>

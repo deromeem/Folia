@@ -10,8 +10,8 @@ class FoliaModelReferentiels extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'r.id',
-				'classes_id', 'r.classes_id',
 				'nom', 'r.nom',
+				'description', 'r.description',
 				'published', 'r.published',
 				'hits', 'r.hits',
 				'modified', 'r.modified'
@@ -39,9 +39,8 @@ class FoliaModelReferentiels extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('r.id, r.classes_id, c.libelle classes_libelle, r.nom, r.published, r.hits, r.modified');
-		$query->from('`#__folia_referentiels` r, `#__folia_classes` c');
-		$query->where('r.classes_id = c.id');
+		$query->select('r.id, r.nom, r.description, r.published, r.hits, r.modified');
+		$query->from('#__folia_referentiels r');
 
 		// joint la table pays
 		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
@@ -59,6 +58,7 @@ class FoliaModelReferentiels extends JModelList
 				// Compile les clauses de recherche
 				$searches	= array();
 				$searches[]	= 'nom LIKE '.$search;
+				$searches[]	= 'description LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}

@@ -12,7 +12,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th class="nowrap center hidden-tablet hidden-phone">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_ACTIVITES_REFERENTIEL', 'referentiels_id', $listDirn, $listOrder) ?>
         </th>                   
-        <th width="35%">
+        <th width="7%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_ACTIVITES_NOM', 'a.nom', $listDirn, $listOrder) ?>
         </th>
         <th width="5%" class="nowrap hidden-phone">

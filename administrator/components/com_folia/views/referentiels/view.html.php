@@ -86,7 +86,7 @@ class FoliaViewReferentiels extends JViewLegacy
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
 			'r.nom' => JText::_('COM_FOLIA_REFERENTIELS_NOM'),
-			'r.classes_id' => JText::_('COM_FOLIA_REFERENTIELS_CLASSE'),
+			'r.description' => JText::_('COM_FOLIA_REFERENTIELS_DESCRIPTION'),
 			'r.published' => JText::_('JSTATUS'),
 			'r.modified' => JText::_('JDATE'),
 			'r.id' => "Id"
