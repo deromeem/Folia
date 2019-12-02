@@ -3,19 +3,19 @@ defined('_JEXEC') or die('Restricted access');
 
 class FoliaModelUtilisateur extends JModelAdmin
 {
-	protected $_compo = 'com_folia';
+	protected $_compo = 'com_utilisateur';
 	protected $_context = 'utilisateur';
 	public $typeAlias = 'com_folia.utilisateur';
 	
-	// Surcharges des méthodes de la classe mère pour :
+	// Surcharges des mï¿½thodes de la classe mï¿½re pour :
 	
-	// 1) définir la table de soutien à utiliser
+	// 1) dï¿½finir la table de soutien ï¿½ utiliser
 	public function getTable($type = 'Utilisateur', $prefix = 'FoliaTable', $config = array()) 
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
 
-	// 2) préciser le chemin du contexte à utiliser pour charger le fichier XML décrivant les champs de saisie
+	// 2) prï¿½ciser le chemin du contexte ï¿½ utiliser pour charger le fichier XML dï¿½crivant les champs de saisie
 	public function getForm($data = array(), $loadData = true) 
 	{
 		$form = $this->loadForm($this->typeAlias, $this->_context,
@@ -27,12 +27,12 @@ class FoliaModelUtilisateur extends JModelAdmin
 		
 		$jinput = JFactory::getApplication()->input;
 
-		// le frontend appelle ce modèle et utilise a_id (initialisé à 0 by par défaut) pour éviter la collision avec id
-		if ($jinput->get('a_id'))
+		// le frontend appelle ce modï¿½le et utilise a_id (initialisï¿½ ï¿½ 0 by par dï¿½faut) pour ï¿½viter la collision avec id
+		if ($jinput->get('u_id'))
 		{
-			$id = $jinput->get('a_id', 0);
+			$id = $jinput->get('u_id', 0);
 		}
-		// le backend utilise id (initialisé à 0 by par défaut)
+		// le backend utilise id (initialisï¿½ ï¿½ 0 by par dï¿½faut)
 		else
 		{
 			$id = $jinput->get('id', 0);
@@ -42,7 +42,7 @@ class FoliaModelUtilisateur extends JModelAdmin
 		return $form;
 	}
 
-	// 3) contrôler qu'un tableau de données n'est pas déjà initialisé dans la session
+	// 3) contrï¿½ler qu'un tableau de donnï¿½es n'est pas dï¿½jï¿½ initialisï¿½ dans la session
 	protected function loadFormData() 
 	{
 		$data = JFactory::getApplication()->getUserState($this->_compo.'.edit.'.$this->_context.'.data', array());
@@ -53,7 +53,7 @@ class FoliaModelUtilisateur extends JModelAdmin
 		return $data;
 	}
 
-	// 4) préparer les données avant la sauvegarde en base de données par l'objet JTable
+	// 4) prï¿½parer les donnï¿½es avant la sauvegarde en base de donnï¿½es par l'objet JTable
 	protected function prepareTable($table)
 	{
 		$table->alias = JApplication::stringURLSafe($table->alias);
