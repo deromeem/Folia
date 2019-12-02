@@ -166,6 +166,7 @@ CREATE TABLE `#__folia_blocs_documents` (
 CREATE TABLE `#__folia_classes` (
   `id` int(11) NOT NULL,
   `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `referentiel_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
@@ -181,7 +182,7 @@ CREATE TABLE `#__folia_classes` (
 
 INSERT INTO `#__folia_classes` (`id`, `libelle`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(2, 'BTS2 SIO', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+(2, 'BTS2 SIO', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
 
 -- --------------------------------------------------------
 
