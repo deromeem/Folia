@@ -5,19 +5,11 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="nom" type="text" label="COM_FOLIA_COMMENTAIRES_NOM"
+        <field name="nom" type="text" label="COM_FOLIA_COMMENTAIRES_LIBELLE"
             description="COM_FOLIA_UTILISATEURS_NOM"
             size="40" class="input-xxlarge input-large-text" default="" required="true"
         />    
 		
-		<field
-				name="description" type="editor" label="COM_FOLIA_ACTIVITES_DESCRIPTION"
-				description="COM_FOLIA_ACTIVITES_DESCRIPTION"
-				class="inputbox"
-				filter="JComponentHelper::filterText"
-				buttons="true"
-				hide="readmore,pagebreak"
-		/> 
            
 	<field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
