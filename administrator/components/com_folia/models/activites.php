@@ -34,7 +34,7 @@ class FoliaModelActivites extends JModelList
 		$published = $this->getUserStateFromRequest($this->context.'.filter.published', 'filter_published', '');
 		$this->setState('filter.published', $published);
 
-		parent::populateState('modified', 'desc');
+		parent::populateState('a.nom', 'asc');
 	}
 	
 	protected function getListQuery()
