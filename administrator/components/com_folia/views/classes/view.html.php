@@ -49,11 +49,11 @@ class FoliaViewClasses extends JViewLegacy
 		JToolBarHelper::addNew('classe.add');
 		JToolBarHelper::editList('classe.edit');
 		JToolBarHelper::deleteList('Etes vous sur ?', 'classes.delete');		
-		// JToolbarHelper::publish('classes.publish', 'JTOOLBAR_PUBLISH', true);
-		// JToolbarHelper::unpublish('classes.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-		// JToolbarHelper::archiveList('classes.archive');
-		// JToolbarHelper::checkin('classes.checkin');
-		// JToolbarHelper::trash('classes.trash');
+		JToolbarHelper::publish('classes.publish', 'JTOOLBAR_PUBLISH', true);
+		JToolbarHelper::unpublish('classes.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::archiveList('classes.archive');
+		JToolbarHelper::checkin('classes.checkin');
+		JToolbarHelper::trash('classes.trash');
 		JToolbarHelper::preferences('com_folia');
 	}
 

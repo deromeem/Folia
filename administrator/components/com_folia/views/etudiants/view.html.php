@@ -49,11 +49,11 @@ class FoliaViewEtudiants extends JViewLegacy
 		JToolBarHelper::addNew('etudiant.add');
 		JToolBarHelper::editList('etudiant.edit');
 		JToolBarHelper::deleteList('Etes vous sur ?', 'etudiants.delete');		
-		// JToolbarHelper::publish('etudiants.publish', 'JTOOLBAR_PUBLISH', true);
-		// JToolbarHelper::unpublish('etudiants.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-		// JToolbarHelper::archiveList('etudiants.archive');
-		// JToolbarHelper::checkin('etudiants.checkin');
-		// JToolbarHelper::trash('etudiants.trash');
+		JToolbarHelper::publish('etudiants.publish', 'JTOOLBAR_PUBLISH', true);
+		JToolbarHelper::unpublish('etudiants.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::archiveList('etudiants.archive');
+		JToolbarHelper::checkin('etudiants.checkin');
+		JToolbarHelper::trash('etudiants.trash');
 		JToolbarHelper::preferences('com_folia');
 	}
 

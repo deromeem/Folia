@@ -49,11 +49,11 @@ class FoliaViewProfesseurs extends JViewLegacy
 		JToolBarHelper::addNew('professeur.add');
 		JToolBarHelper::editList('professeur.edit');
 		JToolBarHelper::deleteList('Etes vous sur ?', 'professeurs.delete');		
-		// JToolbarHelper::publish('professeurs.publish', 'JTOOLBAR_PUBLISH', true);
-		// JToolbarHelper::unpublish('professeurs.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-		// JToolbarHelper::archiveList('professeurs.archive');
-		// JToolbarHelper::checkin('professeurs.checkin');
-		// JToolbarHelper::trash('professeurs.trash');
+		JToolbarHelper::publish('professeurs.publish', 'JTOOLBAR_PUBLISH', true);
+		JToolbarHelper::unpublish('professeurs.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::archiveList('professeurs.archive');
+		JToolbarHelper::checkin('professeurs.checkin');
+		JToolbarHelper::trash('professeurs.trash');
 		JToolbarHelper::preferences('com_folia');
 	}
 
