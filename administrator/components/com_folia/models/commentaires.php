@@ -57,7 +57,7 @@ class FoliaModelCommentaires extends JModelList
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'c.email');
+		$orderCol = $this->state->get('list.ordering', 'c.libelle');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
