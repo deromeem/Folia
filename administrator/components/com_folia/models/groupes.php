@@ -33,7 +33,7 @@ class FoliaModelGroupes extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('g.id, g.libelle, g.published, g.hits, g.modified');
+		$query->select('g.id, g.nom, g.published, g.hits, g.modified');
 		$query->from('#__folia_groupes g');
 
 		//$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=g.email');
