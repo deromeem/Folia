@@ -12,6 +12,9 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="50%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_FOLIA_CLASSES_LIBELLE', 'c.libelle', $listDirn, $listOrder) ?>
         </th>      
+        <th width="10%" class="nowrap">
+			<?php echo JHtml::_('grid.sort', 'COM_FOLIA_CLASSES_REFERENTIEL', 'r.nom', $listDirn, $listOrder) ?>
+        </th>      
 		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'c.published', $listDirn, $listOrder) ?>
         </th>

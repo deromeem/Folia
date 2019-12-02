@@ -24,6 +24,9 @@ if ($saveOrder)
 				</a>
 			</div>
 		</td>
+		<td class="hidden-phone">
+			<?php echo $this->escape($item->nomReferentiel); ?>
+		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'classes.', true); ?>
 		</td>

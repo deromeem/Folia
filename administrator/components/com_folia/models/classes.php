@@ -11,6 +11,7 @@ class FoliaModelClasses extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'c.id',
 				'libelle', 'c.libelle',
+				'nomReferentiel', 'r.nom',
 				'published', 'c.published',
 				'hits', 'c.hits',
 				'modified', 'c.modified'
@@ -36,6 +37,8 @@ class FoliaModelClasses extends JModelList
 		$query->select('c.id, c.libelle, c.published, c.hits, c.modified');
 		$query->from('#__folia_classes c');
 
+		$query->select('r.nom AS nomReferentiel')->join('LEFT', '#__folia_referentiels AS r ON r.id=c.referentiel_id');
+
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
@@ -49,6 +52,7 @@ class FoliaModelClasses extends JModelList
 				// Compile les clauses de recherche
 				$searches	= array();
 				$searches[]	= 'c.libelle LIKE '.$search;
+				$searches[]	= 'r.nom LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
@@ -56,6 +60,7 @@ class FoliaModelClasses extends JModelList
 
 		// tri des colonnes
 		$orderCol = $this->state->get('list.ordering', 'c.libelle');
+		$orderCol = $this->state->get('list.ordering', 'r.nom');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
