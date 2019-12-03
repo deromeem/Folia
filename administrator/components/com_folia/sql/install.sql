@@ -417,13 +417,13 @@ CREATE TABLE `#__folia_professeurs_classes` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `#__folia_referentiels`
+-- Structure de la table `folia_folia_referentiels`
 --
 
-CREATE TABLE `#__folia_referentiels` (
+CREATE TABLE `folia_folia_referentiels` (
   `id` int(11) NOT NULL,
-  `classes_id` int(11) NOT NULL,
   `nom` varchar(128) NOT NULL,
+  `description` TEXT NOT NULL,
   `alias` varchar(255) NOT NULL,
   `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
@@ -437,8 +437,8 @@ CREATE TABLE `#__folia_referentiels` (
 -- Déchargement des données de la table `#__folia_referentiels`
 --
 
-INSERT INTO `#__folia_referentiels` (`id`, `classes_id`, `nom`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 1, 'BTS SIO v1', 'btssiov1', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+INSERT INTO `folia_folia_referentiels` (`id`, `nom`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 'BTS SIO v1', '1ere version du BTS SIO', 'btssiov1', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '0', 0);
 
 -- --------------------------------------------------------
 
