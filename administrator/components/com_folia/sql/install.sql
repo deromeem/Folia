@@ -653,14 +653,7 @@ ALTER TABLE `#__folia_professeurs`
 ALTER TABLE `#__folia_professeurs_classes`
   ADD PRIMARY KEY (`professeurs_id`,`classes_id`),
   ADD KEY `fk_professeurs_classes_classes` (`classes_id`);
-
---
--- Index pour la table `#__folia_referentiels`
---
-ALTER TABLE `#__folia_referentiels`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_referentiels_classes` (`classes_id`);
-
+  
 --
 -- Index pour la table `#__folia_themes`
 --
