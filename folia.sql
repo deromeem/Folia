@@ -1523,27 +1523,6 @@ CREATE TABLE `folia_finder_types` (
   `mime` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `folia_folia_utilisateurs`
---
---
---CREATE TABLE `folia_folia_utilisateurs` (
---  `id` int(11) NOT NULL,
---  `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
---  `prenom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
---  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT ''
---) ENGINE=InnoDB DEFAULT CHARSET=utf8;
---
-
---
--- Déchargement des données de la table `folia_folia_utilisateurs`
---
---
---INSERT INTO `folia_folia_utilisateurs` (`id`, `nom`, `prenom`, `email`) VALUES
---(1, '-', '', '');
---
 
 -- --------------------------------------------------------
 
@@ -2891,13 +2870,6 @@ ALTER TABLE `folia_finder_types`
   ADD UNIQUE KEY `title` (`title`);
 
 --
--- Index pour la table `folia_folia_utilisateurs`
---
---ALTER TABLE `folia_folia_utilisateurs`
---  ADD PRIMARY KEY (`id`);
---
-
---
 -- Index pour la table `folia_languages`
 --
 ALTER TABLE `folia_languages`
@@ -3287,13 +3259,6 @@ ALTER TABLE `folia_finder_terms`
 --
 ALTER TABLE `folia_finder_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `folia_folia_utilisateurs`
---
---ALTER TABLE `folia_folia_utilisateurs`
---  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
 
 --
 -- AUTO_INCREMENT pour la table `folia_languages`
