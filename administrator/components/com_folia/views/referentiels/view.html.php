@@ -43,7 +43,7 @@ class FoliaViewReferentiels extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_FOLIA_REFERENTIELS'));
+		JToolBarHelper::title(JText::_('COM_FOLIA_OPTIONS')." : ".JText::_('COM_FOLIA_REFERENTIELS'));
 		
 		// affiche les boutons d'action
 		JToolBarHelper::addNew('referentiel.add');

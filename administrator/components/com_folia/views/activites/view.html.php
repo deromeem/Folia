@@ -43,7 +43,7 @@ class FoliaViewActivites extends JViewLegacy
 	protected function addToolBar() 
 	{
 		// affiche le titre de la page
-		JToolBarHelper::title(JText::_('COM_FOLIA_ACTIVITES'));
+		JToolBarHelper::title(JText::_('COM_FOLIA_OPTIONS')." : ".JText::_('COM_FOLIA_ACTIVITES'));
 		
 		// affiche les boutons d'action
 		JToolBarHelper::addNew('activite.add');
