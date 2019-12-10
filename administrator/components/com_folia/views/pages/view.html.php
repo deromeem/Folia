@@ -31,7 +31,7 @@ class FoliaViewPages extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		FoliaHelper::addSubmenu('pages');
+		UtilisateurHelper::addSubmenu('pages');
 		// prépare et affuche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();

@@ -31,7 +31,7 @@ class FoliaViewBlocs_documents extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		FoliaHelper::addSubmenu('blocs_documents');
+		UtilisateurHelper::addSubmenu('blocs_documents');
 		// prépare et affuche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();

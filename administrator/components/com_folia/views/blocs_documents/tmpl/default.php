@@ -6,7 +6,7 @@ JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
 ?>
 
-<form action="<?php echo JRoute::_('index.php?option=com_folia&view=blocs_documents'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_folia&view=blocsDocuments'); ?>" method="post" name="adminForm" id="adminForm">
 
 <?php if (!empty( $this->sidebar)) : ?>
 	<div id="j-sidebar-container" class="span2">
@@ -18,7 +18,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <?php endif;?>
 
 		<?php echo $this->loadTemplate('headfields');?>
-				
+
 		<div class="clearfix"> </div>
 
 		<table class="table table-striped" id="articleList">
@@ -30,7 +30,7 @@ JHtml::_('formbehavior.chosen', 'select');
 		<input type="hidden" name="task" value="" />
 		<input type="hidden" name="boxchecked" value="0" />
 		<input type="hidden" name="filter_order" value="<?php echo $listOrder ?>" />
-		<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn ?>" />  
+		<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn ?>" />
 		<?php echo JHtml::_('form.token'); ?>
 	</div>
 </form>
