@@ -24,7 +24,7 @@ if ($saveOrder)
 				</a>
 			</div>
 		</td>
-		<td class="nowrap pull-left hidden-tablet hidden-phone">
+		<td class="nowrap hidden-tablet hidden-phone">
 			<?php echo $item->description; ?>
 		</td>
 		<td class="center hidden-phone">
