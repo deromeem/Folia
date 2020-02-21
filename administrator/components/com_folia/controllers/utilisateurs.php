@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
  
 class FoliaControllerUtilisateurs extends JControllerAdmin
 {
-	// surcharge pour gérer la suppression d'utilisateurs par le modèle adéquat
+	// surcharge pour gérer la suppression d'entreprises par le modèle adéquat
 	public function getModel($name = 'Utilisateur', $prefix = 'FoliaModel') 
 	{
 		// récupère le modèle de détail ($name au sigulier) pour la suppression assistée d'un (des) enregistrement(s)

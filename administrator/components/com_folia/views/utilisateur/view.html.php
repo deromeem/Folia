@@ -34,7 +34,7 @@ class FoliaViewUtilisateur extends JViewLegacy
 	
 		// affiche le titre de la page
 		$isNew = ($this->item->id == 0);
-		JToolBarHelper::title(JText::_('COM_FOLIA_UTILISATEUR')." : ".($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_MODIF')), 'address');
+		JToolBarHelper::title(JText::_('COM_FOLIA_UTILISATEURS')." : ".($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_MODIF')), 'address');
 
 		if ($isNew)
 		{
