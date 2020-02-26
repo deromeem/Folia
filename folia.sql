@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 27 nov. 2019 à 21:29
+-- Généré le :  mer. 26 fév. 2020 à 19:27
 -- Version du serveur :  10.1.26-MariaDB
 -- Version de PHP :  7.1.9
 
@@ -92,7 +92,27 @@ INSERT INTO `folia_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (46, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":116,\"title\":\"Entreprises\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=116\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2019-11-27 19:28:53', 'com_menus.item', 690, 116, 'COM_ACTIONLOGS_DISABLED'),
 (47, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":90,\"title\":\"Menu Annuaire\",\"extension_name\":\"Menu Annuaire\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=90\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2019-11-27 19:29:31', 'com_modules.module', 690, 90, 'COM_ACTIONLOGS_DISABLED'),
 (48, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2019-11-27 19:29:31', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
-(49, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2019-11-27 19:35:23', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED');
+(49, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2019-11-27 19:35:23', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(50, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-21 21:16:51', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(51, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":10,\"title\":\"Folia\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=10\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-21 21:23:29', 'com_users', 690, 10, 'COM_ACTIONLOGS_DISABLED'),
+(52, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":11,\"title\":\"Folia Administrateur\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=11\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-21 21:27:20', 'com_users', 690, 11, 'COM_ACTIONLOGS_DISABLED'),
+(53, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":12,\"title\":\"Folia Etudiant\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=12\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-21 21:27:46', 'com_users', 690, 12, 'COM_ACTIONLOGS_DISABLED'),
+(54, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":691,\"title\":\"Marcel DUPOND\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-21 21:29:02', 'com_users', 690, 691, 'COM_ACTIONLOGS_DISABLED'),
+(55, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-21 21:35:57', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(56, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-21 21:36:01', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED'),
+(57, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-25 08:03:03', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(58, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 15:07:11', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(59, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":13,\"title\":\"Folia Etudiant avanc\\u00e9\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=13\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-26 15:08:23', 'com_users', 690, 13, 'COM_ACTIONLOGS_DISABLED'),
+(60, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":14,\"title\":\"Folia Professeur\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=14\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-26 15:08:40', 'com_users', 690, 14, 'COM_ACTIONLOGS_DISABLED'),
+(61, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":15,\"title\":\"FootRegion Tuteur\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=15\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-26 15:09:07', 'com_users', 690, 15, 'COM_ACTIONLOGS_DISABLED'),
+(62, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER_GROUP\",\"id\":15,\"title\":\"Folia Tuteur\",\"itemlink\":\"index.php?option=com_users&task=group.edit&id=15\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-26 15:09:27', 'com_users', 690, 15, 'COM_ACTIONLOGS_DISABLED'),
+(63, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 15:50:33', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(64, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 16:25:34', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(65, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":692,\"title\":\"Pierre MARTIN\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-02-26 16:49:05', 'com_users', 690, 692, 'COM_ACTIONLOGS_DISABLED'),
+(66, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"692\",\"username\":\"pmartin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-26 16:49:40', 'com_users', 692, 0, 'COM_ACTIONLOGS_DISABLED'),
+(67, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"692\",\"userid\":\"692\",\"username\":\"pmartin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-26 16:49:46', 'com_users', 692, 692, 'COM_ACTIONLOGS_DISABLED'),
+(68, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 17:06:16', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(69, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 18:19:23', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -658,7 +678,7 @@ CREATE TABLE `folia_content` (
 --
 
 INSERT INTO `folia_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`, `note`) VALUES
-(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 20, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 28, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (2, 61, 'Portfolios', 'portfolios', '<p>Accès réservé aux adhérents (étudiants, professeurs, tuteurs de stage).</p>', '', 1, 2, '2019-10-11 12:39:41', 690, '', '2019-10-11 12:39:41', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:39:41', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 2, '', '', 2, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (3, 62, 'Guide', 'guide', '<p>Guide d\'utilisation pour la création, la modification et le suivi des portfolios.</p>', '', 1, 2, '2019-10-11 12:40:44', 690, '', '2019-10-11 12:40:44', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:40:44', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 5, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (4, 63, 'Exemples', 'exemples', '<p>Exemples de portfolios réalisés avec Folia.</p>', '', 1, 2, '2019-10-11 12:41:17', 690, '', '2019-10-11 12:41:17', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:41:17', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
@@ -913,7 +933,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1574875470}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1582729614}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":1570797294,\"unique_id\":\"1f66858c04f0e1653ddecb8a3629d7522c653eea\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -948,7 +968,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (484, 0, 'PLG_ACTIONLOG_JOOMLA', 'plugin', 'joomla', 'actionlog', 0, 1, 1, 0, '{\"name\":\"PLG_ACTIONLOG_JOOMLA\",\"type\":\"plugin\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_ACTIONLOG_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (485, 0, 'plg_system_privacyconsent', 'plugin', 'privacyconsent', 'system', 0, 0, 1, 0, '{\"name\":\"plg_system_privacyconsent\",\"type\":\"plugin\",\"creationDate\":\"April 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_SYSTEM_PRIVACYCONSENT_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"privacyconsent\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
-(486, 0, 'plg_system_logrotation', 'plugin', 'logrotation', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_logrotation\",\"type\":\"plugin\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_SYSTEM_LOGROTATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"logrotation\"}', '{\"lastrun\":1574875476}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(486, 0, 'plg_system_logrotation', 'plugin', 'logrotation', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_logrotation\",\"type\":\"plugin\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_SYSTEM_LOGROTATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"logrotation\"}', '{\"lastrun\":1582319781}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (487, 0, 'plg_privacy_user', 'plugin', 'user', 'privacy', 0, 1, 1, 0, '{\"name\":\"plg_privacy_user\",\"type\":\"plugin\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_PRIVACY_USER_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"user\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (488, 0, 'plg_quickicon_privacycheck', 'plugin', 'privacycheck', 'quickicon', 0, 1, 1, 0, '{\"name\":\"plg_quickicon_privacycheck\",\"type\":\"plugin\",\"creationDate\":\"June 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_QUICKICON_PRIVACYCHECK_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"privacycheck\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (489, 0, 'plg_user_terms', 'plugin', 'terms', 'user', 0, 0, 1, 0, '{\"name\":\"plg_user_terms\",\"type\":\"plugin\",\"creationDate\":\"June 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_USER_TERMS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"terms\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -1523,6 +1543,552 @@ CREATE TABLE `folia_finder_types` (
   `mime` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_activites`
+--
+
+CREATE TABLE `folia_folia_activites` (
+  `id` int(11) NOT NULL,
+  `referentiels_id` int(11) NOT NULL,
+  `nom` varchar(11) NOT NULL,
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `description` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_activites`
+--
+
+INSERT INTO `folia_folia_activites` (`id`, `referentiels_id`, `nom`, `alias`, `description`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 1, 'A1.1.1', '1a1.1.1', 'Analyse du cahier des charges d\'un service à produire', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 1, 'A1.1.2', '1a1.1.2', 'Étude de l\'impact de l\'intégration d\'un service sur le système', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(3, 1, 'A1.1.3', '1a1.1.3', 'Étude des exigences liées à la qualité attendue d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(4, 1, 'A1.2.1', '1a1.2.1', 'Élaboration et présentation d\'un dossier de choix de solution', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(5, 1, 'A1.2.2', '1a1.2.2', 'Rédaction des spécifications techniques de la solution', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(6, 1, 'A1.2.3', '1a1.2.3', 'Évaluation des risques liés à l\'utilisation d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(7, 1, 'A1.2.4', '1a1.2.4', 'Détermination des tests nécessaires à la validation d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(8, 1, 'A1.2.5', '1a1.2.5', 'Définition des niveaux d\'habilitation associés à un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(9, 1, 'A1.3.1', '1a1.3.1', 'Test d\'intégration et d\'acceptation d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(10, 1, 'A1.3.2', '1a1.3.2', 'Définition des éléments nécessaires à la continuité d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(11, 1, 'A1.3.3', '1a1.3.3', 'Accompagnement de la mise en place d\'un nouveau service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(12, 1, 'A1.3.4', '1a1.3.4', 'Déploiement d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(13, 1, 'A1.4.1', '1a1.4.1', 'Participation à un projet', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(14, 1, 'A1.4.2', '1a1.4.2', 'Évaluation des indicateurs de suivi d\'un projet et justification', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(15, 1, 'A1.4.3', '1a1.4.3', 'Gestion des ressources', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(16, 1, 'A2.1.1', '1a2.1.1', 'Accompagnement des utilisateurs dans la prise en main d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(17, 1, 'A2.1.2', '1a2.1.2', 'Évaluation et maintien de la qualité d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(18, 1, 'A2.2.1', '1a2.2.1', 'Suivi et résolution d\'incidents', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(19, 1, 'A2.2.2', '1a2.2.2', 'Suivi et réponse à des demandes d\'assistance', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(20, 1, 'A2.2.3', '1a2.2.3', 'Réponse à une interruption de service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(21, 1, 'A2.3.1', '1a2.3.1', 'Identification, qualification et évaluation d\'un problème', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(22, 1, 'A2.3.2', '1a2.3.2', 'Proposition d\'amélioration d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(23, 1, 'A3.1.1', '1a3.1.1', 'Proposition d\'une solution d\'infrastructure', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(24, 1, 'A3.1.2', '1a3.1.2', 'Maquettage et prototypage d\'une solution d\'infrastructure', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(25, 1, 'A3.2.1', '1a3.2.1', 'Installation et configuration d\'éléments d\'infrastructure', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(26, 1, 'A3.3.2', '1a3.3.2', 'Planification des sauvegardes et gestion des restaurations', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(27, 1, 'A4.1.1', '1a4.1.1', 'Proposition d\'une solution applicative', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(28, 1, 'A4.1.2', '1a4.1.2', 'Conception ou adaptation de l\'interface utilisateur d\'une solution', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(29, 1, 'A4.1.3', '1a4.1.3', 'Conception ou adaptation d\'une base de données', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(30, 1, 'A4.1.4', '1a4.1.4', 'Définition des caractéristiques d\'une solution applicative', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(31, 1, 'A4.1.5', '1a4.1.5', 'Prototypage de composants logiciels', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(32, 1, 'A4.1.6', '1a4.1.6', 'Gestion d\'environnements de développement et de test', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(33, 1, 'A4.1.7', '1a4.1.7', 'Développement, utilisation ou adaptation de composants logiciels', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(34, 1, 'A4.1.8', '1a4.1.8', 'Réalisation des tests nécessaires à la validation d\'éléments', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(35, 1, 'A4.1.9', '1a4.1.9', 'Rédaction d\'une documentation technique', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(36, 1, 'A4.1.10', '1a4.1.10', 'Rédaction d\'une documentation d\'utilisation', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(37, 1, 'A4.2.1', '1a4.2.1', 'Analyse et correction d\'un dysfonctionnement, d\'un problème', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(38, 1, 'A4.2.2', '1a4.2.2', 'Adaptation d\'une solution applicative aux évolutions', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(39, 1, 'A4.2.3', '1a4.2.3', 'Réalisation des tests nécessaires à la mise en production', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(40, 1, 'A4.2.4', '1a4.2.4', 'Mise à jour d\'une documentation technique', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(41, 1, 'A5.1.1', '1a5.1.1', 'Mise en place d\'une gestion de configuration', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(42, 1, 'A5.1.2', '1a5.1.2', 'Recueil d\'informations sur une configuration et ses élément', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(43, 1, 'A5.1.3', '1a5.1.3', 'Suivi d\'une configuration et de ses éléments', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(44, 1, 'A5.1.4', '1a5.1.4', 'Étude de propositions de contrat de service (client, fournisseur)', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(45, 1, 'A5.1.5', '1a5.1.5', 'Évaluation d\'un élément de configuration ou d\'une configuration', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(46, 1, 'A5.1.6', '1a5.1.6', 'Évaluation d\'un investissement informatique', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(47, 1, 'A5.2.1', '1a5.2.1', 'Exploitation des référentiels, normes et standards', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(48, 1, 'A5.2.2', '1a5.2.2', 'Veille technologique', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(49, 1, 'A5.2.3', '1a5.2.3', 'Repérage des compléments de formation ou d\'auto-formation', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(50, 1, 'A5.2.4', '1a5.2.4', 'Étude d‘une technologie, d\'un composant, d\'un outil', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_bibliotheques`
+--
+
+CREATE TABLE `folia_folia_bibliotheques` (
+  `id` int(11) NOT NULL,
+  `etudiant_id` int(11) NOT NULL,
+  `nom` int(11) NOT NULL,
+  `apercu` varchar(255) NOT NULL,
+  `avance` tinyint(1) NOT NULL DEFAULT '0',
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_blocs`
+--
+
+CREATE TABLE `folia_folia_blocs` (
+  `id` int(11) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `activite_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `texte` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_blocs_documents`
+--
+
+CREATE TABLE `folia_folia_blocs_documents` (
+  `id` int(11) NOT NULL,
+  `blocs_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_classes`
+--
+
+CREATE TABLE `folia_folia_classes` (
+  `id` int(11) NOT NULL,
+  `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `referentiel_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_classes`
+--
+
+INSERT INTO `folia_folia_classes` (`id`, `libelle`, `referentiel_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 0, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 'BTS2 SIO', 0, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_commentaires`
+--
+
+CREATE TABLE `folia_folia_commentaires` (
+  `id` int(11) NOT NULL,
+  `libelle` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `professeurs_id` int(11) NOT NULL,
+  `tuteurs_id` int(11) NOT NULL,
+  `portfolios_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_documents`
+--
+
+CREATE TABLE `folia_folia_documents` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `format` varchar(255) NOT NULL,
+  `blocs_documents_id` int(11) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_etudiants`
+--
+
+CREATE TABLE `folia_folia_etudiants` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `avance` tinyint(1) NOT NULL DEFAULT '0',
+  `classes_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_etudiants`
+--
+
+INSERT INTO `folia_folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 0, 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 'jemima.abeki@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(3, 'elyes.ayari@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(4, 'etienne.bourdin@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(5, 'sabri.chahed@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(6, 'rafhael.chavez-ramirez@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(7, 'tracy.domingos-daupin@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(8, 'anis.el-guabdaoui@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(9, 'olivier.etienne@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(10, 'jordan.etinault@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(11, 'zineddine.guerroumi@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(12, 'ruben.hubert@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(13, 'yannis.kadhi@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(14, 'hamza.khannoussi@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(15, 'caroline.leclerc@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(16, 'david.lencrerot@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(17, 'iannis.limbrey@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(18, 'adrien.marques@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(19, 'akram.mehor@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(20, 'julien.meritte@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(21, 'ahmed-reda.mokhtari@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(22, 'sylvain.ndjip@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(23, 'thomas.rampnoux@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(24, 'christian.ung@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(25, 'william.wan@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(26, 'michel.yam@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(28, 'mdupond@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', '0', '2020-02-26 16:00:00', '', 0),
+(29, 'pmartin@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', '0', '2020-02-26 16:00:00', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_groupes`
+--
+
+CREATE TABLE `folia_folia_groupes` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `etudiants_id` int(11) NOT NULL DEFAULT '1',
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` varchar(255) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` varchar(255) NOT NULL DEFAULT '0',
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_groupes`
+--
+
+INSERT INTO `folia_folia_groupes` (`id`, `nom`, `etudiants_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0),
+(2, 'DUPOND 1', 28, '', 1, '2020-02-26 16:00:00', '0', '0000-00-00 00:00:00', '0', 0),
+(3, 'DUPOND 2', 28, '', 1, '2020-02-26 16:01:00', '0', '0000-00-00 00:00:00', '0', 0),
+(4, 'DUPOND 3', 28, '', 1, '2020-02-26 16:02:00', '0', '0000-00-00 00:00:00', '0', 0),
+(5, 'MARTIN 1', 29, '', 1, '2020-02-26 16:10:00', '0', '0000-00-00 00:00:00', '0', 0),
+(6, 'MARTIN 2', 29, '', 1, '2020-02-26 16:20:00', '0', '0000-00-00 00:00:00', '0', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_groupes_partages`
+--
+
+CREATE TABLE `folia_folia_groupes_partages` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL,
+  `groupes_id` int(11) NOT NULL DEFAULT '1',
+  `utilisateurs_id` int(11) NOT NULL DEFAULT '1',
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_groupes_partages`
+--
+
+INSERT INTO `folia_folia_groupes_partages` (`id`, `nom`, `groupes_id`, `utilisateurs_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, 1, '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_pages`
+--
+
+CREATE TABLE `folia_folia_pages` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `portfolios_id` int(11) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_portfolios`
+--
+
+CREATE TABLE `folia_folia_portfolios` (
+  `id` int(11) NOT NULL,
+  `libelle` text NOT NULL,
+  `etudiant_id` int(11) NOT NULL,
+  `themes_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_professeurs`
+--
+
+CREATE TABLE `folia_folia_professeurs` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `matiere` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` int(11) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_professeurs`
+--
+
+INSERT INTO `folia_folia_professeurs` (`id`, `email`, `matiere`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
+(2, 'emmanuel.derome@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
+(3, 'marie-lise.simon@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
+(4, 'claude.roos@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_professeurs_classes`
+--
+
+CREATE TABLE `folia_folia_professeurs_classes` (
+  `professeurs_id` int(11) NOT NULL,
+  `classes_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` int(11) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_referentiels`
+--
+
+CREATE TABLE `folia_folia_referentiels` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(128) NOT NULL,
+  `description` text NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_referentiels`
+--
+
+INSERT INTO `folia_folia_referentiels` (`id`, `nom`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 'BTS SIO v1', '1ere version du BTS SIO', 'btssiov1', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '0', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_themes`
+--
+
+CREATE TABLE `folia_folia_themes` (
+  `id` int(11) NOT NULL,
+  `lib_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_tuteurs`
+--
+
+CREATE TABLE `folia_folia_tuteurs` (
+  `id` int(11) NOT NULL,
+  `societe` varchar(255) NOT NULL,
+  `service` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` int(11) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_tuteurs`
+--
+
+INSERT INTO `folia_folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 'societe1', 'service1', 'william.wan@etudiants.louis-armand.paris', 'william.wan@etudiants.louis-armand.paris', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_tuteurs_etudiants`
+--
+
+CREATE TABLE `folia_folia_tuteurs_etudiants` (
+  `tuteurs_id` int(11) NOT NULL,
+  `etudiants_id` int(11) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` int(11) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `folia_folia_utilisateurs`
+--
+
+CREATE TABLE `folia_folia_utilisateurs` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '',
+  `alias` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar(255) NOT NULL,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_utilisateurs`
+--
+
+INSERT INTO `folia_folia_utilisateurs` (`id`, `nom`, `prenom`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', '', '', 0, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 'ABEKI', 'Jemima Sofia', 'jemima.abeki@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(3, 'AYARI', 'Elyes', 'elyes.ayari@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(4, 'BOURDIN', 'Etienne', 'etienne.bourdin@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(5, 'CHAHED', 'Sabri', 'sabri.chahed@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(6, 'CHAVEZ RAMIREZ', 'Rafhael', 'rafhael.chavez-ramirez@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(7, 'DOMINGOS DAUPIN', 'Tracy', 'tracy.domingos-daupin@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(8, 'EL GUABDAOUI', 'Anis', 'anis.el-guabdaoui@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(9, 'ETIENNE', 'Olivier', 'olivier.etienne@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(10, 'ETINAULT', 'Jordan', 'jordan.etinault@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(11, 'GUERROUMI', 'Zineddine', 'zineddine.guerroumi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(12, 'HUBERT', 'Ruben', 'ruben.hubert@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(13, 'KADHI', 'Yannis', 'yannis.kadhi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(14, 'KHANNOUSSI', 'Hamza', 'hamza.khannoussi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(15, 'LECLERC', 'Caroline', 'caroline.leclerc@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(16, 'LECREROT', 'David', 'david.lencrerot@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(17, 'LIMBREY', 'Iannis', 'iannis.limbrey@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(18, 'MARQUES', 'Adrien', 'adrien.marques@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(19, 'MEHOR', 'Akram', 'akram.mehor@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(20, 'MERITTE', 'Julien', 'julien.meritte@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(21, 'MOKHTARI', 'Ahmed-Reda', 'ahmed-reda.mokhtari@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(22, 'NDJIP', 'Sylvain', 'sylvain.ndjip@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(23, 'RAMPNOUX', 'Thomas', 'thomas.rampnoux@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(24, 'UNG', 'Christian Hugo', 'christian.ung@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(25, 'WAN', 'William', 'william.wan@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(26, 'YAM', 'Michel', 'michel.yam@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(27, 'DEROME', 'Emmanuel', 'emmanuel.derome@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(28, 'SIMON', 'Marie-Lise', 'marie-lise.simon@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(29, 'ROOS', 'Claude', 'claude.roos@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(30, 'DUPOND', 'Marcel', 'mdupond@folia.fr', '', 1, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', 0),
+(31, 'MARTIN', 'Pierre', 'pmartin@folia.fr', '', 1, '2020-02-26 16:26:18', '690', '2020-02-26 16:27:00', '690', 0);
 
 -- --------------------------------------------------------
 
@@ -1952,8 +2518,10 @@ CREATE TABLE `folia_session` (
 --
 
 INSERT INTO `folia_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x6d6275706e396a32613967633161396c35663632673436663364, 0, 1, 1574886542, 'joomla|s:1040:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU3NDg4NjUzMjtzOjQ6Imxhc3QiO2k6MTU3NDg4NjUzOTtzOjM6Im5vdyI7aToxNTc0ODg2NTQxO31zOjU6InRva2VuIjtzOjMyOiJkQWNGcXBGaHhkdGRzczRudjREaGNzN2M1MllzenZodiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InVzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxvZ2luIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImZvcm0iO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZGF0YSI7YToxOntzOjY6InJldHVybiI7czo0MzoiaHR0cDovL2xvY2FsaG9zdC9mb2xpYS9pbmRleC5waHAvcG9ydGZvbGlvcyI7fX19fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 0, ''),
-(0x723968767038706770636e63646c6961366c30746a626d653661, 1, 0, 1574883332, 'joomla|s:2336:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2OTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1NzQ4ODE2NzU7czo0OiJsYXN0IjtpOjE1NzQ4ODMzMjM7czozOiJub3ciO2k6MTU3NDg4MzMzMTt9czo1OiJ0b2tlbiI7czozMjoid0wxSVVra3FESXk3Tm9PQ0ZSZWVJQ2VKeGZHUWhiM1AiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NDp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6NDp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjEyOiJyZWRpcmVjdF91cmwiO047czo2OiJtYW5hZ2UiO086ODoic3RkQ2xhc3MiOjM6e3M6NjoiZmlsdGVyIjthOjU6e3M6Njoic2VhcmNoIjtzOjA6IiI7czo2OiJzdGF0dXMiO3M6MDoiIjtzOjk6ImNsaWVudF9pZCI7czowOiIiO3M6NDoidHlwZSI7czowOiIiO3M6NjoiZm9sZGVyIjtzOjA6IiI7fXM6NDoibGlzdCI7YToyOntzOjEyOiJmdWxsb3JkZXJpbmciO3M6MTc6ImV4dGVuc2lvbl9pZCBERVNDIjtzOjU6ImxpbWl0IjtzOjI6IjIwIjt9czoxMDoibGltaXRzdGFydCI7aTowO319czoxMzoiY29tX3RlbXBsYXRlcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InN0eWxlIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX19czoxMToiY29tX21vZHVsZXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJtb2R1bGUiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MDp7fXM6NDoiZGF0YSI7Tjt9fXM6MzoiYWRkIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMjoiZXh0ZW5zaW9uX2lkIjtOO3M6NjoicGFyYW1zIjtOO319fXM6OToiY29tX21lbnVzIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoibWVudSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJkYXRhIjtOO31zOjQ6Iml0ZW0iO086ODoic3RkQ2xhc3MiOjQ6e3M6NDoiZGF0YSI7TjtzOjQ6InR5cGUiO047czo0OiJsaW5rIjtOO3M6MjoiaWQiO2E6MDp7fX19czo1OiJpdGVtcyI7Tzo4OiJzdGRDbGFzcyI6NDp7czo4OiJtZW51dHlwZSI7czoxNjoibWVudS1mci1hbm51YWlyZSI7czo5OiJjbGllbnRfaWQiO2k6MDtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY5MCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM');
+(0x656638347664366d6a6339346873646834343769693233633966, 0, 1, 1582740827, 'joomla|s:736:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo4O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4MjczNTc4NjtzOjQ6Imxhc3QiO2k6MTU4MjczOTk4NztzOjM6Im5vdyI7aToxNTgyNzQwODI3O31zOjU6InRva2VuIjtzOjMyOiJKSGVac1B3bkNod25hZnU4UUd3aVpERnhXWFpnbG9sciI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, ''),
+(0x6a6d3967636c716a737168396372763330306b396a7074727675, 0, 1, 1582740964, 'joomla|s:664:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aTo5O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4MjczOTg4MTtzOjQ6Imxhc3QiO2k6MTU4Mjc0MDk1ODtzOjM6Im5vdyI7aToxNTgyNzQwOTY0O319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 0, ''),
+(0x6c6a346d7439326e30726670763836316633706f346f6f6d6b30, 1, 1, 1582736767, 'joomla|s:596:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6IkZRVHNPUE1IakxPcnltRkVpTTJMenA2Z1FjdmFFVHhEIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 0, ''),
+(0x736f6e6634716f37673476766a3261717072756c316b71303362, 1, 0, 1582741230, 'joomla|s:1332:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMDtzOjU6InRva2VuIjtzOjMyOiJ4OGoxemRCQWVVTFZvQVpsb2NjMEVFdXlkWTBnaEhENCI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTgyNzQxMTYzO3M6NDoibGFzdCI7aToxNTgyNzQxMTg4O3M6Mzoibm93IjtpOjE1ODI3NDEyMzA7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjI6e3M6MTI6InV0aWxpc2F0ZXVycyI7Tzo4OiJzdGRDbGFzcyI6NDp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6Njoic2VhcmNoIjtzOjA6IiI7fXM6ODoib3JkZXJjb2wiO3M6NDoidS5pZCI7czo5OiJvcmRlcmRpcm4iO3M6MzoiYXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fXM6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjo0OntzOjg6Im9yZGVyY29sIjtzOjQ6ImUuaWQiO3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6InNlYXJjaCI7czowOiIiO31zOjk6Im9yZGVyZGlybiI7czo0OiJkZXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJsaXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxpbWl0IjtpOjIwO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiNjkwIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM');
 
 -- --------------------------------------------------------
 
@@ -2139,84 +2707,84 @@ CREATE TABLE `folia_updates` (
 --
 
 INSERT INTO `folia_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(78, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
-(79, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
-(80, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.7.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
-(81, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.13.2', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
-(82, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
-(83, 2, 803, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
-(84, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
-(85, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
-(86, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
-(87, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
-(88, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
-(89, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
-(90, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
-(91, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
-(92, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.10.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
-(93, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
-(94, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
-(95, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.11.2', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
-(96, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
-(97, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
-(98, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
-(99, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
-(100, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(101, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
-(102, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(103, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(104, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
-(105, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(106, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.7.3.1', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(107, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.6.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
-(108, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(109, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(110, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
-(111, 2, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
-(112, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(113, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.5.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(114, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(115, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
-(116, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(117, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
-(118, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(119, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(120, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(121, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(122, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(123, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.7.1.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(124, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(125, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(126, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
-(127, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
-(128, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
-(129, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(130, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(131, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.11.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(132, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(133, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(134, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(135, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(136, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(137, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(138, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(139, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(140, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(141, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
-(142, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(143, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.2', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
-(144, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
-(145, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
-(146, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
-(147, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
-(148, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.10.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
-(149, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
-(150, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
-(151, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
-(152, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
-(153, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
-(154, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
-(155, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.13', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', '');
+(312, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.15', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', ''),
+(313, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
+(314, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
+(315, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
+(316, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
+(317, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
+(318, 2, 803, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
+(319, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
+(320, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
+(321, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
+(322, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
+(323, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
+(324, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
+(325, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
+(326, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
+(327, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
+(328, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
+(329, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
+(330, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.11.2', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
+(331, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
+(332, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
+(333, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
+(334, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
+(335, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
+(336, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
+(337, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.14.2', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
+(338, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(339, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
+(340, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(341, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.7.3.1', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(342, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.6.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
+(343, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(344, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(345, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
+(346, 2, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
+(347, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(348, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(349, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(350, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
+(351, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(352, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.15.2', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
+(353, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(354, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(355, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(356, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(357, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(358, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.7.1.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(359, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(360, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(361, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
+(362, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
+(363, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
+(364, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(365, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(366, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(367, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(368, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(369, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(370, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(371, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(372, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(373, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(374, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(375, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(376, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(377, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
+(378, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(379, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
+(380, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
+(381, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
+(382, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
+(383, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
+(384, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
+(385, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
+(386, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
+(387, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
+(388, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
+(389, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', '');
 
 -- --------------------------------------------------------
 
@@ -2239,9 +2807,9 @@ CREATE TABLE `folia_update_sites` (
 --
 
 INSERT INTO `folia_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1574881887, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1574875525, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1574875526, '');
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1582729615, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1582729636, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1582729636, '');
 
 -- --------------------------------------------------------
 
@@ -2283,15 +2851,21 @@ CREATE TABLE `folia_usergroups` (
 --
 
 INSERT INTO `folia_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
-(1, 0, 1, 18, 'Public'),
-(2, 1, 8, 15, 'Enregistré'),
-(3, 2, 9, 14, 'Auteur'),
-(4, 3, 10, 13, 'Rédacteur'),
-(5, 4, 11, 12, 'Validateur'),
-(6, 1, 4, 7, 'Gestionnaire'),
-(7, 6, 5, 6, 'Administrateur'),
-(8, 1, 16, 17, 'Super Utilisateur'),
-(9, 1, 2, 3, 'Invité');
+(1, 0, 1, 30, 'Public'),
+(2, 1, 2, 21, 'Enregistré'),
+(3, 2, 3, 8, 'Auteur'),
+(4, 3, 4, 7, 'Rédacteur'),
+(5, 4, 5, 6, 'Validateur'),
+(6, 1, 22, 25, 'Gestionnaire'),
+(7, 6, 23, 24, 'Administrateur'),
+(8, 1, 28, 29, 'Super Utilisateur'),
+(9, 1, 26, 27, 'Invité'),
+(10, 2, 9, 20, 'Folia'),
+(11, 10, 10, 11, 'Folia Administrateur'),
+(12, 10, 12, 13, 'Folia Etudiant'),
+(13, 10, 14, 15, 'Folia Etudiant avancé'),
+(14, 10, 16, 17, 'Folia Professeur'),
+(15, 10, 18, 19, 'Folia Tuteur');
 
 -- --------------------------------------------------------
 
@@ -2323,8 +2897,9 @@ CREATE TABLE `folia_users` (
 --
 
 INSERT INTO `folia_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2019-11-27 19:08:10', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2019-11-27 19:16:45', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
+(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2020-02-26 18:19:23', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
+(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2020-02-21 21:36:01', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(692, 'Pierre MARTIN', 'pmartin', 'pmartin@folia.fr', '$2y$10$x8ISkYib7ZcNdLv/YS1Md.of17Au1oW4bRMQ68vriqJn47gSh9wOe', 0, 0, '2020-02-26 16:49:05', '2020-02-26 16:49:46', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2396,7 +2971,10 @@ CREATE TABLE `folia_user_usergroup_map` (
 
 INSERT INTO `folia_user_usergroup_map` (`user_id`, `group_id`) VALUES
 (690, 8),
-(691, 2);
+(691, 2),
+(691, 12),
+(692, 2),
+(692, 12);
 
 -- --------------------------------------------------------
 
@@ -2438,6 +3016,23 @@ INSERT INTO `folia_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 (3, 'Accès spécial', 3, '[6,3,8]'),
 (5, 'Accès invité', 1, '[9]'),
 (6, 'Accès super utilisateur', 4, '[8]');
+
+-- --------------------------------------------------------
+
+--
+-- Doublure de structure pour la vue `folia_vue_groupes`
+-- (Voir ci-dessous la vue réelle)
+--
+CREATE TABLE `folia_vue_groupes` (
+`id` int(11)
+,`nom` varchar(100)
+,`date` datetime
+,`auteur` varchar(201)
+,`email` varchar(100)
+);
+
+-- --------------------------------------------------------
+
 
 --
 -- Index pour les tables déchargées
@@ -2870,6 +3465,138 @@ ALTER TABLE `folia_finder_types`
   ADD UNIQUE KEY `title` (`title`);
 
 --
+-- Index pour la table `folia_folia_activites`
+--
+ALTER TABLE `folia_folia_activites`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idReferentiels` (`referentiels_id`);
+
+--
+-- Index pour la table `folia_folia_bibliotheques`
+--
+ALTER TABLE `folia_folia_bibliotheques`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idetudiant` (`etudiant_id`);
+
+--
+-- Index pour la table `folia_folia_blocs`
+--
+ALTER TABLE `folia_folia_blocs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idPage` (`page_id`),
+  ADD KEY `idActivite` (`activite_id`);
+
+--
+-- Index pour la table `folia_folia_blocs_documents`
+--
+ALTER TABLE `folia_folia_blocs_documents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idBloc` (`blocs_id`);
+
+--
+-- Index pour la table `folia_folia_classes`
+--
+ALTER TABLE `folia_folia_classes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `folia_folia_commentaires`
+--
+ALTER TABLE `folia_folia_commentaires`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_commentaires_auteurs_profs` (`professeurs_id`),
+  ADD KEY `fk_commentaires_auteurs_tuteurs` (`tuteurs_id`),
+  ADD KEY `fk_commentaires_portfolios` (`portfolios_id`);
+
+--
+-- Index pour la table `folia_folia_documents`
+--
+ALTER TABLE `folia_folia_documents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idBlocDoc` (`blocs_documents_id`);
+
+--
+-- Index pour la table `folia_folia_etudiants`
+--
+ALTER TABLE `folia_folia_etudiants`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idclasses` (`classes_id`);
+
+--
+-- Index pour la table `folia_folia_groupes`
+--
+ALTER TABLE `folia_folia_groupes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_groupes_etudiants` (`etudiants_id`) USING BTREE;
+
+--
+-- Index pour la table `folia_folia_groupes_partages`
+--
+ALTER TABLE `folia_folia_groupes_partages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_groupes_partages_groupes` (`groupes_id`),
+  ADD KEY `fk_groupes_partages_utilisateurs` (`utilisateurs_id`) USING BTREE;
+
+--
+-- Index pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `folia_folia_portfolios`
+--
+ALTER TABLE `folia_folia_portfolios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idthemes` (`themes_id`),
+  ADD KEY `idetudiant` (`etudiant_id`);
+
+--
+-- Index pour la table `folia_folia_professeurs`
+--
+ALTER TABLE `folia_folia_professeurs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `folia_folia_professeurs_classes`
+--
+ALTER TABLE `folia_folia_professeurs_classes`
+  ADD PRIMARY KEY (`professeurs_id`,`classes_id`),
+  ADD KEY `fk_professeurs_classes_classes` (`classes_id`);
+
+--
+-- Index pour la table `folia_folia_referentiels`
+--
+ALTER TABLE `folia_folia_referentiels`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `folia_folia_themes`
+--
+ALTER TABLE `folia_folia_themes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idlib` (`lib_id`);
+
+--
+-- Index pour la table `folia_folia_tuteurs`
+--
+ALTER TABLE `folia_folia_tuteurs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `folia_folia_tuteurs_etudiants`
+--
+ALTER TABLE `folia_folia_tuteurs_etudiants`
+  ADD PRIMARY KEY (`tuteurs_id`,`etudiants_id`),
+  ADD KEY `fk_tuteurs_etudiants_etudiants` (`etudiants_id`);
+
+--
+-- Index pour la table `folia_folia_utilisateurs`
+--
+ALTER TABLE `folia_folia_utilisateurs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `folia_languages`
 --
 ALTER TABLE `folia_languages`
@@ -3126,7 +3853,7 @@ ALTER TABLE `folia_viewlevels`
 -- AUTO_INCREMENT pour la table `folia_action_logs`
 --
 ALTER TABLE `folia_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT pour la table `folia_action_logs_extensions`
@@ -3144,7 +3871,7 @@ ALTER TABLE `folia_action_log_config`
 -- AUTO_INCREMENT pour la table `folia_annuaire_civilites`
 --
 ALTER TABLE `folia_annuaire_civilites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `folia_annuaire_contacts`
@@ -3261,6 +3988,108 @@ ALTER TABLE `folia_finder_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `folia_folia_activites`
+--
+ALTER TABLE `folia_folia_activites`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_bibliotheques`
+--
+ALTER TABLE `folia_folia_bibliotheques`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_blocs`
+--
+ALTER TABLE `folia_folia_blocs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_blocs_documents`
+--
+ALTER TABLE `folia_folia_blocs_documents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_classes`
+--
+ALTER TABLE `folia_folia_classes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_commentaires`
+--
+ALTER TABLE `folia_folia_commentaires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_documents`
+--
+ALTER TABLE `folia_folia_documents`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_etudiants`
+--
+ALTER TABLE `folia_folia_etudiants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_groupes`
+--
+ALTER TABLE `folia_folia_groupes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_groupes_partages`
+--
+ALTER TABLE `folia_folia_groupes_partages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_portfolios`
+--
+ALTER TABLE `folia_folia_portfolios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_professeurs`
+--
+ALTER TABLE `folia_folia_professeurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_referentiels`
+--
+ALTER TABLE `folia_folia_referentiels`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_themes`
+--
+ALTER TABLE `folia_folia_themes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_tuteurs`
+--
+ALTER TABLE `folia_folia_tuteurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_utilisateurs`
+--
+ALTER TABLE `folia_folia_utilisateurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
 -- AUTO_INCREMENT pour la table `folia_languages`
 --
 ALTER TABLE `folia_languages`
@@ -3354,7 +4183,7 @@ ALTER TABLE `folia_ucm_history`
 -- AUTO_INCREMENT pour la table `folia_updates`
 --
 ALTER TABLE `folia_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=390;
 
 --
 -- AUTO_INCREMENT pour la table `folia_update_sites`
@@ -3366,13 +4195,13 @@ ALTER TABLE `folia_update_sites`
 -- AUTO_INCREMENT pour la table `folia_usergroups`
 --
 ALTER TABLE `folia_usergroups`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `folia_users`
 --
 ALTER TABLE `folia_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=692;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=693;
 
 --
 -- AUTO_INCREMENT pour la table `folia_user_keys`
@@ -3409,6 +4238,91 @@ ALTER TABLE `folia_annuaire_contacts`
 --
 ALTER TABLE `folia_annuaire_entreprises`
   ADD CONSTRAINT `fk_folia_annuaire_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `folia_annuaire_pays` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_activites`
+--
+ALTER TABLE `folia_folia_activites`
+  ADD CONSTRAINT `fk_activites_referentiels` FOREIGN KEY (`referentiels_id`) REFERENCES `folia_folia_referentiels` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_bibliotheques`
+--
+ALTER TABLE `folia_folia_bibliotheques`
+  ADD CONSTRAINT `fk_bibliotheques_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `folia_folia_etudiants` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_blocs`
+--
+ALTER TABLE `folia_folia_blocs`
+  ADD CONSTRAINT `fk_blocs_activites` FOREIGN KEY (`activite_id`) REFERENCES `folia_folia_activites` (`id`),
+  ADD CONSTRAINT `fk_blocs_page` FOREIGN KEY (`page_id`) REFERENCES `folia_folia_pages` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_blocs_documents`
+--
+ALTER TABLE `folia_folia_blocs_documents`
+  ADD CONSTRAINT `fk_blocdoc_bloc` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_commentaires`
+--
+ALTER TABLE `folia_folia_commentaires`
+  ADD CONSTRAINT `fk_commentaires_auteurs_profs` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`),
+  ADD CONSTRAINT `fk_commentaires_auteurs_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`),
+  ADD CONSTRAINT `fk_commentaires_portfolios` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_documents`
+--
+ALTER TABLE `folia_folia_documents`
+  ADD CONSTRAINT `fk_doc_blocdoc` FOREIGN KEY (`blocs_documents_id`) REFERENCES `folia_folia_blocs_documents` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_etudiants`
+--
+ALTER TABLE `folia_folia_etudiants`
+  ADD CONSTRAINT `fk_etudiants_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_groupes`
+--
+ALTER TABLE `folia_folia_groupes`
+  ADD CONSTRAINT `folia_folia_groupes_ibfk_1` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_groupes_partages`
+--
+ALTER TABLE `folia_folia_groupes_partages`
+  ADD CONSTRAINT `fk_groupes_partages_groupes` FOREIGN KEY (`groupes_id`) REFERENCES `folia_folia_groupes` (`id`),
+  ADD CONSTRAINT `folia_folia_groupes_partages_ibfk_1` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_portfolios`
+--
+ALTER TABLE `folia_folia_portfolios`
+  ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `folia_folia_etudiants` (`id`),
+  ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY (`themes_id`) REFERENCES `folia_folia_themes` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_professeurs_classes`
+--
+ALTER TABLE `folia_folia_professeurs_classes`
+  ADD CONSTRAINT `fk_professeurs_classes_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`),
+  ADD CONSTRAINT `fk_professeurs_classes_professeurs` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_themes`
+--
+ALTER TABLE `folia_folia_themes`
+  ADD CONSTRAINT `fk_themes_bibliotheques` FOREIGN KEY (`lib_id`) REFERENCES `folia_folia_bibliotheques` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_tuteurs_etudiants`
+--
+ALTER TABLE `folia_folia_tuteurs_etudiants`
+  ADD CONSTRAINT `fk_tuteurs_etudiants_etudiants` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`),
+  ADD CONSTRAINT `fk_tuteurs_etudiants_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

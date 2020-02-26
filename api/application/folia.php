@@ -129,6 +129,7 @@ class AppFoliaWeb extends JApplicationCms
 					// echo ("DEBUG task_prefix =>" . $task_prefix . "< ");   // TEST/DEBUG
 					if (($task_prefix == "mes") or ($task_prefix == "mon") or ($task_prefix == "ma")) {
 						$email = $response["user"]->email;
+						$task = $twords[1];
 					} else {
 						$email = "";				
 					}
