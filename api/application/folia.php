@@ -122,6 +122,7 @@ class AppFoliaWeb extends JApplicationCms
 				// Recherche la vue éventuellement demandée :
 				if ($task !== ""){
 					$task_prefix = "";
+					$task_name = $task;
 					$twords = explode("_", $task);
 					if (count($twords) > 1){						
 						$task_prefix = $twords[0];
@@ -129,11 +130,11 @@ class AppFoliaWeb extends JApplicationCms
 					// echo ("DEBUG task_prefix =>" . $task_prefix . "< ");   // TEST/DEBUG
 					if (($task_prefix == "mes") or ($task_prefix == "mon") or ($task_prefix == "ma")) {
 						$email = $response["user"]->email;
-						$task = $twords[1];
+						$task_name= $twords[1];
 					} else {
 						$email = "";				
 					}
-					$response[$task] = $this->LoadViewResult($task, $id, $did, $email);
+					$response[$task] = $this->LoadViewResult($task_name, $id, $did, $email);
 					
 					if ($response[$task] == 0){
 						// Vue inexistante :
