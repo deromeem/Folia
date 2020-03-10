@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
  	<name>com_folia</name>
-	<creationDate>Novembre 2019</creationDate>
+	<creationDate>March 2020</creationDate>
 	<author>BTS-SIO2 SLAM</author>
 	<copyright>All rights reserved</copyright>
 	<license>GNU/GPL</license>
-	<version>0.2</version>
+	<version>1.0</version>
 	<description>com_folia_descr</description>
 
 	<install>
@@ -18,10 +18,43 @@
             <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
         </sql>
     </uninstall>
+	
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>folia.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_folia.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_folia.ini</language>
+	</languages>
 
 	<administration>
 		<menu>com_folia</menu>
 		<submenu>
+			<menu link="option=com_folia&amp;view=activites">com_folia_acivites</menu>
+			<menu link="option=com_folia&amp;view=blocs">com_folia_blocs</menu>
+			<menu link="option=com_folia&amp;view=bibliosThemes">com_folia_bibliosThemes</menu>
+			<menu link="option=com_folia&amp;view=bibliosEtenduesThemes">com_folia_bibliosEtenduesThemes</menu>
+			<menu link="option=com_folia&amp;view=blocsDocuments">com_folia_blocsDocuments</menu>
+			<menu link="option=com_folia&amp;view=classes">com_folia_classes</menu>
+			<menu link="option=com_folia&amp;view=commentaires">com_folia_commentaires</menu>
+			<menu link="option=com_folia&amp;view=documents">com_folia_documents</menu>
+			<menu link="option=com_folia&amp;view=etudiants">com_folia_etudiants</menu>
+			<menu link="option=com_folia&amp;view=groupes">com_folia_groupes</menu>
+			<menu link="option=com_folia&amp;view=groupesPartages">com_folia_groupesPartages</menu>
+			<menu link="option=com_folia&amp;view=pages">com_folia_pages</menu>
+			<menu link="option=com_folia&amp;view=portfolios">com_folia_portfolios</menu>
+			<menu link="option=com_folia&amp;view=professeurs">com_folia_professeurs</menu>
+			<menu link="option=com_folia&amp;view=professeursClasses">com_folia_professeursClasses</menu>
+			<menu link="option=com_folia&amp;view=referentiels">com_folia_referentiels</menu>
+			<menu link="option=com_folia&amp;view=themes">com_folia_themes</menu>
+			<menu link="option=com_folia&amp;view=tuteurs">com_folia_tuteurs</menu>
+			<menu link="option=com_folia&amp;view=tuteursEtudiants">com_folia_tuteursEtudiants</menu>
 			<menu link="option=com_folia&amp;view=utilisateurs">com_folia_utilisateurs</menu>
 		</submenu>
 		<files folder="admin">
@@ -33,10 +66,10 @@
 			<folder>tables</folder>
 			<folder>views</folder>
 			<filename>access.xml</filename>
-			<filename>folia.php</filename>
-			<filename>folia.xml</filename>
 			<filename>config.xml</filename>
 			<filename>controller.php</filename>
+			<filename>folia.php</filename>
+			<filename>folia.xml</filename>
 			<filename>index.html</filename>
 		</files>                
 		<languages folder="admin">

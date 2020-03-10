@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 28 nov. 2019 à 12:16
--- Version du serveur :  10.3.15-MariaDB
--- Version de PHP :  7.3.6
+-- Généré le :  mer. 26 fév. 2020 à 19:30
+-- Version du serveur :  10.1.26-MariaDB
+-- Version de PHP :  7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,34 +19,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `pref`
+-- Base de données :  `folia`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_activites`
+-- Structure de la table `#__folia_activites`
 --
 
-CREATE TABLE `folia_folia_activites` (
+CREATE TABLE `#__folia_activites` (
   `id` int(11) NOT NULL,
   `referentiels_id` int(11) NOT NULL,
   `nom` varchar(11) NOT NULL,
   `alias` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_activites`
+-- Déchargement des données de la table `#__folia_activites`
 --
 
-INSERT INTO `folia_folia_activites` (`id`, `referentiels_id`, `nom`, `alias`, `description`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+INSERT INTO `#__folia_activites` (`id`, `referentiels_id`, `nom`, `alias`, `description`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, 1, 'A1.1.1', '1a1.1.1', 'Analyse du cahier des charges d\'un service à produire', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (2, 1, 'A1.1.2', '1a1.1.2', 'Étude de l\'impact de l\'intégration d\'un service sur le système', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (3, 1, 'A1.1.3', '1a1.1.3', 'Étude des exigences liées à la qualité attendue d\'un service', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
@@ -101,155 +101,155 @@ INSERT INTO `folia_folia_activites` (`id`, `referentiels_id`, `nom`, `alias`, `d
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_bibliotheques`
+-- Structure de la table `#__folia_bibliotheques`
 --
 
-CREATE TABLE `folia_folia_bibliotheques` (
+CREATE TABLE `#__folia_bibliotheques` (
   `id` int(11) NOT NULL,
   `etudiant_id` int(11) NOT NULL,
   `nom` int(11) NOT NULL,
   `apercu` varchar(255) NOT NULL,
-  `avance` tinyint(1) NOT NULL DEFAULT 0,
+  `avance` tinyint(1) NOT NULL DEFAULT '0',
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_blocs`
+-- Structure de la table `#__folia_blocs`
 --
 
-CREATE TABLE `folia_folia_blocs` (
+CREATE TABLE `#__folia_blocs` (
   `id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
   `activite_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `texte` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_blocs_documents`
+-- Structure de la table `#__folia_blocs_documents`
 --
 
-CREATE TABLE `folia_folia_blocs_documents` (
+CREATE TABLE `#__folia_blocs_documents` (
   `id` int(11) NOT NULL,
   `blocs_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_classes`
+-- Structure de la table `#__folia_classes`
 --
 
-CREATE TABLE `folia_folia_classes` (
+CREATE TABLE `#__folia_classes` (
   `id` int(11) NOT NULL,
   `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `referentiel_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_classes`
+-- Déchargement des données de la table `#__folia_classes`
 --
 
-INSERT INTO `folia_folia_classes` (`id`, `libelle`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(2, 'BTS2 SIO', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+INSERT INTO `#__folia_classes` (`id`, `libelle`, `referentiel_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 0, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 'BTS2 SIO', 0, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_commentaires`
+-- Structure de la table `#__folia_commentaires`
 --
 
-CREATE TABLE `folia_folia_commentaires` (
+CREATE TABLE `#__folia_commentaires` (
   `id` int(11) NOT NULL,
   `libelle` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `professeurs_id` int(11) NOT NULL,
   `tuteurs_id` int(11) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_documents`
+-- Structure de la table `#__folia_documents`
 --
 
-CREATE TABLE `folia_folia_documents` (
+CREATE TABLE `#__folia_documents` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `format` varchar(255) NOT NULL,
   `blocs_documents_id` int(11) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_etudiants`
+-- Structure de la table `#__folia_etudiants`
 --
 
-CREATE TABLE `folia_folia_etudiants` (
+CREATE TABLE `#__folia_etudiants` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `avance` tinyint(1) NOT NULL DEFAULT 0,
+  `avance` tinyint(1) NOT NULL DEFAULT '0',
   `classes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_etudiants`
+-- Déchargement des données de la table `#__folia_etudiants`
 --
 
-INSERT INTO `folia_folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+INSERT INTO `#__folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', 0, 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (2, 'jemima.abeki@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (3, 'elyes.ayari@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
@@ -275,122 +275,131 @@ INSERT INTO `folia_folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `ali
 (23, 'thomas.rampnoux@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (24, 'christian.ung@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
 (25, 'william.wan@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(26, 'michel.yam@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+(26, 'michel.yam@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(28, 'mdupond@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', '0', '2020-02-26 16:00:00', '', 0),
+(29, 'pmartin@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', '0', '2020-02-26 16:00:00', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_groupes`
+-- Structure de la table `#__folia_groupes`
 --
 
-CREATE TABLE `folia_folia_groupes` (
+CREATE TABLE `#__folia_groupes` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `etudiants_id` int(11) NOT NULL DEFAULT '1',
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` varchar(255) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` varchar(255) NOT NULL DEFAULT '0',
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_groupes`
+-- Déchargement des données de la table `#__folia_groupes`
 --
 
-INSERT INTO `folia_folia_groupes` (`id`, `nom`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0);
+INSERT INTO `#__folia_groupes` (`id`, `nom`, `etudiants_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0),
+(2, 'DUPOND 1', 28, '', 1, '2020-02-26 16:00:00', '0', '0000-00-00 00:00:00', '0', 0),
+(3, 'DUPOND 2', 28, '', 1, '2020-02-26 16:01:00', '0', '0000-00-00 00:00:00', '0', 0),
+(4, 'DUPOND 3', 28, '', 1, '2020-02-26 16:02:00', '0', '0000-00-00 00:00:00', '0', 0),
+(5, 'MARTIN 1', 29, '', 1, '2020-02-26 16:10:00', '0', '0000-00-00 00:00:00', '0', 0),
+(6, 'MARTIN 2', 29, '', 1, '2020-02-26 16:20:00', '0', '0000-00-00 00:00:00', '0', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_groupes_partages`
+-- Structure de la table `#__folia_groupes_partages`
 --
 
-CREATE TABLE `folia_folia_groupes_partages` (
+CREATE TABLE `#__folia_groupes_partages` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) NOT NULL,
-  `groupes_id` int(11) NOT NULL,
+  `groupes_id` int(11) NOT NULL DEFAULT '1',
+  `utilisateurs_id` int(11) NOT NULL DEFAULT '1',
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_groupes_partages`
+-- Déchargement des données de la table `#__folia_groupes_partages`
 --
 
-INSERT INTO `folia_folia_groupes_partages` (`id`, `nom`, `groupes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', 1, '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0);
+INSERT INTO `#__folia_groupes_partages` (`id`, `nom`, `groupes_id`, `utilisateurs_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, 1, '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:01:00', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_pages`
+-- Structure de la table `#__folia_pages`
 --
 
-CREATE TABLE `folia_folia_pages` (
+CREATE TABLE `#__folia_pages` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_portfolios`
+-- Structure de la table `#__folia_portfolios`
 --
 
-CREATE TABLE `folia_folia_portfolios` (
+CREATE TABLE `#__folia_portfolios` (
   `id` int(11) NOT NULL,
   `libelle` text NOT NULL,
   `etudiant_id` int(11) NOT NULL,
   `themes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_professeurs`
+-- Structure de la table `#__folia_professeurs`
 --
 
-CREATE TABLE `folia_folia_professeurs` (
+CREATE TABLE `#__folia_professeurs` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `matiere` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_professeurs`
+-- Déchargement des données de la table `#__folia_professeurs`
 --
 
-INSERT INTO `folia_folia_professeurs` (`id`, `email`, `matiere`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+INSERT INTO `#__folia_professeurs` (`id`, `email`, `matiere`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', '', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
 (2, 'emmanuel.derome@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
 (3, 'marie-lise.simon@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', '', '2018-09-26 15:00:00', 0, 0),
@@ -399,501 +408,497 @@ INSERT INTO `folia_folia_professeurs` (`id`, `email`, `matiere`, `alias`, `publi
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_professeurs_classes`
+-- Structure de la table `#__folia_professeurs_classes`
 --
 
-CREATE TABLE `folia_folia_professeurs_classes` (
+CREATE TABLE `#__folia_professeurs_classes` (
   `professeurs_id` int(11) NOT NULL,
   `classes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_referentiels`
+-- Structure de la table `#__folia_referentiels`
 --
 
-CREATE TABLE `folia_folia_referentiels` (
+CREATE TABLE `#__folia_referentiels` (
   `id` int(11) NOT NULL,
   `nom` varchar(128) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` text NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_referentiels`
+-- Déchargement des données de la table `#__folia_referentiels`
 --
 
-INSERT INTO `folia_folia_referentiels` (`id`, `nom`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+INSERT INTO `#__folia_referentiels` (`id`, `nom`, `description`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, 'BTS SIO v1', '1ere version du BTS SIO', 'btssiov1', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '0', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_themes`
+-- Structure de la table `#__folia_themes`
 --
 
-CREATE TABLE `folia_folia_themes` (
+CREATE TABLE `#__folia_themes` (
   `id` int(11) NOT NULL,
   `lib_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_tuteurs`
+-- Structure de la table `#__folia_tuteurs`
 --
 
-CREATE TABLE `folia_folia_tuteurs` (
+CREATE TABLE `#__folia_tuteurs` (
   `id` int(11) NOT NULL,
   `societe` varchar(255) NOT NULL,
   `service` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_referentiels`
+-- Déchargement des données de la table `#__folia_tuteurs`
 --
 
-INSERT INTO `folia_folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'societe1', 'service1', 'william.wan@etudiants.louis-armand.paris', 'william.wan@etudiants.louis-armand.paris', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '0', 0);
+INSERT INTO `#__folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 'societe1', 'service1', 'william.wan@etudiants.louis-armand.paris', 'william.wan@etudiants.louis-armand.paris', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_tuteurs_etudiants`
+-- Structure de la table `#__folia_tuteurs_etudiants`
 --
 
-CREATE TABLE `folia_folia_tuteurs_etudiants` (
+CREATE TABLE `#__folia_tuteurs_etudiants` (
   `tuteurs_id` int(11) NOT NULL,
   `etudiants_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `folia_folia_utilisateurs`
+-- Structure de la table `#__folia_utilisateurs`
 --
 
-CREATE TABLE `folia_folia_utilisateurs` (
+CREATE TABLE `#__folia_utilisateurs` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `prenom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '',
-  `groupes_partages_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `folia_folia_utilisateurs`
+-- Déchargement des données de la table `#__folia_utilisateurs`
 --
 
-INSERT INTO `folia_folia_utilisateurs` (`id`, `nom`, `prenom`, `email`, `groupes_partages_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', '', 1, '', 0, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(2, 'ABEKI', 'Jemima Sofia', 'jemima.abeki@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(3, 'AYARI', 'Elyes', 'elyes.ayari@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(4, 'BOURDIN', 'Etienne', 'etienne.bourdin@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(5, 'CHAHED', 'Sabri', 'sabri.chahed@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(6, 'CHAVEZ RAMIREZ', 'Rafhael', 'rafhael.chavez-ramirez@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(7, 'DOMINGOS DAUPIN', 'Tracy', 'tracy.domingos-daupin@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(8, 'EL GUABDAOUI', 'Anis', 'anis.el-guabdaoui@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(9, 'ETIENNE', 'Olivier', 'olivier.etienne@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(10, 'ETINAULT', 'Jordan', 'jordan.etinault@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(11, 'GUERROUMI', 'Zineddine', 'zineddine.guerroumi@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(12, 'HUBERT', 'Ruben', 'ruben.hubert@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(13, 'KADHI', 'Yannis', 'yannis.kadhi@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(14, 'KHANNOUSSI', 'Hamza', 'hamza.khannoussi@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(15, 'LECLERC', 'Caroline', 'caroline.leclerc@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(16, 'LECREROT', 'David', 'david.lencrerot@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(17, 'LIMBREY', 'Iannis', 'iannis.limbrey@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(18, 'MARQUES', 'Adrien', 'adrien.marques@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(19, 'MEHOR', 'Akram', 'akram.mehor@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(20, 'MERITTE', 'Julien', 'julien.meritte@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(21, 'MOKHTARI', 'Ahmed-Reda', 'ahmed-reda.mokhtari@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(22, 'NDJIP', 'Sylvain', 'sylvain.ndjip@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(23, 'RAMPNOUX', 'Thomas', 'thomas.rampnoux@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(24, 'UNG', 'Christian Hugo', 'christian.ung@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(25, 'WAN', 'William', 'william.wan@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(26, 'YAM', 'Michel', 'michel.yam@etudiants.louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(27, 'DEROME', 'Emmanuel', 'emmanuel.derome@louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(28, 'SIMON', 'Marie-Lise', 'marie-lise.simon@louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
-(29, 'ROOS', 'Claude', 'claude.roos@louis-armand.paris', 1, '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0);
+INSERT INTO `#__folia_utilisateurs` (`id`, `nom`, `prenom`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', '', '', 0, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(2, 'ABEKI', 'Jemima Sofia', 'jemima.abeki@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(3, 'AYARI', 'Elyes', 'elyes.ayari@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(4, 'BOURDIN', 'Etienne', 'etienne.bourdin@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(5, 'CHAHED', 'Sabri', 'sabri.chahed@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(6, 'CHAVEZ RAMIREZ', 'Rafhael', 'rafhael.chavez-ramirez@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(7, 'DOMINGOS DAUPIN', 'Tracy', 'tracy.domingos-daupin@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(8, 'EL GUABDAOUI', 'Anis', 'anis.el-guabdaoui@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(9, 'ETIENNE', 'Olivier', 'olivier.etienne@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(10, 'ETINAULT', 'Jordan', 'jordan.etinault@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(11, 'GUERROUMI', 'Zineddine', 'zineddine.guerroumi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(12, 'HUBERT', 'Ruben', 'ruben.hubert@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(13, 'KADHI', 'Yannis', 'yannis.kadhi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(14, 'KHANNOUSSI', 'Hamza', 'hamza.khannoussi@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(15, 'LECLERC', 'Caroline', 'caroline.leclerc@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(16, 'LECREROT', 'David', 'david.lencrerot@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(17, 'LIMBREY', 'Iannis', 'iannis.limbrey@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(18, 'MARQUES', 'Adrien', 'adrien.marques@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(19, 'MEHOR', 'Akram', 'akram.mehor@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(20, 'MERITTE', 'Julien', 'julien.meritte@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(21, 'MOKHTARI', 'Ahmed-Reda', 'ahmed-reda.mokhtari@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(22, 'NDJIP', 'Sylvain', 'sylvain.ndjip@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(23, 'RAMPNOUX', 'Thomas', 'thomas.rampnoux@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(24, 'UNG', 'Christian Hugo', 'christian.ung@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(25, 'WAN', 'William', 'william.wan@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(26, 'YAM', 'Michel', 'michel.yam@etudiants.louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(27, 'DEROME', 'Emmanuel', 'emmanuel.derome@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(28, 'SIMON', 'Marie-Lise', 'marie-lise.simon@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(29, 'ROOS', 'Claude', 'claude.roos@louis-armand.paris', '', 1, '2018-09-26 15:00:00', '0', '2018-09-26 15:01:00', '', 0),
+(30, 'DUPOND', 'Marcel', 'mdupond@folia.fr', '', 1, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '', 0),
+(31, 'MARTIN', 'Pierre', 'pmartin@folia.fr', '', 1, '2020-02-26 16:26:18', '690', '2020-02-26 16:27:00', '690', 0);
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `folia_folia_activites`
+-- Index pour la table `#__folia_activites`
 --
-ALTER TABLE `folia_folia_activites`
+ALTER TABLE `#__folia_activites`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idReferentiels` (`referentiels_id`);
 
 --
--- Index pour la table `folia_folia_bibliotheques`
+-- Index pour la table `#__folia_bibliotheques`
 --
-ALTER TABLE `folia_folia_bibliotheques`
+ALTER TABLE `#__folia_bibliotheques`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idetudiant` (`etudiant_id`);
 
 --
--- Index pour la table `folia_folia_blocs`
+-- Index pour la table `#__folia_blocs`
 --
-ALTER TABLE `folia_folia_blocs`
+ALTER TABLE `#__folia_blocs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idPage` (`page_id`),
   ADD KEY `idActivite` (`activite_id`);
 
 --
--- Index pour la table `folia_folia_blocs_documents`
+-- Index pour la table `#__folia_blocs_documents`
 --
-ALTER TABLE `folia_folia_blocs_documents`
+ALTER TABLE `#__folia_blocs_documents`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idBloc` (`blocs_id`);
 
 --
--- Index pour la table `folia_folia_classes`
+-- Index pour la table `#__folia_classes`
 --
-ALTER TABLE `folia_folia_classes`
+ALTER TABLE `#__folia_classes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `folia_folia_commentaires`
+-- Index pour la table `#__folia_commentaires`
 --
-ALTER TABLE `folia_folia_commentaires`
+ALTER TABLE `#__folia_commentaires`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_commentaires_auteurs_profs` (`professeurs_id`),
   ADD KEY `fk_commentaires_auteurs_tuteurs` (`tuteurs_id`),
   ADD KEY `fk_commentaires_portfolios` (`portfolios_id`);
 
 --
--- Index pour la table `folia_folia_documents`
+-- Index pour la table `#__folia_documents`
 --
-ALTER TABLE `folia_folia_documents`
+ALTER TABLE `#__folia_documents`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idBlocDoc` (`blocs_documents_id`);
 
 --
--- Index pour la table `folia_folia_etudiants`
+-- Index pour la table `#__folia_etudiants`
 --
-ALTER TABLE `folia_folia_etudiants`
+ALTER TABLE `#__folia_etudiants`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idclasses` (`classes_id`);
 
 --
--- Index pour la table `folia_folia_groupes`
+-- Index pour la table `#__folia_groupes`
 --
-ALTER TABLE `folia_folia_groupes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `folia_folia_groupes_partages`
---
-ALTER TABLE `folia_folia_groupes_partages`
+ALTER TABLE `#__folia_groupes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_groupes_partages_groupes` (`groupes_id`);
+  ADD KEY `fk_groupes_etudiants` (`etudiants_id`) USING BTREE;
 
 --
--- Index pour la table `folia_folia_pages`
+-- Index pour la table `#__folia_groupes_partages`
 --
-ALTER TABLE `folia_folia_pages`
+ALTER TABLE `#__folia_groupes_partages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_groupes_partages_groupes` (`groupes_id`),
+  ADD KEY `fk_groupes_partages_utilisateurs` (`utilisateurs_id`) USING BTREE;
+
+--
+-- Index pour la table `#__folia_pages`
+--
+ALTER TABLE `#__folia_pages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `folia_folia_portfolios`
+-- Index pour la table `#__folia_portfolios`
 --
-ALTER TABLE `folia_folia_portfolios`
+ALTER TABLE `#__folia_portfolios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idthemes` (`themes_id`),
   ADD KEY `idetudiant` (`etudiant_id`);
 
 --
--- Index pour la table `folia_folia_professeurs`
+-- Index pour la table `#__folia_professeurs`
 --
-ALTER TABLE `folia_folia_professeurs`
+ALTER TABLE `#__folia_professeurs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `folia_folia_professeurs_classes`
+-- Index pour la table `#__folia_professeurs_classes`
 --
-ALTER TABLE `folia_folia_professeurs_classes`
+ALTER TABLE `#__folia_professeurs_classes`
   ADD PRIMARY KEY (`professeurs_id`,`classes_id`),
   ADD KEY `fk_professeurs_classes_classes` (`classes_id`);
-  
+
 --
--- Index pour la table `folia_folia_groupes`
+-- Index pour la table `#__folia_referentiels`
 --
-ALTER TABLE `folia_folia_referentiels`
+ALTER TABLE `#__folia_referentiels`
   ADD PRIMARY KEY (`id`);
-  
+
 --
--- Index pour la table `folia_folia_themes`
+-- Index pour la table `#__folia_themes`
 --
-ALTER TABLE `folia_folia_themes`
+ALTER TABLE `#__folia_themes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idlib` (`lib_id`);
 
 --
--- Index pour la table `folia_folia_tuteurs`
+-- Index pour la table `#__folia_tuteurs`
 --
-ALTER TABLE `folia_folia_tuteurs`
+ALTER TABLE `#__folia_tuteurs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `folia_folia_tuteurs_etudiants`
+-- Index pour la table `#__folia_tuteurs_etudiants`
 --
-ALTER TABLE `folia_folia_tuteurs_etudiants`
+ALTER TABLE `#__folia_tuteurs_etudiants`
   ADD PRIMARY KEY (`tuteurs_id`,`etudiants_id`),
   ADD KEY `fk_tuteurs_etudiants_etudiants` (`etudiants_id`);
 
 --
--- Index pour la table `folia_folia_utilisateurs`
+-- Index pour la table `#__folia_utilisateurs`
 --
-ALTER TABLE `folia_folia_utilisateurs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_utilisateurs_groupes_partages` (`groupes_partages_id`);
+ALTER TABLE `#__folia_utilisateurs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_activites`
+-- AUTO_INCREMENT pour la table `#__folia_activites`
 --
-ALTER TABLE `folia_folia_activites`
+ALTER TABLE `#__folia_activites`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_bibliotheques`
+-- AUTO_INCREMENT pour la table `#__folia_bibliotheques`
 --
-ALTER TABLE `folia_folia_bibliotheques`
+ALTER TABLE `#__folia_bibliotheques`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_blocs`
+-- AUTO_INCREMENT pour la table `#__folia_blocs`
 --
-ALTER TABLE `folia_folia_blocs`
+ALTER TABLE `#__folia_blocs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_blocs_documents`
+-- AUTO_INCREMENT pour la table `#__folia_blocs_documents`
 --
-ALTER TABLE `folia_folia_blocs_documents`
+ALTER TABLE `#__folia_blocs_documents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_classes`
+-- AUTO_INCREMENT pour la table `#__folia_classes`
 --
-ALTER TABLE `folia_folia_classes`
+ALTER TABLE `#__folia_classes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_commentaires`
+-- AUTO_INCREMENT pour la table `#__folia_commentaires`
 --
-ALTER TABLE `folia_folia_commentaires`
+ALTER TABLE `#__folia_commentaires`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_documents`
+-- AUTO_INCREMENT pour la table `#__folia_documents`
 --
-ALTER TABLE `folia_folia_documents`
+ALTER TABLE `#__folia_documents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_etudiants`
+-- AUTO_INCREMENT pour la table `#__folia_etudiants`
 --
-ALTER TABLE `folia_folia_etudiants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+ALTER TABLE `#__folia_etudiants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_groupes`
+-- AUTO_INCREMENT pour la table `#__folia_groupes`
 --
-ALTER TABLE `folia_folia_groupes`
+ALTER TABLE `#__folia_groupes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `#__folia_groupes_partages`
+--
+ALTER TABLE `#__folia_groupes_partages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_groupes_partages`
+-- AUTO_INCREMENT pour la table `#__folia_pages`
 --
-ALTER TABLE `folia_folia_groupes_partages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `folia_folia_pages`
---
-ALTER TABLE `folia_folia_pages`
+ALTER TABLE `#__folia_pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_portfolios`
+-- AUTO_INCREMENT pour la table `#__folia_portfolios`
 --
-ALTER TABLE `folia_folia_portfolios`
+ALTER TABLE `#__folia_portfolios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_professeurs`
+-- AUTO_INCREMENT pour la table `#__folia_professeurs`
 --
-ALTER TABLE `folia_folia_professeurs`
+ALTER TABLE `#__folia_professeurs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_referentiels`
+-- AUTO_INCREMENT pour la table `#__folia_referentiels`
 --
-ALTER TABLE `folia_folia_referentiels`
+ALTER TABLE `#__folia_referentiels`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_themes`
+-- AUTO_INCREMENT pour la table `#__folia_themes`
 --
-ALTER TABLE `folia_folia_themes`
+ALTER TABLE `#__folia_themes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_tuteurs`
+-- AUTO_INCREMENT pour la table `#__folia_tuteurs`
 --
-ALTER TABLE `folia_folia_tuteurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `#__folia_tuteurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `folia_folia_utilisateurs`
+-- AUTO_INCREMENT pour la table `#__folia_utilisateurs`
 --
-ALTER TABLE `folia_folia_utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+ALTER TABLE `#__folia_utilisateurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Contraintes pour les tables déchargées
 --
 
 --
--- Contraintes pour la table `folia_folia_activites`
+-- Contraintes pour la table `#__folia_activites`
 --
-ALTER TABLE `folia_folia_activites`
-  ADD CONSTRAINT `fk_activites_referentiels` FOREIGN KEY (`referentiels_id`) REFERENCES `folia_folia_referentiels` (`id`);
+ALTER TABLE `#__folia_activites`
+  ADD CONSTRAINT `fk_activites_referentiels` FOREIGN KEY (`referentiels_id`) REFERENCES `#__folia_referentiels` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_bibliotheques`
+-- Contraintes pour la table `#__folia_bibliotheques`
 --
-ALTER TABLE `folia_folia_bibliotheques`
-  ADD CONSTRAINT `fk_bibliotheques_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `folia_folia_etudiants` (`id`);
+ALTER TABLE `#__folia_bibliotheques`
+  ADD CONSTRAINT `fk_bibliotheques_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `#__folia_etudiants` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_blocs`
+-- Contraintes pour la table `#__folia_blocs`
 --
-ALTER TABLE `folia_folia_blocs`
-  ADD CONSTRAINT `fk_blocs_activites` FOREIGN KEY (`activite_id`) REFERENCES `folia_folia_activites` (`id`),
-  ADD CONSTRAINT `fk_blocs_page` FOREIGN KEY (`page_id`) REFERENCES `folia_folia_pages` (`id`);
+ALTER TABLE `#__folia_blocs`
+  ADD CONSTRAINT `fk_blocs_activites` FOREIGN KEY (`activite_id`) REFERENCES `#__folia_activites` (`id`),
+  ADD CONSTRAINT `fk_blocs_page` FOREIGN KEY (`page_id`) REFERENCES `#__folia_pages` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_blocs_documents`
+-- Contraintes pour la table `#__folia_blocs_documents`
 --
-ALTER TABLE `folia_folia_blocs_documents`
-  ADD CONSTRAINT `fk_blocdoc_bloc` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`);
+ALTER TABLE `#__folia_blocs_documents`
+  ADD CONSTRAINT `fk_blocdoc_bloc` FOREIGN KEY (`blocs_id`) REFERENCES `#__folia_blocs` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_commentaires`
+-- Contraintes pour la table `#__folia_commentaires`
 --
-ALTER TABLE `folia_folia_commentaires`
-  ADD CONSTRAINT `fk_commentaires_auteurs_profs` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`),
-  ADD CONSTRAINT `fk_commentaires_auteurs_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`),
-  ADD CONSTRAINT `fk_commentaires_portfolios` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
+ALTER TABLE `#__folia_commentaires`
+  ADD CONSTRAINT `fk_commentaires_auteurs_profs` FOREIGN KEY (`professeurs_id`) REFERENCES `#__folia_professeurs` (`id`),
+  ADD CONSTRAINT `fk_commentaires_auteurs_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `#__folia_tuteurs` (`id`),
+  ADD CONSTRAINT `fk_commentaires_portfolios` FOREIGN KEY (`portfolios_id`) REFERENCES `#__folia_portfolios` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_documents`
+-- Contraintes pour la table `#__folia_documents`
 --
-ALTER TABLE `folia_folia_documents`
-  ADD CONSTRAINT `fk_doc_blocdoc` FOREIGN KEY (`blocs_documents_id`) REFERENCES `folia_folia_blocs_documents` (`id`);
+ALTER TABLE `#__folia_documents`
+  ADD CONSTRAINT `fk_doc_blocdoc` FOREIGN KEY (`blocs_documents_id`) REFERENCES `#__folia_blocs_documents` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_etudiants`
+-- Contraintes pour la table `#__folia_etudiants`
 --
-ALTER TABLE `folia_folia_etudiants`
-  ADD CONSTRAINT `fk_etudiants_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`);
+ALTER TABLE `#__folia_etudiants`
+  ADD CONSTRAINT `fk_etudiants_classes` FOREIGN KEY (`classes_id`) REFERENCES `#__folia_classes` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_groupes_partages`
+-- Contraintes pour la table `#__folia_groupes`
 --
-ALTER TABLE `folia_folia_groupes_partages`
-  ADD CONSTRAINT `fk_groupes_partages_groupes` FOREIGN KEY (`groupes_id`) REFERENCES `folia_folia_groupes` (`id`);
+ALTER TABLE `#__folia_groupes`
+  ADD CONSTRAINT `#__folia_groupes_ibfk_1` FOREIGN KEY (`etudiants_id`) REFERENCES `#__folia_etudiants` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_portfolios`
+-- Contraintes pour la table `#__folia_groupes_partages`
 --
-ALTER TABLE `folia_folia_portfolios`
-  ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `folia_folia_etudiants` (`id`),
-  ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY (`themes_id`) REFERENCES `folia_folia_themes` (`id`);
+ALTER TABLE `#__folia_groupes_partages`
+  ADD CONSTRAINT `fk_groupes_partages_groupes` FOREIGN KEY (`groupes_id`) REFERENCES `#__folia_groupes` (`id`),
+  ADD CONSTRAINT `#__folia_groupes_partages_ibfk_1` FOREIGN KEY (`utilisateurs_id`) REFERENCES `#__folia_utilisateurs` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_professeurs_classes`
+-- Contraintes pour la table `#__folia_portfolios`
 --
-ALTER TABLE `folia_folia_professeurs_classes`
-  ADD CONSTRAINT `fk_professeurs_classes_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`),
-  ADD CONSTRAINT `fk_professeurs_classes_professeurs` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`);
+ALTER TABLE `#__folia_portfolios`
+  ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `#__folia_etudiants` (`id`),
+  ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY (`themes_id`) REFERENCES `#__folia_themes` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_referentiels`
+-- Contraintes pour la table `#__folia_professeurs_classes`
 --
--- ALTER TABLE `folia_folia_referentiels`
---  ADD CONSTRAINT `fk_referentiels_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`);
---
+ALTER TABLE `#__folia_professeurs_classes`
+  ADD CONSTRAINT `fk_professeurs_classes_classes` FOREIGN KEY (`classes_id`) REFERENCES `#__folia_classes` (`id`),
+  ADD CONSTRAINT `fk_professeurs_classes_professeurs` FOREIGN KEY (`professeurs_id`) REFERENCES `#__folia_professeurs` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_themes`
+-- Contraintes pour la table `#__folia_themes`
 --
-ALTER TABLE `folia_folia_themes`
-  ADD CONSTRAINT `fk_themes_bibliotheques` FOREIGN KEY (`lib_id`) REFERENCES `folia_folia_bibliotheques` (`id`);
+ALTER TABLE `#__folia_themes`
+  ADD CONSTRAINT `fk_themes_bibliotheques` FOREIGN KEY (`lib_id`) REFERENCES `#__folia_bibliotheques` (`id`);
 
 --
--- Contraintes pour la table `folia_folia_tuteurs_etudiants`
+-- Contraintes pour la table `#__folia_tuteurs_etudiants`
 --
-ALTER TABLE `folia_folia_tuteurs_etudiants`
-  ADD CONSTRAINT `fk_tuteurs_etudiants_etudiants` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`),
-  ADD CONSTRAINT `fk_tuteurs_etudiants_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`);
-
---
--- Contraintes pour la table `folia_folia_utilisateurs`
---
-ALTER TABLE `folia_folia_utilisateurs`
-  ADD CONSTRAINT `fk_utilisateurs_groupes_partages` FOREIGN KEY (`groupes_partages_id`) REFERENCES `folia_folia_groupes_partages` (`id`);
+ALTER TABLE `#__folia_tuteurs_etudiants`
+  ADD CONSTRAINT `fk_tuteurs_etudiants_etudiants` FOREIGN KEY (`etudiants_id`) REFERENCES `#__folia_etudiants` (`id`),
+  ADD CONSTRAINT `fk_tuteurs_etudiants_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `#__folia_tuteurs` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
