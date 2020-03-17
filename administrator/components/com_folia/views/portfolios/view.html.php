@@ -31,7 +31,7 @@ class FoliaViewPortfolios extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		portfoliosHelper::addSubmenu('Portfolios');
+		utilisateurHelper::addSubmenu('Portfolios');
 		// prépare et affiche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();
