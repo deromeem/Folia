@@ -5,17 +5,14 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 ?>
 
-	<tr>
-        <th width="5%" class="hidden-phone">
-			<?php echo JHtml::_('grid.checkall'); ?>
-        </th>                   
-        <th width="30%">
+	<tr>                
+        <th width="60%">
 			<?php echo JHtml::_('grid.sort', 'COM_FOLIA_PORTFOLIOS_LIBELLE', 'p.libelle', $listDirn, $listOrder) ?>
         </th>
-        <th width="30%" class="nowrap">
+        <th width="10%" class="nowrap">
 			<?php echo JHtml::_('grid.sort', 'COM_FOLIA_PORTFOLIOS_PRENOM', 'p.etudiant_id', $listDirn, $listOrder) ?>
         </th>
-		<th width="5%" style="min-width:55px" class="nowrap center hidden-phone">
+		<th width="10%" style="min-width:55px" class="nowrap center hidden-phone">
 			<?php echo JHtml::_('grid.sort', 'Publié', 'u.published', $listDirn, $listOrder) ?>
         </th>
         <th width="10%" style="min-width:120px" class="nowrap center hidden-tablet hidden-phone">
