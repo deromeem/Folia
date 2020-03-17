@@ -36,7 +36,7 @@ class FoliaModelPortfolios extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('p.id, p.libelle, p.etudiant_id, u.themes_id, p.alias, p.published, p.hits, p.modified');
+		$query->select('p.id, p.libelle, p.etudiant_id, p.themes_id, p.alias, p.published, p.hits, p.modified');
 		$query->from('#__folia_portfolios p');
 
 		// filtre de recherche rapide textuelle
