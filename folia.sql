@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 26 fév. 2020 à 19:27
--- Version du serveur :  10.1.26-MariaDB
--- Version de PHP :  7.1.9
+-- Généré le :  mar. 10 mars 2020 à 16:38
+-- Version du serveur :  10.3.15-MariaDB
+-- Version de PHP :  7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,8 +34,8 @@ CREATE TABLE `folia_action_logs` (
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `log_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `item_id` int(11) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `item_id` int(11) NOT NULL DEFAULT 0,
   `ip_address` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0.0.0.0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -112,7 +112,19 @@ INSERT INTO `folia_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (66, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"692\",\"username\":\"pmartin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-26 16:49:40', 'com_users', 692, 0, 'COM_ACTIONLOGS_DISABLED'),
 (67, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"692\",\"userid\":\"692\",\"username\":\"pmartin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-26 16:49:46', 'com_users', 692, 692, 'COM_ACTIONLOGS_DISABLED'),
 (68, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 17:06:16', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
-(69, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 18:19:23', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED');
+(69, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-26 18:19:23', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(70, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-27 09:51:04', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(71, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"692\",\"username\":\"pmartin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=692\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-02-27 09:51:39', 'com_users', 692, 0, 'COM_ACTIONLOGS_DISABLED'),
+(72, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-02-27 10:17:38', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(73, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-03-03 15:07:56', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(74, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-03-10 13:56:50', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(75, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-03-10 14:02:40', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(76, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-03-10 14:02:49', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(77, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-03-10 14:04:18', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED'),
+(78, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-03-10 14:04:44', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(79, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":\"14\",\"title\":\"com_menus\",\"extension_name\":\"com_menus\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=14\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-03-10 14:06:26', 'com_config.component', 690, 14, 'COM_ACTIONLOGS_DISABLED'),
+(80, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":\"10001\",\"title\":\"com_annuaire\",\"extension_name\":\"com_annuaire\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=10001\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-03-10 14:08:15', 'com_config.component', 690, 10001, 'COM_ACTIONLOGS_DISABLED'),
+(82, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-03-10 15:35:09', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -211,7 +223,7 @@ INSERT INTO `folia_action_log_config` (`id`, `type_title`, `type_alias`, `id_hol
 CREATE TABLE `folia_annuaire_civilites` (
   `id` int(11) NOT NULL,
   `civilite` varchar(20) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0'
+  `published` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -234,20 +246,20 @@ CREATE TABLE `folia_annuaire_contacts` (
   `nom` varchar(50) NOT NULL,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `prenom` varchar(50) NOT NULL,
-  `civilites_id` int(11) NOT NULL DEFAULT '1',
-  `typescontacts_id` int(11) NOT NULL DEFAULT '1',
-  `entreprises_id` int(11) NOT NULL DEFAULT '1',
+  `civilites_id` int(11) NOT NULL DEFAULT 1,
+  `typescontacts_id` int(11) NOT NULL DEFAULT 1,
+  `entreprises_id` int(11) NOT NULL DEFAULT 1,
   `fonction` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `mobile` varchar(20) NOT NULL,
   `tel` varchar(20) NOT NULL,
   `commentaire` text NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT '0',
+  `created_by` int(11) NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(11) NOT NULL DEFAULT '0',
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `modified_by` int(11) NOT NULL DEFAULT 0,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -256,7 +268,7 @@ CREATE TABLE `folia_annuaire_contacts` (
 
 INSERT INTO `folia_annuaire_contacts` (`id`, `nom`, `alias`, `prenom`, `civilites_id`, `typescontacts_id`, `entreprises_id`, `fonction`, `email`, `mobile`, `tel`, `commentaire`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', '', '', 1, 1, 1, '', '', '', '', '', 0, '2015-12-17 10:57:13', 690, '0000-00-00 00:00:00', 0, 0),
-(2, 'DUPONT', 'dupont', 'Pierre', 2, 2, 3, '', '', '', '', '', 1, '2016-03-02 16:15:35', 690, '2019-11-27 17:59:01', 690, 0),
+(2, 'DUPONTz', 'dupont', 'Pierre', 2, 2, 3, '', '', '', '', '', 1, '2016-03-02 16:15:35', 690, '2020-03-10 14:08:27', 691, 0),
 (3, 'SMITH', 'smith', 'Léa', 3, 2, 5, '', '', '', '', '', 1, '2016-03-02 16:16:17', 690, '2019-11-27 17:59:21', 690, 0);
 
 -- --------------------------------------------------------
@@ -279,14 +291,14 @@ CREATE TABLE `folia_annuaire_entreprises` (
   `adrRue` varchar(50) NOT NULL,
   `adrVille` varchar(50) NOT NULL,
   `adrCP` varchar(10) NOT NULL,
-  `pays_id` int(11) NOT NULL DEFAULT '1',
+  `pays_id` int(11) NOT NULL DEFAULT 1,
   `commentaire` text NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) NOT NULL DEFAULT '0',
+  `created_by` int(11) NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(11) NOT NULL DEFAULT '0',
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `modified_by` int(11) NOT NULL DEFAULT 0,
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -309,7 +321,7 @@ INSERT INTO `folia_annuaire_entreprises` (`id`, `nom`, `alias`, `logo`, `activit
 CREATE TABLE `folia_annuaire_pays` (
   `id` int(11) NOT NULL,
   `pays` varchar(50) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0'
+  `published` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -335,7 +347,7 @@ INSERT INTO `folia_annuaire_pays` (`id`, `pays`, `published`) VALUES
 CREATE TABLE `folia_annuaire_typescontacts` (
   `id` int(11) NOT NULL,
   `typeContact` varchar(50) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0'
+  `published` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -355,9 +367,9 @@ INSERT INTO `folia_annuaire_typescontacts` (`id`, `typeContact`, `published`) VA
 
 CREATE TABLE `folia_assets` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
-  `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
-  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
+  `parent_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set parent.',
+  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
   `level` int(10) UNSIGNED NOT NULL COMMENT 'The cached level in the nested tree.',
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The unique name for the asset.\n',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
@@ -384,7 +396,7 @@ INSERT INTO `folia_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (13, 1, 37, 38, 1, 'com_mailto', 'com_mailto', '{}'),
 (14, 1, 39, 40, 1, 'com_massmail', 'com_massmail', '{}'),
 (15, 1, 41, 42, 1, 'com_media', 'com_media', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}'),
-(16, 1, 43, 48, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1}}'),
+(16, 1, 43, 48, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1},\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
 (17, 1, 49, 50, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
 (18, 1, 51, 90, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
 (19, 1, 91, 94, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
@@ -430,10 +442,10 @@ INSERT INTO `folia_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (61, 27, 21, 22, 3, 'com_content.article.2', 'Portfolios', '{}'),
 (62, 27, 23, 24, 3, 'com_content.article.3', 'Guide', '{}'),
 (63, 27, 25, 26, 3, 'com_content.article.4', 'Exemples', '{}'),
-(65, 1, 125, 126, 1, 'com_annuaire', 'com_annuaire', '{}'),
-(66, 1, 127, 128, 1, 'com_folia', 'com_folia', '{}'),
+(65, 1, 125, 126, 1, 'com_annuaire', 'com_annuaire', '{\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
 (67, 18, 88, 89, 2, 'com_modules.module.90', 'Menu Annuaire', '{}'),
-(68, 16, 46, 47, 2, 'com_menus.menu.2', 'Menu Annuaire', '{}');
+(68, 16, 46, 47, 2, 'com_menus.menu.2', 'Menu Annuaire', '{}'),
+(69, 1, 127, 128, 1, 'com_folia', 'com_folia', '{}');
 
 -- --------------------------------------------------------
 
@@ -455,39 +467,39 @@ CREATE TABLE `folia_associations` (
 
 CREATE TABLE `folia_banners` (
   `id` int(11) NOT NULL,
-  `cid` int(11) NOT NULL DEFAULT '0',
-  `type` int(11) NOT NULL DEFAULT '0',
+  `cid` int(11) NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT 0,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `imptotal` int(11) NOT NULL DEFAULT '0',
-  `impmade` int(11) NOT NULL DEFAULT '0',
-  `clicks` int(11) NOT NULL DEFAULT '0',
+  `imptotal` int(11) NOT NULL DEFAULT 0,
+  `impmade` int(11) NOT NULL DEFAULT 0,
+  `clicks` int(11) NOT NULL DEFAULT 0,
   `clickurl` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `state` tinyint(3) NOT NULL DEFAULT 0,
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `custombannercode` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sticky` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `sticky` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `own_prefix` tinyint(1) NOT NULL DEFAULT '0',
+  `own_prefix` tinyint(1) NOT NULL DEFAULT 0,
   `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
+  `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
+  `track_impressions` tinyint(4) NOT NULL DEFAULT -1,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `reset` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -502,15 +514,15 @@ CREATE TABLE `folia_banner_clients` (
   `contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `extrainfo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `state` tinyint(3) NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `own_prefix` tinyint(4) NOT NULL DEFAULT '0',
+  `own_prefix` tinyint(4) NOT NULL DEFAULT 0,
   `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `purchase_type` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_clicks` tinyint(4) NOT NULL DEFAULT '-1',
-  `track_impressions` tinyint(4) NOT NULL DEFAULT '-1'
+  `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
+  `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
+  `track_impressions` tinyint(4) NOT NULL DEFAULT -1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -523,7 +535,7 @@ CREATE TABLE `folia_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) UNSIGNED NOT NULL,
   `banner_id` int(10) UNSIGNED NOT NULL,
-  `count` int(10) UNSIGNED NOT NULL DEFAULT '0'
+  `count` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -534,32 +546,32 @@ CREATE TABLE `folia_banner_tracks` (
 
 CREATE TABLE `folia_categories` (
   `id` int(11) NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `lft` int(11) NOT NULL DEFAULT '0',
-  `rgt` int(11) NOT NULL DEFAULT '0',
-  `level` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `lft` int(11) NOT NULL DEFAULT 0,
+  `rgt` int(11) NOT NULL DEFAULT 0,
+  `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The meta description for the page.',
   `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The meta keywords for the page.',
   `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -585,25 +597,25 @@ CREATE TABLE `folia_contact_details` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `con_position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci,
+  `address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `suburb` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `state` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `postcode` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `misc` mediumtext COLLATE utf8mb4_unicode_ci,
+  `misc` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `default_con` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `default_con` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `catid` int(11) NOT NULL DEFAULT '0',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `catid` int(11) NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `webpage` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `sortname1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -611,19 +623,19 @@ CREATE TABLE `folia_contact_details` (
   `sortname3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Set if contact is featured.',
+  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if contact is featured.',
   `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -631,7 +643,7 @@ CREATE TABLE `folia_contact_details` (
 --
 
 INSERT INTO `folia_contact_details` (`id`, `name`, `alias`, `con_position`, `address`, `suburb`, `state`, `country`, `postcode`, `telephone`, `fax`, `misc`, `image`, `email_to`, `default_con`, `published`, `checked_out`, `checked_out_time`, `ordering`, `params`, `user_id`, `catid`, `access`, `mobile`, `webpage`, `sortname1`, `sortname2`, `sortname3`, `language`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `metakey`, `metadesc`, `metadata`, `featured`, `xreference`, `publish_up`, `publish_down`, `version`, `hits`) VALUES
-(1, 'Info Folia', 'info-folia', '', '', '', '', '', '', '', '', '', '', '', 0, 1, 0, '0000-00-00 00:00:00', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"\",\"show_tags\":\"\",\"show_info\":\"\",\"show_name\":\"\",\"show_position\":\"\",\"show_email\":\"\",\"add_mailto_link\":\"\",\"show_street_address\":\"\",\"show_suburb\":\"\",\"show_state\":\"\",\"show_postcode\":\"\",\"show_country\":\"\",\"show_telephone\":\"\",\"show_mobile\":\"\",\"show_fax\":\"\",\"show_webpage\":\"\",\"show_image\":\"\",\"show_misc\":\"\",\"allow_vcard\":\"\",\"show_articles\":\"\",\"articles_display_num\":\"\",\"show_profile\":\"\",\"show_links\":\"\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"\",\"show_email_copy\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 691, 4, 1, '', '', '', '', '', '*', '2019-10-11 12:36:44', 690, '', '2019-10-11 12:36:44', 0, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 6);
+(1, 'Info Folia', 'info-folia', '', '', '', '', '', '', '', '', '', '', '', 0, 1, 0, '0000-00-00 00:00:00', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"\",\"show_tags\":\"\",\"show_info\":\"\",\"show_name\":\"\",\"show_position\":\"\",\"show_email\":\"\",\"add_mailto_link\":\"\",\"show_street_address\":\"\",\"show_suburb\":\"\",\"show_state\":\"\",\"show_postcode\":\"\",\"show_country\":\"\",\"show_telephone\":\"\",\"show_mobile\":\"\",\"show_fax\":\"\",\"show_webpage\":\"\",\"show_image\":\"\",\"show_misc\":\"\",\"allow_vcard\":\"\",\"show_articles\":\"\",\"articles_display_num\":\"\",\"show_profile\":\"\",\"show_links\":\"\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"\",\"show_email_copy\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 691, 4, 1, '', '', '', '', '', '*', '2019-10-11 12:36:44', 690, '', '2019-10-11 12:36:44', 0, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 7);
 
 -- --------------------------------------------------------
 
@@ -641,33 +653,33 @@ INSERT INTO `folia_contact_details` (`id`, `name`, `alias`, `con_position`, `add
 
 CREATE TABLE `folia_content` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `introtext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `fulltext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `state` tinyint(3) NOT NULL DEFAULT 0,
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `attribs` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
+  `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if article is featured.',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The language code for the article.',
   `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
@@ -678,10 +690,10 @@ CREATE TABLE `folia_content` (
 --
 
 INSERT INTO `folia_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`, `note`) VALUES
-(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 28, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 40, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (2, 61, 'Portfolios', 'portfolios', '<p>Accès réservé aux adhérents (étudiants, professeurs, tuteurs de stage).</p>', '', 1, 2, '2019-10-11 12:39:41', 690, '', '2019-10-11 12:39:41', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:39:41', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 2, '', '', 2, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(3, 62, 'Guide', 'guide', '<p>Guide d\'utilisation pour la création, la modification et le suivi des portfolios.</p>', '', 1, 2, '2019-10-11 12:40:44', 690, '', '2019-10-11 12:40:44', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:40:44', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 5, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(4, 63, 'Exemples', 'exemples', '<p>Exemples de portfolios réalisés avec Folia.</p>', '', 1, 2, '2019-10-11 12:41:17', 690, '', '2019-10-11 12:41:17', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:41:17', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
+(3, 62, 'Guide', 'guide', '<p>Guide d\'utilisation pour la création, la modification et le suivi des portfolios.</p>', '', 1, 2, '2019-10-11 12:40:44', 690, '', '2019-10-11 12:40:44', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:40:44', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 6, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(4, 63, 'Exemples', 'exemples', '<p>Exemples de portfolios réalisés avec Folia.</p>', '', 1, 2, '2019-10-11 12:41:17', 690, '', '2019-10-11 12:41:17', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:41:17', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 3, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
 
 -- --------------------------------------------------------
 
@@ -694,7 +706,7 @@ CREATE TABLE `folia_contentitem_tag_map` (
   `core_content_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the core content table',
   `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
   `tag_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the tag table',
-  `tag_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Date of most recent save for this tag-item',
+  `tag_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT 'Date of most recent save for this tag-item',
   `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
 
@@ -705,8 +717,8 @@ CREATE TABLE `folia_contentitem_tag_map` (
 --
 
 CREATE TABLE `folia_content_frontpage` (
-  `content_id` int(11) NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0'
+  `content_id` int(11) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -716,9 +728,9 @@ CREATE TABLE `folia_content_frontpage` (
 --
 
 CREATE TABLE `folia_content_rating` (
-  `content_id` int(11) NOT NULL DEFAULT '0',
-  `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `rating_count` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `content_id` int(11) NOT NULL DEFAULT 0,
+  `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `rating_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `lastip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -766,7 +778,7 @@ INSERT INTO `folia_content_types` (`type_id`, `type_title`, `type_alias`, `table
 
 CREATE TABLE `folia_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -777,23 +789,23 @@ CREATE TABLE `folia_core_log_searches` (
 
 CREATE TABLE `folia_extensions` (
   `extension_id` int(11) NOT NULL,
-  `package_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Parent package ID for extensions installed as a package.',
+  `package_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Parent package ID for extensions installed as a package.',
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `element` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `folder` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `client_id` tinyint(3) NOT NULL,
-  `enabled` tinyint(3) NOT NULL DEFAULT '0',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `protected` tinyint(3) NOT NULL DEFAULT '0',
+  `enabled` tinyint(3) NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `protected` tinyint(3) NOT NULL DEFAULT 0,
   `manifest_cache` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `custom_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `system_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) DEFAULT '0',
-  `state` int(11) DEFAULT '0'
+  `ordering` int(11) DEFAULT 0,
+  `state` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -836,7 +848,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (35, 0, 'com_privacy', 'component', 'com_privacy', '', 1, 1, 1, 1, '{\"name\":\"com_privacy\",\"type\":\"component\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"COM_PRIVACY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"privacy\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (36, 0, 'com_actionlogs', 'component', 'com_actionlogs', '', 1, 1, 1, 1, '{\"name\":\"com_actionlogs\",\"type\":\"component\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"COM_ACTIONLOGS_XML_DESCRIPTION\",\"group\":\"\"}', '{\"ip_logging\":0,\"csv_delimiter\":\",\",\"loggable_extensions\":[\"com_banners\",\"com_cache\",\"com_categories\",\"com_checkin\",\"com_config\",\"com_contact\",\"com_content\",\"com_installer\",\"com_media\",\"com_menus\",\"com_messages\",\"com_modules\",\"com_newsfeeds\",\"com_plugins\",\"com_redirect\",\"com_tags\",\"com_templates\",\"com_users\"]}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 0, 'LIB_PHPUTF8', 'library', 'phputf8', '', 0, 1, 1, 1, '{\"name\":\"LIB_PHPUTF8\",\"type\":\"library\",\"creationDate\":\"2006\",\"author\":\"Harry Fuecks\",\"copyright\":\"Copyright various authors\",\"authorEmail\":\"hfuecks@gmail.com\",\"authorUrl\":\"http:\\/\\/sourceforge.net\\/projects\\/phputf8\",\"version\":\"0.5\",\"description\":\"LIB_PHPUTF8_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phputf8\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '{\"mediaversion\":\"89bd1e4fa9f5a6c2c880a92ab643e835\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '{\"mediaversion\":\"69a46ee26aa6016ca32bb229b4c6b0a8\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 0, 'LIB_IDNA', 'library', 'idna_convert', '', 0, 1, 1, 1, '{\"name\":\"LIB_IDNA\",\"type\":\"library\",\"creationDate\":\"2004\",\"author\":\"phlyLabs\",\"copyright\":\"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de\",\"authorEmail\":\"phlymail@phlylabs.de\",\"authorUrl\":\"http:\\/\\/phlylabs.de\",\"version\":\"0.8.0\",\"description\":\"LIB_IDNA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"idna_convert\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 0, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{\"name\":\"FOF\",\"type\":\"library\",\"creationDate\":\"2015-04-22 13:15:32\",\"author\":\"Nicholas K. Dionysopoulos \\/ Akeeba Ltd\",\"copyright\":\"(C)2011-2015 Nicholas K. Dionysopoulos\",\"authorEmail\":\"nicholas@akeebabackup.com\",\"authorUrl\":\"https:\\/\\/www.akeebabackup.com\",\"version\":\"2.4.3\",\"description\":\"LIB_FOF_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fof\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 0, 'LIB_PHPASS', 'library', 'phpass', '', 0, 1, 1, 1, '{\"name\":\"LIB_PHPASS\",\"type\":\"library\",\"creationDate\":\"2004-2006\",\"author\":\"Solar Designer\",\"copyright\":\"\",\"authorEmail\":\"solar@openwall.com\",\"authorUrl\":\"http:\\/\\/www.openwall.com\\/phpass\\/\",\"version\":\"0.3\",\"description\":\"LIB_PHPASS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phpass\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -933,7 +945,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1582729614}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1583848601}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":1570797294,\"unique_id\":\"1f66858c04f0e1653ddecb8a3629d7522c653eea\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -989,8 +1001,8 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (700, 0, 'files_joomla', 'file', 'joomla', '', 0, 1, 1, 1, '{\"name\":\"files_joomla\",\"type\":\"file\",\"creationDate\":\"September 2019\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2019 Open Source Matters. All rights reserved\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.12\",\"description\":\"FILES_JOOMLA_XML_DESCRIPTION\",\"group\":\"\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (802, 0, 'English (en-GB) Language Pack', 'package', 'pkg_en-GB', '', 0, 1, 1, 1, '{\"name\":\"English (en-GB) Language Pack\",\"type\":\"package\",\"creationDate\":\"September 2019\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.12.1\",\"description\":\"en-GB language pack\",\"group\":\"\",\"filename\":\"pkg_en-GB\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (803, 0, 'French (fr-FR) Language pack', 'package', 'pkg_fr-FR', '', 0, 1, 1, 0, '{\"name\":\"French (fr-FR) Language pack\",\"type\":\"package\",\"creationDate\":\"2019-09-20\",\"author\":\"French translation team : joomla.fr\",\"copyright\":\"Copyright (C) 2005 - 2019 Joomla.fr and Open Source Matters, Inc. All rights reserved.\",\"authorEmail\":\"traduction@joomla.fr\",\"authorUrl\":\"http:\\/\\/joomla.fr\",\"version\":\"3.9.12.1\",\"description\":\"<div style=\\\"text-align:left;\\\">\\n<h3>Joomla! 3.9.12 Full French (fr-FR) Language Package - Version 3.9.12.1<\\/h3>\\n<h3>Paquet de langue Joomla! 3.9.12 fran\\u00e7ais (fr-FR) complet - Version 3.9.12.1<\\/h3>\\n<\\/div>\",\"group\":\"\",\"filename\":\"pkg_fr-FR\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10001, 0, 'com_annuaire', 'component', 'com_annuaire', '', 1, 1, 0, 0, '{\"name\":\"com_annuaire\",\"type\":\"component\",\"creationDate\":\"Octobre 2018\",\"author\":\"Emmanuel DEROME\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"emmanuel.derome@gmail.com\",\"authorUrl\":\"\",\"version\":\"2.5\",\"description\":\"com_annuaire_descr\",\"group\":\"\",\"filename\":\"annuaire\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10002, 0, 'com_folia', 'component', 'com_folia', '', 1, 1, 0, 0, '{\"name\":\"com_folia\",\"type\":\"component\",\"creationDate\":\"Novembre 2019\",\"author\":\"BTS-SIO2 SLAM\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"\",\"authorUrl\":\"\",\"version\":\"0.2\",\"description\":\"com_folia_descr\",\"group\":\"\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(10001, 0, 'com_annuaire', 'component', 'com_annuaire', '', 1, 1, 0, 0, '{\"name\":\"com_annuaire\",\"type\":\"component\",\"creationDate\":\"Octobre 2018\",\"author\":\"Emmanuel DEROME\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"emmanuel.derome@gmail.com\",\"authorUrl\":\"\",\"version\":\"2.5\",\"description\":\"com_annuaire_descr\",\"group\":\"\",\"filename\":\"annuaire\"}', '{\"show_title\":\"1\",\"link_titles\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10003, 0, 'com_folia', 'component', 'com_folia', '', 1, 1, 0, 0, '{\"name\":\"com_folia\",\"type\":\"component\",\"creationDate\":\"March 2020\",\"author\":\"BTS-SIO2 SLAM\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"\",\"authorUrl\":\"\",\"version\":\"1.0\",\"description\":\"com_folia_descr\",\"group\":\"\",\"filename\":\"folia\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1000,9 +1012,9 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 
 CREATE TABLE `folia_fields` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `group_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `group_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -1010,19 +1022,19 @@ CREATE TABLE `folia_fields` (
   `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'text',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT '0',
-  `required` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `state` tinyint(1) NOT NULL DEFAULT 0,
+  `required` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `fieldparams` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `access` int(11) NOT NULL DEFAULT '1'
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `access` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -1032,8 +1044,8 @@ CREATE TABLE `folia_fields` (
 --
 
 CREATE TABLE `folia_fields_categories` (
-  `field_id` int(11) NOT NULL DEFAULT '0',
-  `category_id` int(11) NOT NULL DEFAULT '0'
+  `field_id` int(11) NOT NULL DEFAULT 0,
+  `category_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -1044,22 +1056,22 @@ CREATE TABLE `folia_fields_categories` (
 
 CREATE TABLE `folia_fields_groups` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) NOT NULL DEFAULT '0',
+  `state` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `access` int(11) NOT NULL DEFAULT '1'
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `access` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -1084,17 +1096,17 @@ CREATE TABLE `folia_finder_filters` (
   `filter_id` int(10) UNSIGNED NOT NULL,
   `title` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `state` tinyint(1) NOT NULL DEFAULT '1',
+  `state` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(10) UNSIGNED NOT NULL,
   `created_by_alias` varchar(255) NOT NULL,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `map_count` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `map_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `data` text NOT NULL,
-  `params` mediumtext
+  `params` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1108,19 +1120,19 @@ CREATE TABLE `folia_finder_links` (
   `url` varchar(255) NOT NULL,
   `route` varchar(255) NOT NULL,
   `title` varchar(400) DEFAULT NULL,
-  `description` text,
+  `description` text DEFAULT NULL,
   `indexdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `md5sum` varchar(32) DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
-  `state` int(5) DEFAULT '1',
-  `access` int(5) DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `state` int(5) DEFAULT 1,
+  `access` int(5) DEFAULT 0,
   `language` varchar(8) NOT NULL,
   `publish_start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `start_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `end_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `list_price` double UNSIGNED NOT NULL DEFAULT '0',
-  `sale_price` double UNSIGNED NOT NULL DEFAULT '0',
+  `list_price` double UNSIGNED NOT NULL DEFAULT 0,
+  `sale_price` double UNSIGNED NOT NULL DEFAULT 0,
   `type_id` int(11) NOT NULL,
   `object` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -1325,11 +1337,11 @@ CREATE TABLE `folia_finder_links_termsf` (
 
 CREATE TABLE `folia_finder_taxonomy` (
   `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `title` varchar(255) NOT NULL,
-  `state` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
-  `access` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `ordering` tinyint(1) UNSIGNED NOT NULL DEFAULT '0'
+  `state` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
+  `access` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `ordering` tinyint(1) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -1360,11 +1372,11 @@ CREATE TABLE `folia_finder_terms` (
   `term_id` int(10) UNSIGNED NOT NULL,
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `weight` float UNSIGNED NOT NULL DEFAULT '0',
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `weight` float UNSIGNED NOT NULL DEFAULT 0,
   `soundex` varchar(75) NOT NULL,
-  `links` int(10) NOT NULL DEFAULT '0',
+  `links` int(10) NOT NULL DEFAULT 0,
   `language` char(3) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1504,10 +1516,10 @@ INSERT INTO `folia_finder_terms_common` (`term`, `language`) VALUES
 CREATE TABLE `folia_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `weight` float UNSIGNED NOT NULL DEFAULT '1',
-  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT '2',
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `weight` float UNSIGNED NOT NULL DEFAULT 1,
+  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT 2,
   `language` char(3) NOT NULL DEFAULT ''
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4;
 
@@ -1522,10 +1534,10 @@ CREATE TABLE `folia_finder_tokens_aggregate` (
   `map_suffix` char(1) NOT NULL,
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
-  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `common` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
+  `phrase` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `term_weight` float UNSIGNED NOT NULL,
-  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT '2',
+  `context` tinyint(1) UNSIGNED NOT NULL DEFAULT 2,
   `context_weight` float UNSIGNED NOT NULL,
   `total_weight` float UNSIGNED NOT NULL,
   `language` char(3) NOT NULL DEFAULT ''
@@ -1555,12 +1567,12 @@ CREATE TABLE `folia_folia_activites` (
   `nom` varchar(11) NOT NULL,
   `alias` varchar(255) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1630,14 +1642,14 @@ CREATE TABLE `folia_folia_bibliotheques` (
   `etudiant_id` int(11) NOT NULL,
   `nom` int(11) NOT NULL,
   `apercu` varchar(255) NOT NULL,
-  `avance` tinyint(1) NOT NULL DEFAULT '0',
+  `avance` tinyint(1) NOT NULL DEFAULT 0,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1652,12 +1664,12 @@ CREATE TABLE `folia_folia_blocs` (
   `activite_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `texte` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1670,12 +1682,12 @@ CREATE TABLE `folia_folia_blocs_documents` (
   `id` int(11) NOT NULL,
   `blocs_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1689,12 +1701,12 @@ CREATE TABLE `folia_folia_classes` (
   `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `referentiel_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1718,12 +1730,12 @@ CREATE TABLE `folia_folia_commentaires` (
   `tuteurs_id` int(11) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1738,12 +1750,12 @@ CREATE TABLE `folia_folia_documents` (
   `alias` varchar(255) NOT NULL,
   `format` varchar(255) NOT NULL,
   `blocs_documents_id` int(11) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1755,15 +1767,15 @@ CREATE TABLE `folia_folia_documents` (
 CREATE TABLE `folia_folia_etudiants` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `avance` tinyint(1) NOT NULL DEFAULT '0',
+  `avance` tinyint(1) NOT NULL DEFAULT 0,
   `classes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1809,14 +1821,14 @@ INSERT INTO `folia_folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `ali
 CREATE TABLE `folia_folia_groupes` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `etudiants_id` int(11) NOT NULL DEFAULT '1',
+  `etudiants_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` varchar(255) NOT NULL DEFAULT '0',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_by` varchar(255) NOT NULL DEFAULT '0',
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1840,15 +1852,15 @@ INSERT INTO `folia_folia_groupes` (`id`, `nom`, `etudiants_id`, `alias`, `publis
 CREATE TABLE `folia_folia_groupes_partages` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) NOT NULL,
-  `groupes_id` int(11) NOT NULL DEFAULT '1',
-  `utilisateurs_id` int(11) NOT NULL DEFAULT '1',
+  `groupes_id` int(11) NOT NULL DEFAULT 1,
+  `utilisateurs_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1869,12 +1881,12 @@ CREATE TABLE `folia_folia_pages` (
   `nom` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1889,12 +1901,12 @@ CREATE TABLE `folia_folia_portfolios` (
   `etudiant_id` int(11) NOT NULL,
   `themes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1908,12 +1920,12 @@ CREATE TABLE `folia_folia_professeurs` (
   `email` varchar(255) NOT NULL,
   `matiere` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1936,12 +1948,12 @@ CREATE TABLE `folia_folia_professeurs_classes` (
   `professeurs_id` int(11) NOT NULL,
   `classes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1955,12 +1967,12 @@ CREATE TABLE `folia_folia_referentiels` (
   `nom` varchar(128) NOT NULL,
   `description` text NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1980,12 +1992,12 @@ CREATE TABLE `folia_folia_themes` (
   `id` int(11) NOT NULL,
   `lib_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -2000,12 +2012,12 @@ CREATE TABLE `folia_folia_tuteurs` (
   `service` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2025,12 +2037,12 @@ CREATE TABLE `folia_folia_tuteurs_etudiants` (
   `tuteurs_id` int(11) NOT NULL,
   `etudiants_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -2045,12 +2057,12 @@ CREATE TABLE `folia_folia_utilisateurs` (
   `prenom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '',
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2098,7 +2110,7 @@ INSERT INTO `folia_folia_utilisateurs` (`id`, `nom`, `prenom`, `email`, `alias`,
 
 CREATE TABLE `folia_languages` (
   `lang_id` int(11) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `lang_code` char(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title_native` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2108,9 +2120,9 @@ CREATE TABLE `folia_languages` (
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sitename` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `published` int(11) NOT NULL DEFAULT '0',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0'
+  `published` int(11) NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2136,22 +2148,22 @@ CREATE TABLE `folia_menu` (
   `path` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The computed path of the menu item based on the alias field.',
   `link` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The actually link the menu item refers to.',
   `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of link: Component, URL, Alias, Separator',
-  `published` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'The published state of the menu link.',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '1' COMMENT 'The parent menu item in the menu tree.',
-  `level` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'The relative level in the tree.',
-  `component_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to #__extensions.id',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to #__users.id',
+  `published` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The published state of the menu link.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'The parent menu item in the menu tree.',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The relative level in the tree.',
+  `component_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to #__extensions.id',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to #__users.id',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'The time the menu item was checked out.',
-  `browserNav` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'The click behaviour of the link.',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'The access level required to view the menu item.',
+  `browserNav` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The click behaviour of the link.',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The access level required to view the menu item.',
   `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The image of the menu item.',
-  `template_style_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `template_style_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded data for the menu item.',
-  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
-  `home` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Indicates if this menu item is the home or default page.',
+  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
+  `home` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Indicates if this menu item is the home or default page.',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` tinyint(4) NOT NULL DEFAULT '0'
+  `client_id` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2159,7 +2171,7 @@ CREATE TABLE `folia_menu` (
 --
 
 INSERT INTO `folia_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 67, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 105, 0, '*', 0),
 (2, 'main', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 1, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'main', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 1, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'main', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 1, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -2189,10 +2201,29 @@ INSERT INTO `folia_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (110, 'main', 'com_annuaire', 'com-annuaire', '', 'com-annuaire', 'index.php?option=com_annuaire', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 53, 58, 0, '', 1),
 (111, 'main', 'com_annuaire_entreprises', 'com-annuaire-entreprises', '', 'com-annuaire/com-annuaire-entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 54, 55, 0, '', 1),
 (112, 'main', 'com_annuaire_contacts', 'com-annuaire-contacts', '', 'com-annuaire/com-annuaire-contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 56, 57, 0, '', 1),
-(113, 'main', 'com_folia', 'com-folia', '', 'com-folia', 'index.php?option=com_folia', 'component', 1, 1, 1, 10002, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 59, 62, 0, '', 1),
-(114, 'main', 'com_folia_utilisateurs', 'com-folia-utilisateurs', '', 'com-folia/com-folia-utilisateurs', 'index.php?option=com_folia&view=utilisateurs', 'component', 1, 113, 2, 10002, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 60, 61, 0, '', 1),
-(115, 'menu-fr-annuaire', 'Contacts', 'contacts', '', 'contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 63, 64, 0, '*', 0),
-(116, 'menu-fr-annuaire', 'Entreprises', 'entreprises', '', 'entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 65, 66, 0, '*', 0);
+(115, 'menu-fr-annuaire', 'Contacts', 'contacts', '', 'contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 59, 60, 0, '*', 0),
+(116, 'menu-fr-annuaire', 'Entreprises', 'entreprises', '', 'entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 61, 62, 0, '*', 0),
+(117, 'main', 'com_folia', 'com-folia', '', 'com-folia', 'index.php?option=com_folia', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 63, 104, 0, '', 1),
+(118, 'main', 'com_folia_acivites', 'com-folia-acivites', '', 'com-folia/com-folia-acivites', 'index.php?option=com_folia&view=activites', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 64, 65, 0, '', 1),
+(119, 'main', 'com_folia_blocs', 'com-folia-blocs', '', 'com-folia/com-folia-blocs', 'index.php?option=com_folia&view=blocs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 66, 67, 0, '', 1),
+(120, 'main', 'com_folia_bibliosThemes', 'com-folia-bibliosthemes', '', 'com-folia/com-folia-bibliosthemes', 'index.php?option=com_folia&view=bibliosThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 68, 69, 0, '', 1),
+(121, 'main', 'com_folia_bibliosEtenduesThemes', 'com-folia-bibliosetenduesthemes', '', 'com-folia/com-folia-bibliosetenduesthemes', 'index.php?option=com_folia&view=bibliosEtenduesThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 70, 71, 0, '', 1),
+(122, 'main', 'com_folia_blocsDocuments', 'com-folia-blocsdocuments', '', 'com-folia/com-folia-blocsdocuments', 'index.php?option=com_folia&view=blocsDocuments', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 72, 73, 0, '', 1),
+(123, 'main', 'com_folia_classes', 'com-folia-classes', '', 'com-folia/com-folia-classes', 'index.php?option=com_folia&view=classes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 74, 75, 0, '', 1),
+(124, 'main', 'com_folia_commentaires', 'com-folia-commentaires', '', 'com-folia/com-folia-commentaires', 'index.php?option=com_folia&view=commentaires', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 76, 77, 0, '', 1),
+(125, 'main', 'com_folia_documents', 'com-folia-documents', '', 'com-folia/com-folia-documents', 'index.php?option=com_folia&view=documents', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 78, 79, 0, '', 1),
+(126, 'main', 'com_folia_etudiants', 'com-folia-etudiants', '', 'com-folia/com-folia-etudiants', 'index.php?option=com_folia&view=etudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 80, 81, 0, '', 1),
+(127, 'main', 'com_folia_groupes', 'com-folia-groupes', '', 'com-folia/com-folia-groupes', 'index.php?option=com_folia&view=groupes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 82, 83, 0, '', 1),
+(128, 'main', 'com_folia_groupesPartages', 'com-folia-groupespartages', '', 'com-folia/com-folia-groupespartages', 'index.php?option=com_folia&view=groupesPartages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 84, 85, 0, '', 1),
+(129, 'main', 'com_folia_pages', 'com-folia-pages', '', 'com-folia/com-folia-pages', 'index.php?option=com_folia&view=pages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 86, 87, 0, '', 1),
+(130, 'main', 'com_folia_portfolios', 'com-folia-portfolios', '', 'com-folia/com-folia-portfolios', 'index.php?option=com_folia&view=portfolios', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 88, 89, 0, '', 1),
+(131, 'main', 'com_folia_professeurs', 'com-folia-professeurs', '', 'com-folia/com-folia-professeurs', 'index.php?option=com_folia&view=professeurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 90, 91, 0, '', 1),
+(132, 'main', 'com_folia_professeursClasses', 'com-folia-professeursclasses', '', 'com-folia/com-folia-professeursclasses', 'index.php?option=com_folia&view=professeursClasses', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 92, 93, 0, '', 1),
+(133, 'main', 'com_folia_referentiels', 'com-folia-referentiels', '', 'com-folia/com-folia-referentiels', 'index.php?option=com_folia&view=referentiels', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 94, 95, 0, '', 1),
+(134, 'main', 'com_folia_themes', 'com-folia-themes', '', 'com-folia/com-folia-themes', 'index.php?option=com_folia&view=themes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 96, 97, 0, '', 1),
+(135, 'main', 'com_folia_tuteurs', 'com-folia-tuteurs', '', 'com-folia/com-folia-tuteurs', 'index.php?option=com_folia&view=tuteurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 98, 99, 0, '', 1),
+(136, 'main', 'com_folia_tuteursEtudiants', 'com-folia-tuteursetudiants', '', 'com-folia/com-folia-tuteursetudiants', 'index.php?option=com_folia&view=tuteursEtudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 100, 101, 0, '', 1),
+(137, 'main', 'com_folia_utilisateurs', 'com-folia-utilisateurs', '', 'com-folia/com-folia-utilisateurs', 'index.php?option=com_folia&view=utilisateurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 102, 103, 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2202,11 +2233,11 @@ INSERT INTO `folia_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 
 CREATE TABLE `folia_menu_types` (
   `id` int(10) UNSIGNED NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(48) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` int(11) NOT NULL DEFAULT '0'
+  `client_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2225,12 +2256,12 @@ INSERT INTO `folia_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descript
 
 CREATE TABLE `folia_messages` (
   `message_id` int(10) UNSIGNED NOT NULL,
-  `user_id_from` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `user_id_to` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `folder_id` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
+  `user_id_from` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `user_id_to` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `folder_id` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `date_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `state` tinyint(1) NOT NULL DEFAULT '0',
-  `priority` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `state` tinyint(1) NOT NULL DEFAULT 0,
+  `priority` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `message` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2242,7 +2273,7 @@ CREATE TABLE `folia_messages` (
 --
 
 CREATE TABLE `folia_messages_cfg` (
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `cfg_value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2255,22 +2286,22 @@ CREATE TABLE `folia_messages_cfg` (
 
 CREATE TABLE `folia_modules` (
   `id` int(11) NOT NULL,
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `position` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `module` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `showtitle` tinyint(3) UNSIGNED NOT NULL DEFAULT '1',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `showtitle` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `client_id` tinyint(4) NOT NULL DEFAULT '0',
+  `client_id` tinyint(4) NOT NULL DEFAULT 0,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2306,8 +2337,8 @@ INSERT INTO `folia_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 --
 
 CREATE TABLE `folia_modules_menu` (
-  `moduleid` int(11) NOT NULL DEFAULT '0',
-  `menuid` int(11) NOT NULL DEFAULT '0'
+  `moduleid` int(11) NOT NULL DEFAULT 0,
+  `menuid` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2344,26 +2375,26 @@ INSERT INTO `folia_modules_menu` (`moduleid`, `menuid`) VALUES
 --
 
 CREATE TABLE `folia_newsfeeds` (
-  `catid` int(11) NOT NULL DEFAULT '0',
+  `catid` int(11) NOT NULL DEFAULT 0,
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `link` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `numarticles` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `cache_time` int(10) UNSIGNED NOT NULL DEFAULT '3600',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `numarticles` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `cache_time` int(10) UNSIGNED NOT NULL DEFAULT 3600,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `rtl` tinyint(4) NOT NULL DEFAULT '0',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `rtl` tinyint(4) NOT NULL DEFAULT 0,
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2371,8 +2402,8 @@ CREATE TABLE `folia_newsfeeds` (
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2397,19 +2428,19 @@ CREATE TABLE `folia_overrider` (
 
 CREATE TABLE `folia_postinstall_messages` (
   `postinstall_message_id` bigint(20) UNSIGNED NOT NULL,
-  `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to #__extensions',
+  `extension_id` bigint(20) NOT NULL DEFAULT 700 COMMENT 'FK to #__extensions',
   `title_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for the title',
   `description_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for description',
   `action_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `language_extension` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'com_postinstall' COMMENT 'Extension holding lang keys',
-  `language_client_id` tinyint(3) NOT NULL DEFAULT '1',
+  `language_client_id` tinyint(3) NOT NULL DEFAULT 1,
   `type` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'link' COMMENT 'Message type - message, link, action',
   `action_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'RAD URI to the PHP file containing action method',
   `action` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Action method name or URL',
   `condition_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'RAD URI to file holding display condition method',
   `condition_method` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Display condition method, must return boolean',
   `version_introduced` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
-  `enabled` tinyint(3) NOT NULL DEFAULT '1'
+  `enabled` tinyint(3) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2435,12 +2466,12 @@ INSERT INTO `folia_postinstall_messages` (`postinstall_message_id`, `extension_i
 
 CREATE TABLE `folia_privacy_consents` (
   `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `state` int(10) NOT NULL DEFAULT '1',
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `state` int(10) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remind` tinyint(4) NOT NULL DEFAULT '0',
+  `remind` tinyint(4) NOT NULL DEFAULT 0,
   `token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2454,7 +2485,7 @@ CREATE TABLE `folia_privacy_requests` (
   `id` int(10) UNSIGNED NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `requested_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT 0,
   `request_type` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `confirm_token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `confirm_token_created_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
@@ -2472,11 +2503,11 @@ CREATE TABLE `folia_redirect_links` (
   `new_url` varchar(2048) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `referer` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
   `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `published` tinyint(4) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `header` smallint(3) NOT NULL DEFAULT '301'
+  `header` smallint(3) NOT NULL DEFAULT 301
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -2506,10 +2537,10 @@ INSERT INTO `folia_schemas` (`extension_id`, `version_id`) VALUES
 CREATE TABLE `folia_session` (
   `session_id` varbinary(192) NOT NULL,
   `client_id` tinyint(3) UNSIGNED DEFAULT NULL,
-  `guest` tinyint(3) UNSIGNED DEFAULT '1',
-  `time` int(11) NOT NULL DEFAULT '0',
-  `data` mediumtext COLLATE utf8mb4_unicode_ci,
-  `userid` int(11) DEFAULT '0',
+  `guest` tinyint(3) UNSIGNED DEFAULT 1,
+  `time` int(11) NOT NULL DEFAULT 0,
+  `data` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `userid` int(11) DEFAULT 0,
   `username` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2518,10 +2549,8 @@ CREATE TABLE `folia_session` (
 --
 
 INSERT INTO `folia_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x656638347664366d6a6339346873646834343769693233633966, 0, 1, 1582740827, 'joomla|s:736:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo4O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4MjczNTc4NjtzOjQ6Imxhc3QiO2k6MTU4MjczOTk4NztzOjM6Im5vdyI7aToxNTgyNzQwODI3O31zOjU6InRva2VuIjtzOjMyOiJKSGVac1B3bkNod25hZnU4UUd3aVpERnhXWFpnbG9sciI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, ''),
-(0x6a6d3967636c716a737168396372763330306b396a7074727675, 0, 1, 1582740964, 'joomla|s:664:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aTo5O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4MjczOTg4MTtzOjQ6Imxhc3QiO2k6MTU4Mjc0MDk1ODtzOjM6Im5vdyI7aToxNTgyNzQwOTY0O319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 0, ''),
-(0x6c6a346d7439326e30726670763836316633706f346f6f6d6b30, 1, 1, 1582736767, 'joomla|s:596:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjI6e3M6NzoiY291bnRlciI7aToxO3M6NToidG9rZW4iO3M6MzI6IkZRVHNPUE1IakxPcnltRkVpTTJMenA2Z1FjdmFFVHhEIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 0, ''),
-(0x736f6e6634716f37673476766a3261717072756c316b71303362, 1, 0, 1582741230, 'joomla|s:1332:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMDtzOjU6InRva2VuIjtzOjMyOiJ4OGoxemRCQWVVTFZvQVpsb2NjMEVFdXlkWTBnaEhENCI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTgyNzQxMTYzO3M6NDoibGFzdCI7aToxNTgyNzQxMTg4O3M6Mzoibm93IjtpOjE1ODI3NDEyMzA7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjI6e3M6MTI6InV0aWxpc2F0ZXVycyI7Tzo4OiJzdGRDbGFzcyI6NDp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6Njoic2VhcmNoIjtzOjA6IiI7fXM6ODoib3JkZXJjb2wiO3M6NDoidS5pZCI7czo5OiJvcmRlcmRpcm4iO3M6MzoiYXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fXM6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjo0OntzOjg6Im9yZGVyY29sIjtzOjQ6ImUuaWQiO3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6InNlYXJjaCI7czowOiIiO31zOjk6Im9yZGVyZGlybiI7czo0OiJkZXNjIjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjY6Imdsb2JhbCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJsaXN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxpbWl0IjtpOjIwO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MzoiNjkwIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM');
+(0x67376e6d6b753175666f6d6f70326a63366f646471326c75616a, 1, 0, 1583854596, 'joomla|s:2312:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMDU7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTgzODQ4NjAwO3M6NDoibGFzdCI7aToxNTgzODU0Mjk2O3M6Mzoibm93IjtpOjE1ODM4NTQ1OTU7fXM6NToidG9rZW4iO3M6MzI6IkNSZ1BNcTgwVEdGY3k3ME9jeEZZNWk5M0J6VmVacno5Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6MTM6ImNvbV9pbnN0YWxsZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NzoibWVzc2FnZSI7czowOiIiO3M6MTc6ImV4dGVuc2lvbl9tZXNzYWdlIjtzOjA6IiI7czo2OiJtYW5hZ2UiO086ODoic3RkQ2xhc3MiOjM6e3M6NjoiZmlsdGVyIjthOjU6e3M6Njoic2VhcmNoIjtzOjA6IiI7czo2OiJzdGF0dXMiO3M6MDoiIjtzOjk6ImNsaWVudF9pZCI7czowOiIiO3M6NDoidHlwZSI7czowOiIiO3M6NjoiZm9sZGVyIjtzOjA6IiI7fXM6NDoibGlzdCI7YToyOntzOjEyOiJmdWxsb3JkZXJpbmciO3M6MTc6ImV4dGVuc2lvbl9pZCBERVNDIjtzOjU6ImxpbWl0IjtzOjI6IjIwIjt9czoxMDoibGltaXRzdGFydCI7aTowO319czo5OiJjb21fbWVudXMiO086ODoic3RkQ2xhc3MiOjE6e3M6NToiaXRlbXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoibWVudXR5cGUiO3M6MTY6Im1lbnUtZnItYW5udWFpcmUiO3M6OToiY2xpZW50X2lkIjtpOjA7czoxMDoibGltaXRzdGFydCI7aTowO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czozOiJhc2MiO3M6NToibGltaXQiO3M6MjoiMjAiO3M6ODoib3JkZXJpbmciO3M6NToiYS5sZnQiO3M6NToic3RhcnQiO2Q6MDt9fX1zOjExOiJjb21fbW9kdWxlcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319czozOiJhZGQiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoibW9kdWxlIjtPOjg6InN0ZENsYXNzIjoyOntzOjEyOiJleHRlbnNpb25faWQiO047czo2OiJwYXJhbXMiO047fX19czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ1c2VyIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX19czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjI6e3M6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjoxOntzOjg6Im9yZGVyY29sIjtzOjc6ImUuZW1haWwiO31zOjExOiJwcm9mZXNzZXVycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJvcmRlcmNvbCI7czo3OiJwLmVtYWlsIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY5MCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM'),
+(0x6f72303472357162746b6e6332686236766c39726f62396e6868, 0, 1, 1583854521, 'joomla|s:880:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo1O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4Mzg1NDUwOTtzOjQ6Imxhc3QiO2k6MTU4Mzg1NDUyMDtzOjM6Im5vdyI7aToxNTgzODU0NTIxO31zOjU6InRva2VuIjtzOjMyOiJWdGpFRDlEbmdpRXEzeVpsbmVJeXdYeHBwMEc3WVlPcSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJjb21fY29udGFjdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJjb250YWN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImRhdGEiO2E6MTp7czo1OiJjYXRpZCI7czoxOiI0Ijt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, '');
 
 -- --------------------------------------------------------
 
@@ -2531,33 +2560,33 @@ INSERT INTO `folia_session` (`session_id`, `client_id`, `guest`, `time`, `data`,
 
 CREATE TABLE `folia_tags` (
   `id` int(10) UNSIGNED NOT NULL,
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `lft` int(11) NOT NULL DEFAULT '0',
-  `rgt` int(11) NOT NULL DEFAULT '0',
-  `level` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `lft` int(11) NOT NULL DEFAULT 0,
+  `rgt` int(11) NOT NULL DEFAULT 0,
+  `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The meta description for the page.',
   `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The meta keywords for the page.',
   `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded metadata properties.',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
+  `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -2578,7 +2607,7 @@ INSERT INTO `folia_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 CREATE TABLE `folia_template_styles` (
   `id` int(10) UNSIGNED NOT NULL,
   `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `client_id` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `client_id` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `home` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL
@@ -2620,33 +2649,33 @@ CREATE TABLE `folia_ucm_content` (
   `core_title` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `core_body` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `core_state` tinyint(1) NOT NULL DEFAULT '0',
+  `core_state` tinyint(1) NOT NULL DEFAULT 0,
   `core_checked_out_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_checked_out_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `core_access` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_checked_out_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `core_access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `core_params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `core_featured` tinyint(4) UNSIGNED NOT NULL DEFAULT '0',
+  `core_featured` tinyint(4) UNSIGNED NOT NULL DEFAULT 0,
   `core_metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
-  `core_created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `core_created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Most recent user that modified',
+  `core_modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Most recent user that modified',
   `core_modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `core_language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `core_publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `core_content_item_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'ID from the individual type table',
-  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
+  `core_content_item_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'ID from the individual type table',
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
   `core_images` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `core_urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `core_hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `core_version` int(10) UNSIGNED NOT NULL DEFAULT '1',
-  `core_ordering` int(11) NOT NULL DEFAULT '0',
+  `core_hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `core_version` int(10) UNSIGNED NOT NULL DEFAULT 1,
+  `core_ordering` int(11) NOT NULL DEFAULT 0,
   `core_metakey` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `core_metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `core_catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `core_catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `core_xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
-  `core_type_id` int(10) UNSIGNED NOT NULL DEFAULT '0'
+  `core_type_id` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Contains core content data in name spaced fields';
 
 -- --------------------------------------------------------
@@ -2661,11 +2690,11 @@ CREATE TABLE `folia_ucm_history` (
   `ucm_type_id` int(10) UNSIGNED NOT NULL,
   `version_note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Optional version name',
   `save_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `editor_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `character_count` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Number of characters in this version.',
+  `editor_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `character_count` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Number of characters in this version.',
   `sha1_hash` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
   `version_data` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'json-encoded string of version data',
-  `keep_forever` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0=auto delete; 1=keep'
+  `keep_forever` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0=auto delete; 1=keep'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2687,104 +2716,20 @@ INSERT INTO `folia_ucm_history` (`version_id`, `ucm_item_id`, `ucm_type_id`, `ve
 
 CREATE TABLE `folia_updates` (
   `update_id` int(11) NOT NULL,
-  `update_site_id` int(11) DEFAULT '0',
-  `extension_id` int(11) DEFAULT '0',
+  `update_site_id` int(11) DEFAULT 0,
+  `extension_id` int(11) DEFAULT 0,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `element` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `folder` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `client_id` tinyint(3) DEFAULT '0',
+  `client_id` tinyint(3) DEFAULT 0,
   `version` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `detailsurl` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `infourl` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
-
---
--- Déchargement des données de la table `folia_updates`
---
-
-INSERT INTO `folia_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(312, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.15', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', ''),
-(313, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
-(314, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
-(315, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
-(316, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
-(317, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
-(318, 2, 803, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
-(319, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
-(320, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
-(321, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
-(322, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
-(323, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
-(324, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
-(325, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
-(326, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
-(327, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
-(328, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
-(329, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
-(330, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.11.2', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
-(331, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
-(332, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
-(333, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
-(334, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
-(335, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(336, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
-(337, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.14.2', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(338, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(339, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
-(340, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(341, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.7.3.1', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(342, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.6.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
-(343, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(344, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(345, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
-(346, 2, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
-(347, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(348, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(349, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(350, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
-(351, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(352, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.15.2', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
-(353, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(354, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(355, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(356, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(357, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(358, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.7.1.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(359, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(360, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(361, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
-(362, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
-(363, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
-(364, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(365, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(366, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(367, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(368, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(369, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(370, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(371, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(372, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(373, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(374, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(375, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(376, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
-(377, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(378, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
-(379, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
-(380, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
-(381, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
-(382, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
-(383, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
-(384, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
-(385, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
-(386, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
-(387, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
-(388, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
-(389, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', '');
 
 -- --------------------------------------------------------
 
@@ -2797,8 +2742,8 @@ CREATE TABLE `folia_update_sites` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
   `location` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `enabled` int(11) DEFAULT '0',
-  `last_check_timestamp` bigint(20) DEFAULT '0',
+  `enabled` int(11) DEFAULT 0,
+  `last_check_timestamp` bigint(20) DEFAULT 0,
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
@@ -2807,9 +2752,9 @@ CREATE TABLE `folia_update_sites` (
 --
 
 INSERT INTO `folia_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1582729615, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1582729636, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1582729636, '');
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1583848601, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1583848612, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1583848612, '');
 
 -- --------------------------------------------------------
 
@@ -2818,8 +2763,8 @@ INSERT INTO `folia_update_sites` (`update_site_id`, `name`, `type`, `location`, 
 --
 
 CREATE TABLE `folia_update_sites_extensions` (
-  `update_site_id` int(11) NOT NULL DEFAULT '0',
-  `extension_id` int(11) NOT NULL DEFAULT '0'
+  `update_site_id` int(11) NOT NULL DEFAULT 0,
+  `extension_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links extensions to update sites';
 
 --
@@ -2840,9 +2785,9 @@ INSERT INTO `folia_update_sites_extensions` (`update_site_id`, `extension_id`) V
 
 CREATE TABLE `folia_usergroups` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
-  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
-  `lft` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set lft.',
-  `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
+  `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Adjacency List Reference Id',
+  `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
+  `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -2879,17 +2824,17 @@ CREATE TABLE `folia_users` (
   `username` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `block` tinyint(4) NOT NULL DEFAULT '0',
-  `sendEmail` tinyint(4) DEFAULT '0',
+  `block` tinyint(4) NOT NULL DEFAULT 0,
+  `sendEmail` tinyint(4) DEFAULT 0,
   `registerDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastvisitDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `activation` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastResetTime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Date of last password reset',
-  `resetCount` int(11) NOT NULL DEFAULT '0' COMMENT 'Count of password resets since lastResetTime',
+  `resetCount` int(11) NOT NULL DEFAULT 0 COMMENT 'Count of password resets since lastResetTime',
   `otpKey` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
   `otep` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'One time emergency passwords',
-  `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
+  `requireReset` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Require user to reset password on next login'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2897,9 +2842,9 @@ CREATE TABLE `folia_users` (
 --
 
 INSERT INTO `folia_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2020-02-26 18:19:23', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2020-02-21 21:36:01', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
-(692, 'Pierre MARTIN', 'pmartin', 'pmartin@folia.fr', '$2y$10$x8ISkYib7ZcNdLv/YS1Md.of17Au1oW4bRMQ68vriqJn47gSh9wOe', 0, 0, '2020-02-26 16:49:05', '2020-02-26 16:49:46', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
+(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2020-03-10 13:56:50', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
+(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2020-03-10 15:35:09', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(692, 'Pierre MARTIN', 'pmartin', 'pmartin@folia.fr', '$2y$10$x8ISkYib7ZcNdLv/YS1Md.of17Au1oW4bRMQ68vriqJn47gSh9wOe', 0, 0, '2020-02-26 16:49:05', '2020-02-27 09:51:39', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2925,14 +2870,14 @@ CREATE TABLE `folia_user_keys` (
 
 CREATE TABLE `folia_user_notes` (
   `id` int(10) UNSIGNED NOT NULL,
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
-  `catid` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `subject` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `state` tinyint(3) NOT NULL DEFAULT 0,
+  `checked_out` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified_user_id` int(10) UNSIGNED NOT NULL,
   `modified_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2951,7 +2896,7 @@ CREATE TABLE `folia_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `profile_value` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ordering` int(11) NOT NULL DEFAULT '0'
+  `ordering` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Simple user profile storage table';
 
 -- --------------------------------------------------------
@@ -2961,8 +2906,8 @@ CREATE TABLE `folia_user_profiles` (
 --
 
 CREATE TABLE `folia_user_usergroup_map` (
-  `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
-  `group_id` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id'
+  `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__users.id',
+  `group_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__usergroups.id'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -2983,7 +2928,7 @@ INSERT INTO `folia_user_usergroup_map` (`user_id`, `group_id`) VALUES
 --
 
 CREATE TABLE `folia_utf8_conversion` (
-  `converted` tinyint(4) NOT NULL DEFAULT '0'
+  `converted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -3002,7 +2947,7 @@ INSERT INTO `folia_utf8_conversion` (`converted`) VALUES
 CREATE TABLE `folia_viewlevels` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT 0,
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -3033,6 +2978,12 @@ CREATE TABLE `folia_vue_groupes` (
 
 -- --------------------------------------------------------
 
+--
+-- Structure de la vue `folia_vue_groupes`
+--
+DROP TABLE IF EXISTS `folia_vue_groupes`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `folia_vue_groupes`  AS  select `g`.`id` AS `id`,`g`.`nom` AS `nom`,`g`.`created` AS `date`,concat(`u`.`nom`,' ',`u`.`prenom`) AS `auteur`,`u`.`email` AS `email` from ((`folia_folia_groupes` `g` left join `folia_folia_etudiants` `e` on(`e`.`id` = `g`.`etudiants_id`)) left join `folia_folia_utilisateurs` `u` on(`u`.`email` = `e`.`email`)) where `g`.`published` = 1 order by `g`.`id` desc ;
 
 --
 -- Index pour les tables déchargées
@@ -3853,7 +3804,7 @@ ALTER TABLE `folia_viewlevels`
 -- AUTO_INCREMENT pour la table `folia_action_logs`
 --
 ALTER TABLE `folia_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT pour la table `folia_action_logs_extensions`
@@ -3901,7 +3852,7 @@ ALTER TABLE `folia_annuaire_typescontacts`
 -- AUTO_INCREMENT pour la table `folia_assets`
 --
 ALTER TABLE `folia_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=69;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT pour la table `folia_banners`
@@ -3943,7 +3894,7 @@ ALTER TABLE `folia_content_types`
 -- AUTO_INCREMENT pour la table `folia_extensions`
 --
 ALTER TABLE `folia_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10003;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10004;
 
 --
 -- AUTO_INCREMENT pour la table `folia_fields`
@@ -4099,7 +4050,7 @@ ALTER TABLE `folia_languages`
 -- AUTO_INCREMENT pour la table `folia_menu`
 --
 ALTER TABLE `folia_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT pour la table `folia_menu_types`
