@@ -8,7 +8,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'blocs_document.cancel' || document.formvalidator.isValid(document.id('folia-form')))
+		if (task == 'blocsDocument.cancel' || document.formvalidator.isValid(document.id('folia-form')))
 		{
 			<?php //echo $this->form->getField('nom')->save(); ?>
 			Joomla.submitform(task, document.getElementById('folia-form'));
@@ -22,8 +22,10 @@ JHtml::_('formbehavior.chosen', 'select');
 	<div class="control-group">
 		<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
 		<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
-		<div class="control-label"><?php echo $this->form->getLabel('bloc_id'); ?></div>
-		<div class="controls"><?php echo $this->form->getInput('bloc_id'); ?></div>
+		<div class="control-label"><?php echo $this->form->getLabel('blocs_id'); ?></div>
+		<div class="controls"><?php echo $this->form->getInput('blocs_id'); ?></div>
+		<div class="control-label"><?php echo $this->form->getLabel('documents_id'); ?></div>
+		<div class="controls"><?php echo $this->form->getInput('documents_id'); ?></div>
 	</div>					
 
 

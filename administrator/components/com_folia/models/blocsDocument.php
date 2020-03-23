@@ -1,16 +1,16 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaModelBloc_doc extends JModelAdmin
+class FoliaModelBlocsDocument extends JModelAdmin
 {
 	protected $_compo = 'com_folia';
-	protected $_context = 'bloc_doc';
-	public $typeAlias = 'com_folia.blocs_document';
+	protected $_context = 'blocDocument';
+	public $typeAlias = 'com_folia.blocsDocument';
 	
 	// Surcharges des m�thodes de la classe m�re pour :
 	
 	// 1) d�finir la table de soutien � utiliser
-	public function getTable($type = 'Blocs_document', $prefix = 'FoliaTable', $config = array()) 
+	public function getTable($type = 'BlocsDocument', $prefix = 'FoliaTable', $config = array()) 
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}

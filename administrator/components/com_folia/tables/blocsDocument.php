@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class FoliaTableBlocs_document extends JTable
+class FoliaTableBlocsDocument extends JTable
 {
 	function __construct(&$db) 
 	{
@@ -31,7 +31,7 @@ class FoliaTableBlocs_document extends JTable
 		}
 		
 		// contrôle d'unicité de l'alias SEF
-		$table = JTable::getInstance('Blocs_document', 'FoliaTable');
+		$table = JTable::getInstance('BlocsDocument', 'FoliaTable');
 		// if ($table->load(array('alias' => $this->alias)) && ($table->id != $this->id || $this->id == 0))
 		// {
 			// $this->setError("COM_ANNUAIRE_ALIAS_USED");

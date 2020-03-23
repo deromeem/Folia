@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class FoliaViewBlocs_document extends JViewLegacy
+class FoliaViewBlocsDocument extends JViewLegacy
 {
 	protected $form;
 	protected $item;
@@ -38,18 +38,18 @@ class FoliaViewBlocs_document extends JViewLegacy
 
 		if ($isNew)
 		{
-			JToolbarHelper::apply('blocs_document.apply');
-			JToolbarHelper::save('blocs_document.save');
-			JToolbarHelper::save2new('blocs_document.save2new');
+			JToolbarHelper::apply('blocsDocument.apply');
+			JToolbarHelper::save('blocsDocument.save');
+			JToolbarHelper::save2new('blocsDocument.save2new');
 		}
 		else
 		{
 			// if (!$checkedOut)
 			// {
-				JToolbarHelper::apply('blocs_document.apply');
-				JToolbarHelper::save('blocs_document.save');
+				JToolbarHelper::apply('blocsDocument.apply');
+				JToolbarHelper::save('blocsDocument.save');
 			// }
 		}
-		JToolBarHelper::cancel('blocs_document.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+		JToolBarHelper::cancel('blocsDocument.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
 	}
 }

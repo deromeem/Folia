@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class FoliaViewBlocs_documents extends JViewLegacy
+class FoliaViewBlocsDocuments extends JViewLegacy
 {
 	function display($tpl = null) 
 	{
@@ -31,7 +31,7 @@ class FoliaViewBlocs_documents extends JViewLegacy
 		// ajoute la toolbar contenant les boutons d'actions
 		$this->addToolBar();
 		// invoque la méthode addSubmenu du fichier de soutien (helper)
-		UtilisateurHelper::addSubmenu('blocs_documents');
+		UtilisateurHelper::addSubmenu('blocsDocuments');
 		// prépare et affuche la sidebar à gauche de la liste
 		$this->prepareSideBar();
 		$this->sidebar = JHtmlSidebar::render();
@@ -46,14 +46,14 @@ class FoliaViewBlocs_documents extends JViewLegacy
 		JToolBarHelper::title(JText::_('COM_FOLIA_BLOCS_DOCUMENTS'));
 		
 		// affiche les boutons d'action
-		JToolBarHelper::addNew('blocs_document.add');
-		JToolBarHelper::editList('blocs_document.edit');
-		JToolBarHelper::deleteList('Etes vous sur ?', 'blocs_docs.delete');
-		JToolbarHelper::publish('blocs_documents.publish', 'JTOOLBAR_PUBLISH', true);
-		JToolbarHelper::unpublish('blocs_documents.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-		JToolbarHelper::archiveList('blocs_documents.archive');
-		JToolbarHelper::checkin('blocs_documents.checkin');
-		JToolbarHelper::trash('blocs_documents.trash');
+		JToolBarHelper::addNew('blocsDocument.add');
+		JToolBarHelper::editList('blocsDocument.edit');
+		JToolBarHelper::deleteList('Etes vous sur ?', 'blocsDocmuents.delete');
+		JToolbarHelper::publish('blocsDocuments.publish', 'JTOOLBAR_PUBLISH', true);
+		JToolbarHelper::unpublish('blocsDocuments.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::archiveList('blocsDocuments.archive');
+		JToolbarHelper::checkin('blocsDocuments.checkin');
+		JToolbarHelper::trash('blocsDocuments.trash');
 		JToolbarHelper::preferences('com_folia');
 	}
 
