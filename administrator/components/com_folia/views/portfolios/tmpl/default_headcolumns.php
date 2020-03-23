@@ -5,8 +5,11 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 ?>
 
-	<tr>                
-        <th width="60%">
+	<tr>
+		<th width="5%" class="hidden-phone">
+			<?php echo JHtml::_('grid.checkall'); ?>
+        </th>                 
+        <th width="55%">
 			<?php echo JHtml::_('grid.sort', 'COM_FOLIA_PORTFOLIOS_LIBELLE', 'p.libelle', $listDirn, $listOrder) ?>
         </th>
         <th width="10%" class="nowrap">
