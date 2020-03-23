@@ -7,10 +7,13 @@
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT
+= 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone
+= "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,25 +31,38 @@ SET time_zone = "+00:00";
 -- Structure de la table `folia_folia_portfolios`
 --
 
-CREATE TABLE `folia_folia_portfolios` (
-  `id` int(11) NOT NULL,
+CREATE TABLE `folia_folia_portfolios`
+(
+  `id` int
+(11) NOT NULL,
   `libelle` text NOT NULL,
-  `etudiant_id` int(11) NOT NULL,
-  `themes_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `etudiant_id` int
+(11) NOT NULL,
+  `themes_id` int
+(11) NOT NULL,
+  `alias` varchar
+(255) NOT NULL,
+  `published` tinyint
+(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
+  `created_by` varchar
+(255) NOT NULL,
   `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `modified_by` varchar
+(255) NOT NULL,
+  `hits` int
+(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `folia_folia_portfolios`
 --
 
-INSERT INTO `folia_folia_portfolios` (`id`, `libelle`, `etudiant_id`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+INSERT INTO `folia_folia_portfolios` (`
+id`,
+`libelle`,
+`etudiant_id
+`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, 'Portfolios M Dupond', 28, 1, '', 0, '2020-03-17 00:00:00', '', '2020-03-17 00:00:00', '', 0),
 (8, 'Portfolios M Ahmed-Reda', 21, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
 (9, 'Portfolios U Christian', 24, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
@@ -69,9 +85,12 @@ INSERT INTO `folia_folia_portfolios` (`id`, `libelle`, `etudiant_id`, `themes_id
 -- Index pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idthemes` (`themes_id`),
-  ADD KEY `idetudiant` (`etudiant_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `idthemes`
+(`themes_id`),
+ADD KEY `idetudiant`
+(`etudiant_id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -81,7 +100,8 @@ ALTER TABLE `folia_folia_portfolios`
 -- AUTO_INCREMENT pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Contraintes pour les tables déchargées
@@ -91,10 +111,132 @@ ALTER TABLE `folia_folia_portfolios`
 -- Contraintes pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
-  ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY (`etudiant_id`) REFERENCES `folia_folia_etudiants` (`id`),
-  ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY (`themes_id`) REFERENCES `folia_folia_themes` (`id`);
+ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY
+(`etudiant_id`) REFERENCES `folia_folia_etudiants`
+(`id`),
+ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY
+(`themes_id`) REFERENCES `folia_folia_themes`
+(`id`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT
+= 0;
+START TRANSACTION;
+SET time_zone
+= "+00:00";
+
+
+CREATE TABLE `folia_folia_pages`
+(
+  `id` int
+(11) NOT NULL,
+  `nom` varchar
+(255) NOT NULL,
+  `alias` varchar
+(255) NOT NULL,
+  `portfolios_id` int
+(11) NOT NULL,
+  `published` tinyint
+(1) NOT NULL DEFAULT 0,
+  `created` datetime NOT NULL,
+  `created_by` varchar
+(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar
+(255) NOT NULL,
+  `hits` int
+(11) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+ADD PRIMARY KEY
+(`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT
+= 0;
+START TRANSACTION;
+SET time_zone
+= "+00:00";
+
+
+
+CREATE TABLE `folia_folia_pages`
+(
+  `id` int
+(11) NOT NULL,
+  `nom` varchar
+(255) NOT NULL,
+  `alias` varchar
+(255) NOT NULL,
+  `portfolios_id` int
+(11) NOT NULL,
+  `published` tinyint
+(1) NOT NULL DEFAULT 0,
+  `created` datetime NOT NULL,
+  `created_by` varchar
+(255) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` varchar
+(255) NOT NULL,
+  `hits` int
+(11) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `folia_folia_pages`
+--
+
+INSERT INTO `folia_folia_pages` (`
+id`,
+`nom
+`, `alias`, `portfolios_id`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 'page 1 ahmed', '', 8, 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+(2, 'page 2 ahmed', '', 8, 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+(3, 'page Dupond', '', 1, 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+ADD PRIMARY KEY
+(`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
