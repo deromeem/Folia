@@ -11,6 +11,8 @@ class FoliaModelCommentaires extends JModelList
 			$config['filter_fields'] = array(
 				'id', 'c.id',
 				'libelle', 'c.libelle',
+				'portfolio', 'p.portfolio',
+				'professeurs', 'p.professeurs.id',
 				'published', 'c.published',
 				'hits', 'c.hits',
 				'modified', 'c.modified'
@@ -33,8 +35,9 @@ class FoliaModelCommentaires extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('c.id, c.libelle, c.published, c.hits, c.modified');
+		$query->select('c.id, c.libelle, p.libelle, c.published, c.hits, c.modified');
 		$query->from('#__folia_commentaires c');
+		$query->select('c.portfolios_id')->join('LEFT', '#__folia_portfolios AS p ON p.id=c.portfolios_id');
 
 		//$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=c.email');
 
