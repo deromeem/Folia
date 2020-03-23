@@ -54,7 +54,7 @@ class FoliaModelMaClasse extends JModelList
 		$query->select('e.id, u.nom, u.prenom, e.classes_id, e.published, e.hits, e.modified');
 		$query->from('#__folia_etudiants e');
 		$query->select('u.email AS email')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');
-		//$query->where('e.classes_id = '.(int) 2);	
+		//$query->where('e.classes_id = '.);
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');

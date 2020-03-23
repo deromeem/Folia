@@ -40,10 +40,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<thead>
 			<tr>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_ETUDIANTS_NOM'), 'nom', $listDirn, $listOrder) ?>
+					<?php //echo JHtml::_('grid.sort', JText::_('COM_FOLIA_ETUDIANTS_NOM'), 'nom', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_ETUDIANTS_PRENOM'), 'prenom', $listDirn, $listOrder) ?>
+					<?php //echo JHtml::_('grid.sort', JText::_('COM_FOLIA_ETUDIANTS_PRENOM'), 'prenom', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_ETUDIANTS_EMAIL'), 'email', $listDirn, $listOrder) ?>
@@ -57,10 +57,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php foreach($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->nom ?></a>
+						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php //echo $item->nom ?></a>
 					</td>
 					<td>
-						<?php echo $item->prenom ?>
+						<?php //echo $item->prenom ?>
 					</td>
 					<td>
 						<?php echo $item->email ?>
