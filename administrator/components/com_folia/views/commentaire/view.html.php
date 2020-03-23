@@ -33,7 +33,7 @@ class FoliaViewCommentaire extends JViewLegacy
 		// $checkedOut	= !($this->item->checked_out == 0 || $this->item->checked_out == $userId);
 	
 		$isNew = ($this->item->id == 0);
-		JToolBarHelper::title(JText::_('COM_FOLIA_COMMENTAIRES')." : ".($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_MODIF')), 'address');
+		JToolBarHelper::title(($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_COMMENTAIRE')." : ".JText::_('COM_FOLIA_MODIF')), 'address');
 
 
 		if ($isNew)
