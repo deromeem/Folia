@@ -1,0 +1,23 @@
+CREATE VIEW folia_vue_groupes AS
+SELECT g.id, g.nom, g.created date, CONCAT(u.nom,' ', u.prenom) AS `auteur`, u.email
+FROM folia_folia_groupes g
+LEFT JOIN folia_folia_etudiants e ON g.etudiants_id = e.id
+JOIN folia_folia_utilisateurs u
+ON e.email = u.email
+
+CREATE VIEW folia_vue_etudiants AS
+SELECT e.id, u.email, CONCAT(u.nom,' ', u.prenom) AS `etudiant`, c.libelle classe, u.created date
+FROM folia_folia_etudiants e
+JOIN folia_folia_utilisateurs u ON e.email = u.email
+JOIN folia_folia_classes c ON e.classes_id = c.id
+
+CREATE VIEW folia_vue_portfolios AS
+SELECT p.id, p.libelle, p.etudiants_id, CONCAT(u.nom, " ", u.prenom) etudiant, c.libelle classe, p.themes_id, t.libelle theme, p.created, p.hits, COUNT(com.libelle) nbcom
+FROM folia_folia_portfolios p
+LEFT JOIN folia_folia_etudiants e ON p.etudiants_id = e.id
+LEFT JOIN folia_folia_utilisateurs u ON e.email = u.email
+LEFT JOIN folia_folia_classes c ON e.classes_id = c.id
+LEFT JOIN folia_folia_themes t ON p.themes_id = t.id
+LEFT JOIN folia_folia_commentaires com ON com.portfolios_id = p.id
+GROUP BY id, libelle, etudiants_id, etudiant, classe, themes_id, theme, created, hits
+ORDER BY libelle;

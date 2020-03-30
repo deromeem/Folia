@@ -7,7 +7,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $saveOrder	= $listOrder == 'ordering';
 if ($saveOrder)
 {
-	$saveOrderingUrl = 'index.php?option=com_folia&task=blocs_docs.saveOrderAjax&tmpl=component';
+	$saveOrderingUrl = 'index.php?option=com_folia&task=blocsDocuments.saveOrderAjax&tmpl=component';
 	JHtml::_('sortablelist.sortable', 'articleList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 ?>
@@ -18,26 +18,29 @@ if ($saveOrder)
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>
 		<td class="nowrap hidden-phone">
-			<?php echo $item->bloc_id; ?>
+			<?php echo $item->blocs_id; ?>
+		</td>
+		<td class="nowrap hidden-phone">
+			<?php echo $item->documents_id; ?>
+		</td>
+		<td class="center hidden-phone">
+			<?php echo (int) $item->id; ?>
 		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=blocs_document.edit&id='.(int) $item->id); ?>">
+				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=blocsDocument.edit&id='.(int) $item->id); ?>">
 					<?php echo $this->escape($item->alias); ?>
 				</a>
 			</div>
 		</td>
 		<td class="center hidden-phone">
-			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocs_documents.', true); ?>
+			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocsDocuments.', true); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo JHtml::_('date', $item->modified, $this->paramDateFmt); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo (int) $item->hits; ?>
-		</td>
-		<td class="center hidden-phone">
-			<?php echo (int) $item->id; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaModelBlocs_documents extends JModelList
+class FoliaModelBlocsDocuments extends JModelList
 {
 	public function __construct($config = array())
 	{
@@ -10,8 +10,9 @@ class FoliaModelBlocs_documents extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'bd.id',
-				'alias', 'bd.alias',
 				'blocs_id', 'bd.blocs_id',
+				'documents_id', 'bd.documents_id',
+				'alias', 'bd.alias',
 				'published', 'bd.published',
 				'hits', 'bd.hits',
 				'modified', 'bd.modified'
@@ -39,11 +40,18 @@ class FoliaModelBlocs_documents extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('bd.id, bd.alias, bd.blocs_id, bd.published, bd.hits, bd.modified');
+		$query->select('bd.id, bd.blocs_id, bd.documents_id, bd.alias, bd.published, bd.hits, bd.modified');
 		$query->from('#__folia_blocs_documents bd');
 
 		// joint la table pays
 		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
+
+
+
+		//joint la table document 
+		  $query->select('d.nom AS nom')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
+ 
+
 
 		// filtre de recherche rapide textuel
 		$search = $this->getState('filter.search');
