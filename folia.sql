@@ -2013,12 +2013,12 @@ CREATE TABLE `folia_folia_tuteurs` (
   `service` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2035,15 +2035,16 @@ INSERT INTO `folia_folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`,
 --
 
 CREATE TABLE `folia_folia_tuteurs_etudiants` (
-  `tuteurs_id` int(11) NOT NULL,
-  `etudiants_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
+  id int(11) NOT NULL,
+  tuteurs_id int(11) NOT NULL,
+  etudiants_id int(11) NOT NULL,
+  alias varchar(255) NOT NULL,
+  published tinyint(1) NOT NULL DEFAULT 0,
+  created datetime NOT NULL,
+  created_by varchar(255) NOT NULL,
+  modified datetime NOT NULL,
+  modified_by int(11) NOT NULL,
+  hits int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
