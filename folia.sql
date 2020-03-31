@@ -1664,6 +1664,7 @@ CREATE TABLE `folia_folia_blocs` (
   `activite_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `texte` varchar(255) NOT NULL,
+  `texteLong` longtext NOT NULL,
   `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
@@ -1681,6 +1682,7 @@ CREATE TABLE `folia_folia_blocs` (
 CREATE TABLE `folia_folia_blocs_documents` (
   `id` int(11) NOT NULL,
   `blocs_id` int(11) NOT NULL,
+  `documents_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
@@ -1749,7 +1751,6 @@ CREATE TABLE `folia_folia_documents` (
   `nom` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `format` varchar(255) NOT NULL,
-  `blocs_documents_id` int(11) NOT NULL,
   `published` tinyint(1) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
@@ -1767,15 +1768,15 @@ CREATE TABLE `folia_folia_documents` (
 CREATE TABLE `folia_folia_etudiants` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `avance` tinyint(1) NOT NULL DEFAULT 0,
+  `avance` tinyint(1) NOT NULL DEFAULT '0',
   `classes_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` varchar(255) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2012,12 +2013,12 @@ CREATE TABLE `folia_folia_tuteurs` (
   `service` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -2037,12 +2038,12 @@ CREATE TABLE `folia_folia_tuteurs_etudiants` (
   `tuteurs_id` int(11) NOT NULL,
   `etudiants_id` int(11) NOT NULL,
   `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT '0',
   `created` datetime NOT NULL,
   `created_by` varchar(255) NOT NULL,
   `modified` datetime NOT NULL,
   `modified_by` int(11) NOT NULL,
-  `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
+  `hits` int(11) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -3440,9 +3441,11 @@ ALTER TABLE `folia_folia_blocs`
 --
 -- Index pour la table `folia_folia_blocs_documents`
 --
+  
 ALTER TABLE `folia_folia_blocs_documents`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idBloc` (`blocs_id`);
+  ADD PRIMARY KEY (`id`,`blocs_id`,`documents_id`),
+  ADD KEY `fk_tuteurs_blocs_documents_blocs` (blocs_id),
+  ADD KEY `fk_tuteurs_blocs_documents_documents_` (documents_id);
 
 --
 -- Index pour la table `folia_folia_classes`
@@ -3463,8 +3466,7 @@ ALTER TABLE `folia_folia_commentaires`
 -- Index pour la table `folia_folia_documents`
 --
 ALTER TABLE `folia_folia_documents`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idBlocDoc` (`blocs_documents_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `folia_folia_etudiants`
@@ -3538,8 +3540,9 @@ ALTER TABLE `folia_folia_tuteurs`
 -- Index pour la table `folia_folia_tuteurs_etudiants`
 --
 ALTER TABLE `folia_folia_tuteurs_etudiants`
-  ADD PRIMARY KEY (`tuteurs_id`,`etudiants_id`),
-  ADD KEY `fk_tuteurs_etudiants_etudiants` (`etudiants_id`);
+  ADD PRIMARY KEY (`id`,`tuteurs_id`,`etudiants_id`),
+  ADD KEY `fk_tuteurs_etudiants_etudiants` (`etudiants_id`),
+  ADD KEY `fk_tuteurs_etudiants_tuteurs` (`tuteurs_id`);
 
 --
 -- Index pour la table `folia_folia_utilisateurs`
@@ -4213,7 +4216,8 @@ ALTER TABLE `folia_folia_blocs`
 -- Contraintes pour la table `folia_folia_blocs_documents`
 --
 ALTER TABLE `folia_folia_blocs_documents`
-  ADD CONSTRAINT `fk_blocdoc_bloc` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`);
+  ADD CONSTRAINT `fk_blocs_documents_blocs` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`),
+  ADD CONSTRAINT `fk_blocs_documents_documents` FOREIGN KEY (`documents_id`) REFERENCES `folia_folia_documents` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_commentaires`
@@ -4223,12 +4227,7 @@ ALTER TABLE `folia_folia_commentaires`
   ADD CONSTRAINT `fk_commentaires_auteurs_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`),
   ADD CONSTRAINT `fk_commentaires_portfolios` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
 
---
--- Contraintes pour la table `folia_folia_documents`
---
-ALTER TABLE `folia_folia_documents`
-  ADD CONSTRAINT `fk_doc_blocdoc` FOREIGN KEY (`blocs_documents_id`) REFERENCES `folia_folia_blocs_documents` (`id`);
-
+  
 --
 -- Contraintes pour la table `folia_folia_etudiants`
 --
