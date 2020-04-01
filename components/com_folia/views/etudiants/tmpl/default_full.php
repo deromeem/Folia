@@ -12,6 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 			<th class="title">Nom</th>
 			<th class="title">Prénom</th>
 			<th class="title">Email</th>
+			<th class="title">Classe</th>
 		</tr>
 		</thead>
 
@@ -21,6 +22,7 @@ defined('_JEXEC') or die('Restricted access');
 				<td><?php echo $item->nom ?></td>
 				<td><?php echo $item->prenom ?></td>
 				<td><?php echo $item->email ?></td>
+				<td><?php echo $item->classe ?></td>
 			</tr>			
 			<?php endforeach; ?>
 		</tbody>

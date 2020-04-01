@@ -2,10 +2,10 @@
 defined('_JEXEC') or die('Restricted access');
 
 $user = JFactory::getUser();               		// gets current user object
-$isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10' that is 'MRH Administrateur 
+$isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is '12' that is 'MRH Folia Etudiant 
 ?>
 
-<?php if (!$isAdmin) : ?>
+<?php if (!$isEtudiant) : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 	<div class="form-inline form-inline-header">
@@ -41,39 +41,7 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 				</tr>
 				<tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_FOLIA_ETUDIANTS_CIVILITE'); ?></span>
-					</td>
-					<td width="80%">
-						<?php echo $this->item->civilite ?>
-					</td>
-				</tr>
-				<tr>
-					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_TYPECONTACT'); ?></span>
-					</td>
-					<td width="80%">
-						<?php echo $this->item->typecontact ?>
-					</td>
-				</tr>
-				<tr>
-					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_ENTREPRISE'); ?></span>
-					</td>
-					<td width="80%">
-						<a href="<?php echo JRoute::_('index.php?option=com_folia&view=entreprise&id='.(int) $this->item->entreprises_id); ?>"><?php echo $this->item->entreprise ?></a>
-					</td>
-				</tr>
-				<tr>
-					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_FONCTION'); ?></span>
-					</td>
-					<td width="80%">
-						<?php echo $this->item->fonction; ?>
-					</td>
-				</tr>
-				<tr>
-					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_EMAIL'); ?></span>
+						<span class="label"><?php echo JText::_('COM_FOLIA_ETUDIANTS_EMAIL'); ?></span>
 					</td>
 					<td width="80%">
 						<?php echo $this->item->email ?>
@@ -81,28 +49,28 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 				</tr>
 				<tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_MOBILE'); ?></span>
+						<span class="label"><?php echo JText::_('COM_FOLIA_ETUDIANTS_CLASSE'); ?></span>
 					</td>
 					<td width="80%">
-						<?php echo $this->item->mobile ?>
+						<?php echo $this->item->libelle ?>
 					</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_TEL'); ?></span>
+						<span class="label"><?php// echo JText::_('COM_ANNUAIRE_ETUDIANTS_ENTREPRISE'); ?></span>
 					</td>
 					<td width="80%">
-						<?php echo $this->item->tel ?>
+						<a href="<?php //echo JRoute::_('index.php?option=com_folia&view=entreprise&id='.(int) $this->item->entreprises_id); ?>"><?php echo $this->item->entreprise ?></a>
 					</td>
-				</tr>
-				<tr>
+				</tr> -->
+				<!-- <tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_FOLIA_COMMENT'); ?></span>
+						<span class="label"><?php// echo JText::_('COM_FOLIA_COMMENT'); ?></span>
 					</td>
 					<td width="80%">
-						<?php echo $this->item->commentaire ?>
+						<?php //echo $this->item->commentaire ?>
 					</td>
-				</tr>
+				</tr> -->
 			</tbody>
 		</table>
 	</div>

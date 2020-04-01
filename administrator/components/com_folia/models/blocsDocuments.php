@@ -92,7 +92,7 @@ class FoliaModelBlocsDocuments extends JModelList
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
+		 // echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 
