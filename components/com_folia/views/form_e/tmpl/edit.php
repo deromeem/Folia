@@ -7,10 +7,10 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('formbehavior.chosen', 'select');
 
 $user = JFactory::getUser();               		// gets current user object
-$isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10' that is 'MRH Administrateur 
+$isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is '12' that is 'MRH FOLIA Etudiant
 ?>
 
-<?php if (!$isAdmin) : ?>
+<?php if (!$isEtudiant) : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
@@ -19,7 +19,7 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 		Joomla.submitbutton = function(task)
 		{
 			// si bouton 'Annuler' ou si les champs du formulaire sont valides alors on envoie le formulaire
-			if (task == 'contact.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
+			if (task == 'etudiant.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
 			{
 				Joomla.submitform(task);
 			}
@@ -32,7 +32,7 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_FOLIA_ETUDIANT')." ".($isNew ? JText::_('COM_ETUDIANT_ADD_PAR'): JText::_('COM_ETUDIANT_MODIF_PAR')); ?></h2>
+					<h2><?php echo JText::_('COM_FOLIA_ETUDIANT')." ".($isNew ? JText::_('COM_FOLIA_ADD_PAR'): JText::_('COM_FOLIA_MODIF_PAR')); ?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
@@ -56,7 +56,7 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 					<li><a href="#commentaire" data-toggle="tab"><?php echo JText::_('COM_FOLIA_COMMENT'); ?></a></li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane active" id="contact">
+					<div class="tab-pane active" id="etudiant">
 						<table class="table">
 							<tbody>
 								<tr>
@@ -77,34 +77,18 @@ $isAdmin = (in_array('10', $user->groups));		// sets flag when user group is '10
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('civilites_id'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('email'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('civilites_id'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('email'); ?></div>
 									</td>
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('typescontacts_id'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('libelle'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('typescontacts_id'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('entreprises_id'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('entreprises_id'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('fonction'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('fonction'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('libelle'); ?></div>
 									</td>
 								</tr>
 							</tbody>

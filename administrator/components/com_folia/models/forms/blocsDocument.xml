@@ -5,28 +5,20 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="nom" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_BLOC_ID"
-            description="COM_FOLIA_BLOCS_DOCUMENTS_NOM"
+        <field name="nom" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS_ID"
+            description="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS_ID"
+            size="40" class="inputbox" default="" required="true"
+        />
+		<field name="nom" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS_ID"
+            description="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS_ID"
             size="40" class="inputbox" default="" required="true"
         />
         
         <field name="alias" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_ALIAS"
             description="COM_FOLIA_BLOCS_DOCUMENTS_ALIAS"
-            size="40" class="inputbox" default="" required="true"
+            size="40" class="inputbox" default="" required="false"
         />
 
-        <!-- <field name="email" type="text" label="COM_FOLIA_UTILISATEURS_EMAIL"
-            description="COM_FOLIA_UTILISATEURS_EMAIL"
-            size="40" class="inputbox" default="" required="true"
-        /> -->
-		<!-- <field
-				name="activite" type="editor" label="COM_FOLIA_UTILISATEURS_ACTIVITE"
-				description="COM_FOLIA_UTILISATEURS_ACTIVITE"
-				class="inputbox"
-				filter="JComponentHelper::filterText"
-				buttons="true"
-				hide="readmore,pagebreak"
-		/> -->
 		<field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

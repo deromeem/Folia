@@ -25,7 +25,7 @@ class FoliaModelEtudiant extends JModelItem
 		if (!isset($this->_item[$pk])) {
 			$db = $this->getDbo();
 			$query = $db->getQuery(true);
-			$query->select('e.id, e.nom, e.prenom, e.civilites_id, e.typescontacts_id, e.entreprises_id, e.fonction, e.email, e.mobile, e.tel, e.commentaire');
+			$query->select('e.id, e.email ');
 			$query->from('#__folia_etudiants AS e');
 
 			// joint la table classes

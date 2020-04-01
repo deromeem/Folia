@@ -47,12 +47,12 @@ JHtml::_('formbehavior.chosen', 'select');
 
 		<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'infos', JText::_('COM_FOLIA_ADVANCED')); ?>
 		<div class="row-fluid form-horizontal-desktop">
-			<div class="form-vertical">
+			<!-- <div class="form-vertical">
 				<div class="control-group">
 					<div class="control-label"><?php// echo $this->form->getLabel('pays_id'); ?></div>
 					<div class="controls"><?php //echo $this->form->getInput('pays_id'); ?></div>
 				</div>					
-			</div>
+			</div> -->
 		</div>
 		<?php echo JHtml::_('bootstrap.endTab'); ?>
 
