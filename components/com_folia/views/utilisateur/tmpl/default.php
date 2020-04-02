@@ -1,11 +1,17 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+
 $user = JFactory::getUser();               		// gets current user object
-$isREgist = (in_array('10', $user->groups));		// sets flag when user group is '10' that is 'Etudiant' 
+// $isFolia = (in_array('10', $user->groups));		// sets flag when user group is '10' that is 'Etudiant' 
+function in_array_any($needles, $haystack) {
+	return (bool)array_intersect($needles, $haystack);
+	}
+$isFolia = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 ?>
 
-<?php if (!$isREgist) : ?>
+
+<?php if (!$isFolia) : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 	<div class="form-inline form-inline-header">
