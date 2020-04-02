@@ -1565,13 +1565,13 @@ CREATE TABLE `folia_folia_activites` (
   `id` int(11) NOT NULL,
   `referentiels_id` int(11) NOT NULL,
   `nom` varchar(11) NOT NULL,
-  `alias` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1639,16 +1639,15 @@ INSERT INTO `folia_folia_activites` (`id`, `referentiels_id`, `nom`, `alias`, `d
 
 CREATE TABLE `folia_folia_bibliotheques` (
   `id` int(11) NOT NULL,
-  `etudiant_id` int(11) NOT NULL,
-  `nom` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
   `apercu` varchar(255) NOT NULL,
   `avance` tinyint(1) NOT NULL DEFAULT 0,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1662,14 +1661,14 @@ CREATE TABLE `folia_folia_blocs` (
   `id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
   `activite_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
   `texte` varchar(255) NOT NULL,
   `texteLong` longtext NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1683,12 +1682,12 @@ CREATE TABLE `folia_folia_blocs_documents` (
   `id` int(11) NOT NULL,
   `blocs_id` int(11) NOT NULL,
   `documents_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1702,12 +1701,12 @@ CREATE TABLE `folia_folia_classes` (
   `id` int(11) NOT NULL,
   `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `referentiel_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1727,16 +1726,15 @@ INSERT INTO `folia_folia_classes` (`id`, `libelle`, `referentiel_id`, `alias`, `
 
 CREATE TABLE `folia_folia_commentaires` (
   `id` int(11) NOT NULL,
-  `libelle` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `professeurs_id` int(11) NOT NULL,
-  `tuteurs_id` int(11) NOT NULL,
+  `texte` text NOT NULL,
+  `utilisateurs_id` int(11) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1751,12 +1749,12 @@ CREATE TABLE `folia_folia_documents` (
   `titre` varchar(255) NOT NULL,
   `nomFichier` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1771,12 +1769,12 @@ CREATE TABLE `folia_folia_etudiants` (
   `email` varchar(100) NOT NULL,
   `avance` tinyint(1) NOT NULL DEFAULT 0,
   `classes_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1824,12 +1822,12 @@ CREATE TABLE `folia_folia_groupes` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `etudiants_id` int(11) NOT NULL DEFAULT 1,
-  `alias` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` varchar(255) NOT NULL DEFAULT '0',
+  `created_by` int(11) NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` varchar(255) NOT NULL DEFAULT '0',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1856,12 +1854,12 @@ CREATE TABLE `folia_folia_groupes_partages` (
   `nom` varchar(100) NOT NULL,
   `groupes_id` int(11) NOT NULL DEFAULT 1,
   `utilisateurs_id` int(11) NOT NULL DEFAULT 1,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1882,13 +1880,13 @@ CREATE TABLE `folia_folia_pages` (
   `id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `texte` text NOT NULL,
-  `alias` varchar(255) NOT NULL,
   `portfolios_id` int(11) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1904,12 +1902,12 @@ CREATE TABLE `folia_folia_portfolios` (
   `texte` text NOT NULL,
   `etudiant_id` int(11) NOT NULL,
   `themes_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1923,12 +1921,12 @@ CREATE TABLE `folia_folia_professeurs` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `matiere` varchar(255) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` int(11) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1952,12 +1950,12 @@ CREATE TABLE `folia_folia_professeurs_classes` (
   `id` int(11) NOT NULL,
   `professeurs_id` int(11) NOT NULL DEFAULT 1,
   `classes_id` int(11) NOT NULL DEFAULT 1,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` int(11) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1971,12 +1969,12 @@ CREATE TABLE `folia_folia_referentiels` (
   `id` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1998,12 +1996,12 @@ CREATE TABLE `folia_folia_themes` (
   `titre` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `bibliotheques_id` int(11) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -2018,12 +2016,12 @@ CREATE TABLE `folia_folia_tuteurs` (
   `societe` varchar(255) NOT NULL,
   `service` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` int(11) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -2064,12 +2062,12 @@ CREATE TABLE `folia_folia_utilisateurs` (
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `prenom` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT '',
-  `alias` varchar(255) NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT 0,
-  `created` datetime NOT NULL,
-  `created_by` varchar(255) NOT NULL,
-  `modified` datetime NOT NULL,
-  `modified_by` varchar(255) NOT NULL,
+  `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
+  `published` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` int(11) NOT NULL DEFAULT 0,
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -3464,9 +3462,8 @@ ALTER TABLE `folia_folia_classes`
 --
 ALTER TABLE `folia_folia_commentaires`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_commentaires_auteurs_profs` (`professeurs_id`),
-  ADD KEY `fk_commentaires_auteurs_tuteurs` (`tuteurs_id`),
-  ADD KEY `fk_commentaires_portfolios` (`portfolios_id`);
+  ADD KEY `fk_commentaires_utilisateurs_id` (`utilisateurs_id`),
+  ADD KEY `fk_commentaires_portfolios_id` (`portfolios_id`);
 
 --
 -- Index pour la table `folia_folia_documents`
@@ -3958,19 +3955,21 @@ ALTER TABLE `folia_folia_activites`
 -- AUTO_INCREMENT pour la table `folia_folia_bibliotheques`
 --
 ALTER TABLE `folia_folia_bibliotheques`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_blocs`
 --
 ALTER TABLE `folia_folia_blocs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_blocs_documents`
 --
 ALTER TABLE `folia_folia_blocs_documents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_classes`
@@ -3982,13 +3981,13 @@ ALTER TABLE `folia_folia_classes`
 -- AUTO_INCREMENT pour la table `folia_folia_commentaires`
 --
 ALTER TABLE `folia_folia_commentaires`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_documents`
 --
 ALTER TABLE `folia_folia_documents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_etudiants`
@@ -4012,13 +4011,15 @@ ALTER TABLE `folia_folia_groupes_partages`
 -- AUTO_INCREMENT pour la table `folia_folia_pages`
 --
 ALTER TABLE `folia_folia_pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_professeurs`
@@ -4042,7 +4043,8 @@ ALTER TABLE `folia_folia_referentiels`
 -- AUTO_INCREMENT pour la table `folia_folia_themes`
 --
 ALTER TABLE `folia_folia_themes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_tuteurs`
@@ -4242,9 +4244,8 @@ ALTER TABLE `folia_folia_blocs_documents`
 -- Contraintes pour la table `folia_folia_commentaires`
 --
 ALTER TABLE `folia_folia_commentaires`
-  ADD CONSTRAINT `fk_commentaires_auteurs_profs` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`),
-  ADD CONSTRAINT `fk_commentaires_auteurs_tuteurs` FOREIGN KEY (`tuteurs_id`) REFERENCES `folia_folia_tuteurs` (`id`),
-  ADD CONSTRAINT `fk_commentaires_portfolios` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
+  ADD CONSTRAINT `fk_commentaires_utilisateurs_id` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`),
+  ADD CONSTRAINT `fk_commentaires_portfolios_id` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_etudiants`
