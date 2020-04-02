@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <metadata> 
-	<layout title="Liste des entreprises"> 
+	<layout title="Liste des commentaires"> 
 		<message> 
-			<![CDATA[Ecran de liste de toutes les entreprises]]> 
+			<![CDATA[Ecran de liste de tous les commentaires]]> 
 		</message> 
 	</layout> 
 </metadata>

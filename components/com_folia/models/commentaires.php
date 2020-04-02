@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
  
 jimport('joomla.application.component.modellist');
  
-class AnnuaireModelEntreprises extends JModelList
+class FoliaModelCommentaires extends JModelList
 {
 	public function __construct($config = array())
 	{
@@ -11,15 +11,11 @@ class AnnuaireModelEntreprises extends JModelList
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
-				'id', 'e.id',
-				'nom', 'e.nom',
-				'logo', 'e.logo',
-				'codeAPE_NAF', 'e.codeAPE_NAF',
-				'pays', 'e.pays',
-				'siteWeb', 'e.siteWeb',
-				'published', 'e.published',
-				'hits', 'e.hits',
-				'modified', 'e.modified'
+				'id', 'c.id',
+				'texte', 'c.texte',
+				'utilisateur', 'CONCAT(u.nom, " ", u.prenom)',
+				'portfolio', 'pf.libelle',
+				'created', 'c.created'
 			);
 		}
 		parent::__construct($config);
@@ -41,46 +37,52 @@ class AnnuaireModelEntreprises extends JModelList
 		$this->setState('list.ordering', $orderCol);
 
 		$listOrder = $app->input->get('filter_order_Dir', $direction);
-		$this->setState('list.direction', $listOrder);
-		
+		$this->setState('list.direction', $listOrder); 
+
 		$search = $this->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
 
-		parent::populateState('nom', 'ASC');
+		parent::populateState('texte', 'ASC');
 	}
 
 	protected function _getListQuery()
 	{
 		// construit la requête d'affichage de la liste
 		$query	= $this->_db->getQuery(true);
-		$query->select('e.id, e.nom, e.alias, e.logo, e.codeAPE_NAF, e.pays_id, e.siteWeb, e.published, e.hits, e.modified');
-		$query->from('#__annuaire_entreprises e');
+		$query->select('com.id, com.texte, com.utilisateurs_id, com.portfolios_id, com.created');
+		$query->from('#__folia_commentaires com');
 
+		// joint la table civilites
+		$query->select('CONCAT(u.nom, " ", u.prenom) utilisateur')->join('LEFT', '#__folia_utilisateurs u ON u.id = com.utilisateurs_id');
+
+		// joint la table typescontacts
+		$query->select('pf.libelle portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');
+		
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
 			// recherche prefixée par 'id:'
 			if (stripos($search, 'id:') === 0) {
-				$query->where('e.id = '.(int) substr($search, 3));
+				$query->where('com.id = '.(int) substr($search, 3));
 			}
 			else {
 				// recherche textuelle classique (sans préfixe)
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'e.nom LIKE '.$search;
-				$searches[]	= 'e.codeAPE_NAF LIKE '.$search;
-				$searches[]	= 'e.siteWeb LIKE '.$search;
+				$searches[]	= 'com.texte LIKE '.$search;
+				$searches[]	= 'utilisateur LIKE '.$search;
+				$searches[]	= 'portfolio LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
 		}
-
+		
 		// filtre les éléments publiés
-		$query->where('e.published=1');
+		$query->where('com.published=1');
 		
 		// tri des colonnes
-		$orderCol = $this->getState('list.ordering', 'nom');
+		$orderCol = $this->getState('list.ordering', 'texte');
 		$orderDirn = $this->getState('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

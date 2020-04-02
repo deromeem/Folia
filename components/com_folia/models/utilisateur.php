@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 class FoliaModelUtilisateur extends JModelItem
 {
 	protected $_item = null;
-	protected $_context = 'com_annuaire.utilisateur';
+	protected $_context = 'com_folia.utilisateur';
 
 	protected function populateState()
 	{

@@ -1,10 +1,10 @@
 <?php
 defined('_JEXEC') or die;
 
-class AnnuaireControllerContact extends JControllerForm
+class FoliaControllerCommentaire extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_c';
+	protected $view_item = 'form_com';
 	
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
@@ -56,10 +56,10 @@ class AnnuaireControllerContact extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_annuaire&view=contacts";		
+		return JURI::base()."/index.php?option=com_folia&view=commentaires";		
 	}
 
-	public function getModel($name = 'form_c', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_com', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;

@@ -5,8 +5,8 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-		<field name="nom" type="text" label="COM_ANNUAIRE_CONTACTS_NOM"
-			description="COM_ANNUAIRE_CONTACTS_NOM"
+		<field name="texte" type="text" label="COM_FOLIA_COMMENTAIRES_TEXTE"
+			description="COM_FOLIA_COMMENTAIRES_LIBELLE"
 			size="40" class="inputbox" default="" required="true"
 		/>
 		<field name="alias" type="text"
@@ -15,49 +15,23 @@
 			hint="JFIELD_ALIAS_PLACEHOLDER"
 			class="inputbox" size="45"
 		/>
-		<field name="prenom" type="text" label="COM_ANNUAIRE_CONTACTS_PRENOM"
-			description="COM_ANNUAIRE_CONTACTS_PRENOM"
+		<field name="utilisateur" type="text" label="COM_FOLIA_COMMENTAIRES_UTILISATEUR"
+			description="COM_FOLIA_COMMENTAIRES_UTILISATEUR"
 			size="40" class="inputbox" default="" required="true"
 		/>
-		<field name="civilites_id" type="sql" default="" label="COM_ANNUAIRE_CONTACTS_CIVILITE" 
-			description="COM_ANNUAIRE_CONTACTS_CIVILITE"
+		<field name="portfolio" type="sql" default="" label="COM_FOLIA_COMMENTAIRES_PORTFOLIO" 
+			description="COM_FOLIA_COMMENTAIRES_PORTFOLIO"
 			query="SELECT id, civilite FROM #__annuaire_civilites ORDER BY civilite" 
 			key_field="id" value_field="civilite" required="false"
 		/>
-		<field name="typescontacts_id" type="sql" default="" label="COM_ANNUAIRE_CONTACTS_TYPECONTACT" 
-			description="COM_ANNUAIRE_CONTACTS_TYPECONTACT"
-			query="SELECT id, typeContact FROM #__annuaire_typescontacts ORDER BY typeContact" 
-			key_field="id" value_field="typeContact" required="false"
-		/>
-		<field name="entreprises_id" type="sql" default="" label="COM_ANNUAIRE_CONTACTS_ENTREPRISE" 
-			description="COM_ANNUAIRE_CONTACTS_ENTREPRISE"
-			query="SELECT id, nom FROM #__annuaire_entreprises ORDER BY nom" 
-			key_field="id" value_field="nom" required="false"
-		/>
-		<field name="fonction" type="text" label="COM_ANNUAIRE_CONTACTS_FONCTION"
-			description="COM_ANNUAIRE_CONTACTS_FONCTION"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field name="email" type="text" label="COM_ANNUAIRE_CONTACTS_EMAIL"
-			description="COM_ANNUAIRE_CONTACTS_EMAIL"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field name="mobile" type="text" label="COM_ANNUAIRE_CONTACTS_MOBILE"
-			description="COM_ANNUAIRE_CONTACTS_MOBILE"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field name="tel" type="text" label="COM_ANNUAIRE_CONTACTS_TEL"
-			description="COM_ANNUAIRE_CONTACTS_TEL"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field
-			name="commentaire" type="editor" label="COM_ANNUAIRE_COMMENT"
-			description="COM_ANNUAIRE_COMMENT"
+		<!-- <field
+			name="commentaire" type="editor" label="COM_FOLIA_COMMENT"
+			description="COM_FOLIA_COMMENT"
 			class="inputbox"
 			filter="JComponentHelper::filterText"
 			buttons="true"
 			hide="readmore,pagebreak"
-		/>
+		/> -->
 		<field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"

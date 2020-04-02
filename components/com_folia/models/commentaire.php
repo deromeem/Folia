@@ -1,10 +1,10 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class AnnuaireModelContact extends JModelItem
+class FoliaModelCommentaire extends JModelItem
 {
 	protected $_item = null;
-	protected $_context = 'com_annuaire.contact';
+	protected $_context = 'com_folia.commentaire';
 
 	protected function populateState()
 	{
@@ -25,19 +25,16 @@ class AnnuaireModelContact extends JModelItem
 		if (!isset($this->_item[$pk])) {
 			$db = $this->getDbo();
 			$query = $db->getQuery(true);
-			$query->select('c.id, c.nom, c.prenom, c.civilites_id, c.typescontacts_id, c.entreprises_id, c.fonction, c.email, c.mobile, c.tel, c.commentaire');
-			$query->from('#__annuaire_contacts AS c');
+			$query->select('com.id, com.texte, com.utilisateurs_id, com.portfolios_id, com.created');
+			$query->from('#__folia_commentaires com');
 
 			// joint la table civilites
-			$query->select('m.civilite AS civilite')->join('LEFT', '#__annuaire_civilites AS m ON m.id=c.civilites_id');
+			$query->select('CONCAT(u.nom, " ", u.prenom) utilisateur')->join('LEFT', '#__folia_utilisateurs u ON u.id = com.utilisateurs_id');
 
 			// joint la table typescontacts
-			$query->select('t.typeContact AS typecontact')->join('LEFT', '#__annuaire_typescontacts AS t ON t.id=c.typescontacts_id');
-
-			// joint la table entreprises
-			$query->select('e.nom AS entreprise')->join('LEFT', '#__annuaire_entreprises AS e ON e.id=c.entreprises_id');		
+			$query->select('pf.libelle portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');	
 					
-			$query->where('c.id = ' . (int) $pk);
+			$query->where('com.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
