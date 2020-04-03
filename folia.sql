@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 02 avr. 2020 à 12:48
+-- Généré le : ven. 03 avr. 2020 à 18:11
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.3
 
@@ -1568,7 +1568,7 @@ CREATE TABLE `folia_finder_types` (
 
 CREATE TABLE `folia_folia_activites` (
   `id` int(11) NOT NULL,
-  `referentiels_id` int(11) NOT NULL,
+  `referentiels_id` int(11) NOT NULL DEFAULT 1,
   `nom` varchar(11) NOT NULL,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL,
@@ -1656,6 +1656,13 @@ CREATE TABLE `folia_folia_bibliotheques` (
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `folia_folia_bibliotheques`
+--
+
+INSERT INTO `folia_folia_bibliotheques` (`id`, `nom`, `apercu`, `avance`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', 0, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1664,8 +1671,8 @@ CREATE TABLE `folia_folia_bibliotheques` (
 
 CREATE TABLE `folia_folia_blocs` (
   `id` int(11) NOT NULL,
-  `page_id` int(11) NOT NULL,
-  `activite_id` int(11) NOT NULL,
+  `pages_id` int(11) NOT NULL DEFAULT 1,
+  `activites_id` int(11) NOT NULL DEFAULT 1,
   `texte` varchar(255) NOT NULL,
   `texteLong` longtext NOT NULL,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
@@ -1677,6 +1684,13 @@ CREATE TABLE `folia_folia_blocs` (
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `folia_folia_blocs`
+--
+
+INSERT INTO `folia_folia_blocs` (`id`, `pages_id`, `activites_id`, `texte`, `texteLong`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 1, 1, '', '', '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1685,8 +1699,8 @@ CREATE TABLE `folia_folia_blocs` (
 
 CREATE TABLE `folia_folia_blocs_documents` (
   `id` int(11) NOT NULL,
-  `blocs_id` int(11) NOT NULL,
-  `documents_id` int(11) NOT NULL,
+  `blocs_id` int(11) NOT NULL DEFAULT 1,
+  `documents_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1695,6 +1709,13 @@ CREATE TABLE `folia_folia_blocs_documents` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `folia_folia_blocs_documents`
+--
+
+INSERT INTO `folia_folia_blocs_documents` (`id`, `blocs_id`, `documents_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1705,7 +1726,7 @@ CREATE TABLE `folia_folia_blocs_documents` (
 CREATE TABLE `folia_folia_classes` (
   `id` int(11) NOT NULL,
   `libelle` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `referentiel_id` int(11) NOT NULL,
+  `referentiels_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1719,9 +1740,9 @@ CREATE TABLE `folia_folia_classes` (
 -- Déchargement des données de la table `folia_folia_classes`
 --
 
-INSERT INTO `folia_folia_classes` (`id`, `libelle`, `referentiel_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', 0, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
-(2, 'BTS2 SIO', 0, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0);
+INSERT INTO `folia_folia_classes` (`id`, `libelle`, `referentiels_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
+(2, 'BTS2 SIO', 1, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1732,8 +1753,8 @@ INSERT INTO `folia_folia_classes` (`id`, `libelle`, `referentiel_id`, `alias`, `
 CREATE TABLE `folia_folia_commentaires` (
   `id` int(11) NOT NULL,
   `texte` text NOT NULL,
-  `utilisateurs_id` int(11) NOT NULL,
-  `portfolios_id` int(11) NOT NULL,
+  `utilisateurs_id` int(11) NOT NULL DEFAULT 1,
+  `portfolios_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1742,6 +1763,13 @@ CREATE TABLE `folia_folia_commentaires` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_commentaires`
+--
+
+INSERT INTO `folia_folia_commentaires` (`id`, `texte`, `utilisateurs_id`, `portfolios_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1763,6 +1791,13 @@ CREATE TABLE `folia_folia_documents` (
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `folia_folia_documents`
+--
+
+INSERT INTO `folia_folia_documents` (`id`, `titre`, `nomFichier`, `url`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', '', '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1773,7 +1808,7 @@ CREATE TABLE `folia_folia_etudiants` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `avance` tinyint(1) NOT NULL DEFAULT 0,
-  `classes_id` int(11) NOT NULL,
+  `classes_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1885,7 +1920,7 @@ CREATE TABLE `folia_folia_pages` (
   `id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `texte` text NOT NULL,
-  `portfolios_id` int(11) NOT NULL,
+  `portfolios_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1894,6 +1929,13 @@ CREATE TABLE `folia_folia_pages` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `folia_folia_pages`
+--
+
+INSERT INTO `folia_folia_pages` (`id`, `titre`, `texte`, `portfolios_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1905,8 +1947,8 @@ CREATE TABLE `folia_folia_portfolios` (
   `id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `texte` text NOT NULL,
-  `etudiants_id` int(11) NOT NULL,
-  `themes_id` int(11) NOT NULL,
+  `etudiants_id` int(11) NOT NULL DEFAULT 1,
+  `themes_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -1915,6 +1957,13 @@ CREATE TABLE `folia_folia_portfolios` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `folia_folia_portfolios`
+--
+
+INSERT INTO `folia_folia_portfolios` (`id`, `titre`, `texte`, `etudiants_id`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1964,6 +2013,13 @@ CREATE TABLE `folia_folia_professeurs_classes` (
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `folia_folia_professeurs_classes`
+--
+
+INSERT INTO `folia_folia_professeurs_classes` (`id`, `professeurs_id`, `classes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -2000,7 +2056,7 @@ CREATE TABLE `folia_folia_themes` (
   `id` int(11) NOT NULL,
   `titre` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `bibliotheques_id` int(11) NOT NULL,
+  `bibliotheques_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2009,6 +2065,13 @@ CREATE TABLE `folia_folia_themes` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `folia_folia_themes`
+--
+
+INSERT INTO `folia_folia_themes` (`id`, `titre`, `description`, `bibliotheques_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2045,8 +2108,8 @@ INSERT INTO `folia_folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`,
 
 CREATE TABLE `folia_folia_tuteurs_etudiants` (
   `id` int(11) NOT NULL,
-  `tuteurs_id` int(11) NOT NULL,
-  `etudiants_id` int(11) NOT NULL,
+  `tuteurs_id` int(11) NOT NULL DEFAULT 1,
+  `etudiants_id` int(11) NOT NULL DEFAULT 1,
   `alias` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '',
   `published` tinyint(1) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2055,6 +2118,13 @@ CREATE TABLE `folia_folia_tuteurs_etudiants` (
   `modified_by` int(11) NOT NULL DEFAULT 0,
   `hits` int(11) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `folia_folia_tuteurs_etudiants`
+--
+
+INSERT INTO `folia_folia_tuteurs_etudiants` (`id`, `tuteurs_id`, `etudiants_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3568,7 +3638,7 @@ ALTER TABLE `folia_finder_types`
 --
 ALTER TABLE `folia_folia_activites`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idReferentiels` (`referentiels_id`);
+  ADD KEY `fk_folia_folia_activites_referentiels_id` (`referentiels_id`);
 
 --
 -- Index pour la table `folia_folia_bibliotheques`
@@ -3581,30 +3651,31 @@ ALTER TABLE `folia_folia_bibliotheques`
 --
 ALTER TABLE `folia_folia_blocs`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idPage` (`page_id`),
-  ADD KEY `idActivite` (`activite_id`);
+  ADD KEY `fk_folia_folia_blocs_pages_id` (`pages_id`),
+  ADD KEY `fk_folia_folia_blocs_activites_id` (`activites_id`);
 
 --
 -- Index pour la table `folia_folia_blocs_documents`
 --
 ALTER TABLE `folia_folia_blocs_documents`
   ADD PRIMARY KEY (`id`) USING BTREE,
-  ADD KEY `fk_tuteurs_blocs_documents_blocs` (`blocs_id`),
-  ADD KEY `fk_tuteurs_blocs_documents_documents_` (`documents_id`);
+  ADD KEY `fk_folia_folia_blocs_documents_blocs_id` (`blocs_id`),
+  ADD KEY `fk_folia_folia_blocs_documents_documents_id` (`documents_id`);
 
 --
 -- Index pour la table `folia_folia_classes`
 --
 ALTER TABLE `folia_folia_classes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_folia_folia_classes_referentiels_id` (`referentiels_id`);
 
 --
 -- Index pour la table `folia_folia_commentaires`
 --
 ALTER TABLE `folia_folia_commentaires`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_commentaires_utilisateurs_id` (`utilisateurs_id`),
-  ADD KEY `fk_commentaires_portfolios_id` (`portfolios_id`);
+  ADD KEY `fk_folia_folia_commentaires_utilisateurs_id` (`utilisateurs_id`),
+  ADD KEY `fk_folia_folia_commentaires_portfolios_id` (`portfolios_id`);
 
 --
 -- Index pour la table `folia_folia_documents`
@@ -3624,29 +3695,30 @@ ALTER TABLE `folia_folia_etudiants`
 --
 ALTER TABLE `folia_folia_groupes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_groupes_etudiants` (`etudiants_id`) USING BTREE;
+  ADD KEY `fk_folia_folia_groupes_etudiants_id` (`etudiants_id`) USING BTREE;
 
 --
 -- Index pour la table `folia_folia_groupes_partages`
 --
 ALTER TABLE `folia_folia_groupes_partages`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_groupes_partages_groupes` (`groupes_id`),
-  ADD KEY `fk_groupes_partages_utilisateurs` (`utilisateurs_id`) USING BTREE;
+  ADD KEY `fk_folia_folia_groupes_partages_groupes_id` (`groupes_id`),
+  ADD KEY `fk_folia_folia_groupes_partages_utilisateurs_id` (`utilisateurs_id`) USING BTREE;
 
 --
 -- Index pour la table `folia_folia_pages`
 --
 ALTER TABLE `folia_folia_pages`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_folia_folia_pages_portfolios_id` (`portfolios_id`);
 
 --
 -- Index pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idthemes` (`themes_id`),
-  ADD KEY `idetudiant` (`etudiants_id`);
+  ADD KEY `fk_folia_folia_portfolios_themes_id` (`themes_id`),
+  ADD KEY `fk_folia_folia_portfolios_etudiants_id` (`etudiants_id`);
 
 --
 -- Index pour la table `folia_folia_professeurs`
@@ -3659,8 +3731,8 @@ ALTER TABLE `folia_folia_professeurs`
 --
 ALTER TABLE `folia_folia_professeurs_classes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_professeurs_classes_professeurs` (`professeurs_id`),
-  ADD KEY `fk_professeurs_classes_classes` (`classes_id`);
+  ADD KEY `fk_folia_folia_professeurs_classes_professeurs_id` (`professeurs_id`),
+  ADD KEY `fk_folia_folia_professeurs_classes_classes_id` (`classes_id`);
 
 --
 -- Index pour la table `folia_folia_referentiels`
@@ -3673,7 +3745,7 @@ ALTER TABLE `folia_folia_referentiels`
 --
 ALTER TABLE `folia_folia_themes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_themes_bibliotheques` (`bibliotheques_id`) USING BTREE;
+  ADD KEY `fk_folia_folia_themes_bibliotheques_id` (`bibliotheques_id`) USING BTREE;
 
 --
 -- Index pour la table `folia_folia_tuteurs`
@@ -4354,67 +4426,79 @@ ALTER TABLE `folia_annuaire_entreprises`
 -- Contraintes pour la table `folia_folia_activites`
 --
 ALTER TABLE `folia_folia_activites`
-  ADD CONSTRAINT `fk_activites_referentiels` FOREIGN KEY (`referentiels_id`) REFERENCES `folia_folia_referentiels` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_activites_referentiels_id` FOREIGN KEY (`referentiels_id`) REFERENCES `folia_folia_referentiels` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_blocs`
 --
 ALTER TABLE `folia_folia_blocs`
-  ADD CONSTRAINT `fk_blocs_activites` FOREIGN KEY (`activite_id`) REFERENCES `folia_folia_activites` (`id`),
-  ADD CONSTRAINT `fk_blocs_page` FOREIGN KEY (`page_id`) REFERENCES `folia_folia_pages` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_blocs_activites_id` FOREIGN KEY (`activites_id`) REFERENCES `folia_folia_activites` (`id`),
+  ADD CONSTRAINT `fk_folia_folia_blocs_pages_id` FOREIGN KEY (`pages_id`) REFERENCES `folia_folia_pages` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_blocs_documents`
 --
 ALTER TABLE `folia_folia_blocs_documents`
-  ADD CONSTRAINT `fk_blocs_documents_blocs` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`),
-  ADD CONSTRAINT `fk_blocs_documents_documents` FOREIGN KEY (`documents_id`) REFERENCES `folia_folia_documents` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_blocs_documents_blocs_id` FOREIGN KEY (`blocs_id`) REFERENCES `folia_folia_blocs` (`id`),
+  ADD CONSTRAINT `fk_folia_folia_blocs_documents_documents_id` FOREIGN KEY (`documents_id`) REFERENCES `folia_folia_documents` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_classes`
+--
+ALTER TABLE `folia_folia_classes`
+  ADD CONSTRAINT `fk_folia_folia_classes_referentiels_id` FOREIGN KEY (`referentiels_id`) REFERENCES `folia_folia_referentiels` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_commentaires`
 --
 ALTER TABLE `folia_folia_commentaires`
-  ADD CONSTRAINT `fk_commentaires_portfolios_id` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`),
-  ADD CONSTRAINT `fk_commentaires_utilisateurs_id` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_commentaires_portfolios_id` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`),
+  ADD CONSTRAINT `fk_folia_folia_commentaires_utilisateurs_id` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_etudiants`
 --
 ALTER TABLE `folia_folia_etudiants`
-  ADD CONSTRAINT `fk_etudiants_classes` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_etudiants_classes_id` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_groupes`
 --
 ALTER TABLE `folia_folia_groupes`
-  ADD CONSTRAINT `folia_folia_groupes_ibfk_1` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_groupes_etudiants_id` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_groupes_partages`
 --
 ALTER TABLE `folia_folia_groupes_partages`
-  ADD CONSTRAINT `fk_groupes_partages_groupes` FOREIGN KEY (`groupes_id`) REFERENCES `folia_folia_groupes` (`id`),
-  ADD CONSTRAINT `folia_folia_groupes_partages_ibfk_1` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_groupes_partages_groupes_id` FOREIGN KEY (`groupes_id`) REFERENCES `folia_folia_groupes` (`id`),
+  ADD CONSTRAINT `fl_folia_folia_groupes_partages_utilisateurs_id` FOREIGN KEY (`utilisateurs_id`) REFERENCES `folia_folia_utilisateurs` (`id`);
+
+--
+-- Contraintes pour la table `folia_folia_pages`
+--
+ALTER TABLE `folia_folia_pages`
+  ADD CONSTRAINT `fk_folia_folia_pages_portfolios_id` FOREIGN KEY (`portfolios_id`) REFERENCES `folia_folia_portfolios` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_portfolios`
 --
 ALTER TABLE `folia_folia_portfolios`
-  ADD CONSTRAINT `fk_portfolios_etudiant` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`),
-  ADD CONSTRAINT `fk_portfolios_themes` FOREIGN KEY (`themes_id`) REFERENCES `folia_folia_themes` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_portfolios_etudiants_id` FOREIGN KEY (`etudiants_id`) REFERENCES `folia_folia_etudiants` (`id`),
+  ADD CONSTRAINT `fk_folia_folia_portfolios_themes_id` FOREIGN KEY (`themes_id`) REFERENCES `folia_folia_themes` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_professeurs_classes`
 --
 ALTER TABLE `folia_folia_professeurs_classes`
-  ADD CONSTRAINT `fk_professeurs_classes_classes_id` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`),
-  ADD CONSTRAINT `fk_professeurs_classes_professeurs_id` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_professeurs_classes_classes_id` FOREIGN KEY (`classes_id`) REFERENCES `folia_folia_classes` (`id`),
+  ADD CONSTRAINT `fk_folia_folia_professeurs_classes_professeurs_id` FOREIGN KEY (`professeurs_id`) REFERENCES `folia_folia_professeurs` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_themes`
 --
 ALTER TABLE `folia_folia_themes`
-  ADD CONSTRAINT `fk_themes_bibliotheques` FOREIGN KEY (`bibliotheques_id`) REFERENCES `folia_folia_bibliotheques` (`id`);
+  ADD CONSTRAINT `fk_folia_folia_themes_bibliotheques_id` FOREIGN KEY (`bibliotheques_id`) REFERENCES `folia_folia_bibliotheques` (`id`);
 
 --
 -- Contraintes pour la table `folia_folia_tuteurs_etudiants`
