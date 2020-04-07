@@ -4,11 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.framework'); 				// javascript Joomla object for grid.sort !
 
 $user = JFactory::getUser();               		// gets current user object
-// $isFolia = (in_array('10', $user->groups));
-function in_array_any($needles, $haystack) {
-   return (bool)array_intersect($needles, $haystack);
-}
-$isFolia = (in_array_any(array('12', '13', '14', '15'), $user->groups));
+$isFolia = ((bool)array_intersect(array('12', '13', '14', '15'), $user->groups));
 ?>
 
 <?php if (!$isFolia) : ?>

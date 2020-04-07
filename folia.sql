@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 03 avr. 2020 à 18:11
+-- Généré le : mar. 07 avr. 2020 à 15:48
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.3
 
@@ -129,7 +129,79 @@ INSERT INTO `folia_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (84, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_LANGUAGE\",\"id\":\"602\",\"name\":\"French (France)\",\"extension_name\":\"French (France)\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-02 10:44:43', 'com_installer', 690, 602, 'COM_ACTIONLOGS_DISABLED'),
 (85, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_LANGUAGE\",\"id\":\"603\",\"name\":\"French (France)\",\"extension_name\":\"French (France)\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-02 10:44:43', 'com_installer', 690, 603, 'COM_ACTIONLOGS_DISABLED'),
 (86, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PACKAGE\",\"id\":\"803\",\"name\":\"French (fr-FR) Language pack\",\"extension_name\":\"French (fr-FR) Language pack\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-02 10:44:43', 'com_installer', 690, 803, 'COM_ACTIONLOGS_DISABLED'),
-(87, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-02 10:46:55', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED');
+(87, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-02 10:46:55', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(88, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 09:36:28', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(89, 'PLG_ACTIONLOG_JOOMLA_USER_LOGIN_FAILED', '{\"action\":\"login\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 09:40:31', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED'),
+(90, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 09:40:45', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(91, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 09:53:37', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(92, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":693,\"title\":\"Antoine DURAND\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=693\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 09:55:42', 'com_users', 690, 693, 'COM_ACTIONLOGS_DISABLED'),
+(93, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":694,\"title\":\"Jean MARQUE\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=694\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 09:56:29', 'com_users', 690, 694, 'COM_ACTIONLOGS_DISABLED'),
+(94, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":695,\"title\":\"Ivan NOTE\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=695\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:01:16', 'com_users', 690, 695, 'COM_ACTIONLOGS_DISABLED'),
+(95, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":696,\"title\":\"Sami FRAIS\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=696\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:02:15', 'com_users', 690, 696, 'COM_ACTIONLOGS_DISABLED'),
+(96, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":697,\"title\":\"Louise AUBIN\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=697\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:03:04', 'com_users', 690, 697, 'COM_ACTIONLOGS_DISABLED'),
+(97, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":698,\"title\":\"Ines PAGE\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=698\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:04:08', 'com_users', 690, 698, 'COM_ACTIONLOGS_DISABLED'),
+(98, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":699,\"title\":\"Alain CARON\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=699\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:05:04', 'com_users', 690, 699, 'COM_ACTIONLOGS_DISABLED'),
+(99, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":700,\"title\":\"Paul HOCHON\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=700\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:05:52', 'com_users', 690, 700, 'COM_ACTIONLOGS_DISABLED'),
+(100, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":693,\"title\":\"Antoine DURAND\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=693\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:06:13', 'com_users', 690, 693, 'COM_ACTIONLOGS_DISABLED'),
+(101, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":694,\"title\":\"Jean MARQUE\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=694\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:06:28', 'com_users', 690, 694, 'COM_ACTIONLOGS_DISABLED'),
+(102, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":698,\"title\":\"Iris PAGE\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=698\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:14:26', 'com_users', 690, 698, 'COM_ACTIONLOGS_DISABLED'),
+(103, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 10:40:12', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(104, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":3,\"title\":\"Menu Folia Etudiant\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=3\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:43:16', 'com_menus.menu', 690, 3, 'COM_ACTIONLOGS_DISABLED'),
+(105, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":138,\"title\":\"Mon profil\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=138\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:44:43', 'com_menus.item', 690, 138, 'COM_ACTIONLOGS_DISABLED'),
+(106, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":139,\"title\":\"Mes portfolios\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=139\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:46:11', 'com_menus.item', 690, 139, 'COM_ACTIONLOGS_DISABLED'),
+(107, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":91,\"title\":\"Espace Etudiant\",\"extension_name\":\"Espace Etudiant\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=91\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:47:42', 'com_modules.module', 690, 91, 'COM_ACTIONLOGS_DISABLED'),
+(108, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ACCESS_LEVEL\",\"id\":7,\"title\":\"Acc\\u00e8s folia \\u00e9tudiant\",\"itemlink\":\"index.php?option=com_users&task=level.edit&id=7\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:48:45', 'com_users.level', 690, 7, 'COM_ACTIONLOGS_DISABLED'),
+(109, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":91,\"title\":\"Espace Etudiant\",\"extension_name\":\"Espace Etudiant\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=91\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:49:16', 'com_modules.module', 690, 91, 'COM_ACTIONLOGS_DISABLED'),
+(110, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-04-07 10:49:16', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(111, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-04-07 10:50:08', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(112, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":\"10003\",\"title\":\"com_folia\",\"extension_name\":\"com_folia\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=10003\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:53:22', 'com_config.component', 690, 10003, 'COM_ACTIONLOGS_DISABLED'),
+(113, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":3,\"title\":\"Menu folia \\u00e9tudiant\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=3\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 10:59:34', 'com_menus.menu', 690, 3, 'COM_ACTIONLOGS_DISABLED'),
+(114, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":4,\"title\":\"Menu folia professeur\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=4\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:00:21', 'com_menus.menu', 690, 4, 'COM_ACTIONLOGS_DISABLED'),
+(115, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":5,\"title\":\"Menu folia arbitre\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=5\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:00:44', 'com_menus.menu', 690, 5, 'COM_ACTIONLOGS_DISABLED'),
+(116, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ACCESS_LEVEL\",\"id\":8,\"title\":\"Acc\\u00e8s folia professeur\",\"itemlink\":\"index.php?option=com_users&task=level.edit&id=8\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:01:23', 'com_users.level', 690, 8, 'COM_ACTIONLOGS_DISABLED'),
+(117, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ACCESS_LEVEL\",\"id\":9,\"title\":\"Acc\\u00e8s folia tuteur\",\"itemlink\":\"index.php?option=com_users&task=level.edit&id=9\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:01:50', 'com_users.level', 690, 9, 'COM_ACTIONLOGS_DISABLED'),
+(118, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":139,\"title\":\"Ma classe\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=139\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:05:39', 'com_menus.item', 690, 139, 'COM_ACTIONLOGS_DISABLED'),
+(119, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__menu\"}', '2020-04-07 11:05:39', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(120, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":138,\"title\":\"Mes portfolios\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=138\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:06:16', 'com_menus.item', 690, 138, 'COM_ACTIONLOGS_DISABLED'),
+(121, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__menu\"}', '2020-04-07 11:06:16', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(122, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":140,\"title\":\"Mon profil\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=140\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 11:08:23', 'com_menus.item', 690, 140, 'COM_ACTIONLOGS_DISABLED'),
+(123, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 12:30:07', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(124, 'PLG_ACTIONLOG_JOOMLA_USER_LOGIN_FAILED', '{\"action\":\"login\",\"id\":\"690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 12:30:26', 'com_users', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(125, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 12:30:35', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(126, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__menu\"}', '2020-04-07 12:33:01', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(127, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__menu\"}', '2020-04-07 12:33:18', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(128, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UNPUBLISHED', '{\"action\":\"unpublish\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":106,\"title\":\"Contact\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=106\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:33:18', 'com_menus.item', 690, 106, 'COM_ACTIONLOGS_DISABLED'),
+(129, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 12:33:40', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED');
+INSERT INTO `folia_action_logs` (`id`, `message_language_key`, `message`, `log_date`, `extension`, `user_id`, `item_id`, `ip_address`) VALUES
+(130, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 12:33:50', 'com_users', 691, 0, 'COM_ACTIONLOGS_DISABLED'),
+(131, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":\"10001\",\"title\":\"com_annuaire\",\"extension_name\":\"com_annuaire\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=10001\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:48:20', 'com_config.component', 690, 10001, 'COM_ACTIONLOGS_DISABLED'),
+(132, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":2,\"title\":\"Annuaire\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=2\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:49:25', 'com_menus.menu', 690, 2, 'COM_ACTIONLOGS_DISABLED'),
+(133, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":2,\"title\":\"Menu Annuaire\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=2\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:49:58', 'com_menus.menu', 690, 2, 'COM_ACTIONLOGS_DISABLED'),
+(134, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":2,\"title\":\"Menu annuaire\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=2\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:50:11', 'com_menus.menu', 690, 2, 'COM_ACTIONLOGS_DISABLED'),
+(135, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":90,\"title\":\"Annuaire\",\"extension_name\":\"Annuaire\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=90\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:50:35', 'com_modules.module', 690, 90, 'COM_ACTIONLOGS_DISABLED'),
+(136, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-04-07 12:50:35', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(137, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"691\",\"userid\":\"691\",\"username\":\"mdupond\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=691\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 12:51:20', 'com_users', 691, 691, 'COM_ACTIONLOGS_DISABLED'),
+(138, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"695\",\"username\":\"inote\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=695\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 12:51:42', 'com_users', 695, 0, 'COM_ACTIONLOGS_DISABLED'),
+(139, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":90,\"title\":\"Annuaire\",\"extension_name\":\"Annuaire\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=90\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:52:48', 'com_modules.module', 690, 90, 'COM_ACTIONLOGS_DISABLED'),
+(140, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-04-07 12:52:48', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(141, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":141,\"title\":\"Mes classes\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=141\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:53:41', 'com_menus.item', 690, 141, 'COM_ACTIONLOGS_DISABLED'),
+(142, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":142,\"title\":\"Mes \\u00e9tudiants\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=142\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:54:19', 'com_menus.item', 690, 142, 'COM_ACTIONLOGS_DISABLED'),
+(143, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":92,\"title\":\"Espace professeur\",\"extension_name\":\"Espace professeur\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=92\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 12:55:18', 'com_modules.module', 690, 92, 'COM_ACTIONLOGS_DISABLED'),
+(144, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2020-04-07 13:20:00', 'com_users', 690, 0, 'COM_ACTIONLOGS_DISABLED'),
+(145, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":143,\"title\":\"R\\u00e9f\\u00e9rentiels\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=143\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:21:00', 'com_menus.item', 690, 143, 'COM_ACTIONLOGS_DISABLED'),
+(146, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":144,\"title\":\"Commentaires\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=144\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:22:08', 'com_menus.item', 690, 144, 'COM_ACTIONLOGS_DISABLED'),
+(147, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"695\",\"userid\":\"695\",\"username\":\"inote\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=695\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:22:30', 'com_users', 695, 695, 'COM_ACTIONLOGS_DISABLED'),
+(148, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"695\",\"username\":\"inote\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=695\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:22:59', 'com_users', 695, 0, 'COM_ACTIONLOGS_DISABLED'),
+(149, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"695\",\"userid\":\"695\",\"username\":\"inote\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=695\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:27:23', 'com_users', 695, 695, 'COM_ACTIONLOGS_DISABLED'),
+(150, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"700\",\"username\":\"phochon\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=700\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:27:39', 'com_users', 700, 0, 'COM_ACTIONLOGS_DISABLED'),
+(151, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU\",\"id\":5,\"title\":\"Menu folia tuteur\",\"itemlink\":\"index.php?option=com_menus&task=menu.edit&id=5\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:29:00', 'com_menus.menu', 690, 5, 'COM_ACTIONLOGS_DISABLED'),
+(152, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":145,\"title\":\"Mes \\u00e9tudiants\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=145\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:31:30', 'com_menus.item', 690, 145, 'COM_ACTIONLOGS_DISABLED'),
+(153, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":146,\"title\":\"Mes commentaires\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=146\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:32:14', 'com_menus.item', 690, 146, 'COM_ACTIONLOGS_DISABLED'),
+(154, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":93,\"title\":\"Espace tuteur\",\"extension_name\":\"Espace tuteur\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=93\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:33:09', 'com_modules.module', 690, 93, 'COM_ACTIONLOGS_DISABLED'),
+(155, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"690\",\"title\":\"SLAM\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\",\"table\":\"#__modules\"}', '2020-04-07 13:33:13', 'com_checkin', 690, 690, 'COM_ACTIONLOGS_DISABLED'),
+(156, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":\"700\",\"userid\":\"700\",\"username\":\"phochon\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=700\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:38:51', 'com_users', 700, 700, 'COM_ACTIONLOGS_DISABLED'),
+(157, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"696\",\"username\":\"sfrais\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=696\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2020-04-07 13:39:21', 'com_users', 696, 0, 'COM_ACTIONLOGS_DISABLED'),
+(158, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":147,\"title\":\"Mes commentaires\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=147\",\"userid\":\"690\",\"username\":\"SLAM\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=690\"}', '2020-04-07 13:41:30', 'com_menus.item', 690, 147, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -273,7 +345,7 @@ CREATE TABLE `folia_annuaire_contacts` (
 
 INSERT INTO `folia_annuaire_contacts` (`id`, `nom`, `alias`, `prenom`, `civilites_id`, `typescontacts_id`, `entreprises_id`, `fonction`, `email`, `mobile`, `tel`, `commentaire`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', '', '', 1, 1, 1, '', '', '', '', '', 0, '2015-12-17 10:57:13', 690, '0000-00-00 00:00:00', 0, 0),
-(2, 'DUPONTz', 'dupont', 'Pierre', 2, 2, 3, '', '', '', '', '', 1, '2016-03-02 16:15:35', 690, '2020-03-10 14:08:27', 691, 0),
+(2, 'DUPONT', 'dupont', 'Pierre', 2, 2, 3, '', '', '', '', '', 1, '2016-03-02 16:15:35', 690, '2020-04-07 13:15:07', 695, 0),
 (3, 'SMITH', 'smith', 'Léa', 3, 2, 5, '', '', '', '', '', 1, '2016-03-02 16:16:17', 690, '2019-11-27 17:59:21', 690, 0);
 
 -- --------------------------------------------------------
@@ -315,7 +387,7 @@ INSERT INTO `folia_annuaire_entreprises` (`id`, `nom`, `alias`, `logo`, `activit
 (2, 'Carrefour', 'carrefour', 'Carrefour.png', 'Grande distribution', '4711F', '', '', 'carrefour.fr', '', '', '', '', 2, '', 1, '2019-11-27 17:38:27', 540, '2019-11-27 17:45:31', 690, 0),
 (3, 'Sopra Steria', 'sopra-steria', 'SopraSteria.png', 'Services numériques', '7022Z', '', '', 'soprasteria.fr', '', '', '', '', 2, '', 1, '2019-11-27 17:42:39', 690, '2019-11-27 17:43:21', 690, 0),
 (4, 'Renault', 'renault', 'Renault.png', 'Construction automobile', '2910Z', '', '', 'renault.fr', '', '', '', '', 2, '', 1, '2019-11-27 17:50:46', 690, '2019-11-27 17:50:46', 0, 0),
-(5, 'Accenture', 'accenture', 'Accenture.png', 'Services numériques', '', '', '', 'accenture.com', '', '', '', '', 8, '', 1, '2019-11-27 17:54:13', 690, '2019-11-27 17:55:09', 690, 0);
+(5, 'Accenture', 'accenture', 'Accenture.png', 'Services numériques', '', '', '', 'accenture.com', '', '', '', '', 8, '', 1, '2019-11-27 17:54:13', 690, '2020-04-07 13:15:29', 695, 0);
 
 -- --------------------------------------------------------
 
@@ -386,7 +458,7 @@ CREATE TABLE `folia_assets` (
 --
 
 INSERT INTO `folia_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 129, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
+(1, 0, 0, 141, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
@@ -401,56 +473,62 @@ INSERT INTO `folia_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (13, 1, 37, 38, 1, 'com_mailto', 'com_mailto', '{}'),
 (14, 1, 39, 40, 1, 'com_massmail', 'com_massmail', '{}'),
 (15, 1, 41, 42, 1, 'com_media', 'com_media', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}'),
-(16, 1, 43, 48, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1},\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
-(17, 1, 49, 50, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
-(18, 1, 51, 90, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
-(19, 1, 91, 94, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(20, 1, 95, 96, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
-(21, 1, 97, 98, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
-(22, 1, 99, 100, 1, 'com_search', 'com_search', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(23, 1, 101, 102, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
-(24, 1, 103, 106, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
-(26, 1, 107, 108, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(16, 1, 43, 54, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1},\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
+(17, 1, 55, 56, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
+(18, 1, 57, 102, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
+(19, 1, 103, 106, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(20, 1, 107, 108, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
+(21, 1, 109, 110, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
+(22, 1, 111, 112, 1, 'com_search', 'com_search', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(23, 1, 113, 114, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
+(24, 1, 115, 118, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
+(26, 1, 119, 120, 1, 'com_wrapper', 'com_wrapper', '{}'),
 (27, 8, 18, 27, 2, 'com_content.category.2', 'Non catégorisé', '{}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Non catégorisé', '{}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Non catégorisé', '{}'),
-(30, 19, 92, 93, 2, 'com_newsfeeds.category.5', 'Non catégorisé', '{}'),
-(32, 24, 104, 105, 2, 'com_users.category.7', 'Non catégorisé', '{}'),
-(33, 1, 109, 110, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(34, 1, 111, 112, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
-(35, 1, 113, 114, 1, 'com_tags', 'com_tags', '{}'),
-(36, 1, 115, 116, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 117, 118, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 119, 120, 1, 'com_postinstall', 'com_postinstall', '{}'),
-(39, 18, 52, 53, 2, 'com_modules.module.1', 'Menu principal', '{}'),
-(40, 18, 54, 55, 2, 'com_modules.module.2', 'Login', '{}'),
-(41, 18, 56, 57, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
-(42, 18, 58, 59, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
-(43, 18, 60, 61, 2, 'com_modules.module.8', 'Toolbar', '{}'),
-(44, 18, 62, 63, 2, 'com_modules.module.9', 'Quick Icons', '{}'),
-(45, 18, 64, 65, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
-(46, 18, 66, 67, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
-(47, 18, 68, 69, 2, 'com_modules.module.13', 'Admin Submenu', '{}'),
-(48, 18, 70, 71, 2, 'com_modules.module.14', 'User Status', '{}'),
-(49, 18, 72, 73, 2, 'com_modules.module.15', 'Title', '{}'),
-(50, 18, 74, 75, 2, 'com_modules.module.16', 'Login Form', '{}'),
-(51, 18, 76, 77, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
-(52, 18, 78, 79, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
-(53, 18, 80, 81, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
+(30, 19, 104, 105, 2, 'com_newsfeeds.category.5', 'Non catégorisé', '{}'),
+(32, 24, 116, 117, 2, 'com_users.category.7', 'Non catégorisé', '{}'),
+(33, 1, 121, 122, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(34, 1, 123, 124, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
+(35, 1, 125, 126, 1, 'com_tags', 'com_tags', '{}'),
+(36, 1, 127, 128, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 129, 130, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 131, 132, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(39, 18, 58, 59, 2, 'com_modules.module.1', 'Menu principal', '{}'),
+(40, 18, 60, 61, 2, 'com_modules.module.2', 'Login', '{}'),
+(41, 18, 62, 63, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
+(42, 18, 64, 65, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
+(43, 18, 66, 67, 2, 'com_modules.module.8', 'Toolbar', '{}'),
+(44, 18, 68, 69, 2, 'com_modules.module.9', 'Quick Icons', '{}'),
+(45, 18, 70, 71, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
+(46, 18, 72, 73, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
+(47, 18, 74, 75, 2, 'com_modules.module.13', 'Admin Submenu', '{}'),
+(48, 18, 76, 77, 2, 'com_modules.module.14', 'User Status', '{}'),
+(49, 18, 78, 79, 2, 'com_modules.module.15', 'Title', '{}'),
+(50, 18, 80, 81, 2, 'com_modules.module.16', 'Login Form', '{}'),
+(51, 18, 82, 83, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
+(52, 18, 84, 85, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
+(53, 18, 86, 87, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
 (54, 16, 44, 45, 2, 'com_menus.menu.1', 'Main Menu', '{}'),
-(55, 18, 82, 83, 2, 'com_modules.module.87', 'Sample Data', '{}'),
-(56, 1, 121, 122, 1, 'com_privacy', 'com_privacy', '{}'),
-(57, 1, 123, 124, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
-(58, 18, 84, 85, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
-(59, 18, 86, 87, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
+(55, 18, 88, 89, 2, 'com_modules.module.87', 'Sample Data', '{}'),
+(56, 1, 133, 134, 1, 'com_privacy', 'com_privacy', '{}'),
+(57, 1, 135, 136, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
+(58, 18, 90, 91, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
+(59, 18, 92, 93, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
 (60, 27, 19, 20, 3, 'com_content.article.1', 'Bienvenue', '{}'),
 (61, 27, 21, 22, 3, 'com_content.article.2', 'Portfolios', '{}'),
 (62, 27, 23, 24, 3, 'com_content.article.3', 'Guide', '{}'),
 (63, 27, 25, 26, 3, 'com_content.article.4', 'Exemples', '{}'),
-(65, 1, 125, 126, 1, 'com_annuaire', 'com_annuaire', '{\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
-(67, 18, 88, 89, 2, 'com_modules.module.90', 'Menu Annuaire', '{}'),
-(68, 16, 46, 47, 2, 'com_menus.menu.2', 'Menu Annuaire', '{}'),
-(69, 1, 127, 128, 1, 'com_folia', 'com_folia', '{}');
+(65, 1, 137, 138, 1, 'com_annuaire', 'com_annuaire', '{\"core.create\":{\"2\":1},\"core.delete\":{\"2\":1},\"core.edit\":{\"2\":1}}'),
+(67, 18, 94, 95, 2, 'com_modules.module.90', 'Annuaire', '{}'),
+(68, 16, 46, 47, 2, 'com_menus.menu.2', 'Menu annuaire', '{}'),
+(69, 1, 139, 140, 1, 'com_folia', 'com_folia', '{\"core.create\":{\"10\":1},\"core.delete\":{\"10\":1},\"core.edit\":{\"10\":1}}'),
+(70, 16, 48, 49, 2, 'com_menus.menu.3', 'Menu folia étudiant', '{}'),
+(71, 18, 96, 97, 2, 'com_modules.module.91', 'Espace Etudiant', '{}'),
+(72, 16, 50, 51, 2, 'com_menus.menu.4', 'Menu folia professeur', '{}'),
+(73, 16, 52, 53, 2, 'com_menus.menu.5', 'Menu folia tuteur', '{}'),
+(74, 18, 98, 99, 2, 'com_modules.module.92', 'Espace professeur', '{}'),
+(75, 18, 100, 101, 2, 'com_modules.module.93', 'Espace tuteur', '{}');
 
 -- --------------------------------------------------------
 
@@ -695,9 +773,9 @@ CREATE TABLE `folia_content` (
 --
 
 INSERT INTO `folia_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`, `note`) VALUES
-(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 43, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(2, 61, 'Portfolios', 'portfolios', '<p>Accès réservé aux adhérents (étudiants, professeurs, tuteurs de stage).</p>', '', 1, 2, '2019-10-11 12:39:41', 690, '', '2019-10-11 12:39:41', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:39:41', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 2, '', '', 2, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
-(3, 62, 'Guide', 'guide', '<p>Guide d\'utilisation pour la création, la modification et le suivi des portfolios.</p>', '', 1, 2, '2019-10-11 12:40:44', 690, '', '2019-10-11 12:40:44', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:40:44', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 6, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(1, 60, 'Bienvenue', 'bienvenue', '<p>Bienvenue sur le site Folia de création et de suivi de portfolio des étudiants de BTS-SIO.</p>', '', 1, 2, '2019-10-11 12:38:00', 690, '', '2019-10-11 12:38:00', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:38:00', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 3, '', '', 1, 57, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(2, 61, 'Portfolios', 'portfolios', '<p>Accès réservé aux adhérents (étudiants, professeurs, tuteurs de stage).</p>', '', 1, 2, '2019-10-11 12:39:41', 690, '', '2019-10-11 12:39:41', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:39:41', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 2, '', '', 2, 4, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
+(3, 62, 'Guide', 'guide', '<p>Guide d\'utilisation pour la création, la modification et le suivi des portfolios.</p>', '', 1, 2, '2019-10-11 12:40:44', 690, '', '2019-10-11 12:40:44', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:40:44', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 8, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', ''),
 (4, 63, 'Exemples', 'exemples', '<p>Exemples de portfolios réalisés avec Folia.</p>', '', 1, 2, '2019-10-11 12:41:17', 690, '', '2019-10-11 12:41:17', 0, 0, '0000-00-00 00:00:00', '2019-10-11 12:41:17', '0000-00-00 00:00:00', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":false,\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":false,\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":false,\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_vote\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 3, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\",\"xreference\":\"\"}', 0, '*', '', '');
 
 -- --------------------------------------------------------
@@ -950,7 +1028,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1585824238}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1586252171}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":1570797294,\"unique_id\":\"1f66858c04f0e1653ddecb8a3629d7522c653eea\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -1007,7 +1085,7 @@ INSERT INTO `folia_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (802, 0, 'English (en-GB) Language Pack', 'package', 'pkg_en-GB', '', 0, 1, 1, 1, '{\"name\":\"English (en-GB) Language Pack\",\"type\":\"package\",\"creationDate\":\"September 2019\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.12.1\",\"description\":\"en-GB language pack\",\"group\":\"\",\"filename\":\"pkg_en-GB\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (803, 0, 'French (fr-FR) Language pack', 'package', 'pkg_fr-FR', '', 0, 1, 1, 0, '{\"name\":\"French (fr-FR) Language pack\",\"type\":\"package\",\"creationDate\":\"2020-03-07\",\"author\":\"French translation team : joomla.fr\",\"copyright\":\"Copyright (C) 2005 - 2020 Joomla.fr and Open Source Matters, Inc. All rights reserved.\",\"authorEmail\":\"traduction@joomla.fr\",\"authorUrl\":\"http:\\/\\/joomla.fr\",\"version\":\"3.9.16.1\",\"description\":\"<div style=\\\"text-align:left;\\\">\\n<h3>Joomla! 3.9.16 Full French (fr-FR) Language Package - Version 3.9.16.1<\\/h3>\\n<h3>Paquet de langue Joomla! 3.9.16 fran\\u00e7ais (fr-FR) complet - Version 3.9.16.1<\\/h3>\\n<\\/div>\",\"group\":\"\",\"filename\":\"pkg_fr-FR\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10001, 0, 'com_annuaire', 'component', 'com_annuaire', '', 1, 1, 0, 0, '{\"name\":\"com_annuaire\",\"type\":\"component\",\"creationDate\":\"Octobre 2018\",\"author\":\"Emmanuel DEROME\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"emmanuel.derome@gmail.com\",\"authorUrl\":\"\",\"version\":\"2.5\",\"description\":\"com_annuaire_descr\",\"group\":\"\",\"filename\":\"annuaire\"}', '{\"show_title\":\"1\",\"link_titles\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10003, 0, 'com_folia', 'component', 'com_folia', '', 1, 1, 0, 0, '{\"name\":\"com_folia\",\"type\":\"component\",\"creationDate\":\"March 2020\",\"author\":\"BTS-SIO2 SLAM\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"\",\"authorUrl\":\"\",\"version\":\"1.0\",\"description\":\"com_folia_descr\",\"group\":\"\",\"filename\":\"folia\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(10003, 0, 'com_folia', 'component', 'com_folia', '', 1, 1, 0, 0, '{\"name\":\"com_folia\",\"type\":\"component\",\"creationDate\":\"March 2020\",\"author\":\"BTS-SIO2 SLAM\",\"copyright\":\"All rights reserved\",\"authorEmail\":\"\",\"authorUrl\":\"\",\"version\":\"1.0\",\"description\":\"com_folia_descr\",\"group\":\"\",\"filename\":\"folia\"}', '{\"show_title\":\"1\",\"link_titles\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1850,7 +1928,9 @@ INSERT INTO `folia_folia_etudiants` (`id`, `email`, `avance`, `classes_id`, `ali
 (25, 'william.wan@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
 (26, 'michel.yam@etudiants.louis-armand.paris', 0, 2, '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
 (28, 'mdupond@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', 0, '2020-02-26 16:00:00', 0, 0),
-(29, 'pmartin@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', 0, '2020-02-26 16:00:00', 0, 0);
+(29, 'pmartin@folia.fr', 0, 1, '', 1, '2020-02-26 16:00:00', 0, '2020-02-26 16:00:00', 0, 0),
+(30, 'adurand@folia.fr', 0, 1, '', 1, '2020-04-07 12:22:06', 0, '0000-00-00 00:00:00', 0, 0),
+(31, 'jmarque@folia.fr', 0, 1, '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1992,7 +2072,10 @@ INSERT INTO `folia_folia_professeurs` (`id`, `email`, `matiere`, `alias`, `publi
 (1, '-', '', '', 0, '2018-09-26 15:00:00', 0, '2018-09-26 15:00:00', 0, 0),
 (2, 'emmanuel.derome@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', 0, '2018-09-26 15:00:00', 0, 0),
 (3, 'marie-lise.simon@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', 0, '2018-09-26 15:00:00', 0, 0),
-(4, 'claude.roos@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', 0, '2018-09-26 15:00:00', 0, 0);
+(4, 'claude.roos@louis-armand.paris', 'Informatique', '', 0, '2018-09-26 15:00:00', 0, '2018-09-26 15:00:00', 0, 0),
+(5, 'inote@folia.fr', 'Informatique', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0),
+(6, 'sfrais@folia.fr', 'Maths', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0),
+(7, 'laubin@folia.fr', 'Anglais', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2098,7 +2181,9 @@ CREATE TABLE `folia_folia_tuteurs` (
 --
 
 INSERT INTO `folia_folia_tuteurs` (`id`, `societe`, `service`, `email`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, 'societe1', 'service1', 'william.wan@etudiants.louis-armand.paris', 'william.wan@etudiants.louis-armand.paris', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0);
+(1, 'Accenture', 'Formation', 'ipage@folia.fr', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0),
+(2, 'Renault', 'Commercial', 'acaron@folia.fr', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0),
+(3, 'Carrefour', 'Informatique', 'phochon@folia.fr', '', 1, '2020-04-07 12:22:06', 0, '2020-04-07 12:22:06', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2180,8 +2265,16 @@ INSERT INTO `folia_folia_utilisateurs` (`id`, `nom`, `prenom`, `email`, `alias`,
 (27, 'DEROME', 'Emmanuel', 'emmanuel.derome@louis-armand.paris', '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
 (28, 'SIMON', 'Marie-Lise', 'marie-lise.simon@louis-armand.paris', '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
 (29, 'ROOS', 'Claude', 'claude.roos@louis-armand.paris', '', 1, '2018-09-26 15:00:00', 0, '2018-09-26 15:01:00', 0, 0),
-(30, 'DUPOND', 'Marcel', 'mdupond@folia.fr', '', 1, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, 0),
-(31, 'MARTIN', 'Pierre', 'pmartin@folia.fr', '', 1, '2020-02-26 16:26:18', 690, '2020-02-26 16:27:00', 690, 0);
+(30, 'DUPONDz', 'Marcel', 'mdupond@folia.fr', 'dupondz', 1, '0000-00-00 00:00:00', 0, '2020-04-07 12:34:49', 691, 0),
+(31, 'MARTIN', 'Pierre', 'pmartin@folia.fr', '', 1, '2020-02-26 16:26:18', 690, '2020-02-26 16:27:00', 690, 0),
+(32, 'DURAND', 'Antoine', 'adurand@folia.fr', 'martin', 1, '2020-04-07 10:08:23', 690, '2020-04-07 10:09:15', 690, 0),
+(33, 'MARQUE', 'Jean', 'jmarque@folia.fr', 'marque', 1, '2020-04-07 10:10:30', 690, '0000-00-00 00:00:00', 0, 0),
+(34, 'NOTE', 'Ivan', 'inote@folia.fr', 'note', 1, '2020-04-07 10:11:06', 690, '0000-00-00 00:00:00', 0, 0),
+(35, 'FRAIS', 'Sami', 'sfrais@folia.fr', 'frais', 1, '2020-04-07 10:11:51', 690, '0000-00-00 00:00:00', 0, 0),
+(36, 'AUBIN', 'Louise', 'laubin@folia.fr', 'aubin', 1, '2020-04-07 10:12:16', 690, '0000-00-00 00:00:00', 0, 0),
+(37, 'PAGE', 'Iris', 'ipage@folia.fr', 'page', 1, '2020-04-07 10:12:33', 690, '2020-04-07 10:14:12', 690, 0),
+(38, 'CARON', 'Alain', 'acaron@folia.fr', 'caron', 1, '2020-04-07 10:12:52', 690, '0000-00-00 00:00:00', 0, 0),
+(39, 'HOCHON', 'Paul', 'phochon@folia.fr', 'hochon', 1, '2020-04-07 10:13:14', 690, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2252,59 +2345,69 @@ CREATE TABLE `folia_menu` (
 --
 
 INSERT INTO `folia_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 105, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 125, 0, '*', 0),
 (2, 'main', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 1, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'main', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 1, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'main', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 1, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
 (5, 'main', 'com_banners_clients', 'Clients', '', 'Banners/Clients', 'index.php?option=com_banners&view=clients', 'component', 1, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-clients', 0, '', 6, 7, 0, '*', 1),
 (6, 'main', 'com_banners_tracks', 'Tracks', '', 'Banners/Tracks', 'index.php?option=com_banners&view=tracks', 'component', 1, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-tracks', 0, '', 8, 9, 0, '*', 1),
-(7, 'main', 'com_contact', 'Contacts', '', 'Contacts', 'index.php?option=com_contact', 'component', 1, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 11, 16, 0, '*', 1),
-(8, 'main', 'com_contact_contacts', 'Contacts', '', 'Contacts/Contacts', 'index.php?option=com_contact', 'component', 1, 7, 2, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 12, 13, 0, '*', 1),
-(9, 'main', 'com_contact_categories', 'Categories', '', 'Contacts/Categories', 'index.php?option=com_categories&extension=com_contact', 'component', 1, 7, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact-cat', 0, '', 14, 15, 0, '*', 1),
-(10, 'main', 'com_messages', 'Messaging', '', 'Messaging', 'index.php?option=com_messages', 'component', 1, 1, 1, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages', 0, '', 17, 20, 0, '*', 1),
-(11, 'main', 'com_messages_add', 'New Private Message', '', 'Messaging/New Private Message', 'index.php?option=com_messages&task=message.add', 'component', 1, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-add', 0, '', 18, 19, 0, '*', 1),
-(13, 'main', 'com_newsfeeds', 'News Feeds', '', 'News Feeds', 'index.php?option=com_newsfeeds', 'component', 1, 1, 1, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 21, 26, 0, '*', 1),
-(14, 'main', 'com_newsfeeds_feeds', 'Feeds', '', 'News Feeds/Feeds', 'index.php?option=com_newsfeeds', 'component', 1, 13, 2, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 22, 23, 0, '*', 1),
-(15, 'main', 'com_newsfeeds_categories', 'Categories', '', 'News Feeds/Categories', 'index.php?option=com_categories&extension=com_newsfeeds', 'component', 1, 13, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds-cat', 0, '', 24, 25, 0, '*', 1),
-(16, 'main', 'com_redirect', 'Redirect', '', 'Redirect', 'index.php?option=com_redirect', 'component', 1, 1, 1, 24, 0, '0000-00-00 00:00:00', 0, 0, 'class:redirect', 0, '', 27, 28, 0, '*', 1),
-(17, 'main', 'com_search', 'Basic Search', '', 'Basic Search', 'index.php?option=com_search', 'component', 1, 1, 1, 19, 0, '0000-00-00 00:00:00', 0, 0, 'class:search', 0, '', 29, 30, 0, '*', 1),
-(18, 'main', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 1, 1, 1, 27, 0, '0000-00-00 00:00:00', 0, 0, 'class:finder', 0, '', 31, 32, 0, '*', 1),
-(19, 'main', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 28, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 33, 34, 0, '*', 1),
-(20, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 1, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 35, 36, 0, '', 1),
-(21, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 1, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 37, 38, 0, '*', 1),
-(22, 'main', 'com_associations', 'Multilingual Associations', '', 'Multilingual Associations', 'index.php?option=com_associations', 'component', 1, 1, 1, 34, 0, '0000-00-00 00:00:00', 0, 0, 'class:associations', 0, '', 39, 40, 0, '*', 1),
-(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 0, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":1,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 41, 42, 0, '*', 0),
-(102, 'mainmenu', 'Bienvenue', 'bienvenue', '', 'bienvenue', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 43, 44, 1, '*', 0),
-(103, 'mainmenu', 'Portfolios', 'portfolios', '', 'portfolios', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 45, 46, 0, '*', 0),
-(104, 'mainmenu', 'Guide', 'guide', '', 'guide', 'index.php?option=com_content&view=article&id=3', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 47, 48, 0, '*', 0),
-(105, 'mainmenu', 'Exemples', 'exemples', '', 'exemples', 'index.php?option=com_content&view=article&id=4', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 49, 50, 0, '*', 0),
-(106, 'mainmenu', 'Contact', 'contact', '', 'contact', 'index.php?option=com_contact&view=contact&id=1', 'component', 1, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"presentation_style\":\"\",\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"show_name\":\"\",\"show_tags\":\"\",\"show_info\":\"\",\"show_position\":\"\",\"show_email\":\"\",\"add_mailto_link\":\"\",\"show_street_address\":\"\",\"show_suburb\":\"\",\"show_state\":\"\",\"show_postcode\":\"\",\"show_country\":\"\",\"show_telephone\":\"\",\"show_mobile\":\"\",\"show_fax\":\"\",\"show_webpage\":\"\",\"show_image\":\"\",\"allow_vcard\":\"\",\"show_misc\":\"\",\"show_articles\":\"\",\"articles_display_num\":\"\",\"show_profile\":\"\",\"show_links\":\"\",\"linka_name\":\"\",\"linkb_name\":\"\",\"linkc_name\":\"\",\"linkd_name\":\"\",\"linke_name\":\"\",\"show_email_form\":\"\",\"show_email_copy\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 51, 52, 0, '*', 0),
-(110, 'main', 'com_annuaire', 'com-annuaire', '', 'com-annuaire', 'index.php?option=com_annuaire', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 53, 58, 0, '', 1),
-(111, 'main', 'com_annuaire_entreprises', 'com-annuaire-entreprises', '', 'com-annuaire/com-annuaire-entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 54, 55, 0, '', 1),
-(112, 'main', 'com_annuaire_contacts', 'com-annuaire-contacts', '', 'com-annuaire/com-annuaire-contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 56, 57, 0, '', 1),
-(115, 'menu-fr-annuaire', 'Contacts', 'contacts', '', 'contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 59, 60, 0, '*', 0),
-(116, 'menu-fr-annuaire', 'Entreprises', 'entreprises', '', 'entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 61, 62, 0, '*', 0),
-(117, 'main', 'com_folia', 'com-folia', '', 'com-folia', 'index.php?option=com_folia', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 63, 104, 0, '', 1),
-(118, 'main', 'com_folia_acivites', 'com-folia-acivites', '', 'com-folia/com-folia-acivites', 'index.php?option=com_folia&view=activites', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 64, 65, 0, '', 1),
-(119, 'main', 'com_folia_blocs', 'com-folia-blocs', '', 'com-folia/com-folia-blocs', 'index.php?option=com_folia&view=blocs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 66, 67, 0, '', 1),
-(120, 'main', 'com_folia_bibliosThemes', 'com-folia-bibliosthemes', '', 'com-folia/com-folia-bibliosthemes', 'index.php?option=com_folia&view=bibliosThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 68, 69, 0, '', 1),
-(121, 'main', 'com_folia_bibliosEtenduesThemes', 'com-folia-bibliosetenduesthemes', '', 'com-folia/com-folia-bibliosetenduesthemes', 'index.php?option=com_folia&view=bibliosEtenduesThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 70, 71, 0, '', 1),
-(122, 'main', 'com_folia_blocsDocuments', 'com-folia-blocsdocuments', '', 'com-folia/com-folia-blocsdocuments', 'index.php?option=com_folia&view=blocsDocuments', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 72, 73, 0, '', 1),
-(123, 'main', 'com_folia_classes', 'com-folia-classes', '', 'com-folia/com-folia-classes', 'index.php?option=com_folia&view=classes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 74, 75, 0, '', 1),
-(124, 'main', 'com_folia_commentaires', 'com-folia-commentaires', '', 'com-folia/com-folia-commentaires', 'index.php?option=com_folia&view=commentaires', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 76, 77, 0, '', 1),
-(125, 'main', 'com_folia_documents', 'com-folia-documents', '', 'com-folia/com-folia-documents', 'index.php?option=com_folia&view=documents', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 78, 79, 0, '', 1),
-(126, 'main', 'com_folia_etudiants', 'com-folia-etudiants', '', 'com-folia/com-folia-etudiants', 'index.php?option=com_folia&view=etudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 80, 81, 0, '', 1),
-(127, 'main', 'com_folia_groupes', 'com-folia-groupes', '', 'com-folia/com-folia-groupes', 'index.php?option=com_folia&view=groupes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 82, 83, 0, '', 1),
-(128, 'main', 'com_folia_groupesPartages', 'com-folia-groupespartages', '', 'com-folia/com-folia-groupespartages', 'index.php?option=com_folia&view=groupesPartages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 84, 85, 0, '', 1),
-(129, 'main', 'com_folia_pages', 'com-folia-pages', '', 'com-folia/com-folia-pages', 'index.php?option=com_folia&view=pages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 86, 87, 0, '', 1),
-(130, 'main', 'com_folia_portfolios', 'com-folia-portfolios', '', 'com-folia/com-folia-portfolios', 'index.php?option=com_folia&view=portfolios', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 88, 89, 0, '', 1),
-(131, 'main', 'com_folia_professeurs', 'com-folia-professeurs', '', 'com-folia/com-folia-professeurs', 'index.php?option=com_folia&view=professeurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 90, 91, 0, '', 1),
-(132, 'main', 'com_folia_professeursClasses', 'com-folia-professeursclasses', '', 'com-folia/com-folia-professeursclasses', 'index.php?option=com_folia&view=professeursClasses', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 92, 93, 0, '', 1),
-(133, 'main', 'com_folia_referentiels', 'com-folia-referentiels', '', 'com-folia/com-folia-referentiels', 'index.php?option=com_folia&view=referentiels', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 94, 95, 0, '', 1),
-(134, 'main', 'com_folia_themes', 'com-folia-themes', '', 'com-folia/com-folia-themes', 'index.php?option=com_folia&view=themes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 96, 97, 0, '', 1),
-(135, 'main', 'com_folia_tuteurs', 'com-folia-tuteurs', '', 'com-folia/com-folia-tuteurs', 'index.php?option=com_folia&view=tuteurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 98, 99, 0, '', 1),
-(136, 'main', 'com_folia_tuteursEtudiants', 'com-folia-tuteursetudiants', '', 'com-folia/com-folia-tuteursetudiants', 'index.php?option=com_folia&view=tuteursEtudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 100, 101, 0, '', 1),
-(137, 'main', 'com_folia_utilisateurs', 'com-folia-utilisateurs', '', 'com-folia/com-folia-utilisateurs', 'index.php?option=com_folia&view=utilisateurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 102, 103, 0, '', 1);
+(7, 'main', 'com_contact', 'Contacts', '', 'Contacts', 'index.php?option=com_contact', 'component', 1, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 29, 34, 0, '*', 1),
+(8, 'main', 'com_contact_contacts', 'Contacts', '', 'Contacts/Contacts', 'index.php?option=com_contact', 'component', 1, 7, 2, 8, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact', 0, '', 30, 31, 0, '*', 1),
+(9, 'main', 'com_contact_categories', 'Categories', '', 'Contacts/Categories', 'index.php?option=com_categories&extension=com_contact', 'component', 1, 7, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:contact-cat', 0, '', 32, 33, 0, '*', 1),
+(10, 'main', 'com_messages', 'Messaging', '', 'Messaging', 'index.php?option=com_messages', 'component', 1, 1, 1, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages', 0, '', 35, 38, 0, '*', 1),
+(11, 'main', 'com_messages_add', 'New Private Message', '', 'Messaging/New Private Message', 'index.php?option=com_messages&task=message.add', 'component', 1, 10, 2, 15, 0, '0000-00-00 00:00:00', 0, 0, 'class:messages-add', 0, '', 36, 37, 0, '*', 1),
+(13, 'main', 'com_newsfeeds', 'News Feeds', '', 'News Feeds', 'index.php?option=com_newsfeeds', 'component', 1, 1, 1, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 39, 44, 0, '*', 1),
+(14, 'main', 'com_newsfeeds_feeds', 'Feeds', '', 'News Feeds/Feeds', 'index.php?option=com_newsfeeds', 'component', 1, 13, 2, 17, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds', 0, '', 40, 41, 0, '*', 1),
+(15, 'main', 'com_newsfeeds_categories', 'Categories', '', 'News Feeds/Categories', 'index.php?option=com_categories&extension=com_newsfeeds', 'component', 1, 13, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:newsfeeds-cat', 0, '', 42, 43, 0, '*', 1),
+(16, 'main', 'com_redirect', 'Redirect', '', 'Redirect', 'index.php?option=com_redirect', 'component', 1, 1, 1, 24, 0, '0000-00-00 00:00:00', 0, 0, 'class:redirect', 0, '', 45, 46, 0, '*', 1),
+(17, 'main', 'com_search', 'Basic Search', '', 'Basic Search', 'index.php?option=com_search', 'component', 1, 1, 1, 19, 0, '0000-00-00 00:00:00', 0, 0, 'class:search', 0, '', 47, 48, 0, '*', 1),
+(18, 'main', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 1, 1, 1, 27, 0, '0000-00-00 00:00:00', 0, 0, 'class:finder', 0, '', 49, 50, 0, '*', 1),
+(19, 'main', 'com_joomlaupdate', 'Joomla! Update', '', 'Joomla! Update', 'index.php?option=com_joomlaupdate', 'component', 1, 1, 1, 28, 0, '0000-00-00 00:00:00', 0, 0, 'class:joomlaupdate', 0, '', 51, 52, 0, '*', 1),
+(20, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags', 'component', 1, 1, 1, 29, 0, '0000-00-00 00:00:00', 0, 1, 'class:tags', 0, '', 53, 54, 0, '', 1),
+(21, 'main', 'com_postinstall', 'Post-installation messages', '', 'Post-installation messages', 'index.php?option=com_postinstall', 'component', 1, 1, 1, 32, 0, '0000-00-00 00:00:00', 0, 1, 'class:postinstall', 0, '', 55, 56, 0, '*', 1),
+(22, 'main', 'com_associations', 'Multilingual Associations', '', 'Multilingual Associations', 'index.php?option=com_associations', 'component', 1, 1, 1, 34, 0, '0000-00-00 00:00:00', 0, 0, 'class:associations', 0, '', 57, 58, 0, '*', 1),
+(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 0, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, '', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_columns\":\"3\",\"num_links\":\"0\",\"multi_column_order\":\"1\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_text\":1,\"page_title\":\"\",\"show_page_heading\":1,\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 11, 12, 0, '*', 0),
+(102, 'mainmenu', 'Bienvenue', 'bienvenue', '', 'bienvenue', 'index.php?option=com_content&view=article&id=1', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 13, 14, 1, '*', 0),
+(103, 'mainmenu', 'Portfolios', 'portfolios', '', 'portfolios', 'index.php?option=com_content&view=article&id=2', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 23, 24, 0, '*', 0),
+(104, 'mainmenu', 'Guide', 'guide', '', 'guide', 'index.php?option=com_content&view=article&id=3', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 15, 16, 0, '*', 0),
+(105, 'mainmenu', 'Exemples', 'exemples', '', 'exemples', 'index.php?option=com_content&view=article&id=4', 'component', 1, 1, 1, 22, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_icons\":\"\",\"show_print_icon\":\"\",\"show_email_icon\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 17, 18, 0, '*', 0),
+(106, 'mainmenu', 'Contact', 'contact', '', 'contact', 'index.php?option=com_contact&view=contact&id=1', 'component', 0, 1, 1, 8, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"presentation_style\":\"\",\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"show_name\":\"\",\"show_tags\":\"\",\"show_info\":\"\",\"show_position\":\"\",\"show_email\":\"\",\"add_mailto_link\":\"\",\"show_street_address\":\"\",\"show_suburb\":\"\",\"show_state\":\"\",\"show_postcode\":\"\",\"show_country\":\"\",\"show_telephone\":\"\",\"show_mobile\":\"\",\"show_fax\":\"\",\"show_webpage\":\"\",\"show_image\":\"\",\"allow_vcard\":\"\",\"show_misc\":\"\",\"show_articles\":\"\",\"articles_display_num\":\"\",\"show_profile\":\"\",\"show_links\":\"\",\"linka_name\":\"\",\"linkb_name\":\"\",\"linkc_name\":\"\",\"linkd_name\":\"\",\"linke_name\":\"\",\"show_email_form\":\"\",\"show_email_copy\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 19, 20, 0, '*', 0),
+(110, 'main', 'com_annuaire', 'com-annuaire', '', 'com-annuaire', 'index.php?option=com_annuaire', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 59, 64, 0, '', 1),
+(111, 'main', 'com_annuaire_entreprises', 'com-annuaire-entreprises', '', 'com-annuaire/com-annuaire-entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 60, 61, 0, '', 1),
+(112, 'main', 'com_annuaire_contacts', 'com-annuaire-contacts', '', 'com-annuaire/com-annuaire-contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 110, 2, 10001, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 62, 63, 0, '', 1),
+(115, 'menu-fr-annuaire', 'Contacts', 'contacts', '', 'contacts', 'index.php?option=com_annuaire&view=contacts', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 65, 66, 0, '*', 0),
+(116, 'menu-fr-annuaire', 'Entreprises', 'entreprises', '', 'entreprises', 'index.php?option=com_annuaire&view=entreprises', 'component', 1, 1, 1, 10001, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 67, 68, 0, '*', 0),
+(117, 'main', 'com_folia', 'com-folia', '', 'com-folia', 'index.php?option=com_folia', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 69, 110, 0, '', 1),
+(118, 'main', 'com_folia_acivites', 'com-folia-acivites', '', 'com-folia/com-folia-acivites', 'index.php?option=com_folia&view=activites', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 70, 71, 0, '', 1),
+(119, 'main', 'com_folia_blocs', 'com-folia-blocs', '', 'com-folia/com-folia-blocs', 'index.php?option=com_folia&view=blocs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 72, 73, 0, '', 1),
+(120, 'main', 'com_folia_bibliosThemes', 'com-folia-bibliosthemes', '', 'com-folia/com-folia-bibliosthemes', 'index.php?option=com_folia&view=bibliosThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 74, 75, 0, '', 1),
+(121, 'main', 'com_folia_bibliosEtenduesThemes', 'com-folia-bibliosetenduesthemes', '', 'com-folia/com-folia-bibliosetenduesthemes', 'index.php?option=com_folia&view=bibliosEtenduesThemes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 76, 77, 0, '', 1),
+(122, 'main', 'com_folia_blocsDocuments', 'com-folia-blocsdocuments', '', 'com-folia/com-folia-blocsdocuments', 'index.php?option=com_folia&view=blocsDocuments', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 78, 79, 0, '', 1),
+(123, 'main', 'com_folia_classes', 'com-folia-classes', '', 'com-folia/com-folia-classes', 'index.php?option=com_folia&view=classes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 80, 81, 0, '', 1),
+(124, 'main', 'com_folia_commentaires', 'com-folia-commentaires', '', 'com-folia/com-folia-commentaires', 'index.php?option=com_folia&view=commentaires', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 82, 83, 0, '', 1),
+(125, 'main', 'com_folia_documents', 'com-folia-documents', '', 'com-folia/com-folia-documents', 'index.php?option=com_folia&view=documents', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 84, 85, 0, '', 1),
+(126, 'main', 'com_folia_etudiants', 'com-folia-etudiants', '', 'com-folia/com-folia-etudiants', 'index.php?option=com_folia&view=etudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 86, 87, 0, '', 1),
+(127, 'main', 'com_folia_groupes', 'com-folia-groupes', '', 'com-folia/com-folia-groupes', 'index.php?option=com_folia&view=groupes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 88, 89, 0, '', 1),
+(128, 'main', 'com_folia_groupesPartages', 'com-folia-groupespartages', '', 'com-folia/com-folia-groupespartages', 'index.php?option=com_folia&view=groupesPartages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 90, 91, 0, '', 1),
+(129, 'main', 'com_folia_pages', 'com-folia-pages', '', 'com-folia/com-folia-pages', 'index.php?option=com_folia&view=pages', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 92, 93, 0, '', 1),
+(130, 'main', 'com_folia_portfolios', 'com-folia-portfolios', '', 'com-folia/com-folia-portfolios', 'index.php?option=com_folia&view=portfolios', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 94, 95, 0, '', 1),
+(131, 'main', 'com_folia_professeurs', 'com-folia-professeurs', '', 'com-folia/com-folia-professeurs', 'index.php?option=com_folia&view=professeurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 96, 97, 0, '', 1),
+(132, 'main', 'com_folia_professeursClasses', 'com-folia-professeursclasses', '', 'com-folia/com-folia-professeursclasses', 'index.php?option=com_folia&view=professeursClasses', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 98, 99, 0, '', 1),
+(133, 'main', 'com_folia_referentiels', 'com-folia-referentiels', '', 'com-folia/com-folia-referentiels', 'index.php?option=com_folia&view=referentiels', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 100, 101, 0, '', 1),
+(134, 'main', 'com_folia_themes', 'com-folia-themes', '', 'com-folia/com-folia-themes', 'index.php?option=com_folia&view=themes', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 102, 103, 0, '', 1),
+(135, 'main', 'com_folia_tuteurs', 'com-folia-tuteurs', '', 'com-folia/com-folia-tuteurs', 'index.php?option=com_folia&view=tuteurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 104, 105, 0, '', 1),
+(136, 'main', 'com_folia_tuteursEtudiants', 'com-folia-tuteursetudiants', '', 'com-folia/com-folia-tuteursetudiants', 'index.php?option=com_folia&view=tuteursEtudiants', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 106, 107, 0, '', 1),
+(137, 'main', 'com_folia_utilisateurs', 'com-folia-utilisateurs', '', 'com-folia/com-folia-utilisateurs', 'index.php?option=com_folia&view=utilisateurs', 'component', 1, 117, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 108, 109, 0, '', 1),
+(138, 'menu-folia-etudiant', 'Mes portfolios', 'mes-portfolios', '', 'mes-portfolios', 'index.php?option=com_folia&view=commentaires', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 111, 112, 0, '*', 0),
+(139, 'menu-folia-etudiant', 'Ma classe', 'ma-classe', '', 'ma-classe', 'index.php?option=com_folia&view=etudiants', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 113, 114, 0, '*', 0),
+(140, 'mainmenu', 'Mon profil', 'mon-profil', '', 'mon-profil', 'index.php?option=com_folia&view=utilisateur', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 27, 28, 0, '*', 0),
+(141, 'menu-folia-professeur', 'Mes classes', 'mes-classes', '', 'mes-classes', 'index.php?option=com_folia&view=etudiants', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 115, 116, 0, '*', 0),
+(142, 'menu-folia-professeur', 'Mes étudiants', 'mes-etudiants', '', 'mes-etudiants', 'index.php?option=com_folia&view=etudiants', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 117, 118, 0, '*', 0),
+(143, 'mainmenu', 'Référentiels', 'referentiels', '', 'referentiels', 'index.php?option=com_folia&view=commentaires', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 21, 22, 0, '*', 0),
+(144, 'mainmenu', 'Commentaires', 'commentaires', '', 'commentaires', 'index.php?option=com_folia&view=commentaires', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 2, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 25, 26, 0, '*', 0),
+(145, 'menu-folia-tuteur', 'Mes étudiants', 'mes-etudiants-tuteur', '', 'mes-etudiants-tuteur', 'index.php?option=com_folia&view=etudiants', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 9, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 119, 120, 0, '*', 0),
+(146, 'menu-folia-tuteur', 'Mes commentaires', 'mes-commentaires-tuteur', '', 'mes-commentaires-tuteur', 'index.php?option=com_folia&view=commentaires', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 9, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 121, 122, 0, '*', 0),
+(147, 'menu-folia-professeur', 'Mes commentaires', 'mes-commentaires', '', 'mes-commentaires', 'index.php?option=com_folia&view=commentaires', 'component', 1, 1, 1, 10003, 0, '0000-00-00 00:00:00', 0, 8, ' ', 0, '{\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 123, 124, 0, '*', 0);
 
 -- --------------------------------------------------------
 
@@ -2327,7 +2430,10 @@ CREATE TABLE `folia_menu_types` (
 
 INSERT INTO `folia_menu_types` (`id`, `asset_id`, `menutype`, `title`, `description`, `client_id`) VALUES
 (1, 0, 'mainmenu', 'Menu principal', 'Le menu principal du site', 0),
-(2, 68, 'menu-fr-annuaire', 'Menu Annuaire', '', 0);
+(2, 68, 'menu-fr-annuaire', 'Menu annuaire', '', 0),
+(3, 70, 'menu-folia-etudiant', 'Menu folia étudiant', '', 0),
+(4, 72, 'menu-folia-professeur', 'Menu folia professeur', '', 0),
+(5, 73, 'menu-folia-tuteur', 'Menu folia tuteur', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2409,7 +2515,10 @@ INSERT INTO `folia_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (87, 55, 'Exemples de données', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_sampledata', 6, 1, '{}', 1, '*'),
 (88, 58, 'Dernière actions', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latestactions', 6, 1, '{}', 1, '*'),
 (89, 59, 'Privacy Dashboard', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_privacy_dashboard', 6, 1, '{}', 1, '*'),
-(90, 67, 'Menu Annuaire', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 2, 1, '{\"menutype\":\"menu-fr-annuaire\",\"base\":\"\",\"startLevel\":1,\"endLevel\":0,\"showAllChildren\":1,\"tag_id\":\"\",\"class_sfx\":\"\",\"window_open\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*');
+(90, 67, 'Annuaire', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 2, 1, '{\"menutype\":\"menu-fr-annuaire\",\"base\":\"\",\"startLevel\":1,\"endLevel\":0,\"showAllChildren\":1,\"tag_id\":\"\",\"class_sfx\":\"\",\"window_open\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
+(91, 71, 'Espace Etudiant', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 7, 1, '{\"menutype\":\"menu-folia-etudiant\",\"base\":\"\",\"startLevel\":1,\"endLevel\":0,\"showAllChildren\":1,\"tag_id\":\"\",\"class_sfx\":\"\",\"window_open\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
+(92, 74, 'Espace professeur', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 8, 1, '{\"menutype\":\"menu-folia-professeur\",\"base\":\"\",\"startLevel\":1,\"endLevel\":0,\"showAllChildren\":1,\"tag_id\":\"\",\"class_sfx\":\"\",\"window_open\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*'),
+(93, 75, 'Espace tuteur', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 9, 1, '{\"menutype\":\"menu-folia-tuteur\",\"base\":\"\",\"startLevel\":1,\"endLevel\":0,\"showAllChildren\":1,\"tag_id\":\"\",\"class_sfx\":\"\",\"window_open\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"itemid\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -2447,7 +2556,10 @@ INSERT INTO `folia_modules_menu` (`moduleid`, `menuid`) VALUES
 (87, 0),
 (88, 0),
 (89, 0),
-(90, 0);
+(90, 0),
+(91, 0),
+(92, 0),
+(93, 0);
 
 -- --------------------------------------------------------
 
@@ -2630,10 +2742,8 @@ CREATE TABLE `folia_session` (
 --
 
 INSERT INTO `folia_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x30346d38376563333562733475626e6830703933333873733831, 0, 0, 1585824415, 'joomla|s:1072:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo0O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4NTgyNDIzNTtzOjQ6Imxhc3QiO2k6MTU4NTgyNDQxNDtzOjM6Im5vdyI7aToxNTg1ODI0NDE1O31zOjU6InRva2VuIjtzOjMyOiJINmY0anRUZDJqY29zZnRrSmUxWWpzcWtPUlZwU1dkRSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoyOntzOjEzOiJjb21faW5zdGFsbGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6Im1lc3NhZ2UiO3M6MDoiIjtzOjE3OiJleHRlbnNpb25fbWVzc2FnZSI7czowOiIiO31zOjU6InVzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxvZ2luIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImZvcm0iO086ODoic3RkQ2xhc3MiOjI6e3M6NjoicmV0dXJuIjtzOjIzOiJodHRwOi8vbG9jYWxob3N0L2ZvbGlhLyI7czo0OiJkYXRhIjthOjA6e319fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiI2OTEiO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 691, 'mdupond'),
-(0x67376e6d6b753175666f6d6f70326a63366f646471326c75616a, 1, 0, 1583854596, 'joomla|s:2312:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMDU7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTgzODQ4NjAwO3M6NDoibGFzdCI7aToxNTgzODU0Mjk2O3M6Mzoibm93IjtpOjE1ODM4NTQ1OTU7fXM6NToidG9rZW4iO3M6MzI6IkNSZ1BNcTgwVEdGY3k3ME9jeEZZNWk5M0J6VmVacno5Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6MTM6ImNvbV9pbnN0YWxsZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NzoibWVzc2FnZSI7czowOiIiO3M6MTc6ImV4dGVuc2lvbl9tZXNzYWdlIjtzOjA6IiI7czo2OiJtYW5hZ2UiO086ODoic3RkQ2xhc3MiOjM6e3M6NjoiZmlsdGVyIjthOjU6e3M6Njoic2VhcmNoIjtzOjA6IiI7czo2OiJzdGF0dXMiO3M6MDoiIjtzOjk6ImNsaWVudF9pZCI7czowOiIiO3M6NDoidHlwZSI7czowOiIiO3M6NjoiZm9sZGVyIjtzOjA6IiI7fXM6NDoibGlzdCI7YToyOntzOjEyOiJmdWxsb3JkZXJpbmciO3M6MTc6ImV4dGVuc2lvbl9pZCBERVNDIjtzOjU6ImxpbWl0IjtzOjI6IjIwIjt9czoxMDoibGltaXRzdGFydCI7aTowO319czo5OiJjb21fbWVudXMiO086ODoic3RkQ2xhc3MiOjE6e3M6NToiaXRlbXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoibWVudXR5cGUiO3M6MTY6Im1lbnUtZnItYW5udWFpcmUiO3M6OToiY2xpZW50X2lkIjtpOjA7czoxMDoibGltaXRzdGFydCI7aTowO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czozOiJhc2MiO3M6NToibGltaXQiO3M6MjoiMjAiO3M6ODoib3JkZXJpbmciO3M6NToiYS5sZnQiO3M6NToic3RhcnQiO2Q6MDt9fX1zOjExOiJjb21fbW9kdWxlcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319czozOiJhZGQiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoibW9kdWxlIjtPOjg6InN0ZENsYXNzIjoyOntzOjEyOiJleHRlbnNpb25faWQiO047czo2OiJwYXJhbXMiO047fX19czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ1c2VyIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX19czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjI6e3M6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjoxOntzOjg6Im9yZGVyY29sIjtzOjc6ImUuZW1haWwiO31zOjExOiJwcm9mZXNzZXVycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJvcmRlcmNvbCI7czo3OiJwLmVtYWlsIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY5MCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM'),
-(0x6d6f693176736370306436396d33316a646e396335366674626b, 1, 0, 1585824373, 'joomla|s:1204:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxNztzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1ODU4MjQyNDY7czo0OiJsYXN0IjtpOjE1ODU4MjQzNjk7czozOiJub3ciO2k6MTU4NTgyNDM3Mzt9czo1OiJ0b2tlbiI7czozMjoiVkttaERJSjdWc0hnMmtMaWhtM29yY2hXUEtXVWlqc04iO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjI6e3M6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjoxOntzOjg6Im9yZGVyY29sIjtzOjg6InUucHJlbm9tIjt9czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJyZWZlcmVudGllbCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY5MCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM'),
-(0x6f72303472357162746b6e6332686236766c39726f62396e6868, 0, 1, 1583854521, 'joomla|s:880:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo1O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTU4Mzg1NDUwOTtzOjQ6Imxhc3QiO2k6MTU4Mzg1NDUyMDtzOjM6Im5vdyI7aToxNTgzODU0NTIxO31zOjU6InRva2VuIjtzOjMyOiJWdGpFRDlEbmdpRXEzeVpsbmVJeXdYeHBwMEc3WVlPcSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJjb21fY29udGFjdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJjb250YWN0IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImRhdGEiO2E6MTp7czo1OiJjYXRpZCI7czoxOiI0Ijt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 0, '');
+(0x3867396d656535366133636a6a646e6c64386c387571376d7365, 1, 0, 1586267026, 'joomla|s:1840:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2NjtzOjU6InRva2VuIjtzOjMyOiJqeGZObVZTSlJkclhld2s1QmtiY2o5QzZhQXhoblFCQiI7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNTg2MjY1NjAwO3M6NDoibGFzdCI7aToxNTg2MjY2ODkwO3M6Mzoibm93IjtpOjE1ODYyNjcwMjU7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo5OiJjb21fbWVudXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NToiaXRlbXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoibWVudXR5cGUiO3M6MjE6Im1lbnUtZm9saWEtcHJvZmVzc2V1ciI7czo5OiJjbGllbnRfaWQiO2k6MDtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6Iml0ZW0iO086ODoic3RkQ2xhc3MiOjM6e3M6NDoiZGF0YSI7TjtzOjQ6InR5cGUiO047czo0OiJsaW5rIjtOO31zOjQ6Im1lbnUiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MDp7fXM6NDoiZGF0YSI7Tjt9fX1zOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjU6ImxldmVsIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX19czoxMToiY29tX21vZHVsZXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJtb2R1bGUiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZGF0YSI7TjtzOjI6ImlkIjthOjA6e319fXM6MzoiYWRkIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6Im1vZHVsZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMjoiZXh0ZW5zaW9uX2lkIjtOO3M6NjoicGFyYW1zIjtOO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjM6IjY5MCI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 690, 'SLAM'),
+(0x767565336930313076326532626f69663936353964756b396c70, 0, 0, 1586267167, 'joomla|s:1168:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxODtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1ODYyNjY3MzE7czo0OiJsYXN0IjtpOjE1ODYyNjcwODY7czozOiJub3ciO2k6MTU4NjI2NzE2Nzt9czo1OiJ0b2tlbiI7czozMjoiUlFka3o4OWRBRm1LcngyeHBFVHNlaUYxd2k3YWlwV3kiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo1OiJ1c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJsb2dpbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJmb3JtIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImRhdGEiO2E6MDp7fXM6NjoicmV0dXJuIjtzOjM4OiJodHRwOi8vbG9jYWxob3N0L2ZvbGlhL2luZGV4LnBocC9ndWlkZSI7fX19czo5OiJjb21fZm9saWEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiZXR1ZGlhbnRzIjtPOjg6InN0ZENsYXNzIjoxOntzOjg6Im9yZGVyY29sIjtzOjM6Im5vbSI7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czozOiI2OTYiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9\";', 696, 'sfrais');
 
 -- --------------------------------------------------------
 
@@ -2819,83 +2929,83 @@ CREATE TABLE `folia_updates` (
 --
 
 INSERT INTO `folia_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
-(390, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.16', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', ''),
-(391, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
-(392, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
-(393, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
-(394, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
-(395, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
-(397, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
-(398, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
-(399, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
-(400, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
-(401, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
-(402, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
-(403, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
-(404, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
-(405, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
-(406, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
-(407, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
-(408, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.11.2', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
-(409, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
-(410, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
-(411, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
-(412, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
-(413, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
-(414, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
-(415, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.14.2', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
-(416, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
-(417, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
-(418, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
-(419, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.7.3.1', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
-(420, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.6.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
-(421, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
-(422, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
-(423, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
-(424, 2, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
-(425, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
-(426, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
-(427, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
-(428, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
-(429, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
-(430, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
-(431, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
-(432, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
-(433, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
-(434, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
-(435, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
-(436, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.7.1.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
-(437, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
-(438, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
-(439, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
-(440, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
-(441, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
-(442, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
-(443, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
-(444, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
-(445, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
-(446, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
-(447, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
-(448, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
-(449, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
-(450, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
-(451, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
-(452, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
-(453, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
-(454, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
-(455, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
-(456, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
-(457, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
-(458, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
-(459, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
-(460, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
-(461, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
-(462, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
-(463, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
-(464, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
-(465, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
-(466, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
-(467, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', '');
+(469, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
+(470, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
+(471, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
+(472, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
+(473, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
+(474, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
+(475, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
+(476, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
+(477, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
+(478, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
+(479, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
+(480, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
+(481, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
+(482, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
+(483, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
+(484, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
+(485, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.11.2', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
+(486, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
+(487, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
+(488, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
+(489, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
+(490, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
+(491, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
+(492, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.14.2', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
+(493, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(494, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
+(495, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(496, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.7.3.1', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(497, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.6.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
+(498, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(499, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(500, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
+(501, 2, 0, 'Persian', '', 'pkg_fa-IR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fa-IR_details.xml', '', ''),
+(502, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.13.1', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(503, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(504, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.12.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(505, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
+(506, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(507, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
+(508, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(509, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(510, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(511, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(512, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(513, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.7.1.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(514, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(515, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(516, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.7.5.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
+(517, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
+(518, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
+(519, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(520, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(521, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(522, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(523, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(524, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(525, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(526, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(527, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(528, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(529, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(530, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(531, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.14.1', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(532, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
+(533, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(534, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
+(535, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
+(536, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
+(537, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
+(538, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
+(539, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
+(540, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
+(541, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
+(542, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
+(543, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
+(544, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
+(545, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.9.16', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', '');
 
 -- --------------------------------------------------------
 
@@ -2918,9 +3028,9 @@ CREATE TABLE `folia_update_sites` (
 --
 
 INSERT INTO `folia_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1585824238, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1585824260, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1585824260, '');
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1586262638, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1586252192, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1586252192, '');
 
 -- --------------------------------------------------------
 
@@ -3009,9 +3119,17 @@ CREATE TABLE `folia_users` (
 --
 
 INSERT INTO `folia_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2020-04-02 10:44:15', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2020-04-02 10:46:55', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
-(692, 'Pierre MARTIN', 'pmartin', 'pmartin@folia.fr', '$2y$10$x8ISkYib7ZcNdLv/YS1Md.of17Au1oW4bRMQ68vriqJn47gSh9wOe', 0, 0, '2020-02-26 16:49:05', '2020-02-27 09:51:39', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
+(690, 'Super Utilisateur', 'SLAM', 'emmanuel.derome@gmail.com', '$2y$10$K4SNoDV0TrR9b5W/VpF6..3ra/inhvkX73ZtoQYiVcLt0S9lkO8Hm', 0, 1, '2019-10-11 12:34:25', '2020-04-07 13:20:00', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
+(691, 'Marcel DUPOND', 'mdupond', 'mdupond@folia.fr', '$2y$10$pv6i50YTy97Ma1SVkRfUEeMLOtvIspUzatrA822kuInQnF/Y4TUBO', 0, 0, '2019-10-11 12:35:50', '2020-04-07 12:51:20', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(692, 'Pierre MARTIN', 'pmartin', 'pmartin@folia.fr', '$2y$10$x8ISkYib7ZcNdLv/YS1Md.of17Au1oW4bRMQ68vriqJn47gSh9wOe', 0, 0, '2020-02-26 16:49:05', '2020-02-27 09:51:39', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(693, 'Antoine DURAND', 'adurand', 'adurand@folia.fr', '$2y$10$5ECVwjHLCinxmUiQZDnHlORhO/qBf3CPNnKO.6DZzVls0HD92wcb2', 0, 0, '2020-04-07 09:55:42', '0000-00-00 00:00:00', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(694, 'Jean MARQUE', 'jmarque', 'jmarque@folia.fr', '$2y$10$8B5zHfWJh3UR5JafpfOf4upUahlYG8ziSZ08u/IoGFE7rNuexhP.2', 0, 0, '2020-04-07 09:56:29', '0000-00-00 00:00:00', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(695, 'Ivan NOTE', 'inote', 'inote@folia.fr', '$2y$10$YoIqQ6Ofpop1rJIGsknGsO6q4he2IT89gwdPB7ZZavn4yhYUHsVom', 0, 0, '2020-04-07 10:01:16', '2020-04-07 13:27:23', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(696, 'Sami FRAIS', 'sfrais', 'sfrais@folia.fr', '$2y$10$b6WVxnuwqjUvi1jK3MEr8.d37o5riLwforI4a3B9QxopyTb5ghWHC', 0, 0, '2020-04-07 10:02:15', '2020-04-07 13:39:21', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(697, 'Louise AUBIN', 'laubin', 'laubin@folia.fr', '$2y$10$CjOpw9D75qtKt5uioK/aqeVr66t5eY9zOpdeDA006HH7BpeDw2bRu', 0, 0, '2020-04-07 10:03:04', '0000-00-00 00:00:00', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(698, 'Iris PAGE', 'ipage', 'ipage@folia.fr', '$2y$10$Ta6ON06Oic6e5RX9d3ia5uEKxMrG6jLaFaWAKQ6StgF1N3Tim9ak2', 0, 0, '2020-04-07 10:04:08', '0000-00-00 00:00:00', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(699, 'Alain CARON', 'acaron', 'acaron@folia.fr', '$2y$10$g8Z.peF5GU1zBGAtcWDLTesS3BZ91YpEwtmCQF2XwJHYCtd7/T0MS', 0, 0, '2020-04-07 10:05:04', '0000-00-00 00:00:00', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0),
+(700, 'Paul HOCHON', 'phochon', 'phochon@folia.fr', '$2y$10$gT3GLAJNrq2Z3yDaR306AeYc4Ae66BdyKmyQzX6AMPnMFzrcWtBFu', 0, 0, '2020-04-07 10:05:52', '2020-04-07 13:38:51', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3086,7 +3204,23 @@ INSERT INTO `folia_user_usergroup_map` (`user_id`, `group_id`) VALUES
 (691, 2),
 (691, 12),
 (692, 2),
-(692, 12);
+(692, 12),
+(693, 2),
+(693, 12),
+(694, 2),
+(694, 12),
+(695, 2),
+(695, 14),
+(696, 2),
+(696, 14),
+(697, 2),
+(697, 14),
+(698, 2),
+(698, 15),
+(699, 2),
+(699, 15),
+(700, 2),
+(700, 15);
 
 -- --------------------------------------------------------
 
@@ -3127,7 +3261,10 @@ INSERT INTO `folia_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 (2, 'Accès enregistré', 2, '[6,2,8]'),
 (3, 'Accès spécial', 3, '[6,3,8]'),
 (5, 'Accès invité', 1, '[9]'),
-(6, 'Accès super utilisateur', 4, '[8]');
+(6, 'Accès super utilisateur', 4, '[8]'),
+(7, 'Accès folia étudiant', 0, '[12]'),
+(8, 'Accès folia professeur', 0, '[14]'),
+(9, 'Accès folia tuteur', 0, '[15]');
 
 -- --------------------------------------------------------
 
@@ -4024,7 +4161,7 @@ ALTER TABLE `folia_viewlevels`
 -- AUTO_INCREMENT pour la table `folia_action_logs`
 --
 ALTER TABLE `folia_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT pour la table `folia_action_logs_extensions`
@@ -4072,7 +4209,7 @@ ALTER TABLE `folia_annuaire_typescontacts`
 -- AUTO_INCREMENT pour la table `folia_assets`
 --
 ALTER TABLE `folia_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=70;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT pour la table `folia_banners`
@@ -4204,7 +4341,7 @@ ALTER TABLE `folia_folia_documents`
 -- AUTO_INCREMENT pour la table `folia_folia_etudiants`
 --
 ALTER TABLE `folia_folia_etudiants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_groupes`
@@ -4234,7 +4371,7 @@ ALTER TABLE `folia_folia_portfolios`
 -- AUTO_INCREMENT pour la table `folia_folia_professeurs`
 --
 ALTER TABLE `folia_folia_professeurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_professeurs_classes`
@@ -4258,7 +4395,7 @@ ALTER TABLE `folia_folia_themes`
 -- AUTO_INCREMENT pour la table `folia_folia_tuteurs`
 --
 ALTER TABLE `folia_folia_tuteurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `folia_folia_tuteurs_etudiants`
@@ -4270,7 +4407,7 @@ ALTER TABLE `folia_folia_tuteurs_etudiants`
 -- AUTO_INCREMENT pour la table `folia_folia_utilisateurs`
 --
 ALTER TABLE `folia_folia_utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT pour la table `folia_languages`
@@ -4282,13 +4419,13 @@ ALTER TABLE `folia_languages`
 -- AUTO_INCREMENT pour la table `folia_menu`
 --
 ALTER TABLE `folia_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT pour la table `folia_menu_types`
 --
 ALTER TABLE `folia_menu_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `folia_messages`
@@ -4300,7 +4437,7 @@ ALTER TABLE `folia_messages`
 -- AUTO_INCREMENT pour la table `folia_modules`
 --
 ALTER TABLE `folia_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT pour la table `folia_newsfeeds`
@@ -4366,7 +4503,7 @@ ALTER TABLE `folia_ucm_history`
 -- AUTO_INCREMENT pour la table `folia_updates`
 --
 ALTER TABLE `folia_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=468;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=546;
 
 --
 -- AUTO_INCREMENT pour la table `folia_update_sites`
@@ -4384,7 +4521,7 @@ ALTER TABLE `folia_usergroups`
 -- AUTO_INCREMENT pour la table `folia_users`
 --
 ALTER TABLE `folia_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=693;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=701;
 
 --
 -- AUTO_INCREMENT pour la table `folia_user_keys`
@@ -4402,7 +4539,7 @@ ALTER TABLE `folia_user_notes`
 -- AUTO_INCREMENT pour la table `folia_viewlevels`
 --
 ALTER TABLE `folia_viewlevels`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées
