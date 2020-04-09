@@ -6,7 +6,7 @@
 		<field name="asset_id" type="hidden" filter="unset" />
 		
 		<field name="texte" type="text" label="COM_FOLIA_COMMENTAIRES_TEXTE"
-			description="COM_FOLIA_COMMENTAIRES_LIBELLE"
+			description="COM_FOLIA_COMMENTAIRES_TEXTE"
 			size="40" class="inputbox" default="" required="true"
 		/>
 		<field name="alias" type="text"

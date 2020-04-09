@@ -32,7 +32,7 @@ class FoliaModelCommentaire extends JModelItem
 			$query->select('CONCAT(u.nom, " ", u.prenom) utilisateur')->join('LEFT', '#__folia_utilisateurs u ON u.id = com.utilisateurs_id');
 
 			// joint la table typescontacts
-			$query->select('pf.libelle portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');	
+			$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');	
 					
 			$query->where('com.id = ' . (int) $pk);
 			$db->setQuery($query);

@@ -14,7 +14,7 @@ class FoliaModelCommentaires extends JModelList
 				'id', 'c.id',
 				'texte', 'c.texte',
 				'utilisateur', 'CONCAT(u.nom, " ", u.prenom)',
-				'portfolio', 'pf.libelle',
+				'portfolio', 'pf.titre',
 				'created', 'c.created'
 			);
 		}
@@ -56,8 +56,28 @@ class FoliaModelCommentaires extends JModelList
 		$query->select('CONCAT(u.nom, " ", u.prenom) utilisateur')->join('LEFT', '#__folia_utilisateurs u ON u.id = com.utilisateurs_id');
 
 		// joint la table typescontacts
-		$query->select('pf.libelle portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');
-		
+		$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pf.id = com.portfolios_id');
+
+		$user = JFactory::getUser();               		// gets current user object
+		$isEtudiant = ((bool)array_intersect(array('12', '13'), $user->groups));
+		$isProfesseur = ((bool)array_intersect(array('14'), $user->groups));
+		$isTuteur = ((bool)array_intersect(array('15'), $user->groups));
+
+		if($isEtudiant)
+		{
+			$query->where('pf.id IN (SELECT pf.id FROM #__folia_portfolios pf LEFT JOIN #__folia_etudiants etu ON etu.id = pf.etudiants_id LEFT JOIN #__folia_utilisateurs u ON u.email = etu.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id = '.$user->id.')');
+		}
+		else if($isProfesseur)
+		{
+			$query->join('LEFT', '#__folia_etudiants etu ON etu.mail = u.mail');
+			$query->where('etu.classes_id IN (SELECT prof_cla.classes_id FROM #__folia_professeurs_classes prof_cla LEFT JOIN #__folia_professeurs prof ON prof.id = prof_cla.professeurs_id LEFT JOIN #_folia_utilisateurs u ON u.email = prof.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id ='.$user->id.')');
+		}
+		else if($isTuteur)
+		{
+			$query->join('LEFT', '#__folia_etudiants etu ON etu.id = com.utilisateurs_id');
+			$query->where('etu.id IN (SELECT tut_etu.etudiants_id FROM #__folia_tuteurs_etudiants tut_etu LEFT JOIN #__folia_tuteurs tut ON tut.id = tut_etu.tuteurs_id LEFT JOIN #__folia_utilisateurs u ON u.email = tut.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id ='.$user->id.')');
+		}
+
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
