@@ -58,7 +58,7 @@ class FoliaModelPortfolios extends JModelList
 				// Compile les clauses de recherche
 				$searches	= array();
 				$searches[]	= 'p.titre LIKE '.$search;
-				$searches[]	= 'p.etudiants_id LIKE '.$search;
+				$searches[]	= 'p.etudiant LIKE '.$search;
 				$searches[]	= 'p.themes_id LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
