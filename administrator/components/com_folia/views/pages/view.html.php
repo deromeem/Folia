@@ -85,7 +85,8 @@ class FoliaViewPages extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'P.nom' => JText::_('COM_FOLIA_PAGES_NOM'),
+			'P.titre' => JText::_('COM_FOLIA_PAGES_TITRE'),
+			'Port.titre' => JText::_('COM_FOLIA_PAGES_PORTFOLIOS_ID'),
 			'P.alias' => JText::_('COM_FOLIA_PAGES_ALIAS'),
 			'P.published' => JText::_('JSTATUS'),
 			'P.modified' => JText::_('JDATE'),
