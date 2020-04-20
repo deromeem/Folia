@@ -10,10 +10,11 @@ class FoliaModelBlocs extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'b.id',
-				'page_id', 'b.page_id',
-				'activite_id', 'b.activite_id',
-				'alias', 'b.alias',
+				'page_id', 'b.pages_id',
+				'activite_id', 'b.activites_id',
 				'texte', 'b.texte',
+				'texteLong', 'b.texteLong',
+				'alias', 'b.alias',
 				'published', 'b.published',
 				'hits', 'b.hits',
 				'modified', 'b.modified'
@@ -41,11 +42,14 @@ class FoliaModelBlocs extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('b.id, b.page_id, b.activite_id, b.alias, b.texte, b.published, b.hits, b.modified');
+		$query->select('b.id, b.pages_id, b.activites_id, b.texte, b.texteLong, b.alias, b.published, b.hits, b.modified');
 		$query->from('#__folia_blocs b');
 
-		// joint la table pays
-		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
+		// joint la table activites
+		$query->select('a.nom')->join('LEFT', '#__folia_activites AS a ON a.id=b.activites_id');
+
+		// joint la table pages
+		$query->select('p.titre')->join('LEFT', '#__folia_pages AS p ON p.id=b.pages_id');
 
 		// filtre de recherche rapide textuel
 		$search = $this->getState('filter.search');
@@ -60,7 +64,7 @@ class FoliaModelBlocs extends JModelList
 				// Compile les clauses de recherche
 				$searches	= array();
 				$searches[]	= 'alias LIKE '.$search;
-				$searches[]	= 'page_id LIKE '.$search;
+				$searches[]	= 'pages_id LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
@@ -90,15 +94,15 @@ class FoliaModelBlocs extends JModelList
 		return $query;
 	}
 
-	// public function getPays()
-	// {
-	// 	$query = $this->_db->getQuery(true);
-	// 	$query->select('id, pays');
-	// 	$query->from('#__annuaire_pays');
-	// 	$query->where('published=1');
-	// 	$query->order('pays ASC');
-	// 	$this->_db->setQuery($query);
-	// 	$pays = $this->_db->loadObjectList();
-	// 	return $pays;
-	// }
+	public function getPays()
+	{
+		$query = $this->_db->getQuery(true);
+		$query->select('id, pays');
+		$query->from('#__annuaire_pays');
+		$query->where('published=1');
+		$query->order('pays ASC');
+		$this->_db->setQuery($query);
+		$pays = $this->_db->loadObjectList();
+		return $pays;
+	}	
 }

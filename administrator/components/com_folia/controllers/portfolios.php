@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class FoliaControllerPorfolios extends JControllerAdmin
+class FoliaControllerPortfolios extends JControllerAdmin
 {
 	// surcharge pour gérer la suppression d'entreprises par le modèle adéquat
 	public function getModel($name = 'Portfolio', $prefix = 'FoliaModel') 

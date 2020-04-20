@@ -75,7 +75,7 @@ class FoliaViewPortfolios extends JViewLegacy
 		return array(
 			'u.nom' => JText::_('COM_FOLIA_PORTFOLIOS_NOM'),
 			'u.prenom' => JText::_('COM_FOLIA_PORTFOLIOS_PRENOM'),
-			'u.email' => JText::_('COM_FOLIA_PORTFOLIOS_EMAIl'),
+			'u.email' => JText::_('COM_FOLIA_PORTFOLIOS_EMAIL'),
 			'u.id' => "Id"
 		);
 	}  

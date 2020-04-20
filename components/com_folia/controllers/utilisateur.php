@@ -1,13 +1,13 @@
 <?php
 defined('_JEXEC') or die;
 
-class AnnuaireControllerUtilisateur extends JControllerForm
+class FoliaControllerUtilisateur extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_c';
+	protected $view_item = 'form_u';
 	
 	// précise la variable d'édition URL
-	protected $urlVar = 'a.id';
+	protected $urlVar = 'u.id';
 	
 	public function add()
 	{
@@ -18,7 +18,7 @@ class AnnuaireControllerUtilisateur extends JControllerForm
 		}
 	}
 
-	public function edit($key = null, $urlVar = 'a_id')
+	public function edit($key = null, $urlVar = 'u_id')
 	{
 		$result = parent::edit($key, $urlVar);
 		if (!$result)
@@ -28,7 +28,7 @@ class AnnuaireControllerUtilisateur extends JControllerForm
 		return $result;
 	}
 
-	public function save($key = null, $urlVar = 'a_id')
+	public function save($key = null, $urlVar = 'u_id')
 	{
 		$result = parent::save($key, $urlVar);
 		if ($result)
@@ -38,7 +38,7 @@ class AnnuaireControllerUtilisateur extends JControllerForm
 		return $result;
 	}
 
-	public function cancel($key = 'a_id')
+	public function cancel($key = 'u_id')
 	{
 		parent::cancel($key);
 		$this->setRedirect($this->getReturnPage());
@@ -56,10 +56,10 @@ class AnnuaireControllerUtilisateur extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_annuaire&view=utilisateurs";		
+		return JURI::base()."index.php/mon-profil";		
 	}
 
-	public function getModel($name = 'form_c', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_u', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;

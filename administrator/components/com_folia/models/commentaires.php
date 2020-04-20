@@ -35,7 +35,7 @@ class FoliaModelCommentaires extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('c.id, c.libelle, p.libelle, c.published, c.hits, c.modified');
+		$query->select('c.id, c.libelle, p.titre, c.published, c.hits, c.modified');
 		$query->from('#__folia_commentaires c');
 		$query->select('c.portfolios_id')->join('LEFT', '#__folia_portfolios AS p ON p.id=c.portfolios_id');
 

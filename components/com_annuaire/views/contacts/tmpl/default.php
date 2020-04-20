@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.framework'); 				// javascript Joomla object for grid.sort !
 
 $user = JFactory::getUser();               		// gets current user object
-$isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' 
+$isAdmin = (in_array('2', $user->groups));		// sets flag when user group is '2' that is 'Enregistré' 
 ?>
 
 <?php if (!$isAdmin) : ?>

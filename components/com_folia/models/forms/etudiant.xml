@@ -19,35 +19,12 @@
 			description="COM_FOLIA_ETUDIANTS_PRENOM"
 			size="40" class="inputbox" default="" required="true"
 		/>
-		<field name="civilites_id" type="sql" default="" label="COM_FOLIA_ETUDIANTS_CIVILITE" 
-			description="COM_FOLIA_ETUDIANTS_CIVILITE"
-			query="SELECT id, civilite FROM #__folia_civilites ORDER BY civilite" 
-			key_field="id" value_field="civilite" required="false"
-		/>
-		<field name="typescontacts_id" type="sql" default="" label="COM_FOLIA_ETUDIANTS_TYPECONTACT" 
-			description="COM_FOLIA_ETUDIANTS_TYPECONTACT"
-			query="SELECT id, typeContact FROM #__folia_typescontacts ORDER BY typeContact" 
-			key_field="id" value_field="typeContact" required="false"
-		/>
-		<field name="entreprises_id" type="sql" default="" label="COM_FOLIA_ETUDIANTS_ENTREPRISE" 
-			description="COM_FOLIA_ETUDIANTS_ENTREPRISE"
-			query="SELECT id, nom FROM #__folia_entreprises ORDER BY nom" 
-			key_field="id" value_field="nom" required="false"
-		/>
-		<field name="fonction" type="text" label="COM_FOLIA_ETUDIANTS_FONCTION"
-			description="COM_FOLIA_ETUDIANTS_FONCTION"
-			size="40" class="inputbox" default="" required="false"
+		<field name="classe" type="text" label="COM_FOLIA_ETUDIANTS_CLASSE"
+			description="COM_FOLIA_ETUDIANTS_CLASSE"
+			size="40" class="inputbox" default="" required="true"
 		/>
 		<field name="email" type="text" label="COM_FOLIA_ETUDIANTS_EMAIL"
 			description="COM_FOLIA_ETUDIANTS_EMAIL"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field name="mobile" type="text" label="COM_FOLIA_ETUDIANTS_MOBILE"
-			description="COM_FOLIA_ETUDIANTS_MOBILE"
-			size="40" class="inputbox" default="" required="false"
-		/>
-		<field name="tel" type="text" label="COM_FOLIA_ETUDIANTS_TEL"
-			description="COM_FOLIA_ETUDIANTS_TEL"
 			size="40" class="inputbox" default="" required="false"
 		/>
 		<field

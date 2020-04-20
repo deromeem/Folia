@@ -49,7 +49,7 @@ class FoliaModelBlocsDocuments extends JModelList
 
 
 		//joint la table document 
-		  $query->select('d.nom AS nom')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
+		  $query->select('d.titre AS titre')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
  
 
 
@@ -92,7 +92,7 @@ class FoliaModelBlocsDocuments extends JModelList
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
+		 // echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 

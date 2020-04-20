@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 class FoliaModelBlocsDocument extends JModelAdmin
 {
 	protected $_compo = 'com_folia';
-	protected $_context = 'blocDocument';
+	protected $_context = 'blocsDocument';
 	public $typeAlias = 'com_folia.blocsDocument';
 	
 	// Surcharges des m�thodes de la classe m�re pour :
