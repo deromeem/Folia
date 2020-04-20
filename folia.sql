@@ -1739,7 +1739,10 @@ CREATE TABLE `folia_folia_bibliotheques` (
 --
 
 INSERT INTO `folia_folia_bibliotheques` (`id`, `nom`, `apercu`, `avance`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 0, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
+(1, '-', '', 0, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0),
+(2, 'Thème normaux', '', 0, '', 1, '2020-04-20 00:00:00', 0, '2020-04-20 00:00:00', 0, 0),
+(3, 'Thème avancés', '', 0, '', 1, '2020-04-20 00:00:00', 0, '2020-04-20 00:00:00', 0, 0);
+
 
 -- --------------------------------------------------------
 
@@ -2174,9 +2177,7 @@ CREATE TABLE `folia_folia_themes` (
 --
 
 INSERT INTO `folia_folia_themes` (`id`, `titre`, `description`, `bibliotheques_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
-(1, '-', '', 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
-
-INSERT INTO `folia_folia_themes` (`id`, `titre`, `description`, `bibliotheques_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+(1, '-', '', 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0),
 (2, 'Thème par défaut ', 'Thème simple disponible pour les étudiants normaux et avancé.', 1, '', 1, '2020-04-20 00:00:00', 0, '2020-04-20 00:00:00', 0, 0),
 (3, 'Thème supérieure', 'Thème disponible seulement pour les étudiants avancé.', 1, '', 1, '2020-04-20 00:00:00', 0, '2020-04-20 00:00:00', 0, 0);
 
