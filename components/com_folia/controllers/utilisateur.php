@@ -56,7 +56,7 @@ class FoliaControllerUtilisateur extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."index.php/utilisateur";		
+		return JURI::base()."index.php/mon-profil";		
 	}
 
 	public function getModel($name = 'form_u', $prefix = '', $config = array('ignore_request' => true))

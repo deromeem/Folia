@@ -20,12 +20,12 @@ if ($saveOrder)
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=portfolios.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->libelle); ?>
+					<?php echo $this->escape($item->titre); ?>
 				</a>
 			</div>
 		</td>
 		<td>
-			<?php echo $item->etudiant_id; ?>
+			<?php echo $item->etudiants_id; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?>
