@@ -69,39 +69,13 @@ class FoliaModelCommentaires extends JModelList
 		}
 		else if($isProfesseur)
 		{
-			$query->where('
-				pf.id IN (
-    				SELECT pf.id
-    				FROM folia_folia_portfolios pf
-					LEFT JOIN folia_folia_etudiants etu ON etu.id = pf.etudiants_id
-					WHERE etu.classes_id IN (
-        				SELECT prof_cla.classes_id
-        				FROM folia_folia_professeurs_classes prof_cla
-        				LEFT JOIN folia_folia_professeurs prof ON prof.id = prof_cla.professeurs_id
-        				LEFT JOIN folia_folia_utilisateurs u ON u.email = prof.email
-        				LEFT JOIN folia_users users ON users.email = u.email
-        				WHERE users.id = '.$user->id.'
-    				)
-				)
-			');
+			$query->join('LEFT', '#__folia_etudiants etu ON etu.mail = u.mail');
+			$query->where('etu.classes_id IN (SELECT prof_cla.classes_id FROM #__folia_professeurs_classes prof_cla LEFT JOIN #__folia_professeurs prof ON prof.id = prof_cla.professeurs_id LEFT JOIN #_folia_utilisateurs u ON u.email = prof.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id ='.$user->id.')');
 		}
 		else if($isTuteur)
 		{
-			$query->where('
-				pf.id IN (
-	    			SELECT pf.id
-    				FROM folia_folia_portfolios pf
-					LEFT JOIN folia_folia_etudiants etu ON etu.id = pf.etudiants_id
-					WHERE etu.id IN (
-				        SELECT tut_etu.etudiants_id
-				    	FROM folia_folia_tuteurs_etudiants tut_etu
-				    	LEFT JOIN folia_folia_tuteurs tut ON tut.id = tut_etu.tuteurs_id
-				    	LEFT JOIN folia_folia_utilisateurs u ON u.email = tut.email
-				    	LEFT JOIN folia_users users ON users.email = u.email
-				    	WHERE users.id = '.$user->id.'
-				    )
-				)
-			');
+			$query->join('LEFT', '#__folia_etudiants etu ON etu.id = com.utilisateurs_id');
+			$query->where('etu.id IN (SELECT tut_etu.etudiants_id FROM #__folia_tuteurs_etudiants tut_etu LEFT JOIN #__folia_tuteurs tut ON tut.id = tut_etu.tuteurs_id LEFT JOIN #__folia_utilisateurs u ON u.email = tut.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id ='.$user->id.')');
 		}
 
 		// filtre de recherche rapide textuelle

@@ -57,14 +57,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		</thead>
 
 		<tbody>
-			<?php foreach($this->items as $i => $item) : 
-				$name = $item->texte;
-				if(strlen($item->texte) >= 9)
-					$name = substr($item->texte, 0, 9)."...";
-				?>
+			<?php foreach($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $name ?></a>
+						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->texte ?></a>
 					</td>
 					<td>
 						<!-- <a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->utilisateur ?></a> -->
