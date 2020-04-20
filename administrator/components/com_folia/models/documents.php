@@ -10,9 +10,10 @@ class FoliaModelDocuments extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'd.id',
-				'nom', 'd.nom',
+				'titre', 'd.titre',
+				'nomFichier', 'd.nomFichier',
+				'url', 'd.url',
 				'alias', 'd.alias',
-				'format', 'd.format',
 				'published', 'd.published',
 				'hits', 'd.hits',
 				'modified', 'd.modified'
@@ -40,7 +41,7 @@ class FoliaModelDocuments extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('d.id, d.nom, d.alias, d.format, d.published, d.hits, d.modified');
+		$query->select('d.id, d.titre, d.nomFichier, d.url, d.alias, d.published, d.hits, d.modified');
 		$query->from('#__folia_documents d');
 
 		// joint la table pays
@@ -58,8 +59,8 @@ class FoliaModelDocuments extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'nom LIKE '.$search;
-				$searches[]	= 'alias LIKE '.$search;
+				$searches[]	= 'titre LIKE '.$search;
+				$searches[]	= 'nomFichier LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
@@ -81,7 +82,7 @@ class FoliaModelDocuments extends JModelList
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'd.nom');
+		$orderCol = $this->state->get('list.ordering', 'd.nomFichier');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

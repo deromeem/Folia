@@ -49,7 +49,7 @@ class FoliaModelBlocsDocuments extends JModelList
 
 
 		//joint la table document 
-		  $query->select('d.nom AS nom')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
+		  $query->select('d.titre AS titre')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
  
 
 

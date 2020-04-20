@@ -10,11 +10,11 @@ class FoliaModelPages extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'p.id',
-				'nom', 'p.nom',
-				'alias', 'p.alias',
+				'titre', 'p.titre',
+				'texte', 'p.texte',
 				'portfolios_id', 'p.portfolios_id',
+				'alias', 'p.alias',
 				'published', 'p.published',
-				'hits', 'p.hits',
 				'modified', 'p.modified',
 				'created', 'p.created',
 				'hits', 'p.hits'
@@ -42,11 +42,15 @@ class FoliaModelPages extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('p.id, p.nom, p.alias, p.portfolios_id, p.created, p.published, p.hits, p.modified');
+		$query->select('p.id, p.titre, p.texte, p.portfolios_id, p.alias, p.created, p.published, p.hits, p.modified');
 		$query->from('#__folia_pages p');
 
 		// joint la table pays
 		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
+
+		//joint la table portfolio
+		$query->select('port.titre AS titre')->join('LEFT', '#__folia_portfolios AS port ON port.titre=p.portfolios_id');
+
 
 		// filtre de recherche rapide textuel
 		$search = $this->getState('filter.search');
@@ -60,8 +64,8 @@ class FoliaModelPages extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'nom LIKE '.$search;
-				$searches[]	= 'prenom LIKE '.$search;
+				$searches[]	= 'titre LIKE '.$search;
+				$searches[]	= 'port.titre LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
@@ -83,7 +87,7 @@ class FoliaModelPages extends JModelList
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'p.nom');
+		$orderCol = $this->state->get('list.ordering', 'p.titre');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

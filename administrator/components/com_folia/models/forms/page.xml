@@ -5,22 +5,27 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="nom" type="text" label="COM_FOLIA_PAGES_NOM"
-            description="COM_FOLIA_PAGES_NOM"
-            size="40" class="inputbox" default="" required="true"
+        <field name="titre" type="text" label="COM_FOLIA_PAGES_TITRE"
+            description="COM_FOLIA_PAGES_TITRE"
+            size="40" class="inputbox" default="" required="false"
         />
-        
+
+		<field name="texte" type="text" label="COM_FOLIA_PAGES_TEXTE"
+            description="COM_FOLIA_PAGES_TEXTE"
+            size="40" class="inputbox" default="" required="false"
+        />
+
+		<field name="portfolios_id" type="text" label="COM_FOLIA_PAGES_PORTFOLIOS_ID"
+            description="COM_FOLIA_PAGES_PORTFOLIOS_ID"
+            size="40" class="inputbox" default="" required="false"
+        />
         <field name="alias" type="text" label="COM_FOLIA_PAGES_ALIAS"
             description="COM_FOLIA_PAGES_ALIAS"
             size="40" class="inputbox" default="" required="false"
         />
-		<field name="dateCreation" type="text" label="COM_FOLIA_PAGES_DATECREATION"
-            description="COM_FOLIA_PAGES_DATECREATION"
-            size="40" class="inputbox" default="" required="true"
-        />
-		<field name="portfolios_id" type="text" label="COM_FOLIA_PAGES_PORTFOLIOS_ID"
-            description="COM_FOLIA_PAGES_PORTFOLIOS_ID"
-            size="40" class="inputbox" default="" required="true"
+		 <field name="commentaire" type="editor" label="COM_FOLIA_PAGES_COMMENTAIRE"
+            description="COM_FOLIA_PAGES_COMMENTAIRE"
+            size="60" class="inputbox" default="" required="false"
         />
 
         <!-- <field name="email" type="text" label="COM_FOLIA_PAGES_EMAIL"

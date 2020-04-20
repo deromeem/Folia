@@ -20,18 +20,15 @@ if ($saveOrder)
 		<td class="nowrap hidden-phone">
 			<?php echo $item->blocs_id; ?>
 		</td>
-		<td class="nowrap hidden-phone">
-			<?php echo $item->documents_id; ?>
-		</td>
-		<td class="center hidden-phone">
-			<?php echo (int) $item->id; ?>
-		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=blocsDocument.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->alias); ?>
+					<?php echo $this->escape($item->documents_id); ?>
 				</a>
 			</div>
+		</td>
+		<td class="nowrap hidden-phone">
+			<?php echo $item->alias; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocsDocuments.', true); ?>
@@ -41,6 +38,9 @@ if ($saveOrder)
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo (int) $item->hits; ?>
+		</td>
+		<td class="center hidden-phone">
+			<?php echo (int) $item->id; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

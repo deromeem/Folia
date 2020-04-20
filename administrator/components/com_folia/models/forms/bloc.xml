@@ -9,18 +9,23 @@
             description="COM_FOLIA_BLOCS_ALIAS"
             size="40" class="inputbox" default="" required="false"
         />
-        
-        <field name="page_id" type="text" label="COM_FOLIA_BLOCS_PAGE_ID"
-            description="COM_FOLIA_BLOCS_PAGE_ID"
-            size="40" class="inputbox" default="" required="true"
+        <field name="pages_id" type="text" label="COM_FOLIA_BLOCS_PAGE"
+            description="COM_FOLIA_BLOCS_PAGE"
+			query="SELECT id, titre FROM #__folia_pages ORDER BY tire" 
+            size="40" class="inputbox" default="" required="false"
         />
-		<field name="activite_id" type="text" label="COM_FOLIA_BLOCS_ACTIVITE_ID"
-            description="COM_FOLIA_BLOCS_ACTIVITE_ID"
-            size="40" class="inputbox" default="" required="true"
+		<field name="activites_id" type="text" label="COM_FOLIA_BLOCS_ACTIVITE"
+            description="COM_FOLIA_BLOCS_ACTIVITE"
+			query="SELECT id, nom FROM #__folia_activites ORDER BY nom" 
+            size="40" class="inputbox" default="" required="false"
         />
 		 <field name="texte" type="text" label="COM_FOLIA_BLOCS_TEXTE"
             description="COM_FOLIA_BLOCS_TEXTE"
-            size="40" class="inputbox" default="" required="true"
+            size="40" class="inputbox" default="" required="false"
+        />
+		 <field name="texteLong" type="editor" label="COM_FOLIA_BLOCS_TEXTELONG"
+            description="COM_FOLIA_BLOCS_TEXTELONG"
+            size="60" class="inputbox" default="" required="false"
         />
 
         <!-- <field name="email" type="text" label="COM_FOLIA_UTILISATEURS_EMAIL"
@@ -79,11 +84,6 @@
 			class="inputbox" default=""
 		/>
 
-		<field name="email" type="sql" default="" label="COM_FOLIA_BLOCS_EMAIL" 
-			description="COM_FOLIA_BLOCS_EMAIL"
-			query="SELECT id, email FROM #__users WHERE published=1 ORDER BY email" 
-			key_field="id" value_field="email" required="true"
-		/>
 
 	</fieldset>
 </form>

@@ -8,10 +8,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<tr>
         <th width="20" class="hidden-phone">
                 <?php echo JHtml::_('grid.checkall'); ?>
-        </th>
-        <th width="30%" class= " left hidden-phone">
-		<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'b.id', $listDirn, $listOrder); ?>
-	</th>                         
+        </th>                             
         <th width="35%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_DOCUMENTS_BLOCS_ID', 'bd.blocs_id', $listDirn, $listOrder) ?>
         </th>
@@ -30,6 +27,8 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<th width="10%">
 		<?php echo JHtml::_('grid.sort', 'JGLOBAL_HITS', 'bd.hits', $listDirn, $listOrder); ?>
 	</th>
-	
+	  <th width="30%" class= " left hidden-phone">
+		<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'b.id', $listDirn, $listOrder); ?>
+	</th> 
 	</tr>
 

@@ -8,18 +8,18 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<tr>
         <th width="20" class="hidden-phone">
                 <?php echo JHtml::_('grid.checkall'); ?>
-        </th>      
-        <th width="30%" class="nowrap center hidden-phone">
-		<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'b.id', $listDirn, $listOrder); ?>
-	</th>                   
-        <th width="35%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_NOM', 'p.nom', $listDirn, $listOrder) ?>
+        </th>                       
+        <th width="35%"  class="nowrap hidden-phone">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_TITRE', 'p.titre', $listDirn, $listOrder) ?>
+        </th>
+        <th width="35%" class="wrap has-context">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_TEXTE', 'p.texte', $listDirn, $listOrder) ?>
+        </th>
+        <th width="5%" class="nowrap hidden-phone">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_PORTFOLIOS_ID', 'port.titre', $listDirn, $listOrder) ?>
         </th>
         <th width="5%" class="nowrap hidden-phone">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_ALIAS', 'p.alias', $listDirn, $listOrder) ?>
-        </th>
-        <th width="5%" class="nowrap hidden-phone">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_PORTFOLIOS_ID', 'p.portfolios_id', $listDirn, $listOrder) ?>
         </th>
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'p.published', $listDirn, $listOrder) ?>
@@ -30,6 +30,8 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<th width="10%">
 		<?php echo JHtml::_('grid.sort', 'JGLOBAL_HITS', 'p.hits', $listDirn, $listOrder); ?>
 	</th>
-	
+        <th width="30%" class="nowrap center hidden-phone">
+		<?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'p.id', $listDirn, $listOrder); ?>
+	</th>  
 	</tr>
 
