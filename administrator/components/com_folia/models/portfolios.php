@@ -36,8 +36,14 @@ class FoliaModelPortfolios extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('p.id, p.titre, p.etudiants_id, p.themes_id, p.alias, p.published, p.hits, p.modified');
+		$query->select('p.id, p.titre, p.themes_id, p.alias, p.published, p.hits, p.modified');
 		$query->from('#__folia_portfolios p');
+
+		// joint la table étudiant
+		$query->join('LEFT', '#__folia_etudiants AS e ON e.id = p.etudiants_id');
+
+		// joint la table utilisateur
+		$query->select('CONCAT(u.nom," ", u.prenom) AS etudiant')->join('LEFT', '#__folia_utilisateurs AS u ON u.email = e.email');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
@@ -64,7 +70,7 @@ class FoliaModelPortfolios extends JModelList
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
+		// echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }

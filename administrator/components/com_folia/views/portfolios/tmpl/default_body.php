@@ -25,7 +25,7 @@ if ($saveOrder)
 			</div>
 		</td>
 		<td>
-			<?php echo $item->etudiants_id; ?>
+			<?php echo $item->etudiant; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?>
