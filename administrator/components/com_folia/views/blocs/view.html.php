@@ -85,8 +85,8 @@ class FoliaViewBlocs extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'b.page_id' => JText::_('COM_FOLIA_BLOCS_PAGE_ID'),
-			'b.alias' => JText::_('COM_FOLIA_BLOCS_ALIAS'),
+			'b.pages_id' => JText::_('COM_FOLIA_BLOCS_PAGE'),
+			'b.activites_id' => JText::_('COM_FOLIA_BLOCS_ACTIVITE'),
 			'b.texte' => JText::_('COM_FOLIA_BLOCS_TEXTE'),
 			'b.published' => JText::_('JSTATUS'),
 			'b.modified' => JText::_('JDATE'),

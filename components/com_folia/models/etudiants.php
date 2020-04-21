@@ -57,6 +57,16 @@ class FoliaModelEtudiants extends JModelList
 
 		//joint la table utilisateur
 		$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');	
+
+		$user = JFactory::getUser();               		// gets current user object
+		$isProfesseur = ((bool)array_intersect(array('14'), $user->groups));
+		$isTuteur = ((bool)array_intersect(array('15'), $user->groups));
+
+		if($isProfesseur)
+		{
+			$query->where();
+		}
+		else
 		
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');

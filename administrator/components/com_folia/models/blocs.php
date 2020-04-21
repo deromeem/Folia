@@ -70,11 +70,11 @@ class FoliaModelBlocs extends JModelList
 			}
 		}
 
-		// filtre selon l'état du filtre 'filter_pay'
-		// $pay = $this->getState('filter.pay');
-		// if (is_numeric($pay)) {
-		// 	$query->where('e.pays_id=' . (int) $pay);
-		// }
+		// filtre selon l'état du filtre 'filter_activities'
+		 $nom = $this->getState('filter.nom');
+		 if (is_numeric($nom)) {
+		 	$query->where('b.activites_id=' . (int) $nom);
+		 }
 		// filtre selon l'état du filtre 'filter_published'
 		$published = $this->getState('filter.published');
 		if (is_numeric($published)) {
@@ -94,15 +94,15 @@ class FoliaModelBlocs extends JModelList
 		return $query;
 	}
 
-	public function getPays()
+	public function getActivites()
 	{
 		$query = $this->_db->getQuery(true);
-		$query->select('id, pays');
-		$query->from('#__annuaire_pays');
+		$query->select('id, nom');
+		$query->from('#__folia_activites');
 		$query->where('published=1');
-		$query->order('pays ASC');
+		$query->order('nom ASC');
 		$this->_db->setQuery($query);
-		$pays = $this->_db->loadObjectList();
-		return $pays;
+		$activities = $this->_db->loadObjectList();
+		return $activities;
 	}	
 }

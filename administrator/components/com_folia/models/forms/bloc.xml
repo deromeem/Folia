@@ -14,11 +14,11 @@
 			query="SELECT id, titre FROM #__folia_pages ORDER BY tire" 
             size="40" class="inputbox" default="" required="false"
         />
-		<field name="activites_id" type="text" label="COM_FOLIA_BLOCS_ACTIVITE"
-            description="COM_FOLIA_BLOCS_ACTIVITE"
+		<field name="activites_id" type="sql" default="" label="COM_FOLIA_BLOCS_ACTIVITE" 
+			description="COM_FOLIA_BLOCS_ACTIVITE"
 			query="SELECT id, nom FROM #__folia_activites ORDER BY nom" 
-            size="40" class="inputbox" default="" required="false"
-        />
+			key_field="id" value_field="nom" required="false"
+		/>
 		 <field name="texte" type="text" label="COM_FOLIA_BLOCS_TEXTE"
             description="COM_FOLIA_BLOCS_TEXTE"
             size="40" class="inputbox" default="" required="false"

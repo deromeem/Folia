@@ -34,7 +34,7 @@ JHtml::_('formbehavior.chosen', 'select');
 		<div class="row-fluid ">
 			<div class="span9">
 				<div class="form-vertical">
-				<div class="control-group">
+					<div class="control-group">
 						<div class="span2">
 							<div class="control-label"><?php echo $this->form->getLabel('pages_id'); ?></div>
 						</div>					
