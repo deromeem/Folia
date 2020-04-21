@@ -16,14 +16,14 @@ class UtilisateurHelper extends JHelperContent
 			$vName == 'blocs'
 		);
 		JHtmlSidebar::addEntry(
-			JText::_('Bibliothèques de thèmes'),
-			'index.php?option=com_folia&view=bibliosThemes',
-			$vName == 'bibliosTheme'
+			JText::_('Thèmes'),
+			'index.php?option=com_folia&view=Themes',
+			$vName == 'Themes'
 		);
 		JHtmlSidebar::addEntry(
 			JText::_('Bibliothèques étendues de thèmes'),
-			'index.php?option=com_folia&view=bibliosEtenduesThemes',
-			$vName == 'bibliosEtenduesThemes'
+			'index.php?option=com_folia&view=bibliothequesThemes',
+			$vName == 'bibliothequesThemes'
 		);
 		JHtmlSidebar::addEntry(
 			JText::_('Blocs documents'),

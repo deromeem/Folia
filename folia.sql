@@ -2048,25 +2048,20 @@ CREATE TABLE `folia_folia_portfolios` (
 INSERT INTO `folia_folia_portfolios` (`id`, `titre`, `texte`, `etudiants_id`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
 (1, '-', '', 1, 1, '', 1, '2020-04-03 17:00:00', 0, '2020-04-03 17:00:00', 0, 0);
 
-INSERT INTO `folia_folia_portfolios` (`
-titre`,
-`texte`,
-`etudiants_id
-`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`)
-VALUES
-('Portfolios M Dupond', 'Text', 28, 1, '', 0, '2020-03-17 00:00:00', '', '2020-03-17 00:00:00', '', 0),
-('Portfolios M Ahmed-Reda', 'Text', 21, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios U Christian', 'Text', 24, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios L Caroline', 'Text', 15, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios E Jordan', 'Text', 10, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios M Julien', 'Text', 20, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios Y Michel', 'Text', 26, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios C-R Rafhael', 'Text', 6, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios R Thomas', 'Text', 23, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios D-D Tracy', 'Text', 7, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios D-D Tracy', 'Text', 7, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios W William', 'Text', 25, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
-('Portfolios W William', 'Text', 25, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0);
+INSERT INTO `folia_folia_portfolios` (`id`,`titre`,`texte`,`etudiants_id`, `themes_id`, `alias`, `published`, `created`, `created_by`, `modified`, `modified_by`, `hits`) VALUES
+('2', 'Portfolios M Dupond', 'Text', 28, 1, '', 0, '2020-03-17 00:00:00', '', '2020-03-17 00:00:00', '', 0),
+('3', 'Portfolios M Ahmed-Reda', 'Text', 21, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('4', 'Portfolios U Christian', 'Text', 24, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('5', 'Portfolios L Caroline', 'Text', 15, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('6', 'Portfolios E Jordan', 'Text', 10, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('7', 'Portfolios M Julien', 'Text', 20, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('8', 'Portfolios Y Michel', 'Text', 26, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('9', 'Portfolios C-R Rafhael', 'Text', 6, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('10', 'Portfolios R Thomas', 'Text', 23, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('11', 'Portfolios D-D Tracy', 'Text', 7, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('12', 'Portfolios D-D Tracy', 'Text', 7, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('13', 'Portfolios W William', 'Text', 25, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0),
+('14', 'Portfolios W William', 'Text', 25, 1, '', 0, '2020-03-23 00:00:00', '', '2020-03-23 00:00:00', '', 0);
 
 -- --------------------------------------------------------
 
