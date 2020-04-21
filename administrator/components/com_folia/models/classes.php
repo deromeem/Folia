@@ -35,9 +35,9 @@ class FoliaModelClasses extends JModelList
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
 		$query->select('c.id, c.libelle, c.published, c.hits, c.modified');
-		$query->from('#__folia_classes c');
+		$query->from('#__folia_classes AS c');
 
-		$query->select('r.nom AS nomReferentiel')->join('LEFT', '#__folia_referentiels AS r ON r.id=c.referentiel_id');
+		$query->select('r.nom AS nomReferentiel')->join('LEFT', '#__folia_referentiels AS r ON r.id=c.referentiels_id');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
