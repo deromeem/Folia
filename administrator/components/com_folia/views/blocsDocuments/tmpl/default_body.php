@@ -17,18 +17,15 @@ if ($saveOrder)
 		<td class="left hidden-phone">
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>
-		<td class="nowrap hidden-phone">
-			<?php echo $item->blocs_id; ?>
-		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=blocsDocument.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->documents_id); ?>
+					<?php echo $this->escape($item->blocs_id); ?>
 				</a>
 			</div>
 		</td>
 		<td class="nowrap hidden-phone">
-			<?php echo $item->alias; ?>
+			<?php echo $item->documents_id; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocsDocuments.', true); ?>

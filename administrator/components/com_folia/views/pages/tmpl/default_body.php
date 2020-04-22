@@ -17,21 +17,18 @@ if ($saveOrder)
 		<td class="left hidden-phone">
 			<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 		</td>
-		<td class="nowrap hidden-phone">
-			<?php echo $item->titre; ?>
-		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=page.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->texte); ?>
+					<?php echo $this->escape($item->titre); ?>
 				</a>
 			</div>
 		</td>
 		<td class="nowrap hidden-phone">
-			<?php echo $item->portfolios_id; ?>
+			<?php echo $item->texte; ?>
 		</td>
 		<td class="nowrap hidden-phone">
-			<?php echo $item->alias; ?>
+			<?php echo $item->po_titre; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'pages.', true); ?>

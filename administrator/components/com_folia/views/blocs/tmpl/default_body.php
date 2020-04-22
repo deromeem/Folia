@@ -28,13 +28,10 @@ if ($saveOrder)
 			<?php echo $item->nom; ?>
 		</td>
 		<td class="center hidden-phone">
+			<?php echo $item->titre; ?>
+		</td>
+		<td class="center hidden-phone">
 			<?php echo $item->texte; ?>
-		</td>
-		<td class="center hidden-phone">
-			<?php echo $item->texteLong; ?>
-		</td>
-		<td class="center hidden-phone">
-			<?php echo $item->alias; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocs.', true); ?>

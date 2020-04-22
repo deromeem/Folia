@@ -15,10 +15,12 @@
             size="40" class="inputbox" default="" required="false"
         />
 
-		<field name="portfolios_id" type="text" label="COM_FOLIA_PAGES_PORTFOLIOS_ID"
-            description="COM_FOLIA_PAGES_PORTFOLIOS_ID"
-            size="40" class="inputbox" default="" required="false"
+		<field name="portfolios_id" type="sql" label="COM_FOLIA_PAGES_PORTFOLIOS_TITRE"
+            description="COM_FOLIA_PAGES_PORTFOLIOS_TITRE"
+			query="SELECT id, titre FROM #__folia_portfolios ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />
+
         <field name="alias" type="text" label="COM_FOLIA_PAGES_ALIAS"
             description="COM_FOLIA_PAGES_ALIAS"
             size="40" class="inputbox" default="" required="false"

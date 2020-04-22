@@ -66,11 +66,6 @@ class FoliaModelDocuments extends JModelList
 			}
 		}
 
-		// filtre selon l'état du filtre 'filter_pay'
-		// $pay = $this->getState('filter.pay');
-		// if (is_numeric($pay)) {
-		// 	$query->where('e.pays_id=' . (int) $pay);
-		// }
 		// filtre selon l'état du filtre 'filter_published'
 		$published = $this->getState('filter.published');
 		if (is_numeric($published)) {
@@ -82,7 +77,7 @@ class FoliaModelDocuments extends JModelList
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'd.nomFichier');
+		$orderCol = $this->state->get('list.ordering', 'titre');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

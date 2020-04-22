@@ -48,8 +48,8 @@ class FoliaModelPages extends JModelList
 		// joint la table pays
 		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
 
-		//joint la table portfolio
-		$query->select('port.titre AS titre')->join('LEFT', '#__folia_portfolios AS port ON port.titre=p.portfolios_id');
+		//joint la table portfolios
+		$query->select('po.titre as po_titre')->join('LEFT', '#__folia_portfolios AS po ON po.id=p.portfolios_id');
 
 
 		// filtre de recherche rapide textuel

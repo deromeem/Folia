@@ -32,9 +32,6 @@ if ($saveOrder)
 			<?php echo $item->url; ?>
 		</td>
 		<td class="center hidden-phone">
-			<?php echo $item->alias; ?>
-		</td>
-		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'documents.', true); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">

@@ -16,10 +16,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_TEXTE', 'p.texte', $listDirn, $listOrder) ?>
         </th>
         <th width="5%" class="nowrap hidden-phone">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_PORTFOLIOS_ID', 'port.titre', $listDirn, $listOrder) ?>
-        </th>
-        <th width="5%" class="nowrap hidden-phone">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_ALIAS', 'p.alias', $listDirn, $listOrder) ?>
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_PAGES_PORTFOLIOS_TITRE', 'port.titre', $listDirn, $listOrder) ?>
         </th>
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'p.published', $listDirn, $listOrder) ?>

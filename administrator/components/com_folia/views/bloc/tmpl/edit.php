@@ -21,6 +21,8 @@ JHtml::_('formbehavior.chosen', 'select');
 
 	<div class="form-inline form-inline-header">			
 		<div class="control-group">
+		<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
+			<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
 			<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
 			<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
 		</div>					
@@ -49,18 +51,10 @@ JHtml::_('formbehavior.chosen', 'select');
 						<div class="span7">
 							<div class="controls"><?php echo $this->form->getInput('activites_id'); ?></div>
 						</div>					
-					</div>					
-					<div class="control-group">
-						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('texte'); ?></div>
-						</div>					
-						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('texte'); ?></div>
-						</div>					
-					</div>										
+					</div>															
 				</div>
 				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('texteLong'); ?>
+					<?php echo $this->form->getControlGroup('texte'); ?>
 				</div>
 			</div>
 			<div class="span3">

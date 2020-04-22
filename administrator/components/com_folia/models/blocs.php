@@ -12,8 +12,8 @@ class FoliaModelBlocs extends JModelList
 				'id', 'b.id',
 				'page_id', 'b.pages_id',
 				'activite_id', 'b.activites_id',
+				'titre', 'b.titre',
 				'texte', 'b.texte',
-				'texteLong', 'b.texteLong',
 				'alias', 'b.alias',
 				'published', 'b.published',
 				'hits', 'b.hits',
@@ -42,7 +42,7 @@ class FoliaModelBlocs extends JModelList
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('b.id, b.pages_id, b.activites_id, b.texte, b.texteLong, b.alias, b.published, b.hits, b.modified');
+		$query->select('b.id, b.pages_id, b.activites_id, b.titre, b.texte, b.alias, b.published, b.hits, b.modified');
 		$query->from('#__folia_blocs b');
 
 		// joint la table activites

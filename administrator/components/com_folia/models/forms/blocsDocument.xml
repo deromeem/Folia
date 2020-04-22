@@ -5,13 +5,16 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="blocs_id" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS_ID"
-            description="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS_ID"
-            size="40" class="inputbox" default="" required="false"
+		<field name="blocs_id" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS"
+            description="COM_FOLIA_BLOCS_DOCUMENTS_BLOCS"
+			query="SELECT id, titre FROM #__folia_blocs ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />
-		<field name="documents_id" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS_ID"
-            description="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS_ID"
-            size="40" class="inputbox" default="" required="false"
+	
+		<field name="documents_id" type="sql" label="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS"
+            description="COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS"
+			query="SELECT id, titre FROM #__folia_documents ORDER BY titre" 
+            key_field="id" value_field="titre" required="false"
         />
         
         <field name="alias" type="text" label="COM_FOLIA_BLOCS_DOCUMENTS_ALIAS"

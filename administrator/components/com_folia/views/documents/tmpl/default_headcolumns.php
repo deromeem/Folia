@@ -18,10 +18,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="35%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_DOCUMENTS_URL', 'd.url', $listDirn, $listOrder) ?>
         </th>
-        <th class="nowrap center hidden-tablet hidden-phone">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_DOCUMENTS_ALIAS', 'd.alias', $listDirn, $listOrder) ?>
-        </th>
-        
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'd.published', $listDirn, $listOrder) ?>
         </th>
