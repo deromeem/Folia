@@ -43,16 +43,12 @@ class FoliaModelBlocsDocuments extends JModelList
 		$query->select('bd.id, bd.blocs_id, bd.documents_id, bd.alias, bd.published, bd.hits, bd.modified');
 		$query->from('#__folia_blocs_documents bd');
 
-		// joint la table pays
-		//$query->select('p.pays AS pays')->join('LEFT', '#__annuaire_pays AS p ON p.id=e.pays_id');
+		//joint la table blocs 
+		$query->select('b.titre AS titre')->join('LEFT', '#__folia_blocs AS b ON b.id=bd.blocs_id');
 
-
-
-		//joint la table document 
+		//joint la table documents 
 		  $query->select('d.titre AS titre')->join('LEFT', '#__folia_documents AS d ON d.id=bd.documents_id');
  
-
-
 		// filtre de recherche rapide textuel
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {

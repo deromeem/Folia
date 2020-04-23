@@ -55,25 +55,25 @@ class FoliaModelEtudiants extends JModelList
 		// joint la table classes
 		$query->select('c.libelle')->join('LEFT', '#__folia_classes AS c ON c.id=e.classes_id');
 
-		//joint la table utilisateur
+		//joint la table utilisateurs
 		$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');	
 
-		$user = JFactory::getUser();               		// gets current user object
+		$user = JFactory::getUser();               		// gets current user objecte
 		$isProfesseur = ((bool)array_intersect(array('14'), $user->groups));
 		$isTuteur = ((bool)array_intersect(array('15'), $user->groups));
 
 		if($isProfesseur)
 		{
-			$query->where();
+			
+			$query->where('c.id IN (SELECT c.id FROM #__folia_classes c LEFT JOIN #__folia_professeurs_classes pc ON c.id = pc.classes_id LEFT JOIN #__folia_professeurs p ON p.id = pc.id WHERE p.id = '.$user->id.')');
 		}
-		else
-		
+	
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
 			// recherche prefix�e par 'id:'
 			if (stripos($search, 'id:') === 0) {
-				$query->where('c.id = '.(int) substr($search, 3));
+				$query->where('e.id = '.(int) substr($search, 3));
 			}
 			else {
 				// recherche textuelle classique (sans pr�fixe)

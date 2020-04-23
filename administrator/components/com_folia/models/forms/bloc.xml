@@ -19,12 +19,12 @@
 			query="SELECT id, nom FROM #__folia_activites ORDER BY nom" 
 			key_field="id" value_field="nom" required="false"
 		/>
-		 <field name="texte" type="text" label="COM_FOLIA_BLOCS_TEXTE"
-            description="COM_FOLIA_BLOCS_TEXTE"
+		<field name="titre" type="text" label="COM_FOLIA_BLOCS_TITRE"
+            description="COM_FOLIA_BLOCS_TITRE"
             size="40" class="inputbox" default="" required="false"
         />
-		 <field name="texteLong" type="editor" label="COM_FOLIA_BLOCS_TEXTELONG"
-            description="COM_FOLIA_BLOCS_TEXTELONG"
+		 <field name="texte" type="editor" label="COM_FOLIA_BLOCS_TEXTE"
+            description="COM_FOLIA_BLOCS_TEXTE"
             size="60" class="inputbox" default="" required="false"
         />
 
