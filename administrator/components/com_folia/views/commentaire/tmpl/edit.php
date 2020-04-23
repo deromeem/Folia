@@ -19,10 +19,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <form action="<?php echo JRoute::_('index.php?option=com_folia&layout=edit&id='.(int) $this->item->id); ?>"
       method="post" name="adminForm" id="folia-form" class="form-validate">
 
-	<div class="control-group">
-		<div class="control-label"><?php echo $this->form->getLabel('nom'); ?></div>
-		<div class="controls"><?php echo $this->form->getInput('nom'); ?></div>
-	</div>					
+			
 
 
 	<div class="form-horizontal">

@@ -20,13 +20,13 @@ if ($saveOrder)
 		<td class="wrap has-context">
 			<div class="pull-left">
 				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=commentaire.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->email); ?>
+					<?php echo $this->escape($item->titre); ?>
 				</a>
 			</div>
 		</td>
 		<td class="">
-			<?php echo $item->libelle; ?>
-		</td>
+			<?php echo $item->texte; ?> 
+		</td> 
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'commentaires.', true); ?>
 		</td>

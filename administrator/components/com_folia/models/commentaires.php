@@ -10,7 +10,7 @@ class FoliaModelCommentaires extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'c.id',
-				'libelle', 'c.libelle',
+				'texte', 'c.texte',
 				'portfolio', 'p.portfolio',
 				'professeurs', 'p.professeurs.id',
 				'published', 'c.published',
@@ -28,14 +28,14 @@ class FoliaModelCommentaires extends JModelList
 		$this->setState('filter.search', $search);
 
 		// parent::populateState('modified', 'desc');
-		parent::populateState('c.libelle', 'ASC');
+		parent::populateState('c.texte', 'ASC');
 	}
 	
 	protected function getListQuery()
 	{
 		// construit la requête d'affichage de la liste
 		$query = $this->_db->getQuery(true);
-		$query->select('c.id, c.libelle, p.titre, c.published, c.hits, c.modified');
+		$query->select('c.id, c.texte, p.titre, c.published, c.hits, c.modified');
 		$query->from('#__folia_commentaires c');
 		$query->select('c.portfolios_id')->join('LEFT', '#__folia_portfolios AS p ON p.id=c.portfolios_id');
 
@@ -53,14 +53,14 @@ class FoliaModelCommentaires extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'c.libelle LIKE '.$search;
+				$searches[]	= 'c.texte LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
 		}
 
 		// tri des colonnes
-		$orderCol = $this->state->get('list.ordering', 'c.libelle');
+		$orderCol = $this->state->get('list.ordering', 'c.texte');
 		$orderDirn = $this->state->get('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

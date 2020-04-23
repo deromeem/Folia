@@ -73,7 +73,7 @@ class FoliaViewCommentaires extends JViewLegacy
 	{
 		// prépare l'affichage des colonnes de tri du calque
 		return array(
-			'c.libelle' => JText::_('COM_FOLIA_COMMENTAIRES_LIBELLE'),
+			'c.texte' => JText::_('COM_FOLIA_COMMENTAIRES_LIBELLE'),
 			'c.id' => "Id"
 		);
 	}  

@@ -5,13 +5,17 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 		
-        <field name="nom" type="text" label="COM_FOLIA_COMMENTAIRES_LIBELLE"
+        <!--<field name="nom" type="text" label="COM_FOLIA_COMMENTAIRES_LIBELLE"
             description="COM_FOLIA_COMMENTAIRES_LIBELLE"
             size="40" class="inputbox" default="" required="true"
-        />
+        /> -->
         <field name="description" type="editor" label="COM_FOLIA_COMMENTAIRES_DESCRIPTION"
             description="COM_FOLIA_COMMENTAIRES_DESCRIPTION"
             size="60" class="inputbox" default="" required="true"
+        />
+        <field name="nom" type="text" label="COM_FOLIA_COMMENT"
+            description="COM_FOLIA_COMMENTAIRES_LIBELLE"
+            size="40" class="inputbox" default="" required="false"
         />
 
        <!--  <field name="description" type="text" label="COM_FOLIA_COMMENTAIRES_DESCRIPTION"
