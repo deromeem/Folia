@@ -1776,7 +1776,7 @@ INSERT INTO `folia_folia_blocs` (`id`, `pages_id`, `activites_id`, `titre`, `tex
 (4, 2, 36, 'Documentation d\'utilisation', 'Réalisation d\'une documentation d\'utilisation pour aider les utilisateurs d\'utiliser le logiciel produit', '', 0, '2020-03-17 00:00:00', 0, '2020-03-17 00:00:00', 0, 0),
 (5, 17, 23, 'Proposition d\'une solution', 'Réalisation d\'un tableau de comparaison de plusieurs solutions possible.', '', 0, '2020-03-17 00:00:00', 0, '2020-03-17 00:00:00', 0, 0),
 (6, 17, 12, 'Déploiement d\'un service', 'l’ajout de fonctionnalité a été déployé en présence de mon tuteur, qui l’a testé et validé', '', 0, '2020-03-17 00:00:00', 0, '2020-03-17 00:00:00', 0, 0),
-(7, 17, 36, 'Documentation d\'utilisation', 'le DSI  m’a proposé de rédiger 1 document afin de servir de trame pour d’autres stagiaires ultérieurement.', '', 1, '2020-04-08 11:29:23', 0, '2020-04-08 11:29:23', 0, 0),
+(7, 17, 36, 'Documentation d\'utilisation', 'le DSI  m’a proposé de rédiger un document afin de servir de trame pour d’autres stagiaires ultérieurement.', '', 1, '2020-04-08 11:29:23', 0, '2020-04-08 11:29:23', 0, 0),
 (8, 16, 1, 'Cahier des charges ', 'Réalisation d\'un cahier des charges à partir des demandes du client', '', 1, '2020-04-08 11:29:35', 0, '2020-04-08 11:29:35', 0, 0),
 (9, 16, 23, 'Proposition d\'une solution', 'Réalisation d\'un tableau de comparaison de plusieurs solutions possible.', '', 1, '2020-04-08 11:38:56', 0, '2020-04-08 11:38:56', 0, 0);
 
