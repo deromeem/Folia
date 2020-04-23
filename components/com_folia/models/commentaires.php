@@ -62,10 +62,18 @@ class FoliaModelCommentaires extends JModelList
 		$isEtudiant = ((bool)array_intersect(array('12', '13'), $user->groups));
 		$isProfesseur = ((bool)array_intersect(array('14'), $user->groups));
 		$isTuteur = ((bool)array_intersect(array('15'), $user->groups));
-
 		if($isEtudiant)
 		{
-			$query->where('pf.id IN (SELECT pf.id FROM #__folia_portfolios pf LEFT JOIN #__folia_etudiants etu ON etu.id = pf.etudiants_id LEFT JOIN #__folia_utilisateurs u ON u.email = etu.email LEFT JOIN #__users users ON users.email = u.email WHERE users.id = '.$user->id.')');
+			$query->where('
+				pf.id IN (
+				    SELECT pf.id
+				    FROM folia_folia_portfolios pf
+				    LEFT JOIN folia_folia_etudiants etu ON etu.id = pf.etudiants_id
+				    LEFT JOIN folia_folia_utilisateurs u ON u.email = etu.email
+				    LEFT JOIN folia_users users ON users.email = u.email
+				    WHERE users.id = '.$user->id.'
+				)
+			');
 		}
 		else if($isProfesseur)
 		{
