@@ -24,10 +24,10 @@ if ($saveOrder)
 				</a>
 			</div>
 		</td>
-		<td class="center hidden-phone">
+		<td width="5%">
 			<?php echo $item->nom; ?>
 		</td>
-		<td class="center hidden-phone">
+		<td width="10%">
 			<?php echo $item->titre; ?>
 		</td>
 		<td class="center hidden-phone">

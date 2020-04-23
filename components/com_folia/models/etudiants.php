@@ -64,10 +64,12 @@ class FoliaModelEtudiants extends JModelList
 
 		if($isProfesseur)
 		{
-			
-			$query->where('c.id IN (SELECT c.id FROM #__folia_classes c LEFT JOIN #__folia_professeurs_classes pc ON c.id = pc.classes_id LEFT JOIN #__folia_professeurs p ON p.id = pc.id WHERE p.id = '.$user->id.')');
+			$query->select('e.id, e.classes_id, e.email, e.published, e.hits, e.modified');
+			$query->from('#__folia_etudiants e');
+			$query->where('c.id IN (SELECT c.id FROM #__folia_classes c LEFT JOIN #__folia_professeurs_classes pc ON c.id = pc.classes_id LEFT JOIN #__folia_professeurs p ON p.id = pc.id WHERE p.id = '.$user->email.')');
+		
 		}
-	
+		
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
@@ -97,7 +99,7 @@ class FoliaModelEtudiants extends JModelList
 		$orderDirn = $this->getState('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
+		 echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }
