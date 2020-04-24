@@ -52,22 +52,25 @@ class FoliaModelEtudiants extends JModelList
 		$query->select('e.id, e.classes_id, e.email, e.published, e.hits, e.modified');
 		$query->from('#__folia_etudiants e');
 
+		//joint la table utilisateurs
+		$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');	
+
 		// joint la table classes
 		$query->select('c.libelle')->join('LEFT', '#__folia_classes AS c ON c.id=e.classes_id');
 
-		//joint la table utilisateurs
-		$query->select('u.nom, u.prenom')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');	
 
 		$user = JFactory::getUser();               		// gets current user objecte
 		$isProfesseur = ((bool)array_intersect(array('14'), $user->groups));
 		$isTuteur = ((bool)array_intersect(array('15'), $user->groups));
 
-		if($isProfesseur)
-		{
-			$query->select('e.id, e.classes_id, e.email, e.published, e.hits, e.modified');
-			$query->from('#__folia_etudiants e');
-			$query->where('c.id IN (SELECT c.id FROM #__folia_classes c LEFT JOIN #__folia_professeurs_classes pc ON c.id = pc.classes_id LEFT JOIN #__folia_professeurs p ON p.id = pc.id WHERE p.id = '.$user->email.')');
-		
+		if($isProfesseur){
+			$query->join('LEFT', '#__folia_professeurs_classes AS pc ON pc.classes_id=c.id ');
+			$query->join('LEFT', '#__folia_professeurs AS p ON pc.professeurs_id=p.id');
+			$query->where('p.email = "'.$user->email.'"');
+		}else if($isTuteur){
+			$query->join('LEFT', '#__folia_tuteurs_etudiants AS te ON te.etudiants_id=e.id ');
+			$query->join('LEFT', '#__folia_tuteurs AS t ON te.tuteurs_id=t.id');
+			$query->where('t.email = "'.$user->email.'"');
 		}
 		
 		// filtre de recherche rapide textuelle
@@ -99,7 +102,7 @@ class FoliaModelEtudiants extends JModelList
 		$orderDirn = $this->getState('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		 echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
+		 //echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }

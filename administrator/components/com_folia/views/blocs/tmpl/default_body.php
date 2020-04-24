@@ -31,7 +31,7 @@ if ($saveOrder)
 			<?php echo $item->titre; ?>
 		</td>
 		<td class="center hidden-phone">
-			<?php echo $item->texte; ?>
+			<?php echo substr($item->texte, 0, 13)."...";?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'blocs.', true); ?>
