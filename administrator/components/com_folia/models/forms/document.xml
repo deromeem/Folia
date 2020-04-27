@@ -17,14 +17,16 @@
             description="COM_FOLIA_DOCUMENTS_URL"
             size="40" class="inputbox" default="" required="false"
         /> 
-        <field name="alias" type="text" label="COM_FOLIA_DOCUMENTS_ALIAS"
-            description="COM_FOLIA_DOCUMENTS_ALIAS"
-            size="40" class="inputbox" default="" required="false"
-        />
 		 <field name="commentaire" type="editor" label="COM_FOLIA_DOCUMENTS_COMMENTAIRE"
             description="COM_FOLIA_DOCUMENTS_COMMENTAIRE"
             size="60" class="inputbox" default="" required="false"
         />
+		<field name="alias" type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			class="inputbox" size="45"
+		/>
 
       
 		<!-- <field

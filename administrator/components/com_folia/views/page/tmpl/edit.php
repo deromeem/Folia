@@ -58,9 +58,9 @@ JHtml::_('formbehavior.chosen', 'select');
 						</div>					
 					</div>														
 				</div>
-				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('commentaire'); ?>
-				</div>
+				<!-- <div class="form-vertical">
+					<?php //echo $this->form->getControlGroup('commentaire'); ?>
+				</div> -->
 			</div>
 			<div class="span3">
 				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>

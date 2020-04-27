@@ -49,7 +49,7 @@ class FoliaModelBlocs extends JModelList
 		$query->select('a.nom')->join('LEFT', '#__folia_activites AS a ON a.id=b.activites_id');
 
 		// joint la table pages
-		$query->select('p.titre')->join('LEFT', '#__folia_pages AS p ON p.id=b.pages_id');
+		$query->select('p.titre AS titreP')->join('LEFT', '#__folia_pages AS p ON p.id=b.pages_id');
 
 		// filtre de recherche rapide textuel
 		$search = $this->getState('filter.search');

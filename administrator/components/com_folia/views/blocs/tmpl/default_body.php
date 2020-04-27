@@ -28,7 +28,7 @@ if ($saveOrder)
 			<?php echo $item->nom; ?>
 		</td>
 		<td width="10%">
-			<?php echo $item->titre; ?>
+			<?php echo $item->titreP; ?>
 		</td>
 		<td class="center hidden-phone">
 			<?php echo substr($item->texte, 0, 13)."...";?>

@@ -21,7 +21,7 @@ JHtml::_('formbehavior.chosen', 'select');
 
 	<div class="form-inline form-inline-header">			
 		<div class="control-group">
-		<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
+			<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
 			<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
 			<div class="control-label"><?php echo $this->form->getLabel('alias'); ?></div>
 			<div class="controls"><?php echo $this->form->getInput('alias'); ?></div>
