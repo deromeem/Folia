@@ -4,15 +4,12 @@
 		<field name="id" type="hidden" />
 
 		<field name="asset_id" type="hidden" filter="unset" />
-		
-        <field name="alias" type="text" label="COM_FOLIA_BLOCS_ALIAS"
-            description="COM_FOLIA_BLOCS_ALIAS"
-            size="40" class="inputbox" default="" required="false"
-        />
-        <field name="pages_id" type="text" label="COM_FOLIA_BLOCS_PAGE"
+
+      <field name="pages_id" type="sql" default="" label="COM_FOLIA_BLOCS_PAGE"
             description="COM_FOLIA_BLOCS_PAGE"
-			query="SELECT id, titre FROM #__folia_pages ORDER BY tire" 
-            size="40" class="inputbox" default="" required="false"
+			query="SELECT id, titre FROM #__folia_pages ORDER BY titre" 
+           	key_field="id" value_field="titre" required="false"
+
         />
 		<field name="activites_id" type="sql" default="" label="COM_FOLIA_BLOCS_ACTIVITE" 
 			description="COM_FOLIA_BLOCS_ACTIVITE"
@@ -27,6 +24,12 @@
             description="COM_FOLIA_BLOCS_TEXTE"
             size="60" class="inputbox" default="" required="false"
         />
+		<field name="alias" type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			class="inputbox" size="45"
+		/>
 
         <!-- <field name="email" type="text" label="COM_FOLIA_UTILISATEURS_EMAIL"
             description="COM_FOLIA_UTILISATEURS_EMAIL"

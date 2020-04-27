@@ -9,14 +9,14 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="20" class="hidden-phone">
                 <?php echo JHtml::_('grid.checkall'); ?>
         </th>                 
-        <th width="10%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TITRE', 'p.titre', $listDirn, $listOrder) ?>
+        <th width="15%">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TITRE', 'b.titre', $listDirn, $listOrder) ?>
         </th>
-        <th width="5%">
+        <th width="10%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_ACTIVITE', 'a.nom', $listDirn, $listOrder) ?>
         </th>
-        <th width="10%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TITRE', 'b.titre', $listDirn, $listOrder) ?>
+        <th width="15%">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_PAGE', 'p.titre', $listDirn, $listOrder) ?>
         </th>
         <th class="nowrap center hidden-tablet hidden-phone">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TEXTE', 'b.texte', $listDirn, $listOrder) ?>
