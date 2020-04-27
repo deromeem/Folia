@@ -50,11 +50,12 @@ class FoliaModelMaClasse extends JModelList
 	protected function _getListQuery()
 	{
 		// construit la requête d'affichage de la liste
+		$user = JFactory::getUser();
 		$query	= $this->_db->getQuery(true);
 		$query->select('e.id, u.nom, u.prenom, e.classes_id, e.published, e.hits, e.modified');
 		$query->from('#__folia_etudiants e');
 		$query->select('u.email AS email')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');
-		//$query->where('e.classes_id = '.);
+		$query->where('e.classes_id IN( SELECT et.classes_id FROM #__folia_etudiants AS et WHERE et.email = "'.$user->email.'")');
 
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
@@ -83,7 +84,7 @@ class FoliaModelMaClasse extends JModelList
 		$orderDirn = $this->getState('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 
-		// echo nl2br(str_replace('#__','egs_',$query));			// TEST/DEBUG
+		//echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
 }

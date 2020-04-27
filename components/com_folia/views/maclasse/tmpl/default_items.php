@@ -57,7 +57,8 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			<?php foreach($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->nom ?></a>
+						<!-- <a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->nom ?></a> -->
+						<?php echo $item->nom ?>
 					</td>
 					<td>
 						<?php echo $item->prenom ?>
