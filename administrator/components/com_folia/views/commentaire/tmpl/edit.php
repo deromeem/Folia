@@ -29,7 +29,7 @@ JHtml::_('formbehavior.chosen', 'select');
 		<div class="row-fluid">
 			<div class="span9">
 				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('description'); ?>
+					<?php echo $this->form->getControlGroup('texte'); ?>
 				</div>
 			</div>
 			<div class="span3">
