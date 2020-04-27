@@ -19,10 +19,6 @@ $isFolia = (in_array_any(array('12', '13', '14', '15'), $user->groups));
 			<h2><?php echo JText::_('COM_FOLIA_UTILISATEUR'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=utilisateur'); ?>" class="btn" role="button">
-				<span class="icon-cancel"></span></a>
-		</div>	
-		<div class="btn-group pull-right">
 			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_u&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>	
 	</div>
