@@ -19,6 +19,11 @@ JHtml::_('formbehavior.chosen', 'select');
 <form action="<?php echo JRoute::_('index.php?option=com_folia&layout=edit&id='.(int) $this->item->id); ?>"
       method="post" name="adminForm" id="folia-form" class="form-validate">
 
+			<?php
+			//tester id
+			echo $this->item->id;
+			?>
+
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details')); ?>
 

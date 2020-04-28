@@ -10,12 +10,14 @@
 						description="COM_FOLIA_TUTEUR_ETUDIANT_ALIAS"
 						size="40" class="inputbox" default="" required="true"
 				/> -->
-				<field type="sql" name="tuteurs_id" required="false" default="" description="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID"
-					label="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID" value_field="nom" key_field="id"
-					 query="SELECT t.id, t.email, u.nom FROM #__folia_utilisateurs as u,#__folia_tuteurs as t where t.email = u.email ORDER BY u.nom"/>
-						 <field type="sql" name="etudiants_id" required="false" default="" description="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID"
-						 		label="COM_FOLIA_TUTEUR_ETUDIANT_ETUDIANTS_ID" value_field="nom" key_field="id"
-						 		 query="SELECT e.id,e.email, u.nom FROM #__folia_utilisateurs as u, #__folia_etudiants as e where e.email = u.email ORDER BY u.nom"/>
+				<field name="tuteurs_id" type="sql"  default=""
+					label="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID" description="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID"
+					 query="SELECT t.id, Concat(u.nom,' ',u.prenom) as nomprenom FROM #__folia_utilisateurs as u,#__folia_tuteurs as t WHERE t.email = u.email ORDER BY u.nom"
+					 key_field="id" value_field="nomprenom" required="false"/>
+				<field name="etudiants_id" type="sql" default=""
+					label="COM_FOLIA_TUTEUR_ETUDIANT_ETUDIANTS_ID"  description="COM_FOLIA_TUTEUR_ETUDIANT_TUTEURS_ID"
+					query="SELECT e.id, Concat(u.nom,' ',u.prenom) as nomprenom FROM #__folia_utilisateurs as u, #__folia_etudiants as e WHERE e.email = u.email ORDER BY u.nom"
+					key_field="id" value_field="nomprenom" required="false"/>
 
 		<!-- <field
 				name="description" type="editor" label="COM_FOLIA_ACTIVITES_DESCRIPTION"

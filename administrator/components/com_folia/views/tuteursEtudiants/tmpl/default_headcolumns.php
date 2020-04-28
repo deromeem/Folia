@@ -10,18 +10,18 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
                 <?php echo JHtml::_('grid.checkall'); ?>
         </th>
 				<th width="8%" class="nowrap">
-								<?php echo JHtml::_('grid.sort', 'TUTEURS_NOM', 'ut.nom', $listDirn, $listOrder) ?>
-				</th>
-				<th width="8%" class="nowrap">
-								<?php echo JHtml::_('grid.sort', 'TUTEURS_PRENOM', 'ut.prenom', $listDirn, $listOrder) ?>
-				</th>
-				<th width="8%" class="nowrap">
 								<?php echo JHtml::_('grid.sort', 'ETUDIANTS_NOM', 'ue.nom', $listDirn, $listOrder) ?>
 				</th>
 				<th width="8%" class="nowrap">
 								<?php echo JHtml::_('grid.sort', 'ETUDIANTS_PRENOM', 'ue.prenom', $listDirn, $listOrder) ?>
 				</th>
-			
+				<th width="8%" class="nowrap">
+					<?php echo JHtml::_('grid.sort', 'TUTEURS_NOM', 'ut.nom', $listDirn, $listOrder) ?>
+				</th>
+				<th width="8%" class="nowrap">
+					<?php echo JHtml::_('grid.sort', 'TUTEURS_PRENOM', 'ut.prenom', $listDirn, $listOrder) ?>
+				</th>
+
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'te.published', $listDirn, $listOrder) ?>
         </th>
