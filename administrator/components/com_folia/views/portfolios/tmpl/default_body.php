@@ -19,7 +19,7 @@ if ($saveOrder)
 		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=portfolios.edit&id='.(int) $item->id); ?>">
+				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=portfolio.edit&id='.(int) $item->id); ?>">
 					<?php echo $this->escape($item->titre); ?>
 				</a>
 			</div>

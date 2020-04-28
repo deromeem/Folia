@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
  
-class FoliaTablePortfolios extends JTable
+class FoliaTablePortfolio extends JTable
 {
 	function __construct(&$db) 
 	{
