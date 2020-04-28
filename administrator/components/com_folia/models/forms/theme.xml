@@ -14,10 +14,7 @@
             description="COM_FOLIA_THEMES_DESCRIPTION"
             size="40" class="input-xxlarge input-large-text" default="" required="true"
         />   
-        <field name="bibliotheques_id" type="number" label="COM_FOLIA_THEMES_BIBLIOTHEQUE"
-            description="COM_FOLIA_THEMES_BIBLIOTHEQUE"
-            size="5" class="input-xxlarge input-large-text" default="" required="true"
-        />  
+
         <field id="published" name="published" type="list"
 			label="JSTATUS"	description="JSTATUS"
 			class="chzn-color-state" size="1" default="1"
