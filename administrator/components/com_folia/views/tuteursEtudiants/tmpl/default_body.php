@@ -19,7 +19,7 @@ if ($saveOrder)
 		</td>
 
 		<td class="nowrap hidden-phone">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&task=tuteurEtudiant.edit&id='.(int) $item->id); ?>">
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&task=tuteursEtudiant.edit&id='.(int) $item->id); ?>">
 				<?php echo $this->escape($item->nomTuteur); ?>
 			</a>
 		</td>

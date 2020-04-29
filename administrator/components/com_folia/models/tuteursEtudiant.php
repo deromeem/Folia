@@ -1,16 +1,16 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaModelTuteurEtudiant extends JModelAdmin
+class FoliaModelTuteursEtudiant extends JModelAdmin
 {
 	protected $_compo = 'com_folia';
-	protected $_context = 'tuteurEtudiant';
-	public $typeAlias = 'com_folia.tuteurEtudiant';
+	protected $_context = 'tuteursEtudiant';
+	public $typeAlias = 'com_folia.tuteursEtudiant';
 
 	// Surcharges des m�thodes de la classe m�re pour :
 
 	// 1) d�finir la table de soutien � utiliser
-	public function getTable($type = 'tuteurEtudiant', $prefix = 'FoliaTable', $config = array())
+	public function getTable($type = 'TuteursEtudiant', $prefix = 'FoliaTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
