@@ -48,7 +48,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_TEXTE'), 'texte', $listDirn, $listOrder) ?>
 				</th>
-				<!-- <th class="title">Publié</th> -->
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_UTILISATEUR'), 'utilisateur', $listDirn, $listOrder) ?>
 				</th>
@@ -66,12 +65,12 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->titre ?></a>
 					</td>
 					<td>
-						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->texte ?></a>
+						<?php echo $item->texte ?></a>
 					</td>
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?></td> -->
 					<td><?php echo $item->utilisateur ?></td>
 					<td><?php echo $item->theme ?></td>
-					<!-- <td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td> -->
+					<td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td>
 				</tr>			
 			<?php endforeach; ?>
 		</tbody>

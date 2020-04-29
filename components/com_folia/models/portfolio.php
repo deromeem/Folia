@@ -26,7 +26,7 @@ class FoliaModelPortfolio extends JModelItem
 			$db = $this->getDbo();
 			$query = $db->getQuery(true);
 			$query->select('p.id, p.titre, p.texte, p.etudiants_id, p.themes_id, p.created');
-			$query->from('#__folia_portfolio AS p');
+			$query->from('#__folia_portfolios AS p');
 
 			// joint la table civilites
 			$query->select('e.email AS email')->join('LEFT', '#__folia_etudiants AS e ON e.id=p.etudiants_id');

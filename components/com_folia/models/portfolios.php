@@ -14,6 +14,7 @@ class FoliaModelPortfolios extends JModelList
 				'id', 'p.id',
 				'titre', 'p.titre',
 				'texte', 'p.texte',
+				'published', 'p.published',
 				'utilisateur', 'CONCAT(u.nom, " ", u.prenom)',
 				'theme', 't.titre',
 				'created', 'p.created'
@@ -51,7 +52,7 @@ class FoliaModelPortfolios extends JModelList
 		// construit la requête d'affichage de la liste
 		$query	= $this->_db->getQuery(true);
 		$query->select('p.id, p.titre, p.texte, p.etudiants_id, p.themes_id, p.created');
-		$query->from('#__folia_portfolio AS p');
+		$query->from('#__folia_portfolios AS p');
 
 		// joint la table civilites
 		$query->select('e.email AS email')->join('LEFT', '#__folia_etudiants AS e ON e.id=p.etudiants_id');
@@ -60,7 +61,7 @@ class FoliaModelPortfolios extends JModelList
 		$query->select('CONCAT(u.nom, " ", u.prenom) AS utilisateur')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');
 
 		// joint la table entreprises
-		$query->select('t.titre AS titre')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');		
+		$query->select('t.titre AS theme')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');		
 		
 		// filtre de recherche rapide textuelle
 		$search = $this->getState('filter.search');
@@ -84,7 +85,7 @@ class FoliaModelPortfolios extends JModelList
 		}
 		
 		// filtre les éléments publiés
-		$query->where('c.published=1');
+		$query->where('p.published=1');
 		
 		// tri des colonnes
 		$orderCol = $this->getState('list.ordering', 'u.nom');
