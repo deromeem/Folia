@@ -8,7 +8,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <script type="text/javascript">
 	Joomla.submitbutton = function(task)
 	{
-		if (task == 'tuteurEtudiant.cancel' || document.formvalidator.isValid(document.id('folia-form')))
+		if (task == 'tuteursEtudiant.cancel' || document.formvalidator.isValid(document.id('folia-form')))
 		{
 			<?php //echo $this->form->getField('nom')->save(); ?>
 			Joomla.submitform(task, document.getElementById('folia-form'));
@@ -18,12 +18,7 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <form action="<?php echo JRoute::_('index.php?option=com_folia&layout=edit&id='.(int) $this->item->id); ?>"
       method="post" name="adminForm" id="folia-form" class="form-validate">
-
-			<?php
-			//tester id
-			echo $this->item->id;
-			?>
-
+			
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details')); ?>
 
@@ -48,12 +43,7 @@ JHtml::_('formbehavior.chosen', 'select');
 						</div>
 					</div>
 				</div>
-				<div class="form-vertical">
-					<?php echo $this->form->getControlGroup('email'); ?>
-				</div>
-			</div>
-			<div class="span3">
-				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
+
 			</div>
 		</div>
 		<?php echo JHtml::_('bootstrap.endTab'); ?>
@@ -66,6 +56,9 @@ JHtml::_('formbehavior.chosen', 'select');
 			<div class="span6">
 				<?php echo JLayoutHelper::render('joomla.edit.metadata', $this); ?>
 			</div>
+			<div class="span3">
+							<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>
+			</div>
 		</div>
 
 		<?php echo JHtml::_('bootstrap.endTab'); ?>
@@ -76,4 +69,5 @@ JHtml::_('formbehavior.chosen', 'select');
 	</div>
 	<input type="hidden" name="task" value="" />
 	<?php echo JHtml::_('form.token'); ?>
+
 </form>

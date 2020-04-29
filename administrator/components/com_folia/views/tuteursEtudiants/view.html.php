@@ -46,8 +46,8 @@ class FoliaViewTuteursEtudiants extends JViewLegacy
 		JToolBarHelper::title(JText::_('COM_FOLIA_OPTIONS')." : ".JText::_('COM_FOLIA_TUTEURS_ETUDIANT'));
 
 		// affiche les boutons d'action
-		JToolBarHelper::addNew('tuteurEtudiant.add');
-		JToolBarHelper::editList('tuteurEtudiant.edit');
+		JToolBarHelper::addNew('tuteursEtudiant.add');
+		JToolBarHelper::editList('tuteursEtudiant.edit');
 		JToolBarHelper::deleteList('Etes vous sur ?', 'tuteursEtudiants.delete');
 		JToolbarHelper::publish('tuteursEtudiants.publish', 'JTOOLBAR_PUBLISH', true);
 		JToolbarHelper::unpublish('tuteursEtudiants.unpublish', 'JTOOLBAR_UNPUBLISH', true);

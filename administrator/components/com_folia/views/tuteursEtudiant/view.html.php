@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaViewTuteurEtudiant extends JViewLegacy
+class FoliaViewTuteursEtudiant extends JViewLegacy
 {
 	protected $form;
 	protected $item;
@@ -33,23 +33,24 @@ class FoliaViewTuteurEtudiant extends JViewLegacy
 		// $checkedOut	= !($this->item->checked_out == 0 || $this->item->checked_out == $userId);
 
 		$isNew = ($this->item->id == 0);
-		JToolBarHelper::title(($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_TUTEUR_ETUDIANT')." : ".JText::_('COM_FOLIA_MODIF')), 'address');
+		JToolBarHelper::title(JText::_('COM_FOLIA_TUTEUR_ETUDIANT')." : ".($isNew ? JText::_('COM_FOLIA_NEW'): JText::_('COM_FOLIA_MODIF')), 'address');
+
 
 
 		if ($isNew)
 		{
-			JToolbarHelper::apply('tuteurEtudiant.apply');
-			JToolbarHelper::save('tuteurEtudiant.save');
-			JToolbarHelper::save2new('tuteurEtudiant.save2new');
+			JToolbarHelper::apply('tuteursEtudiant.apply');
+			JToolbarHelper::save('tuteursEtudiant.save');
+			JToolbarHelper::save2new('tuteursEtudiant.save2new');
 		}
 		else
 		{
 			// if (!$checkedOut)
 			// {
-				JToolbarHelper::apply('tuteurEtudiant.apply');
-				JToolbarHelper::save('tuteurEtudiant.save');
+				JToolbarHelper::apply('tuteursEtudiant.apply');
+				JToolbarHelper::save('tuteursEtudiant.save');
 			// }
 		}
-		JToolBarHelper::cancel('tuteurEtudiant.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+		JToolBarHelper::cancel('tuteursEtudiant.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
 	}
 }
