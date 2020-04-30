@@ -21,9 +21,9 @@ class UtilisateurHelper extends JHelperContent
 			$vName == 'Themes'
 		);
 		JHtmlSidebar::addEntry(
-			JText::_('Bibliothèques étendues de thèmes'),
-			'index.php?option=com_folia&view=bibliothequesThemes',
-			$vName == 'bibliothequesThemes'
+			JText::_('Bibliothèques de thèmes'),
+			'index.php?option=com_folia&view=bibliotheques',
+			$vName == 'bibliotheques'
 		);
 		JHtmlSidebar::addEntry(
 			JText::_('Blocs documents'),

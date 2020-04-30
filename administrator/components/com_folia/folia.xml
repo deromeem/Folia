@@ -38,8 +38,7 @@
 		<submenu>
 			<menu link="option=com_folia&amp;view=activites">com_folia_acivites</menu>
 			<menu link="option=com_folia&amp;view=blocs">com_folia_blocs</menu>
-			<menu link="option=com_folia&amp;view=bibliosThemes">com_folia_bibliosThemes</menu>
-			<menu link="option=com_folia&amp;view=bibliosEtenduesThemes">com_folia_bibliosEtenduesThemes</menu>
+			<menu link="option=com_folia&amp;view=bibliotheques">com_folia_bibliotheques</menu>
 			<menu link="option=com_folia&amp;view=blocsDocuments">com_folia_blocsDocuments</menu>
 			<menu link="option=com_folia&amp;view=classes">com_folia_classes</menu>
 			<menu link="option=com_folia&amp;view=commentaires">com_folia_commentaires</menu>

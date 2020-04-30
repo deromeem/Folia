@@ -7,7 +7,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $saveOrder	= $listOrder == 'ordering';
 if ($saveOrder)
 {
-	$saveOrderingUrl = 'index.php?option=com_folia&task=themes.saveOrderAjax&tmpl=component';
+	$saveOrderingUrl = 'index.php?option=com_folia&task=bibliotheques.saveOrderAjax&tmpl=component';
 	JHtml::_('sortablelist.sortable', 'articleList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 ?>
@@ -19,19 +19,14 @@ if ($saveOrder)
 		</td>
 		<td class="wrap has-context">
 			<div class="pull-left">
-				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=theme.edit&id='.(int) $item->id); ?>">
-					<?php echo $this->escape($item->titre); ?>
+				<a href="<?php echo JRoute::_('index.php?option=com_folia&task=portfolio.edit&id='.(int) $item->id); ?>">
+					<?php echo $this->escape($item->nom); ?>
 				</a>
 			</div>
 		</td>
-		<td>
-			<?php echo $item->description; ?>
-		</td>
-		<td>
-			<?php echo $item->nom; ?>
-		</td>
+
 		<td class="center hidden-phone">
-			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'themes.', true); ?>
+			<?php echo JHtml::_('jgrid.published', $item->published, $i, 'bibliotheques.', true); ?>
 		</td>
 		<td class="center hidden-tablet hidden-phone">
 			<?php echo JHtml::_('date', $item->modified, $this->paramDateFmt); ?>
