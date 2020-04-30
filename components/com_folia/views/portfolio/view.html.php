@@ -4,7 +4,6 @@ defined('_JEXEC') or die('Restricted access');
 class FoliaViewPortfolio extends JViewLegacy
 {
 	protected $item;
-	
 	function display($tpl = null) 
 	{
 		// initialise les variables

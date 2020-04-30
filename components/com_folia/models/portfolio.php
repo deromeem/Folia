@@ -37,11 +37,32 @@ class FoliaModelPortfolio extends JModelItem
 			// joint la table entreprises
 			$query->select('t.titre AS theme')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');		
 					
-			//$query->where('c.id = ' . (int) $pk);
+			$query->where('p.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;
 		}
   		return $this->_item[$pk];
+	}
+	public function getPages($x)
+	{
+		// Initialise l'id
+		// $pk = (!empty($pk)) ? $pk : (int) $this->getState($this->_context.'.id');
+
+		// Si pas de données chargées pour cet id
+		// if (!isset($this->_item[$pk])) {
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('pg.titre, pg.texte, pg.portfolios_id, pg.created');
+		$query->from('#__folia_pages AS pg');
+		$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pg.portfolios_id = pf.id');
+		$query->where('pg.portfolios_id = '.$x);
+				
+		//$query->where('c.id = ' . (int) $pk);
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		$this->_pages = $data;
+		// }
+  		return $this->_pages;
 	}
 }

@@ -13,8 +13,8 @@
 			description="COM_FOLIA_PORTFOLIOS_TEXTE"
 			size="40" class="inputbox" default="" required="true"
 		/>
-		<field name="classe" type="text" label="COM_FOLIA_PORTFOLIOS_UTILISATEUR"
-			description="COM_FOLIA_PORTFOLIOS_UTILISATEUR"
+		<field name="classe" type="text" label="COM_FOLIA_PORTFOLIOS_ETUDIANT"
+			description="COM_FOLIA_PORTFOLIOS_ETUDIANT"
 			size="40" class="inputbox" default="" required="true"
 		/>
 		<field name="email" type="text" label="COM_FOLIA_PORTFOLIOS_THEME"

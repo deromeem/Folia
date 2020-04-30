@@ -15,7 +15,7 @@ class FoliaModelPortfolios extends JModelList
 				'titre', 'p.titre',
 				'texte', 'p.texte',
 				'published', 'p.published',
-				'utilisateur', 'CONCAT(u.nom, " ", u.prenom)',
+				'etudiant', 'CONCAT(u.nom, " ", u.prenom)',
 				'theme', 't.titre',
 				'created', 'p.created'
 			);
