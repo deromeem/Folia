@@ -49,7 +49,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_TEXTE'), 'texte', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_UTILISATEUR'), 'utilisateur', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_ETUDIANT'), 'utilisateur', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_THEME'), 'theme', $listDirn, $listOrder) ?>
@@ -65,7 +65,12 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						<a href="<?php echo $uriCompoDetail.$item->id ?>"><?php echo $item->titre ?></a>
 					</td>
 					<td>
-						<?php echo $item->texte ?></a>
+						<?php
+						$sub_texte = $item->texte;
+						if(strlen($item->texte) >= 9)
+							$sub_texte = substr($item->texte, 0, 9)."...";
+						echo $sub_texte
+						?>
 					</td>
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?></td> -->
 					<td><?php echo $item->utilisateur ?></td>

@@ -53,7 +53,7 @@ class FoliaModelPortfolio extends JModelItem
 		// if (!isset($this->_item[$pk])) {
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
-		$query->select('pg.titre, pg.texte, pg.portfolios_id, pg.created');
+		$query->select('pg.id, pg.titre, pg.texte, pg.portfolios_id, pg.created');
 		$query->from('#__folia_pages AS pg');
 		$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pg.portfolios_id = pf.id');
 		$query->where('pg.portfolios_id = '.$x);

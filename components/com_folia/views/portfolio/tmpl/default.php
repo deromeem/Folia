@@ -1,6 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+$uriCompoDetail = JURI::base(true)."/index.php?option=com_folia&view=page&id=";
 $user = JFactory::getUser();               		// gets current user object
 $isFolia = ((bool)array_intersect(array('12', '13', '14', '15'), $user->groups));
 ?>
@@ -79,16 +80,21 @@ $isFolia = ((bool)array_intersect(array('12', '13', '14', '15'), $user->groups))
 			<tr>
 			<th class="title">Titre de la page</th>
 			<th class="title">Texte de la page</th>
-			<th class="title">Portfolio de la page</th>
 			<th class="title">Date de création</th>
 		</tr>
 		</thead>
 		<tbody>
 			<?php for($counter = 0; $counter < $max; $counter++): ?>
 			<tr>
-				<td><?php echo $this->pages[$counter]->titre ?></td>
-				<td><?php echo $this->pages[$counter]->texte ?></td>
-				<td><?php echo $this->pages[$counter]->portfolio ?></td>
+				<td><a href="<?php echo $uriCompoDetail.$this->pages[$counter]->id ?>"><?php echo $this->pages[$counter]->titre ?></a></td>
+				<td>
+					<?php
+						$sub_texte = $this->pages[$counter]->texte;
+						if(strlen($this->pages[$counter]->texte) >= 25)
+							$sub_texte = substr($this->pages[$counter]->texte, 0, 22)."...";
+						echo $sub_texte
+					?>	
+				</td>
 				<td><?php echo $this->pages[$counter]->created ?></td>
 			</tr>
 			<?php endfor ?>
