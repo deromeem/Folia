@@ -4,11 +4,11 @@ defined('_JEXEC') or die;
 // use Joomla\Registry\Registry;
 
 // Base ce modèle sur celui du backend.
-require_once JPATH_COMPONENT_ADMINISTRATOR.'/models/portfolio.php';
+require_once JPATH_COMPONENT_ADMINISTRATOR.'/models/mportfolio.php';
 
-class FoliaModelForm_p extends FoliaModelMonPortfolio
+class FoliaModelForm_mp extends FoliaModelMPortfolio
 {
-	protected $_context = 'monportfolio';
+	protected $_context = 'mportfolio';
 
 	protected function populateState()
 	{

@@ -11,7 +11,7 @@ $isProfesseur = (in_array('12', $user->groups));		// sets flag when user group i
 $isTuteur = (in_array('12', $user->groups));
 ?>
 
-<?php if (!$isProfesseur) or (!$isTuteur)  : ?>
+<?php if (!$isProfesseur or !$isTuteur)  : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
@@ -20,7 +20,7 @@ $isTuteur = (in_array('12', $user->groups));
 		Joomla.submitbutton = function(task)
 		{
 			// si bouton 'Annuler' ou si les champs du formulaire sont valides alors on envoie le formulaire
-			if (task == 'monportfolio.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
+			if (task == 'mportfolio.cancel' || document.formvalidator.isValid(document.getElementById('adminForm')))
 			{
 				Joomla.submitform(task);
 			}
@@ -37,12 +37,12 @@ $isTuteur = (in_array('12', $user->groups));
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
-						<button type="button" class="btn" onclick="Joomla.submitbutton('monportfolio.cancel')">
+						<button type="button" class="btn" onclick="Joomla.submitbutton('mportfolio.cancel')">
 							<span class="icon-cancel"></span>
 						</button>
 					</div>
 					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('monportfolio.save')">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('mportfolio.save')">
 							<span class="icon-ok"></span>
 						</button>
 					</div>
@@ -62,10 +62,10 @@ $isTuteur = (in_array('12', $user->groups));
 							<tbody>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('ptitre'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('ptitre'); ?></div>
 									</td>
 								</tr>
 								<tr>

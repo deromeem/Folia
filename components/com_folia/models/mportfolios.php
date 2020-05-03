@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.modellist');
 
-class FoliaModelMesPortfolios extends JModelList
+class FoliaModelMPortfolios extends JModelList
 {
 	public function __construct($config = array())
 	{
@@ -14,7 +14,7 @@ class FoliaModelMesPortfolios extends JModelList
 				'id', 'p.id',
 				'titrep', 'p.titre',
 				'theme', 't.titre',
-        'text', 'p.text',
+        'texte', 'p.texte',
         'etudiants_id', 'p.etudiants_id',
         'themes_id', 'p.themes_id',
 				'published', 'p.published',

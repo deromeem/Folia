@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
- 
+
 class FoliaModelUtilisateur extends JModelItem
 {
 	protected $_item = null;
@@ -9,7 +9,7 @@ class FoliaModelUtilisateur extends JModelItem
 	protected function populateState()
 	{
 		$app = JFactory::getApplication('site');
-		
+
 		// Charge et mémorise l'état (state) de l'id depuis le contexte
 		$pk = $app->input->getInt('id');
 		$this->setState($this->_context.'.id', $pk);
@@ -29,7 +29,7 @@ class FoliaModelUtilisateur extends JModelItem
 			$query->select('u.id, u.nom, u.prenom, uf.email, u.hits, u.modified');
 			$query->from('#__folia_utilisateurs AS u');
 			$query->select('uf.email AS email')->join('LEFT', '#__users AS uf ON uf.email = u.email');
-			$query->where('uf.id = ' . (int) $id);		
+			$query->where('uf.id = ' . (int) $id);
 			$db->setQuery($query);
 			$data = $db->loadObject();
 			$this->_item[$pk] = $data;

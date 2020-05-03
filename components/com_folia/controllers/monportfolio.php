@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 
-class FoliaControllerMonPortfolio extends JControllerForm
+class FoliaControllerMPortfolio extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
 	protected $view_item = 'form_mp';

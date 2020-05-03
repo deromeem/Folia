@@ -13,11 +13,11 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 			<h2><?php echo JText::_('COM_FOLIA_PORTFOLIOS'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=mesportfolios'); ?>" class="btn" role="button">
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=mportfolios'); ?>" class="btn" role="button">
 				<span class="icon-cancel"></span></a>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_p&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>
 	</div>
 	<div>
@@ -28,7 +28,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 						<span class="label"><?php echo JText::_('COM_FOLIA_PORTFOLIOS_TITRE'); ?></span>
 					</td>
 					<td width="80%">
-						<h4><?php echo $this->item->titre ?></h4>
+						<h4><?php echo $this->item->ptitre ?></h4>
 					</td>
 				</tr>
 				<tr>
@@ -47,7 +47,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 						<?php echo $this->item->theme ?>
 					</td>
 				</tr>
-			
+
 				<!-- <tr>
 					<td width="20%" class="nowrap right">
 						<span class="label"><?php echo JText::_('COM_ANNUAIRE_CONTACTS_ENTREPRISE'); ?></span>

@@ -1,10 +1,10 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaModelMonPortfolio extends JModelItem
+class FoliaModelMPortfolio extends JModelItem
 {
 	protected $_item = null;
-	protected $_context = 'com_folia.monportfolio';
+	protected $_context = 'com_folia.mportfolio';
 
 	protected function populateState()
 	{

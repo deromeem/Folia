@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.application.component.view');
 
-class FoliaViewMesPortfolios extends JViewLegacy
+class FoliaViewMPortfolios extends JViewLegacy
 {
 	protected $items;
 

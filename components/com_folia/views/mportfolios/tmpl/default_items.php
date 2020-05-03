@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 
-$uriCompoDetail = JURI::base(true)."/index.php?option=com_folia&view=monportfolio&id=";
+$uriCompoDetail = JURI::base(true)."/index.php?option=com_folia&view=mportfolio&id=";
 
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
@@ -65,7 +65,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					</td>
 
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?></td> -->
-					
+
 					<td><?php echo $item->texte ?></td>
 					<td><?php echo $item->theme ?></td>
 					<!-- <td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td> -->

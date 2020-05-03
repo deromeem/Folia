@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-class FoliaViewMonPortfolio extends JViewLegacy
+class FoliaViewMPortfolio extends JViewLegacy
 {
 	protected $item;
 
