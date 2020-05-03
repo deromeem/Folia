@@ -41,4 +41,25 @@ class FoliaModelMPortfolio extends JModelItem
 		}
   		return $this->_item[$pk];
 	}
+		public function getMpages($x)
+	{
+		// Initialise l'id
+		// $pk = (!empty($pk)) ? $pk : (int) $this->getState($this->_context.'.id');
+
+		// Si pas de données chargées pour cet id
+		// if (!isset($this->_item[$pk])) {
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('pg.id, pg.titre, pg.texte, pg.portfolios_id, pg.created');
+		$query->from('#__folia_pages AS pg');
+		$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pg.portfolios_id = pf.id');
+		$query->where('pg.portfolios_id = '.$x);
+
+		//$query->where('c.id = ' . (int) $pk);
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		$this->_mpages = $data;
+		// }
+  		return $this->_mpages;
+	}
 }

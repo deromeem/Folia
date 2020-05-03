@@ -14,9 +14,9 @@ class FoliaModelMPortfolios extends JModelList
 				'id', 'p.id',
 				'titrep', 'p.titre',
 				'theme', 't.titre',
-        'texte', 'p.texte',
-        'etudiants_id', 'p.etudiants_id',
-        'themes_id', 'p.themes_id',
+				'texte', 'p.texte',
+				'etudiants_id', 'p.etudiants_id',
+				'themes_id', 'p.themes_id',
 				'published', 'p.published',
 				'hits', 'p.hits',
 				'modified', 'p.modified'

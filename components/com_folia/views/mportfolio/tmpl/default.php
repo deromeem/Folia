@@ -1,6 +1,7 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
+$uriCompoDetail = JURI::base(true)."/index.php?option=com_folia&view=mpage&id=";
 $user = JFactory::getUser();               		// gets current user object
 $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is '2' that is 'Enregistré'
 ?>
@@ -99,4 +100,41 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 			</tbody>
 		</table>
 	</div>
+		<?php
+	$url = JUri::getInstance();
+	$explode = explode("=", $url);
+	$number = $explode[3];
+	$model = $this->getModel();
+	$this->pages = $model->getMpages($number);
+	$max = count($this->pages);
+	?>
+	<h2>Pages du Portfolio</h2>
+			<div class="btn-group pull-left">
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+		</div>
+	<table class="category table table-striped">
+		<thead>
+			<tr>
+			<th class="title">Titre de la page</th>
+			<th class="title">Texte de la page</th>
+			<th class="title">Date de création</th>
+		</tr>
+		</thead>
+		<tbody>
+			<?php for($counter = 0; $counter < $max; $counter++): ?>
+			<tr>
+				<td><a href="<?php echo $uriCompoDetail.$this->pages[$counter]->id ?>"><?php echo $this->pages[$counter]->titre ?></a></td>
+				<td>
+					<?php
+						$sub_texte = $this->pages[$counter]->texte;
+						if(strlen($this->pages[$counter]->texte) >= 25)
+							$sub_texte = substr($this->pages[$counter]->texte, 0, 22)."...";
+						echo $sub_texte
+					?>	
+				</td>
+				<td><?php echo $this->pages[$counter]->created ?></td>
+			</tr>
+			<?php endfor ?>
+		</tbody>
+	</table>
 <?php endif; ?>

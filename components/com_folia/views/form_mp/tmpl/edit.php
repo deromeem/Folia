@@ -10,7 +10,6 @@ $user = JFactory::getUser();               		// gets current user object
 $isProfesseur = (in_array('12', $user->groups));		// sets flag when user group is '12' that is 'MRH FOLIA Etudiant
 $isTuteur = (in_array('12', $user->groups));
 ?>
-
 <?php if (!$isProfesseur or !$isTuteur)  : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>

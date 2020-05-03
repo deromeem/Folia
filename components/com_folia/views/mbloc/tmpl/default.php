@@ -19,12 +19,12 @@ $this->return = $model->getReturn($number);
 			<h2><?php echo JText::_('COM_FOLIA_BLOC'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JURI::base(true).'/index.php?option=com_folia&view=page&id='.$this->return->pages_id ?>" class="btn" role="button">
+			<a href="<?php echo JURI::base(true).'/index.php?option=com_folia&view=mpage&id='.$this->return->pages_id ?>" class="btn" role="button">
 				<span class="icon-cancel"></span></a>
 		</div>	
-		<!-- <div class="btn-group pull-right">
+		<div class="btn-group pull-right">
 			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_p&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
-		</div>	 -->
+		</div>
 	</div>
 	<div>
 		<table class="table">
@@ -92,7 +92,10 @@ $this->return = $model->getReturn($number);
 	$this->documents = $model->getDocuments($number);
 	$max = count($this->documents);
 	?>
-	<h2>Blocs du Portfolio</h2>
+		<h2>Documents du Bloc</h2>
+			<div class="btn-group pull-left">
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+		</div>
 	<table class="category table table-striped">
 		<thead>
 			<tr>
