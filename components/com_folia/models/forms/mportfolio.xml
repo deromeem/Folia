@@ -13,6 +13,11 @@
 			description="COM_FOLIA_PORTFOLIOS_THEME"
 			size="40" class="inputbox" default="" required="true"
 		/>
+		<field name="themes_id"  type="sql" default="" label="COM_FOLIA_PORTFOLIOS_THEME"
+			description="COM_FOLIA_PORTFOLIOS_THEME"
+			query="SELECT id, titre FROM #__folia_themes WHERE published = 1 ORDER BY titre"
+			key_field="id" value_field="titre" required="false"
+		/>
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC"

@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
- 
+
 class FoliaModelPortfolio extends JModelItem
 {
 	protected $_item = null;
@@ -9,7 +9,7 @@ class FoliaModelPortfolio extends JModelItem
 	protected function populateState()
 	{
 		$app = JFactory::getApplication('site');
-		
+
 		// Charge et mémorise l'état (state) de l'id depuis le contexte
 		$pk = $app->input->getInt('id');
 		$this->setState($this->_context.'.id', $pk);
@@ -35,8 +35,8 @@ class FoliaModelPortfolio extends JModelItem
 			$query->select('CONCAT(u.nom, " ", u.prenom) AS utilisateur')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');
 
 			// joint la table entreprises
-			$query->select('t.titre AS theme')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');		
-					
+			$query->select('t.titre AS theme')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');
+
 			$query->where('p.id = ' . (int) $pk);
 			$db->setQuery($query);
 			$data = $db->loadObject();
@@ -57,7 +57,7 @@ class FoliaModelPortfolio extends JModelItem
 		$query->from('#__folia_pages AS pg');
 		$query->select('pf.titre portfolio')->join('LEFT', '#__folia_portfolios pf ON pg.portfolios_id = pf.id');
 		$query->where('pg.portfolios_id = '.$x);
-				
+
 		//$query->where('c.id = ' . (int) $pk);
 		$db->setQuery($query);
 		$data = $db->loadObjectList();

@@ -62,10 +62,10 @@ $isTuteur = (in_array('12', $user->groups));
 							<tbody>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('titrep'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('titrep'); ?></div>
 									</td>
 								</tr>
 								<tr>
@@ -74,14 +74,6 @@ $isTuteur = (in_array('12', $user->groups));
 									</td>
 									<td width="80%">
 										<div class="controls"><?php echo $this->form->getInput('texte'); ?></div>
-									</td>
-								</tr>
-								<tr>
-									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('etudiants_id'); ?></div>
-									</td>
-									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('etudiants_id'); ?></div>
 									</td>
 								</tr>
 								<tr>
