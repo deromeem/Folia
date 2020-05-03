@@ -70,7 +70,7 @@ $this->return = $model->getReturn($number);
 	$this->blocs = $model->getBlocs($number);
 	$max = count($this->blocs);
 	?>
-		<h2>Blocs du Portfolio</h2>
+		<h2>Blocs de la Page</h2>
 			<div class="btn-group pull-left">
 			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
