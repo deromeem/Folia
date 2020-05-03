@@ -5,18 +5,18 @@
 
 		<field name="asset_id" type="hidden" filter="unset" />
 
-		<field name="titrep" type="text" label="COM_FOLIA_PORTFOLIOS_TITRE"
+		<field name="titre" type="text" label="COM_FOLIA_PORTFOLIOS_TITRE"
 			description="COM_FOLIA_PORTFOLIOS_TITRE"
 			size="40" class="inputbox" default="" required="true"
 		/>
 		<field name="theme" type="text" label="COM_FOLIA_PORTFOLIOS_THEME"
 			description="COM_FOLIA_PORTFOLIOS_THEME"
-			size="40" class="inputbox" default="" required="true"
+			size="40" class="inputbox" default="" required="false"
 		/>
 		<field name="themes_id"  type="sql" default="" label="COM_FOLIA_PORTFOLIOS_THEME"
 			description="COM_FOLIA_PORTFOLIOS_THEME"
 			query="SELECT id, titre FROM #__folia_themes WHERE published = 1 ORDER BY titre"
-			key_field="id" value_field="titre" required="false"
+			key_field="id" value_field="titre" required="true"
 		/>
 		<field name="alias" type="text"
 			label="JFIELD_ALIAS_LABEL"

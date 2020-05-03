@@ -61,11 +61,12 @@ $isTuteur = (in_array('12', $user->groups));
 						<table class="table">
 							<tbody>
 								<tr>
+									<!-- il prend le "titre" du BE -->
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('titrep'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('titre'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('titrep'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('titre'); ?></div>
 									</td>
 								</tr>
 								<tr>
