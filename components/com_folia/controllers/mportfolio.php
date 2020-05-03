@@ -56,7 +56,7 @@ class FoliaControllerMPortfolio extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_folia&view=mesportfolios";
+		return JURI::base()."/index.php?option=com_folia&view=mportfolios";
 	}
 
 	public function getModel($name = 'form_mp', $prefix = '', $config = array('ignore_request' => true))

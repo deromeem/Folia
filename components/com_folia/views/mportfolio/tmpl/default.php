@@ -28,7 +28,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 						<span class="label"><?php echo JText::_('COM_FOLIA_PORTFOLIOS_TITRE'); ?></span>
 					</td>
 					<td width="80%">
-						<h4><?php echo $this->item->ptitre ?></h4>
+						<h4><?php echo $this->item->titre ?></h4>
 					</td>
 				</tr>
 				<tr>
