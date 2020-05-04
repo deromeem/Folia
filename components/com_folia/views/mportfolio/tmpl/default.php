@@ -11,7 +11,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 <?php else : ?>
 	<div class="form-inline form-inline-header">
 		<div class="btn-group pull-left">
-			<h2><?php echo JText::_('COM_FOLIA_PORTFOLIOS'); ?></h2>
+			<h2><?php echo JText::_('COM_FOLIA_PORTFOLIO'); ?></h2>
 		</div>
 		<div class="btn-group pull-right">
 			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=mportfolios'); ?>" class="btn" role="button">
