@@ -92,7 +92,7 @@ $this->return = $model->getReturn($number);
 	$this->documents = $model->getDocuments($number);
 	$max = count($this->documents);
 	?>
-	<h2>Blocs du Portfolio</h2>
+	<h2>Documents du Bloc</h2>
 	<table class="category table table-striped">
 		<thead>
 			<tr>
@@ -107,7 +107,13 @@ $this->return = $model->getReturn($number);
 			<tr>
 				<td width="20%"><?php echo $this->documents[$counter]->titre ?></td>
 				<td width="20%"><?php echo $this->documents[$counter]->nomFichier ?></td>
-				<td><a href="<?php echo $this->documents[$counter]->url ?>" target="_blank"><?php echo $this->documents[$counter]->url ?></a></td>
+				<td>
+					<?php
+						$sub_url = $this->documents[$counter]->url;
+						if(strlen($this->documents[$counter]->url) >= 25)
+							$sub_url = substr($this->documents[$counter]->url, 0, 22)."...";
+					?>
+					<a href="<?php echo $this->documents[$counter]->url ?>" target="_blank"><?php echo $sub_url ?></a></td>
 				<td><?php echo $this->documents[$counter]->created ?></td>
 			</tr>
 			<?php endfor ?>
