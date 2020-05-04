@@ -4,18 +4,18 @@
 		<field name="id" type="hidden" />
 
 		<field name="asset_id" type="hidden" filter="unset" />
-		
+
 		<field name="pages_id" type="sql" default="" label="COM_FOLIA_BLOCS_PAGE"
 					description="COM_FOLIA_BLOCS_PAGE"
 		query="SELECT id, titre FROM #__folia_pages ORDER BY titre"
 					key_field="id" value_field="titre" required="false"
 
 			/>
-	<field name="activites_id" type="sql" default="" label="COM_FOLIA_BLOCS_ACTIVITE"
-		description="COM_FOLIA_BLOCS_ACTIVITE"
-		query="SELECT id, nom FROM #__folia_activites ORDER BY nom"
-		key_field="id" value_field="nom" required="false"
-	/>
+			<field name="activites_id" type="sql" default="" label="COM_FOLIA_BLOCS_ACTIVITE"
+		            description="COM_FOLIA_BLOCS_ACTIVITE"
+		            query="SELECT id, concat(nom, ' ', description) as nom FROM #__folia_activites ORDER BY nom"
+		            key_field="id" value_field="nom" required="false"
+		        />
 	<field name="titre" type="text" label="COM_FOLIA_BLOCS_TITRE"
 					description="COM_FOLIA_BLOCS_TITRE"
 					size="40" class="inputbox" default="" required="false"
