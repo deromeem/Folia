@@ -110,7 +110,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 	?>
 	<h2>Pages du Portfolio</h2>
 			<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_page&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>
@@ -130,7 +130,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 						if(strlen($this->pages[$counter]->texte) >= 25)
 							$sub_texte = substr($this->pages[$counter]->texte, 0, 22)."...";
 						echo $sub_texte
-					?>	
+					?>
 				</td>
 				<td><?php echo $this->pages[$counter]->created ?></td>
 			</tr>

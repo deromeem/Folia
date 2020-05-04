@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
- 
+
 class FoliaModelMbloc extends JModelItem
 {
 	protected $_item = null;
@@ -9,7 +9,7 @@ class FoliaModelMbloc extends JModelItem
 	protected function populateState()
 	{
 		$app = JFactory::getApplication('site');
-		
+
 		// Charge et mémorise l'état (state) de l'id depuis le contexte
 		$pk = $app->input->getInt('id');
 		$this->setState($this->_context.'.id', $pk);
@@ -54,7 +54,7 @@ class FoliaModelMbloc extends JModelItem
 		// $query->select('a.nom activites_nom, a.description activites_description')->join('LEFT', '#__folia_activites a ON b.activites_id = a.id');
 		// $query->select('pg.titre pages_titre')->join('LEFT', '#__folia_pages pg ON b.pages_id = pg.id');
 		$query->where('bd.blocs_id = '.$x);
-				
+
 		//$query->where('c.id = ' . (int) $pk);
 		$db->setQuery($query);
 		$data = $db->loadObjectList();
@@ -78,7 +78,7 @@ class FoliaModelMbloc extends JModelItem
 		// $query->select('a.nom activites_nom, a.description activites_description')->join('LEFT', '#__folia_activites a ON b.activites_id = a.id');
 		// $query->select('pg.titre pages_titre')->join('LEFT', '#__folia_pages pg ON b.pages_id = pg.id');
 		$query->where('b.id = '.$x);
-				
+
 		//$query->where('c.id = ' . (int) $pk);
 		$db->setQuery($query);
 		$data = $db->loadObject();

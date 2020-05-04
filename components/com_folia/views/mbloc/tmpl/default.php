@@ -21,9 +21,9 @@ $this->return = $model->getReturn($number);
 		<div class="btn-group pull-right">
 			<a href="<?php echo JURI::base(true).'/index.php?option=com_folia&view=mpage&id='.$this->return->pages_id ?>" class="btn" role="button">
 				<span class="icon-cancel"></span></a>
-		</div>	
+		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_p&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>
 	</div>
 	<div>
@@ -94,7 +94,7 @@ $this->return = $model->getReturn($number);
 	?>
 		<h2>Documents du Bloc</h2>
 			<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>

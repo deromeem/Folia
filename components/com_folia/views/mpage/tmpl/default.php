@@ -23,9 +23,9 @@ $this->return = $model->getReturn($number);
 		<div class="btn-group pull-right">
 			<a href="<?php echo JURI::base(true).'/index.php?option=com_folia&view=mportfolio&id='.$this->return->portfolios_id ?>" class="btn" role="button">
 				<span class="icon-cancel"></span></a>
-		</div>	
+		</div>
 		<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_page&layout=edit&id='.$this->item->id); ?>" class="btn" role="button"><span class="icon-edit"></span></a>
 		</div>
 	</div>
 	<div>
@@ -72,7 +72,7 @@ $this->return = $model->getReturn($number);
 	?>
 		<h2>Blocs de la Page</h2>
 			<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_mp&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>
@@ -94,7 +94,7 @@ $this->return = $model->getReturn($number);
 						if(strlen($this->blocs[$counter]->texte) >= 30)
 							$sub_texte = substr($this->blocs[$counter]->texte, 0, 27)."...";
 						echo $sub_texte
-					?>	
+					?>
 				</td>
 				<td><?php echo $this->blocs[$counter]->activites_nom ?></td>
 				<td>
@@ -103,7 +103,7 @@ $this->return = $model->getReturn($number);
 						if(strlen($this->blocs[$counter]->activites_description) >= 30)
 							$sub_description = substr($this->blocs[$counter]->activites_description, 0, 27)."...";
 						echo $sub_description
-					?>	
+					?>
 				</td>
 				<td><?php echo $this->blocs[$counter]->created ?></td>
 			</tr>

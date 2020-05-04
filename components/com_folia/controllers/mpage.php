@@ -1,14 +1,14 @@
 <?php
 defined('_JEXEC') or die;
 
-class FoliaControllerPage extends JControllerForm
+class FoliaControllerMpage extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_pg';
-		
+	protected $view_item = 'form_page';
+
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
-	
+
 	public function add()
 	{
 		if (!parent::add())
@@ -56,10 +56,10 @@ class FoliaControllerPage extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_folia&view=pages";		
+		return JURI::base()."/index.php?option=com_folia&view=mpage";
 	}
 
-	public function getModel($name = 'form_pg', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_page', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;

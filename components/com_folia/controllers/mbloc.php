@@ -5,10 +5,10 @@ class FoliaControllerMbLoc extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
 	protected $view_item = 'form_mb';
-	
+
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
-	
+
 	public function add()
 	{
 		if (!parent::add())
@@ -56,10 +56,10 @@ class FoliaControllerMbLoc extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_folia&view=mblocs";
+		return JURI::base()."/index.php?option=com_folia&view=mbloc";
 	}
 
-	public function getModel($name = 'form_b', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_bloc', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
