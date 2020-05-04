@@ -2,7 +2,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 $user = JFactory::getUser();               		// gets current user object
-$isFolia = (in_array('14', '15', $user->groups));		// sets flag when user group is '14' that is 'MRH Folia Professeurs, Folia Tuteurs
+$isFolia = (in_array('14', $user->groups));		// sets flag when user group is '14' that is 'MRH Folia Professeurs, Folia Tuteurs
 ?>
 
 <?php if (!$isFolia) : ?>

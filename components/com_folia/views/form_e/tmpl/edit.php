@@ -7,7 +7,7 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('formbehavior.chosen', 'select');
 
 $user = JFactory::getUser();               		// gets current user object
-$isFolia = (in_array('14', '15', $user->groups));		// sets flag when user group is '14', '15' that is 'MRH FOLIA Professeurs , FOLIA Tuteurs
+$isFolia = (in_array('14', $user->groups));		// sets flag when user group is '14', '15' that is 'MRH FOLIA Professeurs , FOLIA Tuteurs
 ?>
 
 <?php if (!$isFolia) : ?>
