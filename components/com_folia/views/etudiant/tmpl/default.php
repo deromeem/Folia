@@ -2,10 +2,10 @@
 defined('_JEXEC') or die('Restricted access');
 
 $user = JFactory::getUser();               		// gets current user object
-$isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is '12' that is 'MRH Folia Etudiant 
+$isFolia = (in_array('14', '15', $user->groups));		// sets flag when user group is '14' that is 'MRH Folia Professeurs, Folia Tuteurs
 ?>
 
-<?php if (!$isEtudiant) : ?>
+<?php if (!$isFolia) : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 	<div class="form-inline form-inline-header">
