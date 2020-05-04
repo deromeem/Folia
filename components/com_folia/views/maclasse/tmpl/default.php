@@ -11,7 +11,7 @@ $isEtud = (in_array('12', $user->groups));		// sets flag when user group is '10'
 	<?php echo JError::raiseWarning( 100, JText::_('COM_ANNUAIRE_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
-	<h2><?php echo JText::_('COM_FOLIA')." : ".JText::_('COM_FOLIA_CLASSES')." - "; ?>
+	<h2><?php echo JText::_('COM_FOLIA')." :"; ?>
 		<a href="<?php echo JRoute::_('index.php?option=com_folia&view=maclasse'); ?>">
 			<?php echo JText::_('COM_FOLIA_MACLASSE'); ?>
 		</a>
