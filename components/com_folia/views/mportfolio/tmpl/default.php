@@ -109,7 +109,7 @@ $isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is 
 	$max = count($this->pages);
 	?>
 	<h2>Pages du Portfolio</h2>
-			<div class="btn-group pull-left">
+			<div class="btn-group pull-right">
 			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_page&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
