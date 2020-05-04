@@ -7,10 +7,10 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('formbehavior.chosen', 'select');
 
 $user = JFactory::getUser();               		// gets current user object
-$isEtudiant = (in_array('12', $user->groups));		// sets flag when user group is '12' that is 'MRH FOLIA Etudiant
+$isFolia = (in_array('14', $user->groups));		// sets flag when user group is '14', '15' that is 'MRH FOLIA Professeurs , FOLIA Tuteurs
 ?>
 
-<?php if (!$isEtudiant) : ?>
+<?php if (!$isFolia) : ?>
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
