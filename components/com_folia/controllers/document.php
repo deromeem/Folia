@@ -1,10 +1,10 @@
 <?php
 defined('_JEXEC') or die;
 
-class FoliaControllerMpage extends JControllerForm
+class FoliaControllerDocument extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_page';
+	protected $view_item = 'form_doc';
 
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
@@ -56,11 +56,10 @@ class FoliaControllerMpage extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-// 		$app    = JFactory::getApplication();
-		return JURI::base().'/index.php?option=com_folia&view=mpage&id='.$dos;
+		return JURI::base()."/index.php?option=com_folia&view=mbloc";
 	}
 
-	public function getModel($name = 'form_page', $prefix = '', $config = array('ignore_request' => true))
+	public function getModel($name = 'form_doc', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;

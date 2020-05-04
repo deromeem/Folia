@@ -94,7 +94,7 @@ $this->return = $model->getReturn($number);
 	?>
 		<h2>Documents du Bloc</h2>
 			<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_doc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>

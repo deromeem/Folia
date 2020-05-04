@@ -56,6 +56,8 @@ class FoliaControllerMPortfolio extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
+
+
 		return JURI::base()."/index.php?option=com_folia&view=mportfolios";
 	}
 
