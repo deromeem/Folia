@@ -46,7 +46,7 @@ class FoliaModelBlocs extends JModelList
 		$query->from('#__folia_blocs b');
 
 		// joint la table activites
-		$query->select('a.nom')->join('LEFT', '#__folia_activites AS a ON a.id=b.activites_id');
+		$query->select("concat(a.nom, ' - ' , a.description) as activite")->join('LEFT', '#__folia_activites AS a ON a.id=b.activites_id');
 
 		// joint la table pages
 		$query->select('p.titre AS titreP')->join('LEFT', '#__folia_pages AS p ON p.id=b.pages_id');

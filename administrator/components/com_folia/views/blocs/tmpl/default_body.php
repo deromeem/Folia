@@ -24,8 +24,8 @@ if ($saveOrder)
 				</a>
 			</div>
 		</td>
-		<td width="5%">
-			<?php echo $item->nom; ?>
+		<td width="20%">
+			<?php echo substr($item->activite, 0, 32)."..." ?>
 		</td>
 		<td width="10%">
 			<?php echo $item->titreP; ?>

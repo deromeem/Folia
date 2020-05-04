@@ -10,10 +10,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
                 <?php echo JHtml::_('grid.checkall'); ?>
         </th>                             
         <th width="35%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_DOCUMENTS_BLOCS', 'b.titre', $listDirn, $listOrder) ?>
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TITRE', 'btitre', $listDirn, $listOrder) ?>
         </th>
         <th width="35%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_DOCUMENTS_DOCUMENTS', 'd.titre', $listDirn, $listOrder) ?>
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_DOCUMENTS_TITRE', 'dtitre', $listDirn, $listOrder) ?>
         </th>
         <th width="1%" style="min-width:55px" class="nowrap center ">
                 <?php echo JHtml::_('grid.sort', 'Publié', 'bd.published', $listDirn, $listOrder) ?>

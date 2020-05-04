@@ -12,8 +12,8 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
         <th width="15%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_TITRE', 'b.titre', $listDirn, $listOrder) ?>
         </th>
-        <th width="10%">
-                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_ACTIVITE', 'a.nom', $listDirn, $listOrder) ?>
+        <th width="20%">
+                <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_ACTIVITE', 'activite', $listDirn, $listOrder) ?>
         </th>
         <th width="15%">
                 <?php echo JHtml::_('grid.sort', 'COM_FOLIA_BLOCS_PAGE', 'p.titre', $listDirn, $listOrder) ?>
