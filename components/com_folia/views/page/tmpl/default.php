@@ -69,6 +69,7 @@ $this->return = $model->getReturn($number);
 	<?php
 	$this->blocs = $model->getBlocs($number);
 	$max = count($this->blocs);
+	if($max != 0) :
 	?>
 	<table class="category table table-striped">
 		<thead>
@@ -106,4 +107,6 @@ $this->return = $model->getReturn($number);
 			<?php endfor ?>
 		</tbody>
 	</table>
-<?php endif; ?>
+<?php else : ?>
+	<h4 align="center">Aucun bloc</h4>
+<?php endif; endif ?>

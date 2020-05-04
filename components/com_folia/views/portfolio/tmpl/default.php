@@ -74,6 +74,7 @@ $isFolia = ((bool)array_intersect(array('12', '13', '14', '15'), $user->groups))
 	$model = $this->getModel();
 	$this->pages = $model->getPages($number);
 	$max = count($this->pages);
+	if($max != 0) :
 	?>
 	<table class="category table table-striped">
 		<thead>
@@ -100,4 +101,6 @@ $isFolia = ((bool)array_intersect(array('12', '13', '14', '15'), $user->groups))
 			<?php endfor ?>
 		</tbody>
 	</table>
-<?php endif; ?>
+<?php else : ?>
+	<h4 align="center">Aucune page</h4>
+<?php endif; endif ?>

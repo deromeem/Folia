@@ -91,8 +91,8 @@ $this->return = $model->getReturn($number);
 	<?php
 	$this->documents = $model->getDocuments($number);
 	$max = count($this->documents);
+	if($max != 0) :
 	?>
-	<h2>Documents du Bloc</h2>
 	<table class="category table table-striped">
 		<thead>
 			<tr>
@@ -119,4 +119,6 @@ $this->return = $model->getReturn($number);
 			<?php endfor ?>
 		</tbody>
 	</table>
-<?php endif; ?>
+<?php else : ?>
+	<h4 align="center">Aucun document</h4>
+<?php endif; endif ?>
