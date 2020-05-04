@@ -48,19 +48,11 @@ JHtml::_('formbehavior.chosen', 'select');
 						<div class="span7">
 							<div class="controls"><?php echo $this->form->getInput('portfolios_id'); ?></div>
 						</div>					
-					</div>		
-					<div class="control-group">
-						<div class="span2">
-							<div class="control-label"><?php echo $this->form->getLabel('texte'); ?></div>
-						</div>					
-						<div class="span7">
-							<div class="controls"><?php echo $this->form->getInput('texte'); ?></div>
-						</div>					
-					</div>														
+					</div>																
 				</div>
-				<!-- <div class="form-vertical">
-					<?php //echo $this->form->getControlGroup('commentaire'); ?>
-				</div> -->
+				<div class="form-vertical">
+					<?php echo $this->form->getControlGroup('texte'); ?>
+				</div>
 			</div>
 			<div class="span3">
 				<?php echo JLayoutHelper::render('joomla.edit.global', $this); ?>

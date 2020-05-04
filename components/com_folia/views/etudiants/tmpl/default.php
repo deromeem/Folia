@@ -11,10 +11,10 @@ $isFolia = ((bool)array_intersect(array( '14', '15'), $user->groups));
 	<?php echo JError::raiseWarning( 100, JText::_('COM_FOLIA_RESTRICTED_ACCESS') ); ?>
 <?php else : ?>
 
-	<h2><?php echo JText::_('COM_FOLIA_OPTIONS')." : ".JText::_('COM_FOLIA_ETUDIANTS')." - "; ?>
-		<a href="<?php echo JRoute::_('index.php?option=com_folia&view=etudiants'); ?>">
-			<?php echo JText::_('COM_FOLIA_ETUDIANTS'); ?>
-		</a>
+	<h2><?php echo JText::_('COM_FOLIA_OPTIONS')." : ".JText::_('COM_FOLIA_ETUDIANTS'); ?>
+		<!-- <a href="<?php //echo JRoute::_('index.php?option=com_folia&view=etudiants'); ?>">
+			<?php// echo JText::_('COM_FOLIA_ETUDIANTS'); ?>
+		</a> -->
 	</h2>
 
 	<?php echo $this->loadTemplate('items'); ?>

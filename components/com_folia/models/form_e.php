@@ -29,7 +29,7 @@ class FoliaModelForm_e extends FoliaModelEtudiant
 	public function getItem($itemId = null)
 	{
 		$itemId = (int) (!empty($itemId)) ? $itemId : $this->getState('etudiant.id');
-		 echo "Frontend itemId=".$itemId;   // TEST/DEBUG
+		// echo "Frontend itemId=".$itemId;   // TEST/DEBUG
 
 		// Obtient une instance de la ligne
 		$table = $this->getTable();

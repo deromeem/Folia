@@ -10,7 +10,7 @@
             size="40" class="inputbox" default="" required="false"
         />
 
-		<field name="texte" type="text" label="COM_FOLIA_PAGES_TEXTE"
+		<field name="texte" type="editor" label="COM_FOLIA_PAGES_TEXTE"
             description="COM_FOLIA_PAGES_TEXTE"
             size="40" class="inputbox" default="" required="false"
         />
