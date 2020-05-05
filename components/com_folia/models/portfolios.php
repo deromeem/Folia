@@ -11,13 +11,13 @@ class FoliaModelPortfolios extends JModelList
 		if (empty($config['filter_fields']))
 		{
 			$config['filter_fields'] = array(
-				'id', 'p.id',
-				'titre', 'p.titre',
-				'texte', 'p.texte',
-				'published', 'p.published',
-				'etudiant', 'CONCAT(u.nom, " ", u.prenom)',
-				'theme', 't.titre',
-				'created', 'p.created'
+				'id', 'pf.id',
+				'titre', 'pf.titre',
+				'texte', 'pf.texte',
+				'published', 'pf.published',
+				'etudiant', 'etudiant',
+				'theme', 'theme',
+				'created', 'pf.created'
 			);
 		}
 		parent::__construct($config);
@@ -49,21 +49,12 @@ class FoliaModelPortfolios extends JModelList
 
 	protected function _getListQuery()
 	{
-		// construit la requête d'affichage de la liste
 		$query	= $this->_db->getQuery(true);
-		$query->select('p.id, p.titre, p.texte, p.etudiants_id, p.themes_id, p.created');
-		$query->from('#__folia_portfolios AS p');
-
-		// joint la table civilites
-		$query->select('e.email AS email')->join('LEFT', '#__folia_etudiants AS e ON e.id=p.etudiants_id');
-
-		// joint la table typescontacts
-		$query->select('CONCAT(u.nom, " ", u.prenom) AS utilisateur')->join('LEFT', '#__folia_utilisateurs AS u ON u.email=e.email');
-
-		// joint la table entreprises
-		$query->select('t.titre AS theme')->join('LEFT', '#__folia_themes AS t ON t.id=p.themes_id');		
-		
-		// filtre de recherche rapide textuelle
+		$query->select('pf.id, pf.titre, pf.texte, pf.etudiants_id, pf.themes_id, pf.created');
+		$query->from('#__folia_portfolios pf');
+		$query->select('etu.email AS email')->join('LEFT', '#__folia_etudiants etu ON etu.id = pf.etudiants_id');
+		$query->select('CONCAT(uti.nom, " ", uti.prenom) etudiant')->join('LEFT', '#__folia_utilisateurs uti ON uti.email = etu.email');
+		$query->select('th.titre theme')->join('LEFT', '#__folia_themes th ON th.id = pf.themes_id');
 		$search = $this->getState('filter.search');
 		if (!empty($search)) {
 			// recherche prefixée par 'id:'
@@ -75,20 +66,20 @@ class FoliaModelPortfolios extends JModelList
 				$search = $this->_db->Quote('%'.$this->_db->escape($search, true).'%');
 				// Compile les clauses de recherche
 				$searches	= array();
-				$searches[]	= 'u.nom LIKE '.$search;
-				$searches[]	= 'u.prenom LIKE '.$search;
-				$searches[]	= 'CONCAT(u.nom, " ", u.prenom) LIKE '.$search;
-				$searches[]	= 'p.titre LIKE '.$search;
+				$searches[]	= 'pf.titre LIKE '.$search;
+				$searches[]	= 'etudiant LIKE '.$search;
+				$searches[]	= 'theme LIKE '.$search;
+				$searches[]	= 'pf.created LIKE '.$search;
 				// Ajoute les clauses à la requête
 				$query->where('('.implode(' OR ', $searches).')');
 			}
 		}
 		
 		// filtre les éléments publiés
-		$query->where('p.published=1');
+		$query->where('pf.published=1');
 		
 		// tri des colonnes
-		$orderCol = $this->getState('list.ordering', 'u.nom');
+		$orderCol = $this->getState('list.ordering', 'pf.titre');
 		$orderDirn = $this->getState('list.direction', 'ASC');
 		$query->order($this->_db->escape($orderCol.' '.$orderDirn));
 

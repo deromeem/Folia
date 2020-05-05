@@ -28,9 +28,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<div class="btn-group pull-left">
 			<button type="submit" class="btn" title="<?php echo JText::_('JSEARCH_FILTER');?>">
 				<i class="icon-search"></i></button>
-		</div>
-		<div class="btn-group pull-left">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_p&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>	
 		<div class="btn-group pull-right">
 			<label for="limit" class="element-invisible"><?php echo JText::_('JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC');?></label>
@@ -49,7 +46,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_TEXTE'), 'texte', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
-					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_ETUDIANT'), 'utilisateur', $listDirn, $listOrder) ?>
+					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_ETUDIANT'), 'etudiant', $listDirn, $listOrder) ?>
 				</th>
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_THEME'), 'theme', $listDirn, $listOrder) ?>
@@ -57,7 +54,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<th class="title"><?php echo JHtml::_('grid.sort', 'Date', 'created', $listDirn, $listOrder) ?></th>
 			</tr>
 		</thead>
-
 		<tbody>
 			<?php foreach($this->items as $i => $item) : ?>
 				<tr class="row<?php echo $i % 2; ?>">
@@ -73,7 +69,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						?>
 					</td>
 					<!-- <td><?php echo JHtml::_('jgrid.published', $item->published, $i, 'portfolios.', true); ?></td> -->
-					<td><?php echo $item->utilisateur ?></td>
+					<td><?php echo $item->etudiant ?></td>
 					<td><?php echo $item->theme ?></td>
 					<td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td>
 				</tr>			
