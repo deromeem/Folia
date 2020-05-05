@@ -3427,6 +3427,15 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
+-- Structure de la vue `folia_vue_commentaires`
+--
+DROP TABLE IF EXISTS `folia_vue_commentaires`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `folia_vue_commentaires`  AS  select `c`.`id` AS `id`,`u`.`email` AS `email`,concat(`u`.`nom`,' ',`u`.`prenom`) AS `auteur`,`p`.`titre` AS `titre`,`c`.`texte` AS `texte`,`c`.`created` AS `date` from ((`folia_folia_commentaires` `c` join `folia_folia_utilisateurs` `u` on(`c`.`utilisateurs_id` = `u`.`id`)) join `folia_folia_portfolios` `p` on(`c`.`portfolios_id` = `p`.`id`)) order by `c`.`id` ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la vue `folia_vue_portfolios`
 --
 DROP TABLE IF EXISTS `folia_vue_portfolios`;
