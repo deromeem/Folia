@@ -17,6 +17,7 @@ class FoliaModelMPortfolios extends JModelList
 				'texte', 'p.texte',
 				'etudiants_id', 'p.etudiants_id',
 				'themes_id', 'p.themes_id',
+				'created','p.created',
 				'published', 'p.published',
 				'hits', 'p.hits',
 				'modified', 'p.modified'
@@ -53,7 +54,7 @@ class FoliaModelMPortfolios extends JModelList
 	{
 		// construit la requ�te d'affichage de la liste
 		$query	= $this->_db->getQuery(true);
-    $query->select('p.id,p.titre as titrep ,p.texte, p.etudiants_id ,p.themes_id,p.published, p.hits, p.modified');
+    $query->select('p.id,p.titre as titrep ,p.texte, p.etudiants_id ,p.themes_id,p.published,p.created, p.hits, p.modified');
     $query->from('#__folia_portfolios AS p');
 
 
@@ -123,7 +124,7 @@ class FoliaModelMPortfolios extends JModelList
 
 		$db->setQuery($query);
 		$data = $db->loadObjectList();
-		
+
 		$this->_idtable = $data;
 		// }
 		return $this->_idtable;

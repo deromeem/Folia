@@ -53,6 +53,10 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<th class="title">
 					<?php echo JHtml::_('grid.sort', JText::_('COM_FOLIA_PORTFOLIOS_THEME'), 'theme', $listDirn, $listOrder) ?>
 				</th>
+				<th class="title">
+					<?php echo JHtml::_('grid.sort', JText::_('JGLOBAL_FIELD_CREATED_LABEL'), 'created', $listDirn, $listOrder) ?>
+				</th>
+
 
 				<!-- <th class="title">Publié</th> -->
 				<!-- <th class="title"><?php echo JHtml::_('grid.sort', 'Date', 'created', $listDirn, $listOrder) ?></th> -->
@@ -70,7 +74,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 					<td><?php echo $item->texte ?></td>
 					<td><?php echo $item->theme ?></td>
-					<!-- <td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td> -->
+					<td><?php echo JHtml::_('date', $item->created, 'j F Y'); ?></td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>

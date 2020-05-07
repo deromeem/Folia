@@ -57,7 +57,7 @@ $this->return = $model->getReturn($number);
 				</tr>
 				<tr>
 					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_FOLIA_PAGES_DATE'); ?></span>
+						<span class="label"><?php echo JText::_('JGLOBAL_FIELD_CREATED_LABEL'); ?></span>
 					</td>
 					<td width="80%">
 						<?php echo $this->item->created ?>
