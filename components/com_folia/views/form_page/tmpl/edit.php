@@ -81,7 +81,7 @@ $isTuteur = (in_array('12', $user->groups));
 										<div class="control-label"><?php echo $this->form->getLabel('themes_id'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('themes_id'); ?></div>
+										<div class="controls"><?php echo $this->form->getInput('themes_id',$value=$this->userID); ?></div>
 									</td>
 								</tr>
 							</tbody>

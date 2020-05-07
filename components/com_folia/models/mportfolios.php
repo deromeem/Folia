@@ -113,4 +113,19 @@ class FoliaModelMPortfolios extends JModelList
 		 // echo nl2br(str_replace('#__','folia_',$query));			// TEST/DEBUG
 		return $query;
 	}
+	public function getIdtable(){
+		$user = JFactory::getUser();
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('e.id');
+		$query->from('#__folia_etudiants AS e');
+		$query->where('e.email = "'.$user->email.'"');
+
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		
+		$this->_idtable = $data;
+		// }
+		return $this->_idtable;
+	}
 }

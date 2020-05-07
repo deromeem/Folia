@@ -60,6 +60,20 @@ class FoliaModelMPortfolio extends JModelItem
 		$data = $db->loadObjectList();
 		$this->_mpages = $data;
 		// }
-  		return $this->_mpages;
+		return $this->_mpages;
+	}
+	public function getIdtable(){
+		$user = JFactory::getUser();
+		$db = $this->getDbo();
+		$query = $db->getQuery(true);
+		$query->select('e.id');
+		$query->from('#__folia_etudiants AS e');
+		$query->where('e.email = "'.$user->email.'"');
+		//$query->where('c.id = ' . (int) $pk);
+		$db->setQuery($query);
+		$data = $db->loadObjectList();
+		$this->_idtable = $data;
+		// }
+		return $this->_idtable;
 	}
 }

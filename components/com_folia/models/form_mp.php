@@ -17,8 +17,11 @@ class FoliaModelForm_mp extends FoliaModelMPortfolio
 		// Charge l'état depuis l'URL
 		$pk = $app->input->getInt('id');
 		$this->setState('mportfolio.id', $pk);
+		$pketu = $app->input->getInt('etudiants_id');
+		$this->setState('mportfolio.etudiants_id', $pketu);
 
 		$this->setState($this->_context.'id', $pk);
+		$this->setState($this->_context.'etudiants_id', $pketu);
 
 		$return = $app->input->get('return', null, 'base64');
 		$this->setState('return_page', base64_decode($return));
@@ -33,6 +36,7 @@ class FoliaModelForm_mp extends FoliaModelMPortfolio
 
 		// Obtient une instance de la ligne
 		$table = $this->getTable();
+		// $table->etudiants_id = getState('mportfolio.etudiants_id');
 
 		// Charge la ligne, si possible
 		$return = $table->load($itemId);
@@ -50,5 +54,4 @@ class FoliaModelForm_mp extends FoliaModelMPortfolio
 
 		return $value;
 	}
-
 }

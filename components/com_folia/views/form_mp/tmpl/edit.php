@@ -32,7 +32,8 @@ $isTuteur = (in_array('12', $user->groups));
 			<div class="form-inline form-inline-header">
 				<div class="btn-group pull-left">
 					<?php $isNew = ($this->item->id == 0); ?>
-					<h2><?php echo JText::_('COM_FOLIA_PORTFOLIO')." ".($isNew ? JText::_('COM_FOLIA_ADD_PAR'): JText::_('COM_FOLIA_MODIF_PAR')); ?></h2>
+					<h2><?php
+					echo JText::_('COM_FOLIA_PORTFOLIO')." ".($isNew ? JText::_('COM_FOLIA_ADD_PAR'): JText::_('COM_FOLIA_MODIF_PAR')); ?></h2>
 				</div>
 				<div class="btn-toolbar">
 					<div class="btn-group pull-right">
@@ -84,6 +85,20 @@ $isTuteur = (in_array('12', $user->groups));
 										<div class="controls"><?php echo $this->form->getInput('themes_id'); ?></div>
 									</td>
 								</tr>
+								<tr>
+								<td width="20%" class="nowrap right">
+									<div class="control-label"><?php echo $this->form->getLabel('etudiants_id'); ?></div>
+								</td>
+								<td width="80%">
+									<!-- <div class="controls"><?php echo $this->form->getInput('etudiants_id', $value=$id); ?></div> -->
+									<div class="controls"><?php
+									$url = JUri::getInstance();
+									$explode = explode("=", $url);
+									$id  = $explode[3];
+									// echo "Etudiant_id: ".$id;
+									echo $this->form->getInput('etudiants_id',null,$id); ?></div>
+								</td>
+							</tr>
 							</tbody>
 						</table>
 					</div>
