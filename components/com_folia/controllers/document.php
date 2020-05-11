@@ -56,7 +56,8 @@ class FoliaControllerDocument extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_folia&view=mbloc";
+		// return JURI::base()."/index.php?option=com_folia&view=mbloc";
+		return JURI::base()."/index.php?option=com_folia&view=mportfolios";
 	}
 
 	public function getModel($name = 'form_doc', $prefix = '', $config = array('ignore_request' => true))

@@ -33,6 +33,14 @@ $this->return = $model->getReturn($number);
 			<tbody>
 				<tr>
 					<td width="20%" class="nowrap right">
+						<span class="label"><?php echo JText::_('COM_FOLIA_PAGES_PORTFOLIO'); ?></span>
+					</td>
+					<td width="80%">
+						<?php echo $this->item->portfolio ?>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" class="nowrap right">
 						<span class="label"><?php echo JText::_('COM_FOLIA_PAGES_TITRE'); ?></span>
 					</td>
 					<td width="80%">
@@ -45,14 +53,6 @@ $this->return = $model->getReturn($number);
 					</td>
 					<td width="80%">
 						<?php echo $this->item->texte ?>
-					</td>
-				</tr>
-				<tr>
-					<td width="20%" class="nowrap right">
-						<span class="label"><?php echo JText::_('COM_FOLIA_PAGES_PORTFOLIO'); ?></span>
-					</td>
-					<td width="80%">
-						<?php echo $this->item->portfolio ?>
 					</td>
 				</tr>
 				<tr>
@@ -72,7 +72,11 @@ $this->return = $model->getReturn($number);
 	?>
 		<h2>Blocs de la Page</h2>
 			<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php
+			$url = JUri::getInstance();
+			$explode = explode("=", $url);
+			$numberid = $explode[3];
+			echo JRoute::_('index.php?option=com_folia&view=form_bloc&layout=edit&idpage='.$numberid); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>

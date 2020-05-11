@@ -17,11 +17,7 @@
 	            size="40" class="inputbox" default="" required="false"
 	        />
 
-			<field name="portfolios_id" type="sql" label="COM_FOLIA_PAGES_PORTFOLIO"
-	            description="COM_FOLIA_PAGES_PORTFOLIO"
-				query="SELECT id, titre FROM #__folia_portfolios ORDER BY titre"
-	            key_field="id" value_field="titre" required="false"
-	        />
+			<field name="portfolios_id" type="hidden" required = "true"/>
 
 			 <field name="commentairetable" type="editor" label="COM_FOLIA_PAGES_COMMENTAIRE"
 	            description="COM_FOLIA_PAGES_COMMENTAIRE"

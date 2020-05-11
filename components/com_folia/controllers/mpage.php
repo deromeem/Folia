@@ -8,6 +8,7 @@ class FoliaControllerMpage extends JControllerForm
 
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
+	protected $id;
 
 	public function add()
 	{
@@ -40,6 +41,7 @@ class FoliaControllerMpage extends JControllerForm
 
 	public function cancel($key = 'a_id')
 	{
+		$id = $key;
 		parent::cancel($key);
 		$this->setRedirect($this->getReturnPage());
 	}
@@ -57,7 +59,13 @@ class FoliaControllerMpage extends JControllerForm
 			// return base64_decode($return);
 		// }
 // 		$app    = JFactory::getApplication();
-		return JURI::base().'/index.php?option=com_folia&view=mpage&id='.$dos;
+			// $model = parent::getModel($name = 'form_page', $prefix = '', $config = array('ignore_request' => true));
+			// $id=$model->getItem($itemId = null);
+			// $voir = parent::getRedirectToItemAppend(integer $recordId = null, string $urlVar = 'a_id');
+
+		// return JURI::base().'/index.php?option=com_folia&view=mportfolio&id='.$id;
+		return JURI::base().'/index.php?option=com_folia&view=mportfolios';
+
 	}
 
 	public function getModel($name = 'form_page', $prefix = '', $config = array('ignore_request' => true))

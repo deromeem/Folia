@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 class FoliaControllerMbLoc extends JControllerForm
 {
 	// précise la vue (formulaire de saisie) à afficher
-	protected $view_item = 'form_mb';
+	protected $view_item = 'form_bloc';
 
 	// précise la variable d'édition URL
 	protected $urlVar = 'a.id';
@@ -56,7 +56,8 @@ class FoliaControllerMbLoc extends JControllerForm
 		// {
 			// return base64_decode($return);
 		// }
-		return JURI::base()."/index.php?option=com_folia&view=mbloc";
+		// return JURI::base()."/index.php?option=com_folia&view=mbloc";
+		return JURI::base()."/index.php?option=com_folia&view=mportfolios";
 	}
 
 	public function getModel($name = 'form_bloc', $prefix = '', $config = array('ignore_request' => true))

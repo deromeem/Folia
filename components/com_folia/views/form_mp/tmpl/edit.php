@@ -90,13 +90,15 @@ $isTuteur = (in_array('12', $user->groups));
 									<div class="control-label"><?php echo $this->form->getLabel('etudiants_id'); ?></div>
 								</td>
 								<td width="80%">
-									<!-- <div class="controls"><?php echo $this->form->getInput('etudiants_id', $value=$id); ?></div> -->
 									<div class="controls"><?php
-									$url = JUri::getInstance();
-									$explode = explode("=", $url);
-									$id  = $explode[3];
-									// echo "Etudiant_id: ".$id;
-									echo $this->form->getInput('etudiants_id',null,$id); ?></div>
+									if($isNew){
+
+										$url = JUri::getInstance();
+										$explode = explode("=", $url);
+										$id  = $explode[3];
+										echo $this->form->getInput('etudiants_id',null,$id);
+									}
+									 ?></div>
 								</td>
 							</tr>
 							</tbody>

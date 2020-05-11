@@ -4,6 +4,7 @@
 		<field name="id" type="hidden" />
 
 		<field name="asset_id" type="hidden" filter="unset" />
+		<field name="pages_id" type="hidden" filter="unset" />
 
 		<field name="pages_id" type="sql" default="" label="COM_FOLIA_BLOCS_PAGE"
 					description="COM_FOLIA_BLOCS_PAGE"

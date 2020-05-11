@@ -94,7 +94,11 @@ $this->return = $model->getReturn($number);
 	?>
 		<h2>Documents du Bloc</h2>
 			<div class="btn-group pull-right">
-			<a href="<?php echo JRoute::_('index.php?option=com_folia&view=form_doc&layout=edit'); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
+			<a href="<?php
+			$url = JUri::getInstance();
+			$explode = explode("=", $url);
+			$numberid = $explode[3];
+			echo JRoute::_('index.php?option=com_folia&view=form_doc&layout=edit&idbloc='.$numberid); ?>" class="btn" role="button"><span class="icon-plus"></span></a>
 		</div>
 	<table class="category table table-striped">
 		<thead>

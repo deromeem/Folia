@@ -78,12 +78,21 @@ $isTuteur = (in_array('12', $user->groups));
 								</tr>
 								<tr>
 									<td width="20%" class="nowrap right">
-										<div class="control-label"><?php echo $this->form->getLabel('themes_id'); ?></div>
+										<div class="control-label"><?php echo $this->form->getLabel('portfolios_id'); ?></div>
 									</td>
 									<td width="80%">
-										<div class="controls"><?php echo $this->form->getInput('themes_id',$value=$this->userID); ?></div>
+										<div class="controls"><?php
+										if ($isNew) {
+											$url = JUri::getInstance();
+											$explode = explode("=", $url);
+											$id  = $explode[3];
+											echo $this->form->getInput('portfolios_id',null,$id);
+											}
+											?></div>
+
 									</td>
 								</tr>
+
 							</tbody>
 						</table>
 					</div>
