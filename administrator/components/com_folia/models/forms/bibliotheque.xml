@@ -6,7 +6,7 @@
 		<field name="asset_id" type="hidden" filter="unset" />
 		
         <field name="titre" type="text" label="COM_FOLIA_PORTFOLIO_TITRE"
-            description="COM_FOLIA_UTILISATEURS_NOM"
+            description="COM_FOLIA_BIBLIOTHEQUES_NOM"
             size="40" class="input-xxlarge input-large-text" default="" required="true"
         />
 
